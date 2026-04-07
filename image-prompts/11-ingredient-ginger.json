@@ -1,0 +1,28 @@
+{
+  "name": "Ingredient: Cold-Pressed Ginger",
+  "usage": "Displayed on a sand-colored (#F5EDE0) card in a 2-column ingredient grid. The image sits above the ingredient name and description. Cut-out PNG style — the ginger floats directly on the card with no background. Displayed at approximately 16:9 landscape, 400-500px wide, 200-250px tall.",
+  "prompt": "A fresh knob of ginger root on a solid warm sand background (#F5EDE0) for clean extraction. The ginger is partially sliced — one clean diagonal cut reveals the pale yellow fibrous interior with visible grain texture. One thin circular slice sits beside the main knob, slightly overlapping it. Two or three small broken-off pieces are scattered naturally nearby. The ginger skin is tan and papery with natural bumps and ridges. The cut surfaces look freshly sliced — slightly wet and glistening. A light dusting of ginger fibers is visible on the cut face. Studio lighting is bright and even with a warm cast. The ginger is arranged in a loose natural composition, not perfectly symmetrical. Every texture is rendered in sharp detail — the papery skin, the fibrous interior, the wet glistening cut surface.",
+  "scene": {
+    "type": "studio flat-lay",
+    "background": "solid warm sand (#F5EDE0), matches the card background so edges blend naturally",
+    "surface": "invisible, minimal shadows"
+  },
+  "subject": {
+    "description": "fresh ginger root, partially sliced showing fibrous yellow interior, one thin slice beside it, small broken pieces scattered, freshly cut and glistening",
+    "position": "slightly off-center left, natural arrangement, all pieces fully visible with generous empty space to all edges",
+    "angle": "45-degree overhead, between side-on and top-down"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/4",
+    "depth_of_field": "medium-deep, all ginger pieces in focus",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "studio softbox with warm cast",
+    "direction": "overhead slightly from the left",
+    "shadows": "soft, subtle contact shadows beneath each piece"
+  },
+  "style": "premium food photography, Ottolenghi cookbook aesthetic, ingredient-as-hero, macro texture detail",
+  "negative": "no other foods, no plates or bowls, no text, no watermarks, no wilted or dry appearance, no dark background, no green background"
+}

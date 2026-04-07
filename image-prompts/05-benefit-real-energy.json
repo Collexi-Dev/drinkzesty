@@ -1,0 +1,28 @@
+{
+  "name": "Benefit 2: Real Energy — Morning Ritual",
+  "usage": "Displayed on a dark #2D2D2D background in a 2-column grid alongside text about sustained energy. Cut-out PNG extracted from solid cream background, floating on dark background. This image sits on the right side with text on the left. Approximate display size: 400-500px wide. Same visual approach as the other two benefit images: tight product vignette on cream, studio lit, overhead angle.",
+  "prompt": "Slightly overhead studio shot of a morning energy vignette on a solid warm cream background (#FFFDF7) for clean extraction. A zesty shot bottle stands on a small round wooden board or coaster, the visual anchor of the composition. Beside it: a few thin slices of fresh ginger scattered on the board, a small terracotta pot with a green succulent, and a loosely folded linen napkin in a warm oatmeal tone. Everything is arranged in a compact, intentional cluster centered in the frame with generous empty cream space on all sides. No object should touch or approach the edge of the frame. Leave at least 15-20% padding of empty cream background around the entire cluster. Clean warm studio lighting from the upper left, matching the other benefit shots. The thick opaque golden-yellow liquid in the bottle has a rich turmeric-ginger color. Every texture is sharp: the wooden grain, the ginger's fibrous cut surface, the terracotta's matte finish, the clear PET bottle. The mood is warm and alive. This is the first thing you reach for.",
+  "scene": {
+    "type": "studio tabletop",
+    "background": "solid warm cream (#FFFDF7) for extraction",
+    "surface": "small round wooden board or coaster as base, surrounded by empty cream background"
+  },
+  "subject": {
+    "description": "zesty bottle on wooden board, fresh ginger slices, terracotta succulent pot, folded linen napkin — a morning energy ritual",
+    "position": "centered cluster with generous padding on all sides, nothing near the frame edges",
+    "angle": "slightly overhead, roughly 30-degree downward angle"
+  },
+  "camera": {
+    "lens": "85mm",
+    "aperture": "f/4",
+    "depth_of_field": "medium-deep, all objects in focus with very slight edge softness",
+    "aspect_ratio": "4:3"
+  },
+  "lighting": {
+    "type": "studio softbox, clean and warm",
+    "direction": "upper left key light, soft fill from right",
+    "shadows": "minimal to none, avoid visible shadows on the background to keep extraction clean"
+  },
+  "style": "editorial product styling, Kinfolk meets Aesop, minimal and intentional, consistent with the other benefit vignettes",
+  "negative": "no people, no hands, no dramatic directional light or long shadows, no atmospheric haze, no cool tones, no clutter, no text, no watermarks, no green background, no visible shadows on the background, no objects touching or near the frame edges, no cropped objects"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Ingredient: Lemon, Pineapple, Orange",
+  "usage": "Displayed on a sand-colored (#F5EDE0) card in a 2-column ingredient grid. Cut-out PNG style floating on the card. This should be the most vibrant and fresh-feeling of all the ingredient images — a burst of citrus color. Displayed at approximately 16:9 landscape, 400-500px wide, 200-250px tall.",
+  "prompt": "A composition of freshly cut citrus fruits arranged in a loose natural cluster on a solid warm sand background (#F5EDE0) for clean extraction. Center: a lemon cut in half showing the bright yellow cross-section with visible segments and seeds. Right: a thick round orange slice showing deep orange flesh with the peel ring. Left: a triangular wedge of fresh pineapple showing the golden yellow flesh with a small section of spiky skin still attached. The fruits overlap slightly at their edges, creating a natural grouping — not a perfect line. Each cut surface glistens with fresh juice. A few tiny juice droplets sit on the invisible surface near the fruits. The colors pop vibrantly: bright lemon yellow, deep sunset orange, golden pineapple yellow. Studio lighting is bright and clean with a slight cool-warm balance to make the colors sing.",
+  "scene": {
+    "type": "studio flat-lay",
+    "background": "solid warm sand (#F5EDE0), matches the card background so edges blend naturally",
+    "surface": "invisible, tiny juice droplets and soft contact shadows"
+  },
+  "subject": {
+    "description": "half lemon, thick orange slice, pineapple wedge — all freshly cut, glistening with juice, arranged in a loose overlapping cluster",
+    "position": "centered, loose natural grouping",
+    "angle": "45-degree overhead"
+  },
+  "camera": {
+    "lens": "85mm",
+    "aperture": "f/4",
+    "depth_of_field": "deep, all fruits in sharp focus",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "studio softbox, bright and clean",
+    "direction": "overhead from slightly behind, creating glistening highlights on juice",
+    "shadows": "soft, minimal, contact shadows only"
+  },
+  "style": "vibrant food photography, maximum freshness, Colors should pop — think food magazine cover, not muted editorial",
+  "negative": "no bowls or plates, no brown/wilted edges, no dried-out appearance, no text, no watermarks, no muted colors, no green background"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Pricing: 30-Day Supply — Packaging",
+  "usage": "Replaces the current bottle group image in the 30-day supply pricing card. Should show an actual branded monthly subscription box containing 30 bottles. Displayed on a dark (#2D2D2D) background card with the 'best value' badge. Approximately 16:9 landscape, 400px wide, 200px tall. The packaging should feel premium but warm and approachable — an elevated version of the starter box, not a completely different brand. Should match the 14-day starter's visual language.",
+  "prompt": "A premium rectangular box package for a wellness shot brand called 'zesty', designed to hold 30 small PET bottles. The box is a warm cream-white color with the word 'zesty' printed in a rich golden-amber (#F2A922) bold lowercase sans-serif type on the front. A golden-amber accent stripe runs along the top edge. The box has a hinged lift-off lid that is propped open at roughly a 60-degree angle, revealing a neatly organized grid of bottles (5 rows of 6) nestled inside, each containing thick opaque golden-yellow liquid visible through clear PET plastic. The open lid leans against the back of the box, showing the 'zesty' branding on its inside surface. The box sits on a clean cream-white surface with warm, soft directional light from the left. Two loose bottles stand beside the open box for scale — one upright, one casually angled. A small sprig of fresh ginger and a turmeric root are placed beside the box as styling props. Subtle text on the box reads '30-day supply · 10g creatine per shot'. The packaging feels premium but warm — matte finish, clean Scandinavian design, the kind of beautiful minimal box you'd leave on your kitchen counter. The cream tones with golden accents create a cohesive family look with the 14-day starter. Overall mood: 'this is my daily ritual, and it looks beautiful doing it.'",
+  "scene": {
+    "type": "product packaging studio shot",
+    "background": "clean cream-white surface, warm and soft",
+    "surface": "smooth cream-white with gentle warm shadow"
+  },
+  "subject": {
+    "description": "large cream-colored box with hinged lid propped open showing 30 bottles in a grid, golden 'zesty' branding, two loose bottles and ginger/turmeric styling props beside it",
+    "position": "box slightly angled center, lid hinged open leaning back, loose bottles and props to the right",
+    "angle": "25-degree overhead, showing the full grid of bottles inside and the premium exterior"
+  },
+  "camera": {
+    "lens": "50mm",
+    "aperture": "f/4",
+    "depth_of_field": "medium, box and front bottles sharp, back bottles slightly softer",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "soft warm directional light",
+    "direction": "from the left, warm and golden",
+    "shadows": "soft, warm, natural"
+  },
+  "style": "premium warm Scandinavian packaging photography, Aesop meets wellness, clean and inviting, elevated but not cold",
+  "negative": "no dark background, no dramatic noir lighting, no cool tones, no sliding lid, no cluttered arrangement, no glass bottles, no text overlays or watermarks, no cheap-looking packaging, no glossy plastic wrapping, no completely different aesthetic from the starter box"
+}

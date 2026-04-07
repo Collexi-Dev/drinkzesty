@@ -1,0 +1,28 @@
+{
+  "name": "Step 2: Press",
+  "usage": "Second image in the 3-step ritual grid. This captures the 'aha' moment — pressing the cap releases the creatine powder into the liquid below. The cap stays screwed on the bottle. Displayed at approximately 4:3 landscape, 300-400px wide. This should feel like a slow-motion freeze frame, beautiful and scientific at the same time.",
+  "prompt": "Close-up macro shot of a small clear PET supplement shot bottle from the side, zoomed in to the upper portion of the bottle. The cap is screwed on and being pressed down by a thumb at the top of the frame. Fine white creatine powder is falling from the cap compartment down into the thick opaque golden-yellow ginger-turmeric liquid below. The powder creates a beautiful white cloud as it hits the liquid surface and begins to disperse. Individual powder particles catch the light as they fall through the air gap between cap and liquid, creating tiny bright specks. The clear PET plastic allows a full view of this moment happening inside the bottle. The background is completely blurred warm tones. A woman's hand holds the bottle, mostly out of frame with just the thumb pressing the cap visible at the top. This should feel like a slow-motion freeze-frame captured at the exact right millisecond.",
+  "scene": {
+    "type": "macro product detail",
+    "background": "completely blurred warm ambient tones, no identifiable objects",
+    "surface": "n/a, bottle held in hand"
+  },
+  "subject": {
+    "description": "side view of bottle showing cap being pressed down, white creatine powder falling from cap compartment into thick golden-yellow liquid, cloud of dispersing powder visible through the clear PET walls",
+    "position": "centered, zoomed in on the upper half of the bottle where the action happens",
+    "angle": "straight-on from the side, eye level with the powder release point"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/2.8",
+    "depth_of_field": "shallow, powder cascade and liquid surface sharp, bottle edges softer",
+    "aspect_ratio": "4:3"
+  },
+  "lighting": {
+    "type": "backlit with warm fill",
+    "direction": "backlight from behind making the golden-yellow liquid glow, soft fill from the front to illuminate the falling powder",
+    "shadows": "minimal, the glow of the liquid is the primary light source in the image"
+  },
+  "style": "macro product photography, freeze-frame moment, science-meets-beauty, visually stunning detail",
+  "negative": "no open bottle, no removed cap, no detached cap, no full hand visible, no cluttered background, no cold tones, no motion blur on the powder, no text, no watermarks, no dark or moody feel"
+}

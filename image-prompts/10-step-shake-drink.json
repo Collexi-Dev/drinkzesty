@@ -1,0 +1,28 @@
+{
+  "name": "Step 3: Shake + Drink",
+  "usage": "Third and final image in the 3-step ritual grid. The payoff moment. After the tight macro shots of twist and press, this zooms out slightly to show the shot being taken. Displayed at approximately 4:3 landscape, 300-400px wide. Should feel quick, effortless, done.",
+  "prompt": "Close-up of a woman drinking from a small clear PET supplement shot bottle. Her head is tilted slightly back, the small bottle held to her lips with one hand. The shot is framed tight from the chin to just above the forehead, cropped so we see her lower face, lips on the bottle, and her hand holding it. Her expression is relaxed and natural, mid-sip. Warm soft morning light from the side. The thick opaque golden-yellow liquid is visible in the bottle. Her skin is warm and healthy, natural minimal makeup. Background is completely blurred warm tones, no identifiable setting. The moment feels quick and effortless, like it takes two seconds. This is the reward. The hand is clearly feminine: slender fingers, natural nails, no polish.",
+  "scene": {
+    "type": "lifestyle close-up",
+    "background": "completely blurred warm ambient tones, no identifiable objects",
+    "surface": "n/a"
+  },
+  "subject": {
+    "description": "woman drinking from small PET shot bottle, tight crop from chin to above forehead, one hand holding bottle to lips, relaxed mid-sip",
+    "position": "centered, tight framing on lower face and bottle",
+    "angle": "straight-on, slightly below eye level"
+  },
+  "camera": {
+    "lens": "85mm",
+    "aperture": "f/2.8",
+    "depth_of_field": "shallow, lips and bottle sharp, everything else soft",
+    "aspect_ratio": "4:3"
+  },
+  "lighting": {
+    "type": "natural warm light",
+    "direction": "soft side light from the left",
+    "shadows": "soft, natural, warm"
+  },
+  "style": "intimate close-up, the quick payoff moment, warm and effortless, not posed or performative",
+  "negative": "no full face visible, no eye contact with camera, no dramatic head tilt, no activewear, no gym, no cold tones, no text, no watermarks, no masculine hands, no nail polish, no jewelry"
+}

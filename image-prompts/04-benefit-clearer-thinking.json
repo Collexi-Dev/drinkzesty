@@ -1,0 +1,28 @@
+{
+  "name": "Benefit 1: Clearer Thinking — Focus Ritual",
+  "usage": "Displayed on a dark #2D2D2D background in a 2-column grid alongside text about improved cognitive clarity. The image is a cut-out PNG (extracted from solid cream background) so the product vignette floats directly on the dark background. Rounded corners applied via CSS. Approximate display size: 400-500px wide. The product tells the benefit story through context rather than showing a person.",
+  "prompt": "Overhead studio shot of a minimal desk vignette on a solid warm cream background (#FFFDF7) for clean extraction. A single zesty shot bottle sits upright on a small stack of two clean hardcover notebooks in cream and off-white linen. Next to it: an open Moleskine-style journal with a fine-tip pen resting diagonally across a blank page, and a small clear glass of water catching the light. A single sprig of fresh rosemary adds an organic touch. Everything is arranged in a compact, intentional cluster centered in the frame with generous empty cream space on all sides. No object should touch or approach the edge of the frame. Leave at least 15-20% padding of empty cream background around the entire cluster. Clean warm studio lighting from the upper left. The bottle is the visual anchor. Every texture is sharp: the linen notebook covers, the thick golden-yellow liquid in the bottle, the pen's metal clip. The mood is calm clarity and order.",
+  "scene": {
+    "type": "studio tabletop",
+    "background": "solid warm cream (#FFFDF7) for extraction",
+    "surface": "the notebooks and objects form a self-contained cluster surrounded by empty cream background"
+  },
+  "subject": {
+    "description": "zesty bottle on stacked linen notebooks, open journal with pen, small glass of water, sprig of rosemary — a curated focus ritual",
+    "position": "centered cluster with generous padding on all sides, nothing near the frame edges",
+    "angle": "slightly overhead, roughly 30-degree downward angle"
+  },
+  "camera": {
+    "lens": "85mm",
+    "aperture": "f/4",
+    "depth_of_field": "medium-deep, all objects in focus with very slight edge softness",
+    "aspect_ratio": "4:3"
+  },
+  "lighting": {
+    "type": "studio softbox, clean and warm",
+    "direction": "upper left key light, soft fill from right",
+    "shadows": "minimal to none, avoid visible shadows on the background to keep extraction clean"
+  },
+  "style": "editorial product styling, Kinfolk meets Aesop, minimal and intentional, every object earns its place",
+  "negative": "no people, no hands, no screens showing content, no clutter, no bright colors besides the golden-yellow bottle, no cool tones, no text, no watermarks, no green background, no visible shadows on the background, no objects touching or near the frame edges, no cropped objects"
+}

@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #F2A922;
+  --brand-hover: #D4921E;
+  --bg: #FFFDF7;
+  --text: #2D2D2D;
+  --accent: #6B8F5E;
+  --sand: #F5EDE0;
+  --white: #FFFFFF;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-accent: var(--accent);
+  --color-sand: var(--sand);
+  --font-quicksand: var(--font-quicksand);
+  --font-playfair: var(--font-playfair);
+  --font-caveat: var(--font-caveat);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-quicksand), 'Quicksand', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Marquee scrolling animation for text bands */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}

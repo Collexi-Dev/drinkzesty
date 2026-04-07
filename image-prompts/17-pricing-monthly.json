@@ -1,0 +1,28 @@
+{
+  "name": "Pricing: 30-Day Supply",
+  "usage": "Displayed at the top of the 30-day supply pricing card on a dark (#2D2D2D) background. This card is the 'best value' option and should feel premium, abundant, and committed. It contrasts with the minimal 14-day starter card. Displayed at approximately 16:9 landscape, inside a rounded dark card, about 400px wide, 200px tall.",
+  "prompt": "Multiple zesty supplement shot bottles (5 to 7 visible) arranged in a staggered group formation on a dark charcoal surface. The bottles overlap slightly in depth, creating a layered composition with the front bottle slightly forward and sharpest in focus. Dramatic low-angle studio lighting from behind and below makes the thick opaque golden-yellow liquid inside each bottle glow warmly, creating a beautiful array of golden light through the clear PET plastic. A subtle warm golden haze or flare hovers around the group from the backlighting. The dark surface (#2D2D2D) matches the card background. The bottles cast soft warm reflections on the dark surface below them. The arrangement feels abundant but not chaotic — intentional, like a premium brand display. The overall mood is 'I'm all in. This is my daily commitment.'",
+  "scene": {
+    "type": "studio",
+    "background": "solid dark charcoal (#2D2D2D), matching the card background",
+    "surface": "dark charcoal surface, subtle warm reflections from bottle lighting"
+  },
+  "subject": {
+    "description": "5 to 7 zesty bottles in a staggered group formation, overlapping in depth, front bottle sharper, thick golden-yellow liquid glowing from backlighting",
+    "position": "centered group, front bottle slightly forward",
+    "angle": "low angle, roughly 15 degrees above surface level, looking slightly up at the bottles"
+  },
+  "camera": {
+    "lens": "85mm",
+    "aperture": "f/2.8",
+    "depth_of_field": "shallow, front bottle sharp, back bottles progressively softer",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "dramatic backlight with warm gel",
+    "direction": "from behind and below the bottles, creating glow through the liquid",
+    "shadows": "warm reflections on dark surface, golden haze around the group"
+  },
+  "style": "premium product photography, abundance and commitment, luxury fragrance campaign meets wellness brand",
+  "negative": "no chaotic arrangement, no bright background, no cool tones, no text, no watermarks, no single bottle — must show multiple"
+}

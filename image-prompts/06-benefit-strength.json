@@ -1,0 +1,28 @@
+{
+  "name": "Benefit 3: Strength That Stays — The Hold",
+  "usage": "Displayed on a dark #2D2D2D background in a 2-column grid alongside text about maintaining muscle strength. Cut-out PNG extracted from solid cream background. This is the third and final benefit. Approximate display size: 400-500px wide. Unlike the other two benefit vignettes (overhead product clusters), this one is a close-up of a hand holding the bottle, adding a human touch to close out the trio.",
+  "prompt": "Close-up studio shot of a woman's hand holding a zesty shot bottle upright with a relaxed confident grip. The arm enters the frame from the bottom-left corner and extends diagonally toward the top-right, with the hand gripping the bottle in the upper-right area of the composition. The hand is clearly feminine: slender fingers, soft skin, natural nails with no polish. The hand wraps around the bottle from the side, fingers naturally curved, thumb visible. The hold is casual and easy, like she just picked it up and is about to drink. The wrist and lower forearm are visible along the diagonal, showing natural subtle tone without being athletic. Shot against a solid warm cream background (#FFFDF7) for clean extraction. The hand and bottle are centered in the frame with generous empty cream space on all sides. No part of the hand or bottle approaches the frame edges. The thick opaque golden-yellow liquid is visible inside the bottle, dense and rich like fresh turmeric-ginger juice. Every texture is sharp: the skin, the fingertips against the bottle, the liquid inside. Clean warm studio lighting from the upper left. The mood is effortless. She doesn't even think about it. She just holds it.",
+  "scene": {
+    "type": "studio",
+    "background": "solid warm cream (#FFFDF7) for extraction",
+    "surface": "none, hand and bottle float on cream background"
+  },
+  "subject": {
+    "description": "woman's hand holding zesty bottle upright from the side, relaxed natural grip, natural nails, warm healthy skin, wrist visible",
+    "position": "arm enters from bottom-left, hand and bottle in upper-right area, diagonal composition, generous padding around the bottle and hand",
+    "angle": "straight-on, eye level with the hand"
+  },
+  "camera": {
+    "lens": "85mm",
+    "aperture": "f/3.5",
+    "depth_of_field": "medium, hand and bottle sharp, wrist slightly softer",
+    "aspect_ratio": "4:3"
+  },
+  "lighting": {
+    "type": "studio softbox, clean and warm",
+    "direction": "upper left key light, soft fill from right",
+    "shadows": "minimal to none, avoid visible shadows on the background to keep extraction clean"
+  },
+  "style": "editorial close-up, simple and confident, Cereal magazine aesthetic, the simplest image on the page but the most human",
+  "negative": "no masculine hands, no large or thick fingers, no nail polish, no jewelry, no rings, no dramatic veins, no cool tones, no full arm visible, no twisting or action, no text, no watermarks, no green background, no visible shadows on the background, no objects touching or near frame edges, no cropped fingers"
+}

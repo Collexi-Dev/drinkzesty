@@ -1,0 +1,28 @@
+{
+  "name": "Ingredient: Turmeric + Piperine",
+  "usage": "Displayed on a sand-colored (#F5EDE0) card in a 2-column ingredient grid. Cut-out PNG style floating on the card. The visual contrast between the vivid deep orange turmeric and the black peppercorns tells the story of these two ingredients working together. Displayed at approximately 16:9 landscape, 400-500px wide, 200-250px tall.",
+  "prompt": "A whole turmeric root snapped cleanly in half, revealing the vivid deep orange interior with fine ring patterns visible on the cross-section. The two halves sit slightly apart, the break fresh and jagged. Beside the turmeric: a small loose pile of whole black peppercorns (roughly 15-20 corns) and a very light dusting of bright golden turmeric powder scattered on the invisible surface. The turmeric skin is rough and brownish, contrasting dramatically with the almost neon deep orange interior. The peppercorns are glossy and dark, creating a beautiful color contrast against the golden-orange turmeric. Everything sits on a solid warm sand background (#F5EDE0) for clean extraction. The arrangement is natural and loose — not styled in a perfect line. Studio lighting with a warm golden cast to enhance the orange tones.",
+  "scene": {
+    "type": "studio flat-lay",
+    "background": "solid warm sand (#F5EDE0), matches the card background so edges blend naturally",
+    "surface": "invisible, soft contact shadows and turmeric powder dusting"
+  },
+  "subject": {
+    "description": "turmeric root snapped in half showing vivid deep orange interior, whole black peppercorns in a small pile, light turmeric powder dusting",
+    "position": "centered, turmeric halves slightly left, peppercorns right",
+    "angle": "45-degree overhead"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/4",
+    "depth_of_field": "medium-deep, all elements in focus",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "studio softbox with warm golden cast",
+    "direction": "overhead slightly from the right",
+    "shadows": "soft contact shadows beneath each element"
+  },
+  "style": "premium food photography, vivid color contrast, Ottolenghi aesthetic, raw ingredient beauty",
+  "negative": "no bowls or plates, no text, no watermarks, no muted/desaturated colors — the orange should be vivid, no dark background, no green background"
+}

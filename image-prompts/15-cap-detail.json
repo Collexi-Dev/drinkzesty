@@ -1,0 +1,28 @@
+{
+  "name": "The Cap — Detail Shot",
+  "usage": "Positioned in the bottom-right corner of a dark (#2D2D2D) card via CSS absolute positioning. Text content sits in the top-left. The image will be extracted from its background and placed as a transparent PNG on the card, so the card's own bg-color shows through. 1:1 square format for flexible positioning across breakpoints.",
+  "prompt": "Dramatic macro shot of the zesty dosing cap on a solid dark charcoal background (#2D2D2D) for background removal. The dark background ensures the dramatic lighting on the translucent cap looks correct, and any edge fringing after removal will be dark, blending into the dark card it will be placed on. The cap is tilted at roughly 45 degrees, leaning back so we can see into the open chamber from below. The interior chamber contains fine white creatine monohydrate powder that is naturally spilling and cascading out of the tilted cap, some powder mid-fall in the air, some already settled below the cap on the surface. The powder falls naturally with gravity, not sitting flat. The cap material is slightly translucent plastic. The lighting is dramatic but clean: a strong key light from the upper left illuminates the falling powder particles and the cap interior. Every mechanical detail of the cap is sharp: the twist mechanism ridge, the chamber walls, the rim. The cap is centered in the frame with generous empty dark space on all sides. No part of the cap approaches the frame edges.",
+  "scene": {
+    "type": "studio macro",
+    "background": "solid dark charcoal (#2D2D2D) for extraction, dark fringing blends into destination card",
+    "surface": "none, cap sits on the dark background"
+  },
+  "subject": {
+    "description": "dosing cap tilted at 45 degrees, white creatine powder naturally spilling and cascading out of the chamber, some particles mid-air, twist mechanism visible, slightly translucent plastic",
+    "position": "centered with breathing room on all sides",
+    "angle": "slightly below eye level, looking up into the tilted cap chamber"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/4",
+    "depth_of_field": "medium, front rim and powder surface sharp, back edge slightly softer",
+    "aspect_ratio": "1:1"
+  },
+  "lighting": {
+    "type": "dramatic studio key light",
+    "direction": "strong key light from upper left, minimal fill on the right for contrast",
+    "shadows": "minimal on the background, cap lit dramatically but background stays clean for extraction"
+  },
+  "style": "cinematic macro product photography, Apple-level detail, the powder glows white against the dark, premium and innovative",
+  "negative": "no bright background, no green background, no cream background, no human hands, no full bottle visible, no text, no watermarks, no flat overhead angle, no objects touching or near frame edges"
+}

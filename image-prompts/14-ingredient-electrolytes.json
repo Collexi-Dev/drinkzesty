@@ -1,0 +1,28 @@
+{
+  "name": "Ingredient: Electrolytes",
+  "usage": "Displayed on a sand-colored (#F5EDE0) card in a 2-column ingredient grid. Cut-out PNG style floating on the card. This should feel fresh and hydrating, communicating electrolytes through recognizable, inviting foods rather than abstract minerals or crystals. Displayed at approximately 16:9 landscape, 400-500px wide, 200-250px tall.",
+  "prompt": "A fresh halved coconut showing the white flesh and a small pool of coconut water inside, arranged on a solid warm sand background (#F5EDE0). Beside the coconut half: two or three thin round cucumber slices and a small wedge of watermelon showing the pink flesh. The composition is a loose, natural cluster. The coconut is the hero, the cucumber and watermelon add color and freshness. Everything looks freshly cut, dewy, and hydrating. Warm studio lighting from the upper left, consistent with the other ingredient shots. Every texture is sharp: the rough brown coconut shell, the smooth white flesh, the tiny seeds in the cucumber, the grain of the watermelon. The mood is fresh, clean, and inviting.",
+  "scene": {
+    "type": "studio flat-lay",
+    "background": "solid warm sand (#F5EDE0), matches the card background so edges blend naturally",
+    "surface": "invisible, items sit directly on the sand background"
+  },
+  "subject": {
+    "description": "halved coconut with visible coconut water, thin cucumber slices, small watermelon wedge — fresh hydrating foods representing electrolytes",
+    "position": "slightly off-center, coconut as hero, cucumber and watermelon beside it",
+    "angle": "45-degree overhead"
+  },
+  "camera": {
+    "lens": "85mm",
+    "aperture": "f/4",
+    "depth_of_field": "medium-deep, all elements in focus",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "studio softbox, bright and warm",
+    "direction": "upper left, consistent with other ingredient shots",
+    "shadows": "soft, minimal"
+  },
+  "style": "premium food photography, fresh and hydrating, Ottolenghi aesthetic, inviting and appetizing",
+  "negative": "no crystals, no salt, no powder, no minerals, no pills, no supplements, no dark background, no cool tones, no text, no watermarks, no dried or wilted appearance, no green background"
+}

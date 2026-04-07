@@ -1,0 +1,28 @@
+{
+  "name": "Footer — The Morning You Want",
+  "usage": "Displayed as a wide cinematic banner in the footer section, above the final CTA and newsletter signup. Sits on a dark (#2D2D2D) background. This is the last image on the page. It should leave the viewer with an aspirational feeling of 'I want that morning' without showing a person. The viewer projects themselves into the scene. Displayed at approximately 21:9 ultra-wide, about 800px wide, 250px tall, with rounded corners.",
+  "prompt": "Wide cinematic overhead shot of a sunlit breakfast table scene in warm early morning golden light. A marble or light stone countertop stretches across the full width of the frame. At the center: a zesty shot bottle with the cap twisted off and the small dosing cap standing beside it, clearly just used. Nearby: a steaming cup of coffee in a simple ceramic mug, a halved orange showing its bright flesh, a small plate with a piece of sourdough toast, and a folded linen napkin. Warm golden morning light streams in from the right side, creating long soft shadows across the entire surface. The composition is very wide with breathing room on all sides. The scene feels lived-in but beautiful. This is someone's actual morning, and it looks perfect. No person visible. Warm honey, cream, amber, and soft green tones throughout.",
+  "scene": {
+    "type": "lifestyle overhead",
+    "background": "the countertop extends to fill the frame, no other background visible",
+    "surface": "marble or light stone countertop with subtle natural veining"
+  },
+  "subject": {
+    "description": "used zesty bottle with open cap beside it, steaming coffee mug, halved orange, sourdough toast on small plate, folded linen napkin — an aspirational morning spread",
+    "position": "loosely centered cluster with generous negative space on all sides for the 21:9 crop",
+    "angle": "overhead flat lay, looking straight down"
+  },
+  "camera": {
+    "lens": "35mm",
+    "aperture": "f/4",
+    "depth_of_field": "deep, all objects sharp across the wide frame",
+    "aspect_ratio": "21:9"
+  },
+  "lighting": {
+    "type": "natural golden morning light",
+    "direction": "streaming from the right, low angle creating long shadows across the surface",
+    "shadows": "long, warm, soft — the golden hour doing the heavy lifting"
+  },
+  "style": "cinematic overhead still life, wide and breathing, aspirational morning ritual, Kinfolk meets Sunday morning",
+  "negative": "no people, no hands, no dark moody feel, no cool tones, no clutter, no electronics, no text, no watermarks, no tight crop"
+}

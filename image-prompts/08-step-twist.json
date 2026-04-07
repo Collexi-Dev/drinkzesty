@@ -1,0 +1,28 @@
+{
+  "name": "Step 1: Twist",
+  "usage": "Displayed in a 3-column grid showing the 3-step ritual (twist, press, shake). Each image sits below a large step number and description. This is the first step — simply unlocking the cap by twisting it slightly. Nothing dramatic happens yet, no seal breaking, no powder. Just a quiet, simple twist. Displayed at approximately 4:3 landscape, 300-400px wide.",
+  "prompt": "Tight close-up of a woman's hand gently twisting the cap of a small PET supplement shot bottle. The cap is mid-rotation, being turned slightly to unlock it. Nothing is breaking or cracking, the twist simply unlocks the cap mechanism. The cap remains on top of the bottle, fully closed. The hand has clean natural nails, warm skin tone, relaxed natural grip. The background is a soft blurred warm-toned kitchen counter with gentle morning bokeh. Shallow depth of field: the fingers and cap are razor-sharp, everything else dissolves into warm soft focus. The moment feels simple and effortless, the quiet first step of a daily ritual. Correct scale between hand and bottle — the bottle is small, roughly 90ml PET shot bottle, fitting naturally in one hand.",
+  "scene": {
+    "type": "lifestyle with macro detail",
+    "background": "soft blurred kitchen counter, warm morning bokeh, out of focus",
+    "surface": "n/a, bottle held in hand"
+  },
+  "subject": {
+    "description": "woman's hand gently twisting the cap of a small PET supplement shot bottle, cap still on top and closed, simply unlocking the twist mechanism, no powder visible",
+    "position": "centered, filling most of the frame",
+    "angle": "slight top-down, 30 degrees, looking into the cap opening"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/2.8",
+    "depth_of_field": "shallow, cap and fingers sharp, background fully blurred",
+    "aspect_ratio": "4:3"
+  },
+  "lighting": {
+    "type": "natural window light, warm morning",
+    "direction": "side from the left",
+    "shadows": "soft, natural hand shadows on the bottle"
+  },
+  "style": "macro product-in-use photography, tactile and satisfying, premium unboxing moment",
+  "negative": "no painted nails, no jewelry, no cold tones, no harsh flash, no text, no watermarks, no full body visible, no powder falling, no powder visible, no open cap, no breaking seal, no cracking, no glass bottle"
+}

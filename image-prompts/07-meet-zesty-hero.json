@@ -1,0 +1,28 @@
+{
+  "name": "Meet Zesty — Hero Product Shot",
+  "usage": "The centerpiece of the 'Meet Zesty' section. Displayed large (up to 384px wide, 480px tall) floating in the center of a sand-colored (#F5EDE0) section with text descriptions positioned on either side. This is THE money shot of the entire page — it needs to communicate premium quality, innovation (the cap), and natural ingredients all at once. The floating ingredients around the bottle create visual interest and tell the ingredient story.",
+  "prompt": "Premium studio product photograph of a single zesty supplement shot bottle at a slight 15-degree angle, appearing to float in mid-air against a clean warm sand background. The cap is partially twisted open, revealing the white creatine powder compartment inside. Scattered around the bottle in mid-air: a thin slice of fresh ginger root, a piece of snapped turmeric showing the vivid orange interior, a lemon wedge, four or five whole black peppercorns, and a small cloud of fine white creatine powder. The thick opaque golden-yellow liquid inside the bottle has a rich turmeric-ginger color, dense and not see-through. Every element is tack-sharp. The composition is balanced — bottle centered with ingredients orbiting naturally around it. Clean bright studio lighting with a subtle warm cast. Style is premium product photography meeting an ingredient explosion — Aesop meets Ottolenghi.",
+  "scene": {
+    "type": "studio",
+    "background": "solid warm sand tone (#F5EDE0), clean and uniform",
+    "surface": "none, everything floats with drop shadows"
+  },
+  "subject": {
+    "description": "zesty shot bottle with partially open cap revealing creatine powder, surrounded by floating fresh ingredients: ginger slice, turmeric piece, lemon wedge, black peppercorns, white powder particles",
+    "position": "bottle centered, ingredients orbiting around it in a natural scattered arrangement",
+    "angle": "15-degree tilt, slightly dynamic hero angle"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/5.6",
+    "depth_of_field": "deep, all elements in sharp focus",
+    "aspect_ratio": "2:3"
+  },
+  "lighting": {
+    "type": "studio softbox with warm gel, bright and even",
+    "direction": "front-angled from upper left, secondary fill from right",
+    "shadows": "soft diffused drop shadows on all floating elements"
+  },
+  "style": "premium product photography, ingredient explosion, Aesop meets Ottolenghi, every detail razor-sharp",
+  "negative": "no background texture, no gradient, no humans, no text overlays, no watermarks, no blur, no messy/chaotic arrangement, no green background"
+}

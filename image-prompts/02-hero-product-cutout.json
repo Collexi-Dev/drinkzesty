@@ -1,0 +1,28 @@
+{
+  "name": "Hero Product Cut-Out",
+  "usage": "Floats in the center of the hero section over the atmospheric background. This is the sharpest element on screen — the contrast between the soft dreamy background and the razor-sharp product is what creates the premium feel. Will be extracted from solid cream background and placed on transparent background. Stat blobs with organic shapes float on either side.",
+  "prompt": "Ultra-sharp studio product photograph of a premium clear PET supplement shot bottle with thick opaque golden-yellow liquid visible inside and a sealed pristine dosing cap. The bottle is perfectly centered with a subtle 5-degree tilt to the right. Shot against a solid warm cream background (#FFFDF7) for clean extraction. The thick golden-yellow liquid is opaque and dense, not see-through. It has the deep color of fresh turmeric-ginger juice. The cap is clean and sealed, showing the twist mechanism. No visible shadow on the background to keep extraction clean. Dual softbox studio lighting renders every detail razor-sharp — bottle surface, liquid color, cap texture. The bottle is the sole object in frame, photographed at the level of premium product isolation you would see from Apple or Aesop.",
+  "scene": {
+    "type": "studio",
+    "background": "solid warm cream (#FFFDF7), perfectly uniform, no gradient",
+    "surface": "invisible, no shadow on background"
+  },
+  "subject": {
+    "description": "premium clear PET supplement shot bottle, 90ml size, thick opaque golden-yellow liquid visible through clear plastic, sealed dosing cap on top, clean minimal label",
+    "position": "perfectly centered with generous empty cream space on all sides, bottle should not approach the frame edges",
+    "angle": "straight-on with subtle 5-degree tilt to the right"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/5.6",
+    "depth_of_field": "deep, entire bottle in tack-sharp focus from cap to base",
+    "aspect_ratio": "3:4"
+  },
+  "lighting": {
+    "type": "dual studio softbox, clean and bright",
+    "direction": "front-angled from both sides, slight key light from upper left",
+    "shadows": "minimal to none, no visible shadow on the cream background to keep extraction clean"
+  },
+  "style": "premium product photography, razor-sharp focus, Apple-level product isolation, Aesop aesthetic",
+  "negative": "no background objects, no text overlays, no blur, no humans, no gradient background, no harsh reflections, no secondary objects, no shadows on background, no objects touching or near frame edges"
+}

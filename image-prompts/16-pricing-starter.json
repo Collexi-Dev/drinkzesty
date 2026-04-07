@@ -1,0 +1,28 @@
+{
+  "name": "Pricing: 14-Day Starter",
+  "usage": "Displayed at the top of the 14-day starter pricing card on a light cream (#FFFDF7) background. The image should feel approachable and minimal — 'let me just try this.' It contrasts with the 30-day card which feels more abundant and committed. Displayed at approximately 16:9 landscape, inside a rounded card, about 400px wide, 200px tall.",
+  "prompt": "A single zesty supplement shot bottle standing upright on a light linen napkin or cloth, casually but intentionally placed on a clean cream-white surface. Beside the bottle on the cloth: a small ceramic bowl containing a lemon wedge and a small piece of fresh ginger root. The composition is intentionally minimal and sparse — lots of negative space, only three objects besides the cloth. Soft diffused morning light from the left. The linen has a subtle natural texture. The bottle's thick opaque golden-yellow liquid has a rich turmeric-ginger color. The overall mood is quiet, approachable, 'just the essentials.' This should feel like the start of something — not a big commitment, just a gentle beginning. The cream surface matches the card background it will sit in.",
+  "scene": {
+    "type": "lifestyle flat-lay / tabletop",
+    "background": "clean cream-white surface (#FFFDF7), matching the card background",
+    "surface": "light natural linen napkin or cloth with subtle texture"
+  },
+  "subject": {
+    "description": "single zesty bottle upright on linen cloth, small ceramic bowl with lemon wedge and ginger piece beside it, minimal composition, lots of negative space",
+    "position": "slightly off-center right, bowl to the left",
+    "angle": "slight overhead, roughly 30-degree top-down"
+  },
+  "camera": {
+    "lens": "50mm",
+    "aperture": "f/2.8",
+    "depth_of_field": "medium, bottle sharp, bowl slightly softer",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "natural soft diffused window light",
+    "direction": "from the left",
+    "shadows": "very soft, minimal, airy feeling"
+  },
+  "style": "minimal Scandinavian-clean product lifestyle, quiet and approachable, lots of breathing room",
+  "negative": "no clutter, no multiple bottles, no dark tones, no text, no watermarks, no busy background, no dramatic lighting"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Symptom Center — Morning on Empty",
+  "usage": "Displayed in a 1:1 circle crop at the center of a radial symptom diagram. Four symptom descriptions (brain fog, fatigue, loss of strength, focus) are positioned at the four corners with dashed SVG lines connecting to this central image. The image needs to evoke quiet exhaustion and a stalled morning without showing a person. It should feel like the viewer's own morning, not someone else's.",
+  "prompt": "Overhead still life of an untouched morning scene on a warm wooden table surface. A full cup of black coffee sits slightly off-center, gone cold with no steam, a thin film catching the light. Beside it a phone face-down, a pair of reading glasses folded shut, and a small open notebook with a blank page. Soft early morning window light rakes across the table from the left, casting long gentle shadows. The scene is still and undisturbed. Everything suggests someone sat down to start their day but never quite got going. Warm cream and honey tones throughout. A few soft crumbs on the table surface. No hands, no person, no text visible on any object. Composed tight for a center-weighted square crop that will display as a circle.",
+  "scene": {
+    "type": "lifestyle still life",
+    "background": "warm honey-toned wooden table surface, natural grain visible",
+    "surface": "wooden table with subtle texture and warmth"
+  },
+  "subject": {
+    "description": "cold untouched coffee in a simple ceramic mug, face-down phone, folded reading glasses, open blank notebook, a few crumbs — a stalled morning tableau",
+    "position": "centered cluster, composed for circle crop",
+    "angle": "directly overhead, flat lay"
+  },
+  "camera": {
+    "lens": "50mm",
+    "aperture": "f/4",
+    "depth_of_field": "medium-deep, all objects sharp with table edges slightly soft",
+    "aspect_ratio": "1:1"
+  },
+  "lighting": {
+    "type": "natural early morning window light",
+    "direction": "raking from the left, low angle creating long shadows",
+    "shadows": "long, soft, warm — the shadows do the storytelling"
+  },
+  "style": "editorial overhead still life, Kinfolk magazine aesthetic, quiet and contemplative, warm earth tones",
+  "negative": "no people, no hands, no text visible on notebook or phone, no cool tones, no clutter, no bright colors, no food, no watermarks"
+}

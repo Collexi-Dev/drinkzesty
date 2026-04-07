@@ -1,0 +1,28 @@
+{
+  "name": "Hero Background",
+  "usage": "Full-bleed background filling the entire hero viewport. Displayed with object-cover, so edges will be cropped. Text and UI elements are layered on top with gradient overlays for readability. This image sets the mood for the entire page — it should feel warm, inviting, and atmospheric without competing with the foreground elements.",
+  "prompt": "Wide atmospheric morning scene shot at golden hour across a clean light oak countertop surface. Low camera angle at surface level looking across the empty counter toward a large window in the background. Warm golden sunlight streams in from the right side, casting long honey-colored rays and soft lens flare across the frame. The window and everything beyond it is heavily out of focus, creating large soft bokeh circles of warm white and amber light with a vague suggestion of greenery outside. The countertop surface fills the bottom third of the frame and has a subtle wood grain texture catching the light. The air itself feels warm and hazy with golden morning light. No objects, no people, no product — just pure light, surface, and atmosphere. Color palette is honey gold, soft amber, warm cream, and touches of white from the window light.",
+  "scene": {
+    "type": "environmental",
+    "background": "large window or open door, heavily defocused, showing bokeh circles of warm light and vague greenery",
+    "surface": "clean light oak countertop or table, subtle wood grain, bottom third of frame"
+  },
+  "subject": {
+    "description": "no subject — this is a pure atmospheric/mood image. The countertop surface and golden light are the entire composition",
+    "position": "n/a",
+    "angle": "low angle at surface level, looking across the counter toward the window"
+  },
+  "camera": {
+    "lens": "35mm wide",
+    "aperture": "f/1.8",
+    "depth_of_field": "extreme shallow — only the nearest few inches of countertop are in focus, everything else is soft bokeh",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "natural golden hour window light",
+    "direction": "side-back, streaming in from the right",
+    "shadows": "soft diffused, long warm rays visible in the hazy air"
+  },
+  "style": "editorial lifestyle photography, Kinfolk / Cereal magazine aesthetic, extreme shallow depth of field, atmospheric and dreamy",
+  "negative": "no people, no product, no objects in focus, no text, no watermarks, no cool tones, no harsh shadows, no clutter on the counter"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Pricing: 14-Day Starter — Packaging",
+  "usage": "Replaces the current lifestyle image in the 14-day starter pricing card. Should show an actual branded trial package/box containing 14 bottles. Displayed on a light cream (#FFFDF7) background card, approximately 16:9 landscape, 400px wide, 200px tall. The packaging should feel approachable and inviting — a low-commitment first step.",
+  "prompt": "A sleek, compact rectangular box package for a wellness shot brand called 'zesty', designed to hold 14 small PET bottles. The box is a warm cream-white color with minimal branding — the word 'zesty' in bold lowercase sans-serif type on the front, with a thin golden-amber (#F2A922) accent stripe along the bottom edge. The box is slightly open or has a clever tuck-flap lid partially lifted, revealing 2 rows of 7 small bottles nestled inside, each containing thick opaque golden-yellow liquid visible through clear PET plastic. The box sits on a clean cream-white surface with soft natural morning light from the left. A single loose bottle stands beside the box, as if just taken out, to show scale. Subtle text on the box reads '14-day starter · 10g creatine per shot'. The packaging feels premium but approachable — matte finish, clean Scandinavian design sensibility. Warm, inviting, 'let me just try this.'",
+  "scene": {
+    "type": "product packaging studio shot",
+    "background": "clean cream-white surface (#FFFDF7) matching the pricing card background",
+    "surface": "smooth cream-white with very subtle shadow"
+  },
+  "subject": {
+    "description": "compact cream-colored box partially open showing 14 small bottles inside, one loose bottle standing beside it, minimal 'zesty' branding with golden accent",
+    "position": "slightly angled, box center-left, loose bottle to the right",
+    "angle": "30-degree overhead, showing both the box exterior and the inside contents"
+  },
+  "camera": {
+    "lens": "50mm",
+    "aperture": "f/4",
+    "depth_of_field": "medium, box and front bottles sharp, back bottles slightly softer",
+    "aspect_ratio": "16:9"
+  },
+  "lighting": {
+    "type": "soft diffused natural window light",
+    "direction": "from the left",
+    "shadows": "very soft, clean, airy"
+  },
+  "style": "clean minimal Scandinavian packaging photography, Aesop or Byredo meets wellness, premium but not intimidating",
+  "negative": "no dark tones, no cluttered composition, no glass bottles, no text overlays or watermarks, no glossy finish, no busy patterns"
+}
