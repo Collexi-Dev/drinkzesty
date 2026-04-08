@@ -296,7 +296,7 @@ export default function Home() {
             {" "}brain fog, moeheid en spierverlies.
           </h1>
           <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            met <span className="text-[#F2A922]">10g creatine</span> — het supplement waar vrouwen wou dat ze eerder mee begonnen waren.
+            met <span className="text-[#F2A922]">10g creatine</span> — het supplement waar je eerder mee had willen beginnen.
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             koudgeperste gember &amp; kurkuma. één dagelijkse shot tegen de brain fog, vermoeidheid en het spierverlies van menopauze.
