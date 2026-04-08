@@ -171,7 +171,7 @@ const faqs = [
   { q: "word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water ín de spier (niet opgeblazen), geen vet. Het stabiliseert snel. Veel vrouwen in de menopauze merken juist dat het hun spiermassa helpt behouden." },
   { q: "hoe lang duurt het voor ik iets merk?", a: "Bij 10g/dag zit je creatine na zo'n 2 weken op peil — sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Sommige vrouwen merken meer energie en minder brain fog al in de eerste week, anderen rond week 3-4. De 14-daagse starter is precies om die reden zo ontworpen." },
   { q: "hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma tegen menopauze-ontsteking. Geen mengen, geen afmeten." },
-  { q: "is 10g niet te veel?", a: "3 tot 5g is de onderhoudsdosis voor spiermassa. Maar je brein heeft hogere doseringen nodig — zeker tijdens menopauze als je creatine-reserves uitgeput zijn. Onderzoekers die cognitieve voordelen bestuderen, gebruiken 10g of meer. Ruim binnen de onderzochte veilige marges." },
+  { q: "is 10g niet te veel?", a: "~95% van je lichaamscreatine zit in je spieren, dus standaard 3-5g verzadigt vooral je spiermassa. Je brein bevat de overige ~5% — en dat is precies wat menopauze uitput. Onderzoekers die cognitieve voordelen bij vrouwen bestuderen, gebruiken 10g+ om het brein te bereiken [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
   { q: "ik zit in de perimenopauze — is het nog te vroeg?", a: "Helemaal niet — juist het perfecte moment. Je creatine-reserves nemen al af vóór de echte menopauze begint. Perimenopauze begint meestal rond je 45e, en dan al beginnen met creatine betekent dat je voorloopt op het tekort in plaats van achter de feiten aan te lopen." },
   { q: "wanneer drink ik het best?", a: "'s Ochtends werkt het best als dagelijks ritueel. Twist, press, shake, drink — en je dag begint. Maar elk vast moment op de dag werkt." },
 ];
@@ -185,7 +185,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         <span className={`text-[#F2A922] transition-transform duration-300 text-2xl shrink-0 leading-none ${open ? "rotate-45" : ""}`}>+</span>
       </button>
       <div className={`overflow-hidden transition-all duration-400 ease-out ${open ? "max-h-96 pb-6" : "max-h-0"}`}>
-        <p className="text-[#2D2D2D]/65 leading-relaxed">{a}</p>
+        <p className="text-[#2D2D2D]/65 leading-relaxed text-base">{a}</p>
       </div>
     </div>
   );
@@ -296,7 +296,7 @@ export default function Home() {
             {" "}brain fog, moeheid en spierverlies.
           </h1>
           <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            met <span className="text-[#F2A922]">10g creatine</span> — niet alleen voor sporters.
+            met <span className="text-[#F2A922]">10g creatine</span> — het supplement waar vrouwen wou dat ze eerder mee begonnen waren.
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             koudgeperste gember &amp; kurkuma. één dagelijkse shot tegen de brain fog, vermoeidheid en het spierverlies van menopauze.
@@ -314,7 +314,7 @@ export default function Home() {
         <div className="gsap-hero-intro relative z-10 flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
           {[
             { val: "gember", lbl: "+ kurkuma" },
-            { val: "piperine", lbl: "2.000% absorptie" },
+            { val: "10g", lbl: "creatine per shot" },
             { val: "elektrolyten", lbl: "voor opname" },
             { val: "0g", lbl: "suiker" },
           ].map((s) => (
@@ -332,9 +332,16 @@ export default function Home() {
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
             <span className="w-6 h-6 rounded-full bg-[#F2A922] flex items-center justify-center text-[#2D2D2D] text-xs">↗</span>
-            reserveer je plek
+            pre-order nu
           </a>
           <p className="text-[#2D2D2D]/50 text-sm mt-4 font-medium">vanaf €2,63/shot · levering zomer 2026</p>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 animate-pulse">
+          <svg width="24" height="14" viewBox="0 0 24 14" fill="none" className="text-[#2D2D2D]/25">
+            <path d="M2 2l10 10L22 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </div>
       </section>
 
@@ -370,13 +377,13 @@ export default function Home() {
             <h2 className="text-[2.5rem] md:text-[4.5rem] lg:text-[6rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight max-w-4xl mx-auto">
               je voelde je
               <br />
-              <span className="text-[#2D2D2D]/20">anders.</span>
+              <span className="text-[#F2A922]/50">anders.</span>
             </h2>
-            <p className="text-[#2D2D2D]/45 text-sm md:text-base mt-5 max-w-lg mx-auto leading-relaxed">
+            <p className="text-[#2D2D2D]/45 text-base md:text-base mt-5 max-w-lg mx-auto leading-relaxed">
               het begon rond je 40e. misschien eerder. de klachten kwamen sluipend — en niemand vertelde je wat eraan zat te komen. het is niet gewoon ouder worden. het is menopauze.
             </p>
             <HandNote className="mt-5 block rotate-[-3deg]">
-              en niemand die je waarschuwde.
+              waarom heeft niemand me dit eerder verteld?
             </HandNote>
           </div>
 
@@ -394,7 +401,7 @@ export default function Home() {
                 <div className="shrink-0 mt-1">{s.icon}</div>
                 <div>
                   <p className="font-extrabold text-[#2D2D2D] text-xl">{s.title}</p>
-                  <p className="text-[#2D2D2D]/50 text-sm">{s.desc}</p>
+                  <p className="text-[#2D2D2D]/50 text-base">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -436,28 +443,28 @@ export default function Home() {
               <div className="absolute left-0 top-0 max-w-[220px] z-10">
                 <IconBrainFog className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">menopauze brain fog</p>
-                <p className="text-[#2D2D2D]/50 text-sm mt-1">de woorden zijn er, je kunt ze gewoon niet vinden. oestrogeen daalt, en je helderheid daalt mee.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">de woorden zijn er, je kunt ze gewoon niet vinden. oestrogeen daalt, en je helderheid daalt mee.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
               </div>
 
               {/* Top-right: can't focus */}
               <div className="absolute right-0 top-0 max-w-[220px] text-right z-10">
                 <div className="flex justify-end"><IconFocus className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">concentratieproblemen</p>
-                <p className="text-[#2D2D2D]/50 text-sm mt-1">dezelfde mail drie keer lezen. een van de meest voorkomende menopauze-klachten.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">dezelfde mail drie keer lezen. een van de meest voorkomende menopauze-klachten.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
               </div>
 
               {/* Bottom-left: tired */}
               <div className="absolute left-0 bottom-0 max-w-[220px] z-10">
                 <IconBattery className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">extreme moeheid</p>
-                <p className="text-[#2D2D2D]/50 text-sm mt-1">hormonale veranderingen putten je energie op celniveau uit. 8 uur geslapen en nog steeds doodmoe.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">hormonale veranderingen putten je energie op celniveau uit. 8 uur geslapen en nog steeds doodmoe.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a></p>
               </div>
 
               {/* Bottom-right: losing strength */}
               <div className="absolute right-0 bottom-0 max-w-[220px] text-right z-10">
                 <div className="flex justify-end"><IconStrength className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">spierverlies &amp; minder kracht</p>
-                <p className="text-[#2D2D2D]/50 text-sm mt-1">dalend oestrogeen versnelt spierverlies. dingen die je makkelijk deed, worden steeds moeilijker.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">dalend oestrogeen versnelt spierverlies. dingen die je makkelijk deed, worden steeds moeilijker.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a></p>
               </div>
             </div>
           </div>
@@ -467,7 +474,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           MARQUEE — "it's not just getting older"
       ═══════════════════════════════════════════ */}
-      <Marquee texts={["het is niet ouder worden. het is menopauze. en je kunt er iets aan doen."]} dark />
+      <Marquee texts={["de brain fog. de vermoeidheid. het spierverlies. menopauze draineert je creatine — neem het terug."]} dark />
 
       {/* ═══════════════════════════════════════════
           3. THE CREATINE GAP — Conversational reveal
@@ -603,7 +610,7 @@ export default function Home() {
                   <p className="text-sm text-[#2D2D2D]/40">Sportfysiologe</p>
                 </div>
               </div>
-              <p className="text-[#2D2D2D]/65 leading-relaxed text-sm">
+              <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
                 &ldquo;Creatine is een van de supplementen die ik <strong className="text-[#2D2D2D]">elke dag inneem</strong>, vooral belangrijk voor vrouwen tijdens menopauze.&rdquo;
               </p>
               <a href="https://www.drstacysims.com/newsletters/articles/posts/Why_Active_Women_Need_Creatine" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">bron →</a>
@@ -618,7 +625,7 @@ export default function Home() {
                   <p className="text-sm text-[#2D2D2D]/40">Sportfysioloog · Huberman Lab</p>
                 </div>
               </div>
-              <p className="text-[#2D2D2D]/65 leading-relaxed text-sm">
+              <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
                 &ldquo;Creatine is <strong className="text-[#2D2D2D]">de Michael Jordan van supplementen.</strong>{" "}Het heeft tientallen jaren aan bewijs achter zich.&rdquo;
               </p>
               <a href="https://www.hubermanlab.com/episode/dr-andy-galpin-optimal-nutrition-and-supplementation-for-fitness" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">bron →</a>
@@ -633,7 +640,7 @@ export default function Home() {
                   <p className="text-sm text-[#2D2D2D]/40">Frontiers in Nutrition</p>
                 </div>
               </div>
-              <p className="text-[#2D2D2D]/65 leading-relaxed text-sm">
+              <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
                 &ldquo;Creatine-suppletie verbetert <strong className="text-[#2D2D2D]">cognitieve prestaties</strong>, vooral bij stress en slaaptekort.&rdquo;
               </p>
               <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">bron →</a>
@@ -641,22 +648,32 @@ export default function Home() {
           </div>
 
           {/* Real women */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-[#2D2D2D] rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-4">
-                &ldquo;Ik ben 44 en zit in de perimenopauze. Begon met creatine voor de sportschool, maar <strong className="text-white">dat mijn brain fog verdween</strong>{" "}— dát had ik niet verwacht. Had ik het maar eerder geweten.&rdquo;
+                &ldquo;Geweldig als supplement nu ik de perimenopauze inga. <strong className="text-white">Vrouwen, kijk eens naar creatine voor de grote verandering.</strong>&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <p className="text-sm text-white/30">Reddit · r/Supplements</p>
-                <a href="https://www.reddit.com/r/Supplements/" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">bron →</a>
+                <p className="text-sm text-white/30">X · @SpunkyAzCougar</p>
+                <a href="https://x.com/SpunkyAzCougar/status/2038955331317817460" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">bron →</a>
               </div>
             </div>
             <div className="bg-[#2D2D2D] rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-4">
-                &ldquo;Ik ben 47 en volop in de menopauze. Had geen idee dat creatine kon helpen. <strong className="text-white">Na twee weken kom ik de dag door zonder in te storten.</strong> Mijn dokter zei: gewoon doorgaan.&rdquo;
+                &ldquo;De creatine helpt mijn vrouw met haar menopauze-klachten. <strong className="text-white">We kopen nu elke maand de grote pot.</strong>&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <p className="text-sm text-white/30 italic">echte ervaring, binnenkort beschikbaar</p>
+                <p className="text-sm text-white/30">X · @AdamWal89620299</p>
+                <a href="https://x.com/AdamWal89620299/status/2036738702744109295" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">bron →</a>
+              </div>
+            </div>
+            <div className="bg-[#2D2D2D] rounded-xl p-8">
+              <p className="text-white/70 leading-relaxed mb-4">
+                &ldquo;Ondanks dat ik postmenopauzaal ben, <strong className="text-white">is het me gelukt om flink meer spiermassa op te bouwen.</strong> Ik hoop dat het voor jou net zo goed werkt!&rdquo;
+              </p>
+              <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                <p className="text-sm text-white/30">X · @RunchieC</p>
+                <a href="https://x.com/RunchieC/status/2041405617928028301" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">bron →</a>
               </div>
             </div>
           </div>
@@ -695,7 +712,7 @@ export default function Home() {
                   <div className="w-2.5 h-2.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: item.color }} />
                   <div>
                     <p className="font-extrabold text-[#2D2D2D] text-lg">{item.label}</p>
-                    <p className="text-[#2D2D2D]/55 text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-[#2D2D2D]/55 text-base leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -771,7 +788,7 @@ export default function Home() {
                 <div key={step.num} className="text-center">
                   <p className="text-[#F2A922] text-6xl md:text-7xl font-extrabold tracking-tight mb-3">{step.num}</p>
                   <p className="font-extrabold text-[#2D2D2D] text-xl mb-3">{step.name}</p>
-                  <p className="text-[#2D2D2D]/55 text-sm leading-relaxed mb-6">{step.desc}</p>
+                  <p className="text-[#2D2D2D]/55 text-base leading-relaxed mb-6">{step.desc}</p>
                   <img src={step.img} alt={step.name} className="rounded-xl h-52 md:h-64 w-full object-cover" />
                 </div>
               ))}
@@ -872,7 +889,7 @@ export default function Home() {
               <div key={item.name}>
                 <img src={item.img} alt={item.name} className="h-48 md:h-56 rounded-xl mb-5 w-full object-cover" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl mb-2">{item.name}</p>
-                <p className="text-[#2D2D2D]/55 leading-relaxed mb-3">{item.why}</p>
+                <p className="text-[#2D2D2D]/55 leading-relaxed mb-3 text-base">{item.why}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {item.symptoms.map((s) => (
                     <span key={s} className="text-sm font-bold uppercase tracking-[0.08em] text-[#C96B20] bg-[#C96B20]/[0.1] px-2.5 py-1 rounded-full">{s}</span>
@@ -958,15 +975,15 @@ export default function Home() {
               {[
                 { dose: "3g", label: "EU minimum voor prestatieclaims", pct: "30%" },
                 { dose: "5g", label: "standaard onderhoudsdosis (spier)", pct: "50%" },
-                { dose: "10g", label: "menopauze · helder denken · resultaat in 2 weken [9]", pct: "100%", active: true },
+                { dose: "10g", label: "menopauze · helder denken · resultaat in 2 weken", pct: "100%", active: true },
               ].map((d) => (
-                <div key={d.dose} className="mb-5 last:mb-0">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className={`text-sm font-bold ${d.active ? "text-[#F2A922]" : "text-[#2D2D2D]/30"}`}>{d.dose}/dag</span>
-                    <span className={`text-sm ${d.active ? "text-[#F2A922] font-semibold" : "text-[#2D2D2D]/30"}`}>{d.label}</span>
+                <div key={d.dose} className="mb-7 last:mb-0">
+                  <div className="flex items-baseline justify-between mb-2">
+                    <span className={`text-base font-bold ${d.active ? "text-[#F2A922]" : "text-[#2D2D2D]/50"}`}>{d.dose}/dag</span>
+                    <span className={`text-base max-w-[65%] text-right ${d.active ? "text-[#F2A922] font-semibold" : "text-[#2D2D2D]/45"}`}>{d.label}</span>
                   </div>
                   <div className="bg-white rounded-full h-3 overflow-hidden">
-                    <div className={`h-full rounded-full ${d.active ? "bg-[#F2A922]" : "bg-[#2D2D2D]/10"}`} style={{ width: d.pct }} />
+                    <div className={`h-full rounded-full ${d.active ? "bg-[#F2A922]" : "bg-[#2D2D2D]/25"}`} style={{ width: d.pct }} />
                   </div>
                 </div>
               ))}
@@ -1157,7 +1174,7 @@ export default function Home() {
             <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">levering zomer 2026</p>
           </div>
           <a href="/waitlist?plan=30" className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
-            reserveer je plek
+            pre-order nu
           </a>
         </div>
       </div>
