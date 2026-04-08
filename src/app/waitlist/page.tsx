@@ -22,7 +22,7 @@ function WaitlistForm() {
       <div className="text-center">
         <div className="text-4xl mb-4">&#10003;</div>
         <h2 className="text-2xl font-bold text-text mb-3">you&rsquo;re on the list.</h2>
-        <p className="text-text/60">we&rsquo;ll be in touch soon.</p>
+        <p className="text-text/60">we&rsquo;ll email you as soon as zesty is ready to ship.</p>
       </div>
     );
   }
@@ -30,10 +30,10 @@ function WaitlistForm() {
   return (
     <div className="text-center">
       <h1 className="text-2xl md:text-3xl font-bold text-text mb-4">
-        almost there.
+        we&rsquo;re not ready yet.
       </h1>
       <p className="text-text/60 mb-8 max-w-sm mx-auto">
-        enter your email to complete your order. we&rsquo;ll send you a confirmation with next steps.
+        zesty is still in development. leave your email and we&rsquo;ll let you know as soon as you can order.
       </p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-sm mx-auto">
@@ -49,14 +49,11 @@ function WaitlistForm() {
           type="submit"
           className="w-full bg-brand hover:bg-brand-hover text-text font-semibold py-3.5 rounded-full transition-colors cursor-pointer"
         >
-          complete order
+          keep me posted
         </button>
       </form>
 
-      <p className="text-xs text-text/40 mt-4">no spam. just your order confirmation.</p>
-      <p className="text-xs text-text/30 mt-2">
-        the price you saw is locked in — guaranteed.
-      </p>
+      <p className="text-xs text-text/40 mt-4">no spam. just one email when we launch.</p>
     </div>
   );
 }
