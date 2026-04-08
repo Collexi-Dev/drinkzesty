@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Quicksand, Playfair_Display, Caveat } from "next/font/google";
+import { PostHogProvider } from "./providers";
 import "./globals.css";
 
 const quicksand = Quicksand({
@@ -40,7 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`h-full antialiased ${quicksand.variable} ${playfair.variable} ${caveat.variable}`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <PostHogProvider>{children}</PostHogProvider>
+      </body>
     </html>
   );
 }

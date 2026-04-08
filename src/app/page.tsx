@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Droplets, FlaskConical, Leaf, Recycle, ShieldCheck } from "lucide-react";
+import posthog from "posthog-js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -260,6 +261,33 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /* ── PostHog: section scroll tracking ── */
+  useEffect(() => {
+    const seen = new Set<string>();
+    const sections = document.querySelectorAll<HTMLElement>("[data-section]");
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const name = (entry.target as HTMLElement).dataset.section!;
+          if (entry.isIntersecting && !seen.has(name)) {
+            seen.add(name);
+            posthog.capture("section_viewed", { section: name });
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  const trackCta = (location: string, plan: string) => {
+    posthog.capture("cta_clicked", { location, plan });
+  };
+
   return (
     <main className="overflow-x-hidden bg-[#FFFDF7]">
 
@@ -272,7 +300,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           1. HERO — Full-bleed immersive
       ═══════════════════════════════════════════ */}
-      <section className="min-h-[100dvh] relative flex flex-col items-center justify-center px-6 pt-20 md:pt-24 pb-16 overflow-hidden">
+      <section data-section="hero" className="min-h-[100dvh] relative flex flex-col items-center justify-center px-6 pt-20 md:pt-24 pb-16 overflow-hidden">
 
         {/* ── LAYER 0: Full-bleed background image ── */}
         <div className="absolute inset-0 z-0">
@@ -329,6 +357,7 @@ export default function Home() {
         <div className="gsap-hero-intro relative z-10 text-center">
           <a
             href="/waitlist?plan=30"
+            onClick={() => trackCta("hero", "30")}
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
             <span className="w-6 h-6 rounded-full bg-[#F2A922] flex items-center justify-center text-[#2D2D2D] text-xs">↗</span>
@@ -348,7 +377,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           TRUST STRIP — icon + label badges
       ═══════════════════════════════════════════ */}
-      <section className="bg-[#F5EDE0] py-8 md:py-10 px-6">
+      <section data-section="trust-strip" className="bg-[#F5EDE0] py-8 md:py-10 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
           {[
             { label: "cold-pressed", icon: <Droplets className="w-6 h-6" strokeWidth={1.5} /> },
@@ -368,7 +397,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           2. EMPATHY — Big statement, symptom story
       ═══════════════════════════════════════════ */}
-      <section className="relative py-28 md:py-40 px-6 overflow-hidden">
+      <section data-section="empathy" className="relative py-28 md:py-40 px-6 overflow-hidden">
         <Blob variant={3} className="text-[#F5EDE0]/50 w-[500px] md:w-[800px] -top-[10%] -left-[20%]" />
 
         <div className="max-w-6xl mx-auto relative z-10">
@@ -479,7 +508,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           3. THE CREATINE GAP — Conversational reveal
       ═══════════════════════════════════════════ */}
-      <section className="relative py-28 md:py-40 px-6 bg-[#F5EDE0] overflow-hidden">
+      <section data-section="creatine-gap" className="relative py-28 md:py-40 px-6 bg-[#F5EDE0] overflow-hidden">
         <Blob variant={1} className="text-[#F2A922]/[0.05] w-[600px] md:w-[900px] -bottom-[20%] -right-[25%]" />
 
         <div className="max-w-2xl mx-auto relative z-10">
@@ -525,7 +554,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           4. BENEFITS — Full-bleed, dark section
       ═══════════════════════════════════════════ */}
-      <section className="bg-[#2D2D2D] relative py-24 md:py-36 px-6">
+      <section data-section="benefits" className="bg-[#2D2D2D] relative py-24 md:py-36 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 md:mb-24">
             <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">menopause symptoms, meet creatine</p>
@@ -588,7 +617,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           5. SOCIAL PROOF — editorial, clean
       ═══════════════════════════════════════════ */}
-      <section className="relative py-24 md:py-36 px-6">
+      <section data-section="social-proof" className="relative py-24 md:py-36 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <p className="text-[#2D2D2D]/40 font-bold text-sm tracking-[0.2em] uppercase mb-3">backed by science. recommended by doctors.</p>
@@ -683,7 +712,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           6. MEET THE PRODUCT — centerstage
       ═══════════════════════════════════════════ */}
-      <section id="how-it-works" className="relative py-24 md:py-36 px-6 bg-[#F5EDE0] overflow-hidden">
+      <section id="how-it-works" data-section="product" className="relative py-24 md:py-36 px-6 bg-[#F5EDE0] overflow-hidden">
         <Blob variant={2} className="text-white/30 w-[500px] md:w-[700px] top-[5%] -right-[15%]" />
         <Blob variant={3} className="text-white/20 w-[400px] md:w-[600px] bottom-[10%] -left-[20%]" />
 
@@ -800,7 +829,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           7. COMPARISON TABLE — fair coloring, + gummies
       ═══════════════════════════════════════════ */}
-      <section className="relative py-24 md:py-36 px-6">
+      <section data-section="comparison" className="relative py-24 md:py-36 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
@@ -867,7 +896,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           8. INGREDIENTS — editorial, less card-heavy
       ═══════════════════════════════════════════ */}
-      <section className="relative py-24 md:py-36 px-6 bg-[#F5EDE0]">
+      <section data-section="ingredients" className="relative py-24 md:py-36 px-6 bg-[#F5EDE0]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
@@ -938,7 +967,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           9. THE SCIENCE
       ═══════════════════════════════════════════ */}
-      <section className="relative py-24 md:py-36 px-6 overflow-hidden">
+      <section data-section="science" className="relative py-24 md:py-36 px-6 overflow-hidden">
         <Blob variant={2} className="text-[#F5EDE0]/40 w-[600px] md:w-[800px] top-[15%] -left-[20%]" />
 
         <div className="max-w-5xl mx-auto relative z-10">
@@ -998,7 +1027,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           10. PRICING
       ═══════════════════════════════════════════ */}
-      <section id="pricing" className="relative py-24 md:py-36 px-6 bg-[#F5EDE0]">
+      <section id="pricing" data-section="pricing" className="relative py-24 md:py-36 px-6 bg-[#F5EDE0]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
@@ -1020,7 +1049,7 @@ export default function Home() {
                 <p className="text-5xl md:text-6xl font-extrabold text-[#2D2D2D] tracking-tight mb-2">€42</p>
                 <p className="text-sm text-[#2D2D2D]/60 mb-1">€3.00/shot</p>
                 <p className="text-sm text-[#2D2D2D]/40 mb-8">+ €4.95 shipping</p>
-                <a href="/waitlist?plan=14" className="w-full bg-[#2D2D2D] text-[#FFFDF7] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#2D2D2D]/85 hover:shadow-lg">
+                <a href="/waitlist?plan=14" onClick={() => trackCta("pricing", "14")} className="w-full bg-[#2D2D2D] text-[#FFFDF7] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#2D2D2D]/85 hover:shadow-lg">
                   get starter
                 </a>
                 <p className="text-sm text-[#2D2D2D]/35 text-center mt-3 font-medium tracking-wide uppercase">ships within 3 days</p>
@@ -1043,7 +1072,7 @@ export default function Home() {
                 <p className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-2">€79</p>
                 <p className="text-sm text-white/50 mb-1">€2.63/shot</p>
                 <p className="text-sm text-white/30 mb-8">free shipping</p>
-                <a href="/waitlist?plan=30" className="w-full bg-[#F2A922] text-[#2D2D2D] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#D4921E] hover:shadow-lg">
+                <a href="/waitlist?plan=30" onClick={() => trackCta("pricing", "30")} className="w-full bg-[#F2A922] text-[#2D2D2D] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#D4921E] hover:shadow-lg">
                   get monthly
                 </a>
                 <p className="text-sm text-white/25 text-center mt-3 font-medium tracking-wide uppercase">ships within 3 days</p>
@@ -1071,7 +1100,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           11. FAQ
       ═══════════════════════════════════════════ */}
-      <section className="py-20 md:py-32 px-6">
+      <section data-section="faq" className="py-20 md:py-32 px-6">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] mb-10 tracking-tight">
             frequently asked questions
@@ -1102,6 +1131,7 @@ export default function Home() {
               </p>
               <a
                 href="/waitlist?plan=30"
+                onClick={() => trackCta("footer", "30")}
                 className="inline-flex items-center gap-3 bg-[#F2A922] text-[#2D2D2D] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#D4921E] hover:shadow-xl hover:scale-[1.02]"
               >
                 order now
@@ -1173,7 +1203,7 @@ export default function Home() {
             <p className="text-sm font-bold text-[#2D2D2D]">try it for 2 weeks · from €2.63/shot</p>
             <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">free shipping on 30-packs</p>
           </div>
-          <a href="/waitlist?plan=30" className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
+          <a href="/waitlist?plan=30" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
             order now
           </a>
         </div>

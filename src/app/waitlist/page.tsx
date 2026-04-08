@@ -2,6 +2,7 @@
 
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import posthog from "posthog-js";
 
 function WaitlistForm() {
   const searchParams = useSearchParams();
@@ -11,9 +12,8 @@ function WaitlistForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to Mailchimp + fire WaitlistSignup pixel event
-    // Tag with plan type: plan=14 or plan=30
-    console.log(`Waitlist signup: ${email}, plan: ${plan}`);
+    posthog.identify(email, { email, plan });
+    posthog.capture("waitlist_signup", { email, plan });
     setSubmitted(true);
   };
 
