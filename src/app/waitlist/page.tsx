@@ -30,10 +30,10 @@ function WaitlistForm() {
   return (
     <div className="text-center">
       <h1 className="text-2xl md:text-3xl font-bold text-text mb-4">
-        we&rsquo;re almost ready.
+        almost there.
       </h1>
       <p className="text-text/60 mb-8 max-w-sm mx-auto">
-        our first batch is in production. leave your email and you&rsquo;ll be first in line when we ship.
+        enter your email to complete your order. we&rsquo;ll send you a confirmation with next steps.
       </p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-sm mx-auto">
@@ -49,13 +49,13 @@ function WaitlistForm() {
           type="submit"
           className="w-full bg-brand hover:bg-brand-hover text-text font-semibold py-3.5 rounded-full transition-colors cursor-pointer"
         >
-          notify me
+          complete order
         </button>
       </form>
 
-      <p className="text-xs text-text/40 mt-4">no spam. just one email when we launch.</p>
+      <p className="text-xs text-text/40 mt-4">no spam. just your order confirmation.</p>
       <p className="text-xs text-text/30 mt-2">
-        you&rsquo;ll get first access at the price you saw — guaranteed.
+        the price you saw is locked in — guaranteed.
       </p>
     </div>
   );

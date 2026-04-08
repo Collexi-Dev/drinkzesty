@@ -332,9 +332,9 @@ export default function Home() {
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
             <span className="w-6 h-6 rounded-full bg-[#F2A922] flex items-center justify-center text-[#2D2D2D] text-xs">↗</span>
-            pre-order now
+            order now
           </a>
-          <p className="text-[#2D2D2D]/50 text-sm mt-4 font-medium">from €2.63/shot · first batch ships summer 2026</p>
+          <p className="text-[#2D2D2D]/50 text-sm mt-4 font-medium">from €2.63/shot · free shipping on 30-packs</p>
         </div>
 
         {/* Scroll indicator */}
@@ -1021,9 +1021,9 @@ export default function Home() {
                 <p className="text-sm text-[#2D2D2D]/60 mb-1">€3.00/shot</p>
                 <p className="text-sm text-[#2D2D2D]/40 mb-8">+ €4.95 shipping</p>
                 <a href="/waitlist?plan=14" className="w-full bg-[#2D2D2D] text-[#FFFDF7] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#2D2D2D]/85 hover:shadow-lg">
-                  pre-order starter
+                  get starter
                 </a>
-                <p className="text-sm text-[#2D2D2D]/35 text-center mt-3 font-medium tracking-wide uppercase">ships summer 2026</p>
+                <p className="text-sm text-[#2D2D2D]/35 text-center mt-3 font-medium tracking-wide uppercase">ships within 3 days</p>
                 <HandNote className="mt-2 text-center block text-base">
                   give it 2 weeks to feel it
                 </HandNote>
@@ -1044,9 +1044,9 @@ export default function Home() {
                 <p className="text-sm text-white/50 mb-1">€2.63/shot</p>
                 <p className="text-sm text-white/30 mb-8">free shipping</p>
                 <a href="/waitlist?plan=30" className="w-full bg-[#F2A922] text-[#2D2D2D] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#D4921E] hover:shadow-lg">
-                  pre-order monthly
+                  get monthly
                 </a>
-                <p className="text-sm text-white/25 text-center mt-3 font-medium tracking-wide uppercase">ships summer 2026</p>
+                <p className="text-sm text-white/25 text-center mt-3 font-medium tracking-wide uppercase">ships within 3 days</p>
                 <HandNote className="mt-2 text-center block text-base text-white/40">
                   the daily dose for lasting results
                 </HandNote>
@@ -1063,7 +1063,7 @@ export default function Home() {
           </div>
 
           <p className="text-center text-sm text-[#2D2D2D]/30 mt-8 font-medium">
-            first batch ships summer 2026 · pre-order secures your spot · designed for menopause
+            free shipping on 30-packs · cancel anytime · designed for menopause
           </p>
         </div>
       </section>
@@ -1098,13 +1098,13 @@ export default function Home() {
                 menopause took something.<br />take it back.
               </h2>
               <p className="text-white/50 text-sm md:text-base max-w-md mx-auto mb-8">
-                join the first women to try zesty. the functional menopause wellness shot, launching summer 2026.
+                join thousands of women choosing zesty. the functional menopause wellness shot with creatine.
               </p>
               <a
                 href="/waitlist?plan=30"
                 className="inline-flex items-center gap-3 bg-[#F2A922] text-[#2D2D2D] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#D4921E] hover:shadow-xl hover:scale-[1.02]"
               >
-                pre-order now
+                order now
               </a>
               <p className="text-white/30 text-sm mt-4">from €2.63/shot · free shipping on 30-day plans</p>
             </div>
@@ -1171,10 +1171,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
           <div>
             <p className="text-sm font-bold text-[#2D2D2D]">try it for 2 weeks · from €2.63/shot</p>
-            <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">first batch ships summer 2026</p>
+            <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">free shipping on 30-packs</p>
           </div>
           <a href="/waitlist?plan=30" className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
-            pre-order now
+            order now
           </a>
         </div>
       </div>
