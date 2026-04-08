@@ -23,11 +23,12 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "zesty — ginger + turmeric shot with 10g creatine",
-  description: "The supplement everyone should take. Finally in your morning shot. 10g creatine sealed fresh in the cap of a ginger + turmeric wellness shot.",
+  metadataBase: new URL("https://drinkzesty.be"),
+  title: "zesty — the menopause shot with 10g creatine",
+  description: "The menopause shot that fights the fog, the fatigue, and the fade. 10g creatine sealed fresh in the cap of a cold-pressed ginger + turmeric wellness shot.",
   openGraph: {
-    title: "zesty — ginger + turmeric shot with 10g creatine",
-    description: "The supplement everyone should take. Finally in your morning shot.",
+    title: "zesty — the menopause shot with 10g creatine",
+    description: "The menopause shot that fights the fog, the fatigue, and the fade. 10g creatine · ginger + turmeric · one daily shot.",
     url: "https://drinkzesty.be",
     siteName: "zesty",
     type: "website",
