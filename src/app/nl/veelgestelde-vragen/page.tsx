@@ -126,6 +126,7 @@ export default function VeelgesteldeVragen() {
             <div className="flex gap-5 text-sm text-white/35">
               <Link href="/nl" className="hover:text-white/60 transition-colors">home</Link>
               <Link href="/nl/blog" className="hover:text-white/60 transition-colors">blog</Link>
+              <Link href="/nl/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
               <Link href="/nl#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
             </div>
           </div>

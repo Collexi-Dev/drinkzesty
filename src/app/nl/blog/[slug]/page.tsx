@@ -165,7 +165,8 @@ export default async function BlogPost(props: {
             <div className="flex gap-5 text-sm text-white/35">
               <Link href="/nl" className="hover:text-white/60 transition-colors">home</Link>
               <Link href="/nl/blog" className="hover:text-white/60 transition-colors">blog</Link>
-              <Link href="/waitlist?plan=30" className="hover:text-white/60 transition-colors">bestel</Link>
+              <Link href="/nl/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
+              <Link href="/nl#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">

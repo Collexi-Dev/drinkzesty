@@ -19,6 +19,12 @@ export function Nav({ locale = "nl" }: { locale?: "en" | "nl" }) {
             blog
           </Link>
           <Link
+            href="/nl/veelgestelde-vragen"
+            className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block"
+          >
+            faq
+          </Link>
+          <Link
             href={locale === "nl" ? "/nl#pricing" : "/#pricing"}
             className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors"
           >

@@ -360,6 +360,7 @@ export default function Home() {
           <a href="/" className="text-lg font-extrabold text-[#F2A922] tracking-tight">zesty</a>
           <div className="flex items-center gap-5">
             <a href="/nl/blog" className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
+            <a href="/nl/veelgestelde-vragen" className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block">faq</a>
             <a href="#pricing" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">order now</a>
             <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
               <span className="px-2.5 py-1 text-xs font-bold text-[#FFFDF7] bg-[#2D2D2D] rounded-full">EN</span>
@@ -1221,6 +1222,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-white/35">
                 <a href="/nl/blog" className="hover:text-white/60 transition-colors">blog</a>
+                <a href="/nl/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</a>
                 <a href="#" className="hover:text-white/60 transition-colors">privacy policy</a>
                 <a href="#" className="hover:text-white/60 transition-colors">terms</a>
                 <a href="#" className="hover:text-white/60 transition-colors">contact</a>
