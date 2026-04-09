@@ -338,7 +338,7 @@ export default function Home() {
             {" "}the fog, the fatigue, and the fade.
           </h1>
           <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-[#F2A922]">10g creatine</span> in every shot — the menopause supplement women wish they&rsquo;d started sooner.
+            <span className="text-[#F2A922]">10g creatine</span>{" "}in every shot. The menopause supplement women wish they&rsquo;d started sooner.
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             a cold-pressed ginger &amp; turmeric creatine shot to fight the brain fog, fatigue, and muscle loss of menopause.

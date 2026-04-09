@@ -338,7 +338,7 @@ export default function Home() {
             {" "}brain fog, moeheid en spierverlies.
           </h1>
           <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-[#F2A922]">10g creatine</span> per shot — voor vrouwen in de overgang die het zat zijn om zich zo te voelen.
+            <span className="text-[#F2A922]">10g creatine</span>{" "}per shot. Voor vrouwen in de overgang die het zat zijn om zich zo te voelen.
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             een koudgeperste gember &amp; kurkuma creatine shot tegen de brain fog, vermoeidheid en het spierverlies van de overgang.
