@@ -3,6 +3,7 @@
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
+import { trackMetaEvent } from "../meta-pixel";
 
 function WaitlistForm() {
   const searchParams = useSearchParams();
@@ -14,6 +15,7 @@ function WaitlistForm() {
     e.preventDefault();
     posthog.identify(email, { email, plan });
     posthog.capture("waitlist_signup", { email, plan });
+    trackMetaEvent("Lead", { content_name: "waitlist_signup", content_category: plan });
     setSubmitted(true);
   };
 
