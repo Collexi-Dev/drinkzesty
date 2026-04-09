@@ -288,8 +288,22 @@ export default function Home() {
     posthog.capture("cta_clicked", { location, plan });
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
   return (
     <main className="overflow-x-hidden bg-[#FFFDF7]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       {/* Locale switcher */}
       <div className="fixed top-5 right-5 z-[60] flex items-center gap-1 bg-[#FFFDF7]/90 backdrop-blur-sm border border-[#2D2D2D]/10 rounded-full px-1 py-1 shadow-sm">
@@ -319,15 +333,15 @@ export default function Home() {
             by zesty
           </p>
           <h1 className="text-[1.75rem] md:text-[2.75rem] lg:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight max-w-4xl mx-auto">
-            the <span className="text-[#F2A922]">menopause</span> shot that fights
+            the daily <span className="text-[#F2A922]">creatine</span> shot that fights
             <br className="hidden md:block" />
             {" "}the fog, the fatigue, and the fade.
           </h1>
           <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            powered by <span className="text-[#F2A922]">10g creatine</span> — the supplement women wish they&rsquo;d started sooner.
+            <span className="text-[#F2A922]">10g creatine</span> in every shot — the menopause supplement women wish they&rsquo;d started sooner.
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
-            cold-pressed ginger &amp; turmeric. one daily shot to fight the brain fog, fatigue, and muscle loss of menopause.
+            a cold-pressed ginger &amp; turmeric creatine shot to fight the brain fog, fatigue, and muscle loss of menopause.
           </p>
         </div>
 
