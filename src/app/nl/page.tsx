@@ -165,18 +165,38 @@ function ImgPlaceholder({ hint, className = "" }: { hint: string; className?: st
    FAQ
 ═══════════════════════════════════════════════════ */
 
-const faqs = [
-  { q: "wacht, wat is creatine eigenlijk?", a: "Creatine is een stof die je lichaam van nature aanmaakt. Het geeft je brein en spieren energie — als een oplaadbare batterij voor je cellen. Tijdens perimenopauze en menopauze maakt je lichaam er veel minder van, en dat hangt rechtstreeks samen met de brain fog, vermoeidheid en het spierverlies waar zoveel vrouwen last van hebben." },
-  { q: "hoe helpt creatine bij menopauze?", a: "Veel menopauze-klachten — brain fog, vermoeidheid, spierverlies, weinig energie — lijken verdacht veel op creatine-tekort. Als je oestrogeen daalt, maakt je lichaam ook minder creatine aan. Door creatine aan te vullen geef je terug wat menopauze afpakt: brandstof voor je brein, energie voor je cellen en steun voor je spieren." },
-  { q: "hoe smaakt het?", a: "Een pittige gembershot met warme kurkuma en frisse citrus. Citroen, ananas en sinaasappel. Het is echt een koudgeperste shot. Niet zoet. Niet medicinaal. Gewoon scherp en fris." },
-  { q: "is creatine veilig tijdens menopauze?", a: "Meer dan 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistent veilig bevonden voor gezonde volwassenen bij de aanbevolen dosering. Het wordt al tientallen jaren onderzocht bij alle leeftijdsgroepen, inclusief postmenopauzale vrouwen." },
-  { q: "word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water ín de spier (niet opgeblazen), geen vet. Het stabiliseert snel. Veel vrouwen in de menopauze merken juist dat het hun spiermassa helpt behouden." },
-  { q: "hoe lang duurt het voor ik iets merk?", a: "Bij 10g/dag zit je creatine na zo'n 2 weken op peil — sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Sommige vrouwen merken meer energie en minder brain fog al in de eerste week, anderen rond week 3-4. De 14-daagse starter is precies om die reden zo ontworpen." },
-  { q: "hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma tegen menopauze-ontsteking. Geen mengen, geen afmeten." },
-  { q: "is 10g niet te veel?", a: "~95% van je lichaamscreatine zit in je spieren, dus standaard 3-5g verzadigt vooral je spiermassa. Je brein bevat de overige ~5% — en dat is precies wat menopauze uitput. Onderzoekers die cognitieve voordelen bij vrouwen bestuderen, gebruiken 10g+ om het brein te bereiken [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
-  { q: "ik zit in de perimenopauze — is het nog te vroeg?", a: "Helemaal niet — juist het perfecte moment. Je creatine-reserves nemen al af vóór de echte menopauze begint. Perimenopauze begint meestal rond je 45e, en dan al beginnen met creatine betekent dat je voorloopt op het tekort in plaats van achter de feiten aan te lopen." },
-  { q: "wanneer drink ik het best?", a: "'s Ochtends werkt het best als dagelijks ritueel. Twist, press, shake, drink — en je dag begint. Maar elk vast moment op de dag werkt." },
+const faqGroups = [
+  {
+    label: "over creatine & menopauze",
+    items: [
+      { q: "wacht, wat is creatine eigenlijk?", a: "Creatine is een stof die je lichaam van nature aanmaakt. Het geeft je brein en spieren energie — als een oplaadbare batterij voor je cellen. Tijdens perimenopauze en menopauze maakt je lichaam er veel minder van, en dat hangt rechtstreeks samen met de brain fog, vermoeidheid en het spierverlies waar zoveel vrouwen last van hebben." },
+      { q: "hoe helpt creatine bij menopauze?", a: "Veel menopauze-klachten — brain fog, vermoeidheid, spierverlies, weinig energie — lijken verdacht veel op creatine-tekort. Als je oestrogeen daalt, maakt je lichaam ook minder creatine aan. Door creatine aan te vullen geef je terug wat menopauze afpakt: brandstof voor je brein, energie voor je cellen en steun voor je spieren." },
+      { q: "wat zijn de voordelen van creatine voor vrouwen?", a: "Creatine ondersteunt drie dingen die menopauze aantast: cognitie (minder brain fog), energie (minder vermoeidheid) en spiermassa (minder spierverlies). Onderzoek van Dr. Stacy Sims toont aan dat vrouwen 70-80% minder creatine aanmaken dan mannen, en dat dit verschil groter wordt als oestrogeen daalt. Suppletie vult dat tekort aan — met meetbare effecten op geheugen, kracht en uithoudingsvermogen." },
+      { q: "wat zijn de bijwerkingen van creatine bij vrouwen?", a: "Bij de aanbevolen dosering zijn er geen klinisch relevante bijwerkingen vastgesteld. Meer dan 500 peer-reviewed studies bevestigen de veiligheid, ook bij postmenopauzale vrouwen. De meest voorkomende vraag gaat over gewichtstoename — dat is een kleine hoeveelheid water in de spieren (1-2 kg), geen vet. Maagklachten komen zelden voor bij inname via vloeistof, omdat het beter wordt opgenomen dan poeder op een lege maag." },
+      { q: "is creatine veilig tijdens menopauze?", a: "Meer dan 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistent veilig bevonden voor gezonde volwassenen bij de aanbevolen dosering. Het wordt al tientallen jaren onderzocht bij alle leeftijdsgroepen, inclusief postmenopauzale vrouwen." },
+      { q: "word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water ín de spier (niet opgeblazen), geen vet. Het stabiliseert snel. Veel vrouwen in de menopauze merken juist dat het hun spiermassa helpt behouden." },
+    ],
+  },
+  {
+    label: "over de shot",
+    items: [
+      { q: "hoe smaakt het?", a: "Een pittige gembershot met warme kurkuma en frisse citrus. Citroen, ananas en sinaasappel. Het is echt een koudgeperste shot. Niet zoet. Niet medicinaal. Gewoon scherp en fris." },
+      { q: "hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma tegen menopauze-ontsteking. Geen mengen, geen afmeten." },
+      { q: "is 10g niet te veel?", a: "~95% van je lichaamscreatine zit in je spieren, dus standaard 3-5g verzadigt vooral je spiermassa. Je brein bevat de overige ~5% — en dat is precies wat menopauze uitput. Onderzoekers die cognitieve voordelen bij vrouwen bestuderen, gebruiken 10g+ om het brein te bereiken [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
+    ],
+  },
+  {
+    label: "praktisch",
+    items: [
+      { q: "hoe lang duurt het voor ik iets merk?", a: "Bij 10g/dag zit je creatine na zo'n 2 weken op peil — sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Sommige vrouwen merken meer energie en minder brain fog al in de eerste week, anderen rond week 3-4. De 14-daagse starter is precies om die reden zo ontworpen." },
+      { q: "ik zit in de perimenopauze — is het nog te vroeg?", a: "Helemaal niet — juist het perfecte moment. Je creatine-reserves nemen al af vóór de echte menopauze begint. Perimenopauze begint meestal rond je 45e, en dan al beginnen met creatine betekent dat je voorloopt op het tekort in plaats van achter de feiten aan te lopen." },
+      { q: "wanneer drink ik het best?", a: "'s Ochtends werkt het best als dagelijks ritueel. Twist, press, shake, drink — en je dag begint. Maar elk vast moment op de dag werkt." },
+    ],
+  },
 ];
+
+// Flat list for schema
+const faqs = faqGroups.flatMap((g) => g.items);
 
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -1120,7 +1140,12 @@ export default function Home() {
           <h2 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] mb-10 tracking-tight">
             veelgestelde vragen
           </h2>
-          {faqs.map((faq) => <FaqItem key={faq.q} q={faq.q} a={faq.a} />)}
+          {faqGroups.map((group) => (
+            <div key={group.label} className="mb-10 last:mb-0">
+              <h3 className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] mb-4">{group.label}</h3>
+              {group.items.map((faq) => <FaqItem key={faq.q} q={faq.q} a={faq.a} />)}
+            </div>
+          ))}
         </div>
       </section>
 

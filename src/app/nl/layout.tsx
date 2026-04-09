@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "zesty — de dagelijkse creatine shot voor de overgang",
-  description: "10g creatine in een koudgeperste gember & kurkuma shot. Voor vrouwen in de overgang — tegen brain fog, vermoeidheid en spierverlies. Eén shot, elke ochtend.",
+  title: "zesty — creatine voor vrouwen in de menopauze | dagelijkse shot",
+  description: "10g creatine in een koudgeperste gember & kurkuma shot. Wetenschappelijk onderbouwd voor vrouwen in de menopauze — tegen brain fog, vermoeidheid en spierverlies. Zonder bijwerkingen, elke ochtend.",
   openGraph: {
-    title: "zesty — de dagelijkse creatine shot voor de overgang",
-    description: "10g creatine in een koudgeperste gember & kurkuma shot. Voor vrouwen in de overgang — tegen brain fog, vermoeidheid en spierverlies.",
+    title: "zesty — creatine voor vrouwen in de menopauze | dagelijkse shot",
+    description: "10g creatine in een koudgeperste gember & kurkuma shot. Wetenschappelijk onderbouwd voor vrouwen in de menopauze — tegen brain fog, vermoeidheid en spierverlies.",
     url: "https://drinkzesty.be/nl",
     siteName: "zesty",
     type: "website",
