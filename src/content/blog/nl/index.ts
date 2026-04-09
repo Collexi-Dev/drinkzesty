@@ -33,6 +33,17 @@ const posts: BlogEntry[] = [
         a: "Ja. Meerdere gerandomiseerde gecontroleerde studies tonen verbeteringen aan in cognitie, spiermassa, botdichtheid en stemming bij peri- en postmenopauzale vrouwen die creatine nemen.",
       },
     ],
+    about: [
+      { name: "Creatine", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Menopause", url: "https://www.wikidata.org/wiki/Q131149" },
+    ],
+    mentions: [
+      { name: "Curcumin", url: "https://www.wikidata.org/wiki/Q312266" },
+      { name: "Ginger", url: "https://www.wikidata.org/wiki/Q35625" },
+      { name: "Estrogen", url: "https://www.wikidata.org/wiki/Q277954" },
+      { name: "Osteoporosis", url: "https://www.wikidata.org/wiki/Q165328" },
+      { name: "Sarcopenia", url: "https://www.wikidata.org/wiki/Q1752641" },
+    ],
     component: CreatineMenopauzeGids,
   },
   {
@@ -56,6 +67,15 @@ const posts: BlogEntry[] = [
         q: "Heeft creatine effect op hormonen bij vrouwen?",
         a: "Nee. Creatine heeft geen aangetoond effect op vrouwelijke hormonen. Het werkt op cellulair energieniveau, niet op het hormonale systeem.",
       },
+    ],
+    about: [
+      { name: "Creatine", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Adverse effect", url: "https://www.wikidata.org/wiki/Q21167512" },
+    ],
+    mentions: [
+      { name: "Menopause", url: "https://www.wikidata.org/wiki/Q131149" },
+      { name: "Kidney", url: "https://www.wikidata.org/wiki/Q9377" },
+      { name: "Dihydrotestosterone", url: "https://www.wikidata.org/wiki/Q422485" },
     ],
     component: BijwerkingenCreatineVrouwen,
   },
@@ -81,6 +101,16 @@ const posts: BlogEntry[] = [
         a: "3-5g per dag is voldoende voor spiervoordelen. Voor cognitieve voordelen gebruiken onderzoekers 10g of meer om ook het brein te bereiken.",
       },
     ],
+    about: [
+      { name: "Creatine", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Menopause", url: "https://www.wikidata.org/wiki/Q131149" },
+    ],
+    mentions: [
+      { name: "Cognition", url: "https://www.wikidata.org/wiki/Q3966" },
+      { name: "Sarcopenia", url: "https://www.wikidata.org/wiki/Q1752641" },
+      { name: "Osteoporosis", url: "https://www.wikidata.org/wiki/Q165328" },
+      { name: "Estrogen", url: "https://www.wikidata.org/wiki/Q277954" },
+    ],
     component: CreatineVoordelenVrouwen,
   },
   {
@@ -104,6 +134,17 @@ const posts: BlogEntry[] = [
         q: "Welke supplementen kan ik combineren tijdens de menopauze?",
         a: "Een praktische basiscombinatie is creatine (10g/dag), vitamine D3 (1000-2000 IE/dag) en magnesium (200-400 mg/dag). Omega-3 en collageen zijn waardevolle aanvullingen op basis van persoonlijke klachten.",
       },
+    ],
+    about: [
+      { name: "Menopause", url: "https://www.wikidata.org/wiki/Q131149" },
+      { name: "Dietary supplement", url: "https://www.wikidata.org/wiki/Q191668" },
+    ],
+    mentions: [
+      { name: "Creatine", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Vitamin D", url: "https://www.wikidata.org/wiki/Q175621" },
+      { name: "Magnesium", url: "https://www.wikidata.org/wiki/Q660" },
+      { name: "Omega-3 fatty acid", url: "https://www.wikidata.org/wiki/Q194356" },
+      { name: "Collagen", url: "https://www.wikidata.org/wiki/Q81567" },
     ],
     component: BesteSupplementenMenopauze,
   },

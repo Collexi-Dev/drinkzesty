@@ -337,6 +337,15 @@ export default function Home() {
       },
     ],
     category: "Dietary Supplements",
+    about: [
+      { "@type": "Thing", name: "Creatine", sameAs: "https://www.wikidata.org/wiki/Q186037" },
+      { "@type": "Thing", name: "Menopause", sameAs: "https://www.wikidata.org/wiki/Q131149" },
+    ],
+    mentions: [
+      { "@type": "Thing", name: "Curcumin", sameAs: "https://www.wikidata.org/wiki/Q312266" },
+      { "@type": "Thing", name: "Ginger", sameAs: "https://www.wikidata.org/wiki/Q35625" },
+      { "@type": "Thing", name: "Estrogen", sameAs: "https://www.wikidata.org/wiki/Q277954" },
+    ],
   };
 
   return (

@@ -43,7 +43,7 @@ export default async function BlogPost(props: {
   const Content = getPostComponent(slug);
   if (!post || !Content) notFound();
 
-  // Note: JSON-LD schemas use trusted, developer-controlled content only (no user input)
+  // All JSON-LD schemas use developer-controlled content only, no user input
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -53,6 +53,16 @@ export default async function BlogPost(props: {
     author: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
     publisher: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
     mainEntityOfPage: `https://drinkzesty.be/nl/blog/${slug}`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".prose > p:first-of-type"],
+    },
+    ...(post.about?.length
+      ? { about: post.about.map((e) => ({ "@type": "Thing", name: e.name, sameAs: e.url })) }
+      : {}),
+    ...(post.mentions?.length
+      ? { mentions: post.mentions.map((e) => ({ "@type": "Thing", name: e.name, sameAs: e.url })) }
+      : {}),
   };
 
   const faqSchema = post.faqs?.length

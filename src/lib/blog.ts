@@ -1,5 +1,10 @@
 import type { ComponentType } from "react";
 
+export interface WikidataEntity {
+  name: string;
+  url: string; // e.g. "https://www.wikidata.org/wiki/Q186037"
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -8,6 +13,8 @@ export interface BlogPost {
   readingTime: string;
   image?: string;
   faqs?: { q: string; a: string }[];
+  about?: WikidataEntity[];
+  mentions?: WikidataEntity[];
 }
 
 export interface BlogEntry extends BlogPost {
