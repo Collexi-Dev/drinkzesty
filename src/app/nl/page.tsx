@@ -1188,6 +1188,7 @@ export default function Home() {
                 <p className="text-white/30 text-sm">de menopauzeshot met creatine · 10g per shot</p>
               </div>
               <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-white/35">
+                <a href="/nl/blog" className="hover:text-white/60 transition-colors">blog</a>
                 <a href="#" className="hover:text-white/60 transition-colors">privacybeleid</a>
                 <a href="#" className="hover:text-white/60 transition-colors">voorwaarden</a>
                 <a href="#" className="hover:text-white/60 transition-colors">contact</a>

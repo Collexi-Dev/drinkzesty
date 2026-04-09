@@ -1163,6 +1163,7 @@ export default function Home() {
                 <p className="text-white/30 text-sm">the functional menopause wellness shot · 10g creatine</p>
               </div>
               <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-white/35">
+                <a href="/nl/blog" className="hover:text-white/60 transition-colors">blog</a>
                 <a href="#" className="hover:text-white/60 transition-colors">privacy policy</a>
                 <a href="#" className="hover:text-white/60 transition-colors">terms</a>
                 <a href="#" className="hover:text-white/60 transition-colors">contact</a>
