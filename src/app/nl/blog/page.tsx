@@ -22,7 +22,14 @@ export default function BlogIndex() {
       <Nav locale="nl" />
       <main className="min-h-screen bg-[#FFFBF0] px-6 pt-24 md:pt-32 pb-20 md:pb-32">
         <div className="max-w-4xl mx-auto">
-          <h1 className="sr-only">zesty blog: creatine, menopauze en supplementen</h1>
+          {/* Hero */}
+          <div className="mb-14">
+            <h1 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
+              creatine, menopauze
+              <br />
+              <span className="text-[#F2A922]">en de wetenschap erachter.</span>
+            </h1>
+          </div>
 
           {/* Featured article */}
           {featured && (
