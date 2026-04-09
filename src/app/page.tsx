@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Droplets, FlaskConical, Leaf, Recycle, ShieldCheck } from "lucide-react";
+import { SourceRef } from "@/components/SourceRef";
 import posthog from "posthog-js";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -435,10 +436,10 @@ export default function Home() {
           {/* Mobile: stacked list */}
           <div className="md:hidden space-y-6">
             {[
-              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "menopause brain fog", desc: <>the words are there, you just can&rsquo;t find them. estrogen drops, and so does your mental clarity.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></> },
-              { icon: <IconBattery className="w-8 h-8 text-[#F2A922]" />, title: "crushing fatigue", desc: <>8 hours of sleep and still dragging. hormonal shifts tank your cellular energy production.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a></> },
-              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "losing muscle & strength", desc: <>less muscle, more aches. declining estrogen accelerates muscle loss after 40.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a></> },
-              { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "can\u2019t focus anymore", desc: <>reading the same email three times. cognitive decline is one of the most common menopause symptoms.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></> },
+              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "menopause brain fog", desc: <>the words are there, you just can&rsquo;t find them. estrogen drops, and so does your mental clarity.<SourceRef n={1} /></> },
+              { icon: <IconBattery className="w-8 h-8 text-[#F2A922]" />, title: "crushing fatigue", desc: <>8 hours of sleep and still dragging. hormonal shifts tank your cellular energy production.<SourceRef n={3} /></> },
+              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "losing muscle & strength", desc: <>less muscle, more aches. declining estrogen accelerates muscle loss after 40.<SourceRef n={7} /></> },
+              { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "can\u2019t focus anymore", desc: <>reading the same email three times. cognitive decline is one of the most common menopause symptoms.<SourceRef n={1} /></> },
             ].map((s) => (
               <div key={s.title} className="flex items-start gap-4">
                 <div className="shrink-0 mt-1">{s.icon}</div>
@@ -486,28 +487,28 @@ export default function Home() {
               <div className="absolute left-0 top-0 max-w-[220px] z-10">
                 <IconBrainFog className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">menopause brain fog</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">the words are there, you just can&rsquo;t find them. estrogen drops, and so does clarity.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">the words are there, you just can&rsquo;t find them. estrogen drops, and so does clarity.<SourceRef n={1} /></p>
               </div>
 
               {/* Top-right: can't focus */}
               <div className="absolute right-0 top-0 max-w-[220px] text-right z-10">
                 <div className="flex justify-end"><IconFocus className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">cognitive decline</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">reading the same email three times. one of the most reported menopause symptoms.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">reading the same email three times. one of the most reported menopause symptoms.<SourceRef n={1} /></p>
               </div>
 
               {/* Bottom-left: tired */}
               <div className="absolute left-0 bottom-0 max-w-[220px] z-10">
                 <IconBattery className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">crushing fatigue</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">hormonal shifts tank your cellular energy. 8 hours of sleep and still dragging.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">hormonal shifts tank your cellular energy. 8 hours of sleep and still dragging.<SourceRef n={3} /></p>
               </div>
 
               {/* Bottom-right: losing strength */}
               <div className="absolute right-0 bottom-0 max-w-[220px] text-right z-10">
                 <div className="flex justify-end"><IconStrength className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">muscle &amp; strength loss</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">declining estrogen accelerates muscle loss. things you used to do easily get harder.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">declining estrogen accelerates muscle loss. things you used to do easily get harder.<SourceRef n={7} /></p>
               </div>
             </div>
           </div>
@@ -538,7 +539,7 @@ export default function Home() {
 
           {/* Beat 2 — the gap */}
           <p className="text-[#2D2D2D]/60 text-lg md:text-xl leading-relaxed mb-8 md:mb-10">
-            Women already carry up to <strong className="text-[#2D2D2D] font-bold">80% lower creatine stores</strong> than men.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[4]</a> Then perimenopause hits: estrogen drops, creatine synthesis slows, and the gap widens<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a> — right when your brain and muscles need it most.
+            Women already carry up to <strong className="text-[#2D2D2D] font-bold">80% lower creatine stores</strong> than men.<SourceRef n={4} /> Then perimenopause hits: estrogen drops, creatine synthesis slows, and the gap widens<SourceRef n={3} /> — right when your brain and muscles need it most.
           </p>
 
           {/* Beat 3 — the connection */}
@@ -586,7 +587,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopause symptom: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">clearer thinking</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                It&rsquo;s real — declining estrogen starves your brain of energy. Creatine replenishes that fuel directly.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a> Focus comes back. Words come back.
+                It&rsquo;s real — declining estrogen starves your brain of energy. Creatine replenishes that fuel directly.<SourceRef n={1} /> Focus comes back. Words come back.
               </p>
               <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-2 inline-block hover:text-white/40 transition-colors">Creatine &amp; women&rsquo;s health · Smith-Ryan et al., 2021 →</a>
@@ -602,7 +603,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopause symptom: fatigue</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">real energy</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                It isn&rsquo;t laziness — your cells are producing less ATP. Creatine is the raw material for cellular energy.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a> Not a stimulant. Actual fuel that your body is running low on.
+                It isn&rsquo;t laziness — your cells are producing less ATP. Creatine is the raw material for cellular energy.<SourceRef n={3} /> Not a stimulant. Actual fuel that your body is running low on.
               </p>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
@@ -615,7 +616,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopause symptom: muscle loss</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">strength that stays</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                Women lose up to 10% of muscle mass in the years around menopause.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a> Creatine helps your muscles hold on to the strength you already have<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[2]</a> — and rebuild what&rsquo;s slipping.
+                Women lose up to 10% of muscle mass in the years around menopause.<SourceRef n={7} /> Creatine helps your muscles hold on to the strength you already have<SourceRef n={2} /> — and rebuild what&rsquo;s slipping.
               </p>
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
@@ -924,10 +925,10 @@ export default function Home() {
           {/* Ingredient grid — image + text + symptom tags */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 mb-16">
             {[
-              { name: "Cold-pressed ginger", why: <>A natural anti-inflammatory that helps with the joint pain and digestive issues many women experience during menopause. Also supports immune function when your body is under hormonal stress.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[5]</a></>, symptoms: ["joint pain", "bloating", "nausea"], img: "/images/11-ginger.jpeg" },
-              { name: "Turmeric + piperine", why: <>Curcumin fights the chronic inflammation that spikes during menopause — linked to joint stiffness, mood swings, and brain fog.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[5]</a> Piperine boosts turmeric absorption by 2,000%.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[6]</a></>, symptoms: ["inflammation", "joint stiffness", "mood"], img: "/images/12-turmeric.jpeg" },
-              { name: "Lemon, pineapple, orange", why: <>Women lose up to 30% of skin collagen in the first 5 years after menopause. Vitamin C is essential for collagen synthesis — fighting the skin thinning estrogen leaves behind.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[10]</a> Bromelain from pineapple is a proven anti-inflammatory for the joint stiffness that spikes during menopause.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[5]</a> No added sugar.</>, symptoms: ["skin thinning", "joint pain", "inflammation"], img: "/images/13-citrus.jpeg" },
-              { name: "Electrolytes", why: <>Sodium, potassium, magnesium. Estrogen decline directly disrupts electrolyte balance — magnesium deficiency in postmenopausal women is linked to fatigue, muscle cramps, mood changes, and even heart rhythm issues.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[11]</a> Electrolytes also improve creatine uptake into your muscles.</>, symptoms: ["fatigue", "muscle cramps", "hot flashes"], img: "/images/14-electrolytes.jpeg" },
+              { name: "Cold-pressed ginger", why: <>A natural anti-inflammatory that helps with the joint pain and digestive issues many women experience during menopause. Also supports immune function when your body is under hormonal stress.<SourceRef n={5} /></>, symptoms: ["joint pain", "bloating", "nausea"], img: "/images/11-ginger.jpeg" },
+              { name: "Turmeric + piperine", why: <>Curcumin fights the chronic inflammation that spikes during menopause — linked to joint stiffness, mood swings, and brain fog.<SourceRef n={5} /> Piperine boosts turmeric absorption by 2,000%.<SourceRef n={6} /></>, symptoms: ["inflammation", "joint stiffness", "mood"], img: "/images/12-turmeric.jpeg" },
+              { name: "Lemon, pineapple, orange", why: <>Women lose up to 30% of skin collagen in the first 5 years after menopause. Vitamin C is essential for collagen synthesis — fighting the skin thinning estrogen leaves behind.<SourceRef n={10} /> Bromelain from pineapple is a proven anti-inflammatory for the joint stiffness that spikes during menopause.<SourceRef n={5} /> No added sugar.</>, symptoms: ["skin thinning", "joint pain", "inflammation"], img: "/images/13-citrus.jpeg" },
+              { name: "Electrolytes", why: <>Sodium, potassium, magnesium. Estrogen decline directly disrupts electrolyte balance — magnesium deficiency in postmenopausal women is linked to fatigue, muscle cramps, mood changes, and even heart rhythm issues.<SourceRef n={11} /> Electrolytes also improve creatine uptake into your muscles.</>, symptoms: ["fatigue", "muscle cramps", "hot flashes"], img: "/images/14-electrolytes.jpeg" },
             ].map((item) => (
               <div key={item.name}>
                 <img src={item.img} alt={item.name} className="h-48 md:h-56 rounded-xl mb-5 w-full object-cover" />
@@ -1048,7 +1049,7 @@ export default function Home() {
               try it for <span className="text-[#F2A922]">two weeks.</span>
             </h2>
             <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base max-w-md mx-auto">
-              that&rsquo;s how long it takes for creatine to build up in your system.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[9]</a> most women feel the fog lift and energy return within 14 days.
+              that&rsquo;s how long it takes for creatine to build up in your system.<SourceRef n={9} /> most women feel the fog lift and energy return within 14 days.
             </p>
           </div>
 

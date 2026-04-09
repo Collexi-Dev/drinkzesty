@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Droplets, FlaskConical, Leaf, Recycle, ShieldCheck } from "lucide-react";
+import { SourceRef } from "@/components/SourceRef";
 import posthog from "posthog-js";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -435,10 +436,10 @@ export default function Home() {
           {/* Mobile: stacked list */}
           <div className="md:hidden space-y-6">
             {[
-              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "menopauze brain fog", desc: <>de woorden zijn er, je kunt ze gewoon niet vinden. oestrogeen daalt, en je helderheid daalt mee.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></> },
-              { icon: <IconBattery className="w-8 h-8 text-[#F2A922]" />, title: "extreme moeheid", desc: <>8 uur geslapen en nog steeds doodmoe. hormonale veranderingen putten je energie op celniveau uit.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a></> },
-              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "spierverlies &amp; minder kracht", desc: <>minder spier, meer pijn. dalend oestrogeen versnelt spierverlies na je 40e.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a></> },
-              { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "concentratieproblemen", desc: <>dezelfde mail drie keer lezen. verminderde concentratie is een van de meest voorkomende menopauze-klachten.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></> },
+              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "menopauze brain fog", desc: <>de woorden zijn er, je kunt ze gewoon niet vinden. oestrogeen daalt, en je helderheid daalt mee.<SourceRef n={1} /></> },
+              { icon: <IconBattery className="w-8 h-8 text-[#F2A922]" />, title: "extreme moeheid", desc: <>8 uur geslapen en nog steeds doodmoe. hormonale veranderingen putten je energie op celniveau uit.<SourceRef n={3} /></> },
+              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "spierverlies &amp; minder kracht", desc: <>minder spier, meer pijn. dalend oestrogeen versnelt spierverlies na je 40e.<SourceRef n={7} /></> },
+              { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "concentratieproblemen", desc: <>dezelfde mail drie keer lezen. verminderde concentratie is een van de meest voorkomende menopauze-klachten.<SourceRef n={1} /></> },
             ].map((s) => (
               <div key={s.title} className="flex items-start gap-4">
                 <div className="shrink-0 mt-1">{s.icon}</div>
@@ -486,28 +487,28 @@ export default function Home() {
               <div className="absolute left-0 top-0 max-w-[220px] z-10">
                 <IconBrainFog className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">menopauze brain fog</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">de woorden zijn er, je kunt ze gewoon niet vinden. oestrogeen daalt, en je helderheid daalt mee.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">de woorden zijn er, je kunt ze gewoon niet vinden. oestrogeen daalt, en je helderheid daalt mee.<SourceRef n={1} /></p>
               </div>
 
               {/* Top-right: can't focus */}
               <div className="absolute right-0 top-0 max-w-[220px] text-right z-10">
                 <div className="flex justify-end"><IconFocus className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">concentratieproblemen</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">dezelfde mail drie keer lezen. een van de meest voorkomende menopauze-klachten.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">dezelfde mail drie keer lezen. een van de meest voorkomende menopauze-klachten.<SourceRef n={1} /></p>
               </div>
 
               {/* Bottom-left: tired */}
               <div className="absolute left-0 bottom-0 max-w-[220px] z-10">
                 <IconBattery className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">extreme moeheid</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">hormonale veranderingen putten je energie op celniveau uit. 8 uur geslapen en nog steeds doodmoe.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">hormonale veranderingen putten je energie op celniveau uit. 8 uur geslapen en nog steeds doodmoe.<SourceRef n={3} /></p>
               </div>
 
               {/* Bottom-right: losing strength */}
               <div className="absolute right-0 bottom-0 max-w-[220px] text-right z-10">
                 <div className="flex justify-end"><IconStrength className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">spierverlies &amp; minder kracht</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">dalend oestrogeen versnelt spierverlies. dingen die je makkelijk deed, worden steeds moeilijker.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">dalend oestrogeen versnelt spierverlies. dingen die je makkelijk deed, worden steeds moeilijker.<SourceRef n={7} /></p>
               </div>
             </div>
           </div>
@@ -538,7 +539,7 @@ export default function Home() {
 
           {/* Beat 2 — the gap */}
           <p className="text-[#2D2D2D]/60 text-lg md:text-xl leading-relaxed mb-8 md:mb-10">
-            Vrouwen hebben sowieso al tot <strong className="text-[#2D2D2D] font-bold">80% lagere creatine-reserves</strong> dan mannen.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[4]</a> En dan komt de perimenopauze: oestrogeen daalt, je creatine-aanmaak vertraagt, en het tekort groeit<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a> — precies wanneer je brein en spieren het het hardst nodig hebben.
+            Vrouwen hebben sowieso al tot <strong className="text-[#2D2D2D] font-bold">80% lagere creatine-reserves</strong> dan mannen.<SourceRef n={4} /> En dan komt de perimenopauze: oestrogeen daalt, je creatine-aanmaak vertraagt, en het tekort groeit<SourceRef n={3} /> — precies wanneer je brein en spieren het het hardst nodig hebben.
           </p>
 
           {/* Beat 3 — the connection */}
@@ -586,7 +587,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">helder denken</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                Het is echt — dalend oestrogeen ontneemt je brein energie. Creatine vult die brandstof direct aan.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[1]</a> Je concentratie komt terug. Je woorden komen terug.
+                Het is echt — dalend oestrogeen ontneemt je brein energie. Creatine vult die brandstof direct aan.<SourceRef n={1} /> Je concentratie komt terug. Je woorden komen terug.
               </p>
               <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-2 inline-block hover:text-white/40 transition-colors">Creatine &amp; vrouwengezondheid · Smith-Ryan et al., 2021 →</a>
@@ -602,7 +603,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: vermoeidheid</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">echte energie</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                Het is geen luiheid — je cellen produceren gewoon minder ATP. Creatine is de grondstof voor energie op celniveau.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[3]</a> Geen stimulant. Echte brandstof waar je lichaam een tekort aan heeft.
+                Het is geen luiheid — je cellen produceren gewoon minder ATP. Creatine is de grondstof voor energie op celniveau.<SourceRef n={3} /> Geen stimulant. Echte brandstof waar je lichaam een tekort aan heeft.
               </p>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
@@ -615,7 +616,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: spierverlies</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">kracht die blijft</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[7]</a> Creatine helpt je de kracht vasthouden die je al hebt<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[2]</a> — en weer opbouwen wat je aan het verliezen bent.
+                Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<SourceRef n={7} /> Creatine helpt je de kracht vasthouden die je al hebt<SourceRef n={2} /> — en weer opbouwen wat je aan het verliezen bent.
               </p>
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
@@ -924,10 +925,10 @@ export default function Home() {
           {/* Ingredient grid — image + text + symptom tags */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 mb-16">
             {[
-              { name: "Koudgeperste gember", why: <>Een natuurlijke ontstekingsremmer die helpt bij gewrichtspijn en spijsverteringsproblemen — klachten die veel vrouwen tijdens menopauze herkennen. Ondersteunt ook je immuunsysteem wanneer je lichaam onder hormonale stress staat.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[5]</a></>, symptoms: ["gewrichtspijn", "opgeblazenheid", "misselijkheid"], img: "/images/11-ginger.jpeg" },
-              { name: "Kurkuma + zwarte peper-extract", why: <>Curcumine bestrijdt de chronische ontsteking die tijdens menopauze piekt — gekoppeld aan stijve gewrichten, stemmingswisselingen en brain fog.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[5]</a> Piperine (zwarte peper-extract) verhoogt de opname van kurkuma met 2.000%.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[6]</a></>, symptoms: ["ontsteking", "stijve gewrichten", "stemming"], img: "/images/12-turmeric.jpeg" },
-              { name: "Citroen, ananas, sinaasappel", why: <>Vrouwen verliezen tot 30% huidcollageen in de eerste 5 jaar na menopauze. Vitamine C is essentieel voor collageen-aanmaak — het remt de huidverdunning die door dalend oestrogeen ontstaat.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[10]</a> Bromelaine uit ananas is een bewezen ontstekingsremmer die helpt tegen de gewrichtsstijfheid die toeneemt tijdens menopauze.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[5]</a> Geen toegevoegde suiker.</>, symptoms: ["huidverdunning", "gewrichtspijn", "ontsteking"], img: "/images/13-citrus.jpeg" },
-              { name: "Elektrolyten", why: <>Natrium, kalium, magnesium. Dalend oestrogeen verstoort direct je elektrolytenbalans — magnesiumtekort bij postmenopauzale vrouwen hangt samen met vermoeidheid, spierkrampen, stemmingswisselingen en zelfs hartritmestoornissen.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[11]</a> Elektrolyten verbeteren ook de opname van creatine in je spieren.</>, symptoms: ["vermoeidheid", "spierkrampen", "opvliegers"], img: "/images/14-electrolytes.jpeg" },
+              { name: "Koudgeperste gember", why: <>Een natuurlijke ontstekingsremmer die helpt bij gewrichtspijn en spijsverteringsproblemen — klachten die veel vrouwen tijdens menopauze herkennen. Ondersteunt ook je immuunsysteem wanneer je lichaam onder hormonale stress staat.<SourceRef n={5} /></>, symptoms: ["gewrichtspijn", "opgeblazenheid", "misselijkheid"], img: "/images/11-ginger.jpeg" },
+              { name: "Kurkuma + zwarte peper-extract", why: <>Curcumine bestrijdt de chronische ontsteking die tijdens menopauze piekt — gekoppeld aan stijve gewrichten, stemmingswisselingen en brain fog.<SourceRef n={5} /> Piperine (zwarte peper-extract) verhoogt de opname van kurkuma met 2.000%.<SourceRef n={6} /></>, symptoms: ["ontsteking", "stijve gewrichten", "stemming"], img: "/images/12-turmeric.jpeg" },
+              { name: "Citroen, ananas, sinaasappel", why: <>Vrouwen verliezen tot 30% huidcollageen in de eerste 5 jaar na menopauze. Vitamine C is essentieel voor collageen-aanmaak — het remt de huidverdunning die door dalend oestrogeen ontstaat.<SourceRef n={10} /> Bromelaine uit ananas is een bewezen ontstekingsremmer die helpt tegen de gewrichtsstijfheid die toeneemt tijdens menopauze.<SourceRef n={5} /> Geen toegevoegde suiker.</>, symptoms: ["huidverdunning", "gewrichtspijn", "ontsteking"], img: "/images/13-citrus.jpeg" },
+              { name: "Elektrolyten", why: <>Natrium, kalium, magnesium. Dalend oestrogeen verstoort direct je elektrolytenbalans — magnesiumtekort bij postmenopauzale vrouwen hangt samen met vermoeidheid, spierkrampen, stemmingswisselingen en zelfs hartritmestoornissen.<SourceRef n={11} /> Elektrolyten verbeteren ook de opname van creatine in je spieren.</>, symptoms: ["vermoeidheid", "spierkrampen", "opvliegers"], img: "/images/14-electrolytes.jpeg" },
             ].map((item) => (
               <div key={item.name}>
                 <img src={item.img} alt={item.name} className="h-48 md:h-56 rounded-xl mb-5 w-full object-cover" />
@@ -1048,7 +1049,7 @@ export default function Home() {
               probeer het twee weken. <span className="text-[#F2A922]"></span>
             </h2>
             <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base max-w-md mx-auto">
-              zo lang duurt het voor creatine op peil is in je lichaam.<a href="#sources" className="text-[#F2A922] font-bold text-xs ml-0.5 no-underline hover:underline">[9]</a> de meeste vrouwen voelen binnen 14 dagen hun brain fog afnemen en hun energie terugkomen.
+              zo lang duurt het voor creatine op peil is in je lichaam.<SourceRef n={9} /> de meeste vrouwen voelen binnen 14 dagen hun brain fog afnemen en hun energie terugkomen.
             </p>
           </div>
 
