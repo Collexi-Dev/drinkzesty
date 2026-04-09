@@ -14,7 +14,7 @@ const posts: BlogEntry[] = [
   {
     slug: "creatine-menopauze-complete-gids",
     title: "Creatine & Menopauze: de complete gids",
-    image: "/images/blog-article-2.jpeg",
+    image: "/images/blog-pillar-1.jpeg",
     description:
       "Alles wat je moet weten over creatine tijdens de menopauze: waarom vrouwen minder aanmaken, wat het onderzoek zegt over brain fog, spierverlies en energie, en hoe je het gebruikt.",
     date: "2026-04-09",
