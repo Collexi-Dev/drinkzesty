@@ -165,43 +165,21 @@ function ImgPlaceholder({ hint, className = "" }: { hint: string; className?: st
    FAQ
 ═══════════════════════════════════════════════════ */
 
-const faqGroups = [
-  {
-    label: "over creatine & menopauze",
-    items: [
-      { q: "wacht, wat is creatine eigenlijk?", a: "Creatine is een stof die je lichaam van nature aanmaakt. Het geeft je brein en spieren energie — als een oplaadbare batterij voor je cellen. Tijdens perimenopauze en menopauze maakt je lichaam er veel minder van, en dat hangt rechtstreeks samen met de brain fog, vermoeidheid en het spierverlies waar zoveel vrouwen last van hebben." },
-      { q: "hoe helpt creatine bij menopauze?", a: "Veel menopauze-klachten — brain fog, vermoeidheid, spierverlies, weinig energie — lijken verdacht veel op creatine-tekort. Als je oestrogeen daalt, maakt je lichaam ook minder creatine aan. Door creatine aan te vullen geef je terug wat menopauze afpakt: brandstof voor je brein, energie voor je cellen en steun voor je spieren." },
-      { q: "wat zijn de voordelen van creatine voor vrouwen?", a: "Creatine ondersteunt drie dingen die menopauze aantast: cognitie (minder brain fog), energie (minder vermoeidheid) en spiermassa (minder spierverlies). Onderzoek van Dr. Stacy Sims toont aan dat vrouwen 70-80% minder creatine aanmaken dan mannen, en dat dit verschil groter wordt als oestrogeen daalt. Suppletie vult dat tekort aan — met meetbare effecten op geheugen, kracht en uithoudingsvermogen." },
-      { q: "wat zijn de bijwerkingen van creatine bij vrouwen?", a: "Bij de aanbevolen dosering zijn er geen klinisch relevante bijwerkingen vastgesteld. Meer dan 500 peer-reviewed studies bevestigen de veiligheid, ook bij postmenopauzale vrouwen. De meest voorkomende vraag gaat over gewichtstoename — dat is een kleine hoeveelheid water in de spieren (1-2 kg), geen vet. Maagklachten komen zelden voor bij inname via vloeistof, omdat het beter wordt opgenomen dan poeder op een lege maag." },
-      { q: "is creatine veilig tijdens menopauze?", a: "Meer dan 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistent veilig bevonden voor gezonde volwassenen bij de aanbevolen dosering. Het wordt al tientallen jaren onderzocht bij alle leeftijdsgroepen, inclusief postmenopauzale vrouwen." },
-      { q: "word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water ín de spier (niet opgeblazen), geen vet. Het stabiliseert snel. Veel vrouwen in de menopauze merken juist dat het hun spiermassa helpt behouden." },
-    ],
-  },
-  {
-    label: "over de shot",
-    items: [
-      { q: "hoe smaakt het?", a: "Een pittige gembershot met warme kurkuma en frisse citrus. Citroen, ananas en sinaasappel. Het is echt een koudgeperste shot. Niet zoet. Niet medicinaal. Gewoon scherp en fris." },
-      { q: "hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma tegen menopauze-ontsteking. Geen mengen, geen afmeten." },
-      { q: "is 10g niet te veel?", a: "~95% van je lichaamscreatine zit in je spieren, dus standaard 3-5g verzadigt vooral je spiermassa. Je brein bevat de overige ~5% — en dat is precies wat menopauze uitput. Onderzoekers die cognitieve voordelen bij vrouwen bestuderen, gebruiken 10g+ om het brein te bereiken [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
-    ],
-  },
-  {
-    label: "praktisch",
-    items: [
-      { q: "hoe lang duurt het voor ik iets merk?", a: "Bij 10g/dag zit je creatine na zo'n 2 weken op peil — sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Sommige vrouwen merken meer energie en minder brain fog al in de eerste week, anderen rond week 3-4. De 14-daagse starter is precies om die reden zo ontworpen." },
-      { q: "ik zit in de perimenopauze — is het nog te vroeg?", a: "Helemaal niet — juist het perfecte moment. Je creatine-reserves nemen al af vóór de echte menopauze begint. Perimenopauze begint meestal rond je 45e, en dan al beginnen met creatine betekent dat je voorloopt op het tekort in plaats van achter de feiten aan te lopen." },
-      { q: "wanneer drink ik het best?", a: "'s Ochtends werkt het best als dagelijks ritueel. Twist, press, shake, drink — en je dag begint. Maar elk vast moment op de dag werkt." },
-    ],
-  },
+const faqs = [
+  { q: "wacht, wat is creatine eigenlijk?", a: "Creatine is een stof die je lichaam van nature aanmaakt. Je brein en spieren hebben het nodig voor energie. Tijdens perimenopauze en menopauze maakt je lichaam er veel minder van, en dat hangt rechtstreeks samen met de brain fog, vermoeidheid en het spierverlies waar zoveel vrouwen last van hebben." },
+  { q: "hoe helpt creatine bij menopauze?", a: "Veel menopauze-klachten (brain fog, vermoeidheid, spierverlies, weinig energie) lijken verdacht veel op creatine-tekort. Als je oestrogeen daalt, maakt je lichaam ook minder creatine aan. Door creatine aan te vullen geef je terug wat menopauze afpakt: energie voor je brein, kracht voor je spieren." },
+  { q: "is creatine veilig tijdens menopauze?", a: "Meer dan 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistent veilig bevonden voor gezonde volwassenen bij de aanbevolen dosering. Het wordt al tientallen jaren onderzocht bij alle leeftijdsgroepen, inclusief postmenopauzale vrouwen." },
+  { q: "word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water ín de spier (niet opgeblazen), geen vet. Het stabiliseert snel. Veel vrouwen in de menopauze merken juist dat het hun spiermassa helpt behouden." },
+  { q: "hoe smaakt het?", a: "Een pittige gembershot met warme kurkuma en frisse citrus. Citroen, ananas en sinaasappel. Het is echt een koudgeperste shot. Niet zoet. Niet medicinaal. Gewoon scherp en fris." },
+  { q: "hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma tegen menopauze-ontsteking. Geen mengen, geen afmeten." },
+  { q: "hoe lang duurt het voor ik iets merk?", a: "Bij 10g/dag zit je creatine na zo'n 2 weken op peil. Dat is sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Sommige vrouwen merken meer energie en minder brain fog al in de eerste week, anderen rond week 3-4. De 14-daagse starter is precies om die reden zo ontworpen." },
+  { q: "is 10g niet te veel?", a: "~95% van je lichaamscreatine zit in je spieren, dus standaard 3-5g verzadigt vooral je spiermassa. Je brein bevat de overige ~5%, en dat is precies wat menopauze uitput. Onderzoekers die cognitieve voordelen bij vrouwen bestuderen, gebruiken 10g+ om het brein te bereiken [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
 ];
 
-// Flat list for schema
-const faqs = faqGroups.flatMap((g) => g.items);
-
-function FaqItem({ q, a }: { q: string; a: string }) {
+function FaqItem({ q, a, last = false }: { q: string; a: string; last?: boolean }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-[#2D2D2D]/10">
+    <div className={last ? "" : "border-b border-[#2D2D2D]/10"}>
       <button onClick={() => setOpen(!open)} className="w-full text-left py-6 flex justify-between items-center gap-6 cursor-pointer group">
         <span className="font-bold text-[#2D2D2D] text-lg group-hover:text-[#F2A922] transition-colors">{q}</span>
         <span className={`text-[#F2A922] transition-transform duration-300 text-2xl shrink-0 leading-none ${open ? "rotate-45" : ""}`}>+</span>
@@ -506,7 +484,7 @@ export default function Home() {
               <span className="text-[#F2A922]/50">anders.</span>
             </h2>
             <p className="text-[#2D2D2D]/45 text-base md:text-base mt-5 max-w-lg mx-auto leading-relaxed">
-              het begon rond je 40e. misschien eerder. de klachten kwamen sluipend — en niemand vertelde je wat eraan zat te komen. het is niet gewoon ouder worden. het is menopauze.
+              het begon rond je 40e. misschien eerder. de klachten kwamen sluipend, en niemand vertelde je wat eraan zat te komen. het is niet gewoon ouder worden. het is menopauze.
             </p>
             <HandNote className="mt-5 block rotate-[-3deg]">
               waarom heeft niemand me dit eerder verteld?
@@ -600,7 +578,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           MARQUEE — "it's not just getting older"
       ═══════════════════════════════════════════ */}
-      <Marquee texts={["de brain fog. de vermoeidheid. het spierverlies. menopauze put je creatine uit — neem het terug."]} dark />
+      <Marquee texts={["de brain fog. de vermoeidheid. het spierverlies. menopauze put je creatine uit. neem het terug."]} dark />
 
       {/* ═══════════════════════════════════════════
           3. THE CREATINE GAP — Conversational reveal
@@ -616,17 +594,17 @@ export default function Home() {
 
           {/* Beat 1 — what it is */}
           <p className="text-[#2D2D2D] text-xl md:text-2xl leading-relaxed font-medium mb-8 md:mb-10">
-            Je lichaam draait op creatine. Het is de stof die je brein scherp houdt, je spieren sterk en je energie stabiel. En menopauze breekt het af.
+            Je lichaam heeft creatine nodig. Het houdt je brein scherp, je spieren sterk en je energie stabiel. En menopauze breekt het af.
           </p>
 
           {/* Beat 2 — the gap */}
           <p className="text-[#2D2D2D]/60 text-lg md:text-xl leading-relaxed mb-8 md:mb-10">
-            Vrouwen hebben sowieso al tot <strong className="text-[#2D2D2D] font-bold">80% lagere creatine-reserves</strong> dan mannen.<SourceRef n={4} /> En dan komt de perimenopauze: oestrogeen daalt, je creatine-aanmaak vertraagt, en het tekort groeit<SourceRef n={3} /> — precies wanneer je brein en spieren het het hardst nodig hebben.
+            Vrouwen hebben sowieso al tot <strong className="text-[#2D2D2D] font-bold">80% lagere creatine-reserves</strong> dan mannen.<SourceRef n={4} /> En dan komt de perimenopauze: oestrogeen daalt, je creatine-aanmaak vertraagt, en het tekort groeit.<SourceRef n={3} /> Precies wanneer je brein en spieren het het hardst nodig hebben.
           </p>
 
           {/* Beat 3 — the connection */}
           <p className="text-[#2D2D2D]/60 text-lg md:text-xl leading-relaxed mb-10 md:mb-14">
-            Daarom lijken de klachten — de brain fog, de moeheid, het spierverlies — zo veel op creatine-tekort. Dat is geen toeval.
+            Daarom lijken de klachten (de brain fog, de moeheid, het spierverlies) zo veel op creatine-tekort. Dat is geen toeval.
           </p>
 
           {/* The emotional bridge */}
@@ -674,7 +652,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">helder denken</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                Het is echt — dalend oestrogeen ontneemt je brein energie. Creatine vult die brandstof direct aan.<SourceRef n={1} /> Je concentratie komt terug. Je woorden komen terug.
+                Het is echt. Dalend oestrogeen ontneemt je brein energie. Creatine vult dat direct aan.<SourceRef n={1} /> Je concentratie komt terug. Je woorden komen terug.
               </p>
               <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-2 inline-block hover:text-white/40 transition-colors">Creatine &amp; vrouwengezondheid · Smith-Ryan et al., 2021 →</a>
@@ -690,7 +668,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: vermoeidheid</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">echte energie</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                Het is geen luiheid — je cellen produceren gewoon minder ATP. Creatine is de grondstof voor energie op celniveau.<SourceRef n={3} /> Geen stimulant. Echte brandstof waar je lichaam een tekort aan heeft.
+                Het is geen luiheid. Je lichaam maakt gewoon minder energie aan. Creatine is wat je lichaam nodig heeft om dat weer op peil te brengen.<SourceRef n={3} /> Geen stimulant, geen cafeïne. Gewoon aanvullen wat er tekort is.
               </p>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
@@ -703,7 +681,7 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: spierverlies</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">kracht die blijft</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<SourceRef n={7} /> Creatine helpt je de kracht vasthouden die je al hebt<SourceRef n={2} /> — en weer opbouwen wat je aan het verliezen bent.
+                Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<SourceRef n={7} /> Creatine helpt je de kracht vasthouden die je al hebt<SourceRef n={2} /> en weer opbouwen wat je aan het verliezen bent.
               </p>
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
@@ -912,7 +890,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">
               {[
-                { num: "01", name: "twist", desc: "breek de verzegeling. de creatine zat tot nu toe droog verzegeld — vers en op volle sterkte.", img: "/images/8-step-twist.jpeg" },
+                { num: "01", name: "twist", desc: "breek de verzegeling. de creatine zat tot nu toe droog verzegeld. vers en op volle sterkte.", img: "/images/8-step-twist.jpeg" },
                 { num: "02", name: "press", desc: "de creatine valt in de gembershot. 10g, exact, elke keer. niets afmeten.", img: "/images/9-step-press.jpeg" },
                 { num: "03", name: "shake + drink", desc: "één shot. klaar voor je koffie koud wordt. energie voor je brein, je spieren, en tegen ontsteking. 10 seconden.", img: "/images/10-step-drink.jpeg" },
               ].map((step) => (
@@ -1012,10 +990,10 @@ export default function Home() {
           {/* Ingredient grid — image + text + symptom tags */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 mb-16">
             {[
-              { name: "Koudgeperste gember", why: <>Een natuurlijke ontstekingsremmer die helpt bij gewrichtspijn en spijsverteringsproblemen — klachten die veel vrouwen tijdens menopauze herkennen. Ondersteunt ook je immuunsysteem wanneer je lichaam onder hormonale stress staat.<SourceRef n={5} /></>, symptoms: ["gewrichtspijn", "opgeblazenheid", "misselijkheid"], img: "/images/11-ginger.jpeg" },
-              { name: "Kurkuma + zwarte peper-extract", why: <>Curcumine bestrijdt de chronische ontsteking die tijdens menopauze piekt — gekoppeld aan stijve gewrichten, stemmingswisselingen en brain fog.<SourceRef n={5} /> Piperine (zwarte peper-extract) verhoogt de opname van kurkuma met 2.000%.<SourceRef n={6} /></>, symptoms: ["ontsteking", "stijve gewrichten", "stemming"], img: "/images/12-turmeric.jpeg" },
-              { name: "Citroen, ananas, sinaasappel", why: <>Vrouwen verliezen tot 30% huidcollageen in de eerste 5 jaar na menopauze. Vitamine C is essentieel voor collageen-aanmaak — het remt de huidverdunning die door dalend oestrogeen ontstaat.<SourceRef n={10} /> Bromelaine uit ananas is een bewezen ontstekingsremmer die helpt tegen de gewrichtsstijfheid die toeneemt tijdens menopauze.<SourceRef n={5} /> Geen toegevoegde suiker.</>, symptoms: ["huidverdunning", "gewrichtspijn", "ontsteking"], img: "/images/13-citrus.jpeg" },
-              { name: "Elektrolyten", why: <>Natrium, kalium, magnesium. Dalend oestrogeen verstoort direct je elektrolytenbalans — magnesiumtekort bij postmenopauzale vrouwen hangt samen met vermoeidheid, spierkrampen, stemmingswisselingen en zelfs hartritmestoornissen.<SourceRef n={11} /> Elektrolyten verbeteren ook de opname van creatine in je spieren.</>, symptoms: ["vermoeidheid", "spierkrampen", "opvliegers"], img: "/images/14-electrolytes.jpeg" },
+              { name: "Koudgeperste gember", why: <>Een natuurlijke ontstekingsremmer die helpt bij gewrichtspijn en spijsverteringsproblemen. Klachten die veel vrouwen tijdens menopauze herkennen. Ondersteunt ook je immuunsysteem wanneer je lichaam onder hormonale stress staat.<SourceRef n={5} /></>, symptoms: ["gewrichtspijn", "opgeblazenheid", "misselijkheid"], img: "/images/11-ginger.jpeg" },
+              { name: "Kurkuma + zwarte peper-extract", why: <>Curcumine bestrijdt de chronische ontsteking die tijdens menopauze piekt. Denk aan stijve gewrichten, stemmingswisselingen en brain fog.<SourceRef n={5} /> Piperine (zwarte peper-extract) verhoogt de opname van kurkuma met 2.000%.<SourceRef n={6} /></>, symptoms: ["ontsteking", "stijve gewrichten", "stemming"], img: "/images/12-turmeric.jpeg" },
+              { name: "Citroen, ananas, sinaasappel", why: <>Vrouwen verliezen tot 30% huidcollageen in de eerste 5 jaar na menopauze. Vitamine C is essentieel voor collageen-aanmaak en remt de huidverdunning die door dalend oestrogeen ontstaat.<SourceRef n={10} /> Bromelaine uit ananas is een bewezen ontstekingsremmer die helpt tegen de gewrichtsstijfheid die toeneemt tijdens menopauze.<SourceRef n={5} /> Geen toegevoegde suiker.</>, symptoms: ["huidverdunning", "gewrichtspijn", "ontsteking"], img: "/images/13-citrus.jpeg" },
+              { name: "Elektrolyten", why: <>Natrium, kalium, magnesium. Dalend oestrogeen verstoort direct je elektrolytenbalans. Magnesiumtekort bij postmenopauzale vrouwen hangt samen met vermoeidheid, spierkrampen, stemmingswisselingen en zelfs hartritmestoornissen.<SourceRef n={11} /> Elektrolyten verbeteren ook de opname van creatine in je spieren.</>, symptoms: ["vermoeidheid", "spierkrampen", "opvliegers"], img: "/images/14-electrolytes.jpeg" },
             ].map((item) => (
               <div key={item.name}>
                 <img src={item.img} alt={item.name} className="h-48 md:h-56 rounded-xl mb-5 w-full object-cover" />
@@ -1046,9 +1024,9 @@ export default function Home() {
               <p className="text-[#F2A922] font-bold text-sm tracking-[0.2em] uppercase mb-5">de dop</p>
               <p className="text-[5.5rem] md:text-[8rem] font-extrabold text-[#F2A922] leading-none tracking-tighter mb-3">10g</p>
               <p className="text-white font-extrabold text-2xl md:text-3xl mb-3">creatine monohydraat</p>
-              <p className="text-white/35 text-sm mb-5">(de meest onderzochte vorm — gericht op brain fog, vermoeidheid &amp; spierverlies)</p>
+              <p className="text-white/35 text-sm mb-5">(de meest onderzochte vorm, gericht op brain fog, vermoeidheid &amp; spierverlies)</p>
               <p className="text-white/50 leading-relaxed text-base md:text-lg">
-                Droog verzegeld. Zonder vulmiddelen. Breekt niet af. Raakt geen vloeistof tot je twist. Een van de best onderzochte supplementen voor de klachten van menopauze — en je neemt het waarschijnlijk nog niet.
+                Droog verzegeld. Zonder vulmiddelen. Breekt niet af. Raakt geen vloeistof tot je twist. Een van de best onderzochte supplementen voor de klachten van menopauze, en je neemt het waarschijnlijk nog niet.
               </p>
               <HandNote className="mt-6 text-white/40 rotate-[-3deg] block">
                 versheid is alles
@@ -1090,7 +1068,7 @@ export default function Home() {
                 het meest onderzochte supplement in <span className="text-[#F2A922]">voedingswetenschap</span>
               </h3>
               <p className="text-[#2D2D2D]/65 leading-relaxed mb-4">
-                Creatine is niet nieuw. Onderzoekers bestuderen het al tientallen jaren: hersengezondheid, spierkracht, botdichtheid en energie — inclusief studies specifiek bij postmenopauzale vrouwen.
+                Creatine is niet nieuw. Onderzoekers bestuderen het al tientallen jaren: hersengezondheid, spierkracht, botdichtheid en energie. Inclusief studies specifiek bij postmenopauzale vrouwen.
               </p>
               <p className="text-[#2D2D2D]/65 leading-relaxed">
                 De uitdaging was altijd de vorm: poeders die vies smaken, gummies die onderdoseren, en pillen die je vergeet. Geen ervan was gemaakt voor menopauze. zesty wel.
@@ -1207,15 +1185,13 @@ export default function Home() {
           <h2 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] mb-10 tracking-tight">
             veelgestelde vragen
           </h2>
-          {faqGroups.map((group) => (
-            <div key={group.label} className="mb-10 last:mb-0">
-              <h3 className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] mb-4">{group.label}</h3>
-              {group.items.map((faq) => <FaqItem key={faq.q} q={faq.q} a={faq.a} />)}
-            </div>
-          ))}
+          {faqs.map((faq, i) => <FaqItem key={faq.q} q={faq.q} a={faq.a} last={i === faqs.length - 1} />)}
 
-          {/* Blog links */}
-          <div className="mt-12 pt-8 border-t border-[#2D2D2D]/10 flex flex-col gap-3">
+          {/* Links */}
+          <div className="mt-10 flex flex-col gap-3">
+            <a href="/nl/veelgestelde-vragen" className="text-[#2D2D2D]/40 font-bold text-sm hover:text-[#2D2D2D] transition-colors">
+              bekijk alle veelgestelde vragen →
+            </a>
             <a href="/nl/blog/bijwerkingen-creatine-vrouwen" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
               bijwerkingen van creatine bij vrouwen: wat zegt het onderzoek? →
             </a>
@@ -1244,7 +1220,7 @@ export default function Home() {
                 menopauze nam iets af.<br />neem het terug.
               </h2>
               <p className="text-white/50 text-sm md:text-base max-w-md mx-auto mb-8">
-                sluit je aan bij duizenden vrouwen die kiezen voor zesty. de menopauzeshot met creatine.
+                zesty. de menopauzeshot met creatine, gember en kurkuma.
               </p>
               <a
                 href="#pricing"

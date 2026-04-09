@@ -50,6 +50,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`h-full antialiased ${quicksand.variable} ${playfair.variable} ${caveat.variable}`}>
+      {/* WebSite schema - developer-controlled content, no user input */}
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "zesty",
+              url: "https://drinkzesty.be",
+              inLanguage: ["nl", "en"],
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <MetaPixel />
         <PostHogProvider>{children}</PostHogProvider>

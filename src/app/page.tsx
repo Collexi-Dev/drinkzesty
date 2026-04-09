@@ -166,7 +166,7 @@ function ImgPlaceholder({ hint, className = "" }: { hint: string; className?: st
 ═══════════════════════════════════════════════════ */
 
 const faqs = [
-  { q: "wait, what exactly is creatine?", a: "Creatine is a molecule your body produces naturally. It fuels your brain and muscles with energy — like a rechargeable battery for your cells. During perimenopause and menopause, your body produces significantly less of it, which is directly linked to the brain fog, fatigue, and muscle loss so many women experience." },
+  { q: "wait, what exactly is creatine?", a: "Creatine is a molecule your body produces naturally. Your brain and muscles need it for energy. During perimenopause and menopause, your body produces significantly less of it, which is directly linked to the brain fog, fatigue, and muscle loss so many women experience." },
   { q: "how does creatine help with menopause?", a: "Many menopause symptoms — brain fog, fatigue, muscle loss, low energy — overlap with creatine deficiency. As estrogen drops, so does creatine synthesis. Supplementing creatine replenishes what menopause is draining: fuel for your brain, energy for your cells, and support for your muscles." },
   { q: "what does it taste like?", a: "A spicy ginger kick with warm turmeric and bright citrus. Lemon, pineapple, and orange. It's a proper cold-pressed shot. Not sweet. Not medicinal. Just sharp and bright." },
   { q: "is creatine safe during menopause?", a: "Over 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistently safe for healthy adults at recommended doses. It's been studied for decades across all age groups, including postmenopausal women specifically." },
@@ -289,6 +289,7 @@ export default function Home() {
     posthog.capture("cta_clicked", { location, plan });
   };
 
+  // All JSON-LD schemas use developer-controlled content only, no user input
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -299,12 +300,50 @@ export default function Home() {
     })),
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "zesty",
+    url: "https://drinkzesty.be",
+    logo: "https://drinkzesty.be/icon.svg",
+    description: "The daily creatine shot for women in menopause. 10g creatine, cold-pressed with ginger, turmeric and electrolytes.",
+    sameAs: [],
+  };
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "zesty creatine shot",
+    description: "10g creatine monohydrate in a cold-pressed ginger & turmeric shot. Built for women in menopause.",
+    brand: { "@type": "Brand", name: "zesty" },
+    url: "https://drinkzesty.be",
+    image: "https://drinkzesty.be/images/2-hero-product-cutout.png",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "14-day starter",
+        price: "42.00",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/PreOrder",
+        url: "https://drinkzesty.be/waitlist?plan=14",
+      },
+      {
+        "@type": "Offer",
+        name: "30-day monthly",
+        price: "79.00",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/PreOrder",
+        url: "https://drinkzesty.be/waitlist?plan=30",
+      },
+    ],
+    category: "Dietary Supplements",
+  };
+
   return (
     <main className="overflow-x-hidden bg-[#FFFDF7]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-[60] bg-[#FFFDF7]/90 backdrop-blur-md border-b border-[#2D2D2D]/5">
