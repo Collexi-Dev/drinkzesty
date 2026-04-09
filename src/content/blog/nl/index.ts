@@ -4,12 +4,37 @@ import type { ComponentType } from "react";
 import BijwerkingenCreatineVrouwen from "./bijwerkingen-creatine-vrouwen.mdx";
 import CreatineVoordelenVrouwen from "./creatine-voordelen-vrouwen.mdx";
 import BesteSupplementenMenopauze from "./beste-supplementen-menopauze.mdx";
+import CreatineMenopauzeGids from "./creatine-menopauze-complete-gids.mdx";
 
 interface BlogEntry extends BlogPost {
   component: ComponentType;
 }
 
 const posts: BlogEntry[] = [
+  {
+    slug: "creatine-menopauze-complete-gids",
+    title: "Creatine & Menopauze: de complete gids",
+    image: "/images/blog-article-2.jpeg",
+    description:
+      "Alles wat je moet weten over creatine tijdens de menopauze: waarom vrouwen minder aanmaken, wat het onderzoek zegt over brain fog, spierverlies en energie, en hoe je het gebruikt.",
+    date: "2026-04-09",
+    readingTime: "12 min",
+    faqs: [
+      {
+        q: "Waarom is creatine belangrijk tijdens de menopauze?",
+        a: "Vrouwen hebben 70-80% lagere creatine-reserves dan mannen. Tijdens de menopauze daalt de aanmaak verder door dalend oestrogeen, wat bijdraagt aan brain fog, vermoeidheid en spierverlies. Suppletie vult dat tekort aan.",
+      },
+      {
+        q: "Hoeveel creatine per dag voor vrouwen in de menopauze?",
+        a: "3-5g per dag is voldoende voor spiervoordelen. 10g per dag wordt gebruikt in onderzoek naar cognitieve voordelen, omdat het brein hogere doseringen nodig heeft om verzadigd te raken.",
+      },
+      {
+        q: "Is creatine bewezen effectief bij menopauze?",
+        a: "Ja. Meerdere gerandomiseerde gecontroleerde studies tonen verbeteringen aan in cognitie, spiermassa, botdichtheid en stemming bij peri- en postmenopauzale vrouwen die creatine nemen.",
+      },
+    ],
+    component: CreatineMenopauzeGids,
+  },
   {
     slug: "bijwerkingen-creatine-vrouwen",
     title: "Bijwerkingen van creatine bij vrouwen: wat zegt het onderzoek?",
