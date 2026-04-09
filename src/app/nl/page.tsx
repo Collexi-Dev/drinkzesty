@@ -319,11 +319,64 @@ export default function Home() {
     })),
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "zesty",
+    url: "https://drinkzesty.be",
+    logo: "https://drinkzesty.be/icon.svg",
+    description: "De dagelijkse creatine shot voor vrouwen in de menopauze. 10g creatine, koudgeperst met gember, kurkuma en elektrolyten.",
+    sameAs: [],
+  };
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "zesty creatine shot",
+    description: "10g creatine monohydraat in een koudgeperste gember & kurkuma shot. Voor vrouwen in de menopauze.",
+    brand: { "@type": "Brand", name: "zesty" },
+    url: "https://drinkzesty.be/nl",
+    image: "https://drinkzesty.be/images/2-hero-product-cutout.png",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "14-daagse starter",
+        price: "42.00",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/PreOrder",
+        url: "https://drinkzesty.be/waitlist?plan=14",
+      },
+      {
+        "@type": "Offer",
+        name: "30-daagse maandelijks",
+        price: "79.00",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/PreOrder",
+        url: "https://drinkzesty.be/waitlist?plan=30",
+      },
+    ],
+    category: "Voedingssupplementen",
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Creatine monohydraat", value: "10g" },
+      { "@type": "PropertyValue", name: "Formaat", value: "Koudgeperste shot" },
+      { "@type": "PropertyValue", name: "Doelgroep", value: "Vrouwen in de menopauze" },
+    ],
+  };
+
   return (
     <main className="overflow-x-hidden bg-[#FFFDF7]">
+      {/* JSON-LD schemas — all developer-controlled content, no user input */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
 
       {/* Navigation */}
@@ -582,6 +635,11 @@ export default function Home() {
               menopauze neemt je creatine af. zesty geeft het terug.
             </HandNote>
           </div>
+
+          {/* Blog link */}
+          <a href="/nl/blog/creatine-menopauze-complete-gids" className="inline-block text-[#F2A922] font-bold text-sm hover:underline transition-colors mb-10 md:mb-14">
+            lees de complete gids: creatine &amp; menopauze →
+          </a>
 
           {/* The turn — reframe + zesty payoff */}
           <div className="text-center py-8 border-t border-b border-[#2D2D2D]/10">
@@ -1155,6 +1213,16 @@ export default function Home() {
               {group.items.map((faq) => <FaqItem key={faq.q} q={faq.q} a={faq.a} />)}
             </div>
           ))}
+
+          {/* Blog links */}
+          <div className="mt-12 pt-8 border-t border-[#2D2D2D]/10 flex flex-col gap-3">
+            <a href="/nl/blog/bijwerkingen-creatine-vrouwen" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
+              bijwerkingen van creatine bij vrouwen: wat zegt het onderzoek? →
+            </a>
+            <a href="/nl/blog/beste-supplementen-menopauze" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
+              beste supplementen voor vrouwen in de menopauze [2026] →
+            </a>
+          </div>
         </div>
       </section>
 
