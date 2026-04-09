@@ -332,7 +332,7 @@ export default function Home() {
           <a href="/nl" className="text-lg font-extrabold text-[#F2A922] tracking-tight">zesty</a>
           <div className="flex items-center gap-5">
             <a href="/nl/blog" className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
-            <a href="/waitlist?plan=30" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">bestel nu</a>
+            <a href="#pricing" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">bestel nu</a>
             <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
               <a href="/" className="px-2.5 py-1 text-xs font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] rounded-full transition-colors">EN</a>
               <span className="px-2.5 py-1 text-xs font-bold text-[#FFFDF7] bg-[#2D2D2D] rounded-full">NL</span>
@@ -400,7 +400,7 @@ export default function Home() {
         {/* CTA */}
         <div className="gsap-hero-intro relative z-10 text-center">
           <a
-            href="/waitlist?plan=30"
+            href="#pricing"
             onClick={() => trackCta("hero", "30")}
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
@@ -1075,7 +1075,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              probeer het twee weken. <span className="text-[#F2A922]"></span>
+              probeer het <span className="text-[#F2A922]">twee weken.</span>
             </h2>
             <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base max-w-md mx-auto">
               zo lang duurt het voor creatine op peil is in je lichaam.<SourceRef n={9} /> de meeste vrouwen voelen binnen 14 dagen hun brain fog afnemen en hun energie terugkomen.
@@ -1179,7 +1179,7 @@ export default function Home() {
                 sluit je aan bij duizenden vrouwen die kiezen voor zesty. de menopauzeshot met creatine.
               </p>
               <a
-                href="/waitlist?plan=30"
+                href="#pricing"
                 onClick={() => trackCta("footer", "30")}
                 className="inline-flex items-center gap-3 bg-[#F2A922] text-[#2D2D2D] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#D4921E] hover:shadow-xl hover:scale-[1.02]"
               >
@@ -1253,7 +1253,7 @@ export default function Home() {
             <p className="text-sm font-bold text-[#2D2D2D]">probeer het 2 weken · vanaf €2,63/shot</p>
             <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">gratis verzending op 30-packs</p>
           </div>
-          <a href="/waitlist?plan=30" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
+          <a href="#pricing" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
             bestel nu
           </a>
         </div>

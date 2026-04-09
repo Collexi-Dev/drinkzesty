@@ -312,7 +312,7 @@ export default function Home() {
           <a href="/" className="text-lg font-extrabold text-[#F2A922] tracking-tight">zesty</a>
           <div className="flex items-center gap-5">
             <a href="/nl/blog" className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
-            <a href="/waitlist?plan=30" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">order now</a>
+            <a href="#pricing" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">order now</a>
             <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
               <span className="px-2.5 py-1 text-xs font-bold text-[#FFFDF7] bg-[#2D2D2D] rounded-full">EN</span>
               <a href="/nl" className="px-2.5 py-1 text-xs font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] rounded-full transition-colors">NL</a>
@@ -380,7 +380,7 @@ export default function Home() {
         {/* CTA */}
         <div className="gsap-hero-intro relative z-10 text-center">
           <a
-            href="/waitlist?plan=30"
+            href="#pricing"
             onClick={() => trackCta("hero", "30")}
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
@@ -1154,7 +1154,7 @@ export default function Home() {
                 join thousands of women choosing zesty. the functional menopause wellness shot with creatine.
               </p>
               <a
-                href="/waitlist?plan=30"
+                href="#pricing"
                 onClick={() => trackCta("footer", "30")}
                 className="inline-flex items-center gap-3 bg-[#F2A922] text-[#2D2D2D] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#D4921E] hover:shadow-xl hover:scale-[1.02]"
               >
@@ -1228,7 +1228,7 @@ export default function Home() {
             <p className="text-sm font-bold text-[#2D2D2D]">try it for 2 weeks · from €2.63/shot</p>
             <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">free shipping on 30-packs</p>
           </div>
-          <a href="/waitlist?plan=30" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
+          <a href="#pricing" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
             order now
           </a>
         </div>

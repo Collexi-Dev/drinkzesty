@@ -6,6 +6,7 @@ export interface BlogPost {
   description: string;
   date: string;
   readingTime: string;
+  image?: string;
   faqs?: { q: string; a: string }[];
 }
 

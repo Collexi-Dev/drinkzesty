@@ -13,6 +13,7 @@ const posts: BlogEntry[] = [
   {
     slug: "bijwerkingen-creatine-vrouwen",
     title: "Bijwerkingen van creatine bij vrouwen: wat zegt het onderzoek?",
+    image: "/images/blog/bijwerkingen-creatine-vrouwen.jpg",
     description:
       "Alles over de bijwerkingen van creatine bij vrouwen. Wat zegt de wetenschap? Is creatine veilig tijdens de menopauze? Een eerlijk overzicht.",
     date: "2026-04-09",
@@ -36,6 +37,7 @@ const posts: BlogEntry[] = [
   {
     slug: "creatine-voordelen-vrouwen",
     title: "Creatine voordelen voor vrouwen: wat het onderzoek zegt",
+    image: "/images/blog/creatine-voordelen-vrouwen.jpg",
     description:
       "De wetenschappelijk bewezen voordelen van creatine voor vrouwen in de menopauze: minder brain fog, meer energie, behoud van spiermassa en botgezondheid.",
     date: "2026-04-09",
@@ -59,6 +61,7 @@ const posts: BlogEntry[] = [
   {
     slug: "beste-supplementen-menopauze",
     title: "Beste supplementen voor vrouwen in de menopauze [2026]",
+    image: "/images/blog/beste-supplementen-menopauze.jpg",
     description:
       "Welke supplementen helpen echt bij menopauze? Een eerlijk, wetenschappelijk onderbouwd overzicht van creatine, vitamine D, magnesium, omega-3 en collageen.",
     date: "2026-04-09",

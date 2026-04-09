@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPost, getPostComponent } from "@/lib/blog";
 import { Nav } from "@/components/Nav";
@@ -29,6 +30,7 @@ export async function generateMetadata(props: {
       url: `https://drinkzesty.be/nl/blog/${slug}`,
       siteName: "zesty",
       type: "article",
+      ...(post.image ? { images: [{ url: post.image }] } : {}),
     },
   };
 }
@@ -95,6 +97,18 @@ export default async function BlogPost(props: {
             <h1 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight">
               {post.title}
             </h1>
+            {post.image && (
+              <div className="mt-8 rounded-xl overflow-hidden">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={1200}
+                  height={630}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+            )}
           </header>
 
           <div className="prose prose-lg prose-neutral max-w-none [&>p]:text-[#2D2D2D]/80 [&>p]:leading-relaxed [&>h2]:text-[#2D2D2D] [&>h2]:font-extrabold [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-4 [&>h3]:text-[#2D2D2D] [&>h3]:font-bold [&>ul]:text-[#2D2D2D]/80 [&>ol]:text-[#2D2D2D]/80 [&>blockquote]:border-[#F2A922] [&>blockquote]:text-[#2D2D2D]/60 [&_table]:w-full [&_table]:text-sm [&_th]:text-left [&_th]:font-bold [&_th]:text-[#2D2D2D] [&_th]:pb-2 [&_th]:border-b [&_th]:border-[#2D2D2D]/15 [&_td]:py-2.5 [&_td]:border-b [&_td]:border-[#2D2D2D]/8 [&_td]:text-[#2D2D2D]/70">
@@ -110,7 +124,7 @@ export default async function BlogPost(props: {
               10g creatine. Eén shot. Elke ochtend.
             </p>
             <Link
-              href="/waitlist?plan=30"
+              href="/nl#pricing"
               className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
             >
               bestel nu
