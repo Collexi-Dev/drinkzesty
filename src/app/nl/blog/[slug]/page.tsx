@@ -1,0 +1,129 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getAllPosts, getPost, getPostComponent } from "@/lib/blog";
+
+export async function generateStaticParams() {
+  return getAllPosts().map((post) => ({ slug: post.slug }));
+}
+
+export const dynamicParams = false;
+
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await props.params;
+  const post = getPost(slug);
+  if (!post) return {};
+
+  return {
+    title: `${post.title} — zesty`,
+    description: post.description,
+    alternates: {
+      canonical: `https://drinkzesty.be/nl/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `https://drinkzesty.be/nl/blog/${slug}`,
+      siteName: "zesty",
+      type: "article",
+    },
+  };
+}
+
+export default async function BlogPost(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await props.params;
+  const post = getPost(slug);
+  const Content = getPostComponent(slug);
+  if (!post || !Content) notFound();
+
+  // Note: JSON-LD schemas use trusted, developer-controlled content only (no user input)
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
+    publisher: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
+    mainEntityOfPage: `https://drinkzesty.be/nl/blog/${slug}`,
+  };
+
+  const faqSchema = post.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map((faq: { q: string; a: string }) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: { "@type": "Answer", text: faq.a },
+        })),
+      }
+    : null;
+
+  return (
+    <main className="min-h-screen bg-[#FFFBF0] px-6 py-20 md:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
+      <article className="max-w-2xl mx-auto">
+        <Link
+          href="/nl/blog"
+          className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] hover:text-[#F2A922] transition-colors"
+        >
+          ← alle artikels
+        </Link>
+
+        <header className="mt-6 mb-12">
+          <p className="text-sm text-[#2D2D2D]/40 font-medium mb-2">
+            {post.date} · {post.readingTime}
+          </p>
+          <h1 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight">
+            {post.title}
+          </h1>
+        </header>
+
+        <div className="prose prose-lg prose-neutral max-w-none [&>p]:text-[#2D2D2D]/80 [&>p]:leading-relaxed [&>h2]:text-[#2D2D2D] [&>h2]:font-extrabold [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-4 [&>h3]:text-[#2D2D2D] [&>h3]:font-bold [&>ul]:text-[#2D2D2D]/80 [&>ol]:text-[#2D2D2D]/80 [&>blockquote]:border-[#F2A922] [&>blockquote]:text-[#2D2D2D]/60">
+          <Content />
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 p-8 bg-[#2D2D2D] rounded-2xl text-center">
+          <p className="text-white/60 text-sm font-bold uppercase tracking-[0.2em] mb-2">
+            zesty
+          </p>
+          <p className="text-white text-xl md:text-2xl font-extrabold mb-4">
+            10g creatine. Eén shot. Elke ochtend.
+          </p>
+          <Link
+            href="/waitlist"
+            className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
+          >
+            schrijf je in voor de waitlist
+          </Link>
+        </div>
+
+        {/* Back to blog */}
+        <div className="mt-12 pt-8 border-t border-[#2D2D2D]/10">
+          <Link
+            href="/nl/blog"
+            className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] hover:text-[#F2A922] transition-colors"
+          >
+            ← alle artikels
+          </Link>
+        </div>
+      </article>
+    </main>
+  );
+}
