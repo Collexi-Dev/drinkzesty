@@ -26,7 +26,7 @@ const posts: BlogEntry[] = [
       },
       {
         q: "Hoeveel creatine per dag voor vrouwen in de menopauze?",
-        a: "3-5g per dag is voldoende voor spiervoordelen. 10g per dag wordt gebruikt in onderzoek naar cognitieve voordelen, omdat het brein hogere doseringen nodig heeft om verzadigd te raken.",
+        a: "3-5g per dag is voldoende voor spiervoordelen. 10g per dag wordt gebruikt in onderzoek naar cognitieve voordelen, omdat de hersenen hogere doseringen nodig heeft om verzadigd te raken.",
       },
       {
         q: "Is creatine bewezen effectief bij menopauze?",
@@ -98,7 +98,7 @@ const posts: BlogEntry[] = [
       },
       {
         q: "Hoeveel creatine per dag voor vrouwen?",
-        a: "3-5g per dag is voldoende voor spiervoordelen. Voor cognitieve voordelen gebruiken onderzoekers 10g of meer om ook het brein te bereiken.",
+        a: "3-5g per dag is voldoende voor spiervoordelen. Voor cognitieve voordelen gebruiken onderzoekers 10g of meer om ook de hersenen te bereiken.",
       },
     ],
     about: [

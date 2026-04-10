@@ -854,9 +854,9 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">
               {[
-                { num: "01", name: "twist", desc: "break the seal. the creatine has been sealed dry, fresh and full-strength until this moment.", img: "/images/8-step-twist.jpeg" },
-                { num: "02", name: "press", desc: "creatine drops through into the ginger shot. 10g, exactly, every time. no measuring.", img: "/images/9-step-press.jpeg" },
-                { num: "03", name: "shake + drink", desc: "one shot. done before your coffee's ready. brain fuel, muscle fuel, anti-inflammatory. 10 seconds.", img: "/images/10-step-drink.jpeg" },
+                { num: "01", name: "twist", desc: "break the seal. the creatine sits dry-sealed in the cap, fresh and full-strength.", img: "/images/8-step-twist.jpeg" },
+                { num: "02", name: "press", desc: "push the cap down. 10g creatine drops into the ginger shot. precisely dosed, no measuring.", img: "/images/9-step-press.jpeg" },
+                { num: "03", name: "shake + drink", desc: "shake and drink. your entire morning routine in 10 seconds.", img: "/images/10-step-drink.jpeg" },
               ].map((step) => (
                 <div key={step.num} className="text-center">
                   <p className="text-[#F2A922] text-6xl md:text-7xl font-extrabold tracking-tight mb-3">{step.num}</p>
