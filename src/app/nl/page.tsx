@@ -464,7 +464,7 @@ export default function Home() {
           TRUST STRIP — icon + label badges
       ═══════════════════════════════════════════ */}
       <section data-section="trust-strip" className="bg-[#F5EDE0] py-8 md:py-10 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-3 md:grid-cols-5 gap-6 md:gap-4">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 md:gap-4 [&>*]:w-[calc(33%-1rem)] md:[&>*]:w-auto">
           {[
             { label: "koudgeperst", icon: <Droplets className="w-6 h-6" strokeWidth={1.5} /> },
             { label: "wetenschappelijk onderbouwd", icon: <FlaskConical className="w-6 h-6" strokeWidth={1.5} /> },
