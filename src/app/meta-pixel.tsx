@@ -13,11 +13,13 @@ export function MetaPixel() {
         id="meta-pixel-sdk"
         strategy="afterInteractive"
         src="https://connect.facebook.net/en_US/fbevents.js"
+        onLoad={() => {
+          if (window.fbq) {
+            window.fbq("init", PIXEL_ID);
+            window.fbq("track", "PageView");
+          }
+        }}
       />
-      <Script
-        id="meta-pixel-init"
-        strategy="afterInteractive"
-      >{`fbq('init', '${PIXEL_ID}'); fbq('track', 'PageView');`}</Script>
       <noscript>
         <img
           height={1}
