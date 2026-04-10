@@ -25,11 +25,11 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://drinkzesty.be"),
-  title: "zesty — the daily creatine shot for menopause",
-  description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause — fights brain fog, fatigue, and muscle loss. One shot, every morning.",
+  title: "zesty — creatine voor vrouwen in de menopauze | dagelijkse shot",
+  description: "10g creatine in een koudgeperste gember & kurkuma shot. Wetenschappelijk onderbouwd voor vrouwen in de menopauze. Tegen brain fog, vermoeidheid en spierverlies. Elke ochtend.",
   openGraph: {
-    title: "zesty — the daily creatine shot for menopause",
-    description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause — fights brain fog, fatigue, and muscle loss.",
+    title: "zesty — creatine voor vrouwen in de menopauze | dagelijkse shot",
+    description: "10g creatine in een koudgeperste gember & kurkuma shot. Wetenschappelijk onderbouwd voor vrouwen in de menopauze.",
     url: "https://drinkzesty.be",
     siteName: "zesty",
     type: "website",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://drinkzesty.be",
     languages: {
-      en: "https://drinkzesty.be",
-      nl: "https://drinkzesty.be/nl",
+      nl: "https://drinkzesty.be",
+      en: "https://drinkzesty.be/en",
     },
   },
 };
@@ -49,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased ${quicksand.variable} ${playfair.variable} ${caveat.variable}`}>
+    <html lang="nl" className={`h-full antialiased ${quicksand.variable} ${playfair.variable} ${caveat.variable}`}>
       {/* WebSite schema - developer-controlled content, no user input */}
       <head>
         <script

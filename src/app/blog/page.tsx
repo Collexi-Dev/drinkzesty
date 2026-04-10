@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Alles over creatine, menopauze en supplementen. Wetenschappelijk onderbouwd, in begrijpelijke taal.",
   alternates: {
-    canonical: "https://drinkzesty.be/nl/blog",
+    canonical: "https://drinkzesty.be/blog",
   },
 };
 
@@ -33,7 +33,7 @@ export default function BlogIndex() {
 
           {/* Featured article */}
           {featured && (
-            <Link href={`/nl/blog/${featured.slug}`} className="group block mb-14">
+            <Link href={`/blog/${featured.slug}`} className="group block mb-14">
               <article>
                 {featured.image && (
                   <div className="rounded-xl overflow-hidden mb-5">
@@ -63,7 +63,7 @@ export default function BlogIndex() {
           {rest.length > 0 && (
             <div className="grid md:grid-cols-2 gap-8">
               {rest.map((post) => (
-                <Link key={post.slug} href={`/nl/blog/${post.slug}`} className="group block">
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
                   <article>
                     {post.image && (
                       <div className="rounded-xl overflow-hidden mb-4">
@@ -108,10 +108,10 @@ export default function BlogIndex() {
               <p className="text-white/30 text-sm">de menopauzeshot met creatine</p>
             </div>
             <div className="flex gap-5 text-sm text-white/35">
-              <Link href="/nl" className="hover:text-white/60 transition-colors">home</Link>
-              <Link href="/nl/blog" className="hover:text-white/60 transition-colors">blog</Link>
-              <Link href="/nl/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/nl#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
+              <Link href="/" className="hover:text-white/60 transition-colors">home</Link>
+              <Link href="/blog" className="hover:text-white/60 transition-colors">blog</Link>
+              <Link href="/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
+              <Link href="/#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">

@@ -106,7 +106,7 @@ export default function VeelgesteldeVragen() {
               10g creatine. Eén shot. Elke ochtend.
             </p>
             <Link
-              href="/nl#pricing"
+              href="/#pricing"
               className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
             >
               bestel nu
@@ -125,10 +125,10 @@ export default function VeelgesteldeVragen() {
               <p className="text-white/30 text-sm">de menopauzeshot met creatine</p>
             </div>
             <div className="flex gap-5 text-sm text-white/35">
-              <Link href="/nl" className="hover:text-white/60 transition-colors">home</Link>
-              <Link href="/nl/blog" className="hover:text-white/60 transition-colors">blog</Link>
-              <Link href="/nl/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/nl#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
+              <Link href="/" className="hover:text-white/60 transition-colors">home</Link>
+              <Link href="/blog" className="hover:text-white/60 transition-colors">blog</Link>
+              <Link href="/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
+              <Link href="/#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">

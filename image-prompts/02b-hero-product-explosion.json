@@ -1,0 +1,28 @@
+{
+  "name": "Hero Product Teaser Cut-Out",
+  "usage": "Replaces the current static hero product cut-out. Floats in the center of the hero section over the atmospheric background, between the headline text above and stat pills below. Extracted from the solid cream background and placed on transparent background. This is a TEASER — just enough ingredient hints to create intrigue and visual interest, but deliberately restrained. The full ingredient explosion payoff comes later in the meet-zesty section (07). Think of this as the movie trailer: you see flashes, you want more.",
+  "prompt": "Ultra-sharp studio product photograph of a premium clear PET supplement shot bottle with thick opaque golden-yellow liquid visible inside, floating at a subtle 5-degree tilt against a perfectly solid warm cream background (#FFFDF7). The cap is pristine and sealed. A few ingredient hints float near the bottle — a single thin slice of fresh ginger root drifting to one side, two or three whole black peppercorns scattered loosely, and a faint wisp of fine white powder near the cap as if something is sealed inside. The ingredients are sparse and atmospheric, not a full display — just enough to hint that this bottle contains real ingredients. The bottle completely dominates the composition, the floating elements are small and secondary. Everything is tack-sharp. Shot against a perfectly solid uniform cream background (#FFFDF7) for clean extraction — no gradient, no shadow on background. Generous negative space on all sides so the composition breathes. Dual softbox studio lighting, bright and even. Premium product photography at Apple isolation quality with a whisper of Ottolenghi.",
+  "scene": {
+    "type": "studio",
+    "background": "solid warm cream (#FFFDF7), perfectly uniform, no gradient, no texture",
+    "surface": "none, everything floats, no shadow cast on background"
+  },
+  "subject": {
+    "description": "premium clear PET supplement shot bottle with thick opaque golden-yellow liquid, sealed dosing cap, with sparse floating ingredient hints: one ginger slice, a few peppercorns, faint powder wisp near cap — teaser level, not a full explosion",
+    "position": "bottle centered and dominant with generous empty cream space on all sides, ingredient hints sparse and close to the bottle — composition should not approach frame edges",
+    "angle": "straight-on with subtle 5-degree tilt to the right"
+  },
+  "camera": {
+    "lens": "100mm macro",
+    "aperture": "f/5.6",
+    "depth_of_field": "deep, all elements in tack-sharp focus",
+    "aspect_ratio": "3:4"
+  },
+  "lighting": {
+    "type": "dual studio softbox, clean and bright",
+    "direction": "front-angled from both sides, slight key light from upper left",
+    "shadows": "minimal soft drop shadows on floating elements only, no shadow cast on the cream background"
+  },
+  "style": "premium product photography, subtle ingredient teaser, Apple-level product isolation with restrained ingredient hints, razor-sharp, clean and premium",
+  "negative": "no background objects, no text overlays, no blur, no humans, no gradient background, no harsh reflections, no background shadows, no objects near frame edges, no cap open, no liquid spilling, no turmeric piece, no lemon wedge, no citrus — save those for the full explosion shot"
+}

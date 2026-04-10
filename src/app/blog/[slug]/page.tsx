@@ -22,12 +22,12 @@ export async function generateMetadata(props: {
     title: `${post.title} — zesty`,
     description: post.description,
     alternates: {
-      canonical: `https://drinkzesty.be/nl/blog/${slug}`,
+      canonical: `https://drinkzesty.be/blog/${slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://drinkzesty.be/nl/blog/${slug}`,
+      url: `https://drinkzesty.be/blog/${slug}`,
       siteName: "zesty",
       type: "article",
       ...(post.image ? { images: [{ url: post.image }] } : {}),
@@ -52,7 +52,7 @@ export default async function BlogPost(props: {
     datePublished: post.date,
     author: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
     publisher: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
-    mainEntityOfPage: `https://drinkzesty.be/nl/blog/${slug}`,
+    mainEntityOfPage: `https://drinkzesty.be/blog/${slug}`,
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: [".prose > p:first-of-type"],
@@ -94,7 +94,7 @@ export default async function BlogPost(props: {
 
         <article className="max-w-2xl mx-auto">
           <Link
-            href="/nl/blog"
+            href="/blog"
             className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] hover:text-[#F2A922] transition-colors"
           >
             ← alle artikels
@@ -134,7 +134,7 @@ export default async function BlogPost(props: {
               10g creatine. Eén shot. Elke ochtend.
             </p>
             <Link
-              href="/nl#pricing"
+              href="/#pricing"
               className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
             >
               bestel nu
@@ -145,7 +145,7 @@ export default async function BlogPost(props: {
           {/* Back to blog */}
           <div className="mt-12 pt-8 border-t border-[#2D2D2D]/10">
             <Link
-              href="/nl/blog"
+              href="/blog"
               className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] hover:text-[#F2A922] transition-colors"
             >
               ← alle artikels
@@ -163,10 +163,10 @@ export default async function BlogPost(props: {
               <p className="text-white/30 text-sm">de menopauzeshot met creatine</p>
             </div>
             <div className="flex gap-5 text-sm text-white/35">
-              <Link href="/nl" className="hover:text-white/60 transition-colors">home</Link>
-              <Link href="/nl/blog" className="hover:text-white/60 transition-colors">blog</Link>
-              <Link href="/nl/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/nl#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
+              <Link href="/" className="hover:text-white/60 transition-colors">home</Link>
+              <Link href="/blog" className="hover:text-white/60 transition-colors">blog</Link>
+              <Link href="/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
+              <Link href="/#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">

@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
 
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `https://drinkzesty.be/nl/blog/${post.slug}`,
+    url: `https://drinkzesty.be/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly",
     priority: 0.7,
@@ -19,12 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       alternates: {
         languages: {
-          nl: "https://drinkzesty.be/nl",
+          en: "https://drinkzesty.be/en",
         },
       },
     },
     {
-      url: "https://drinkzesty.be/nl",
+      url: "https://drinkzesty.be/en",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: "https://drinkzesty.be/nl/veelgestelde-vragen",
+      url: "https://drinkzesty.be/veelgestelde-vragen",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(posts.length > 0
       ? [
           {
-            url: "https://drinkzesty.be/nl/blog",
+            url: "https://drinkzesty.be/blog",
             lastModified: new Date(),
             changeFrequency: "weekly" as const,
             priority: 0.8,
