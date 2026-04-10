@@ -409,7 +409,7 @@ export default function Home() {
             {" "}brain fog, moeheid en spierverlies.
           </h1>
           <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-[#F2A922]">10g creatine</span>{" "}per shot. Voor vrouwen in de overgang die het zat zijn om zich zo te voelen.
+            <span className="text-[#F2A922]">10g creatine</span>{" "}per shot. Gemaakt voor vrouwen die meer verdienen dan &ldquo;dat hoort bij je leeftijd.&rdquo;
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             een koudgeperste gember &amp; kurkuma creatine shot tegen de brain fog, vermoeidheid en het spierverlies van de overgang.
@@ -446,7 +446,7 @@ export default function Home() {
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
             <span className="w-6 h-6 rounded-full bg-[#F2A922] flex items-center justify-center text-[#2D2D2D] text-xs">↗</span>
-            bestel nu
+            probeer het 14 dagen
           </a>
           <p className="text-[#2D2D2D]/50 text-sm mt-4 font-medium">vanaf €2,63/shot · gratis verzending op 30-packs</p>
         </div>
@@ -1121,11 +1121,27 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              probeer het <span className="text-[#F2A922]">twee weken.</span>
+              14 dagen. <span className="text-[#F2A922]">dat is alles.</span>
             </h2>
             <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base max-w-md mx-auto">
               zo lang duurt het voor creatine op peil is in je lichaam.<SourceRef n={9} /> de meeste vrouwen voelen binnen 14 dagen hun brain fog afnemen en hun energie terugkomen.
             </p>
+          </div>
+
+          {/* What's inside */}
+          <div className="flex flex-wrap justify-center gap-3 mb-14 md:mb-20">
+            {[
+              "10g creatine monohydraat",
+              "gember",
+              "kurkuma + piperine",
+              "elektrolyten",
+              "vitamine C",
+              "0g suiker",
+            ].map((item) => (
+              <span key={item} className="text-sm font-bold text-[#2D2D2D]/50 bg-[#FFFDF7] border border-[#2D2D2D]/[0.06] px-4 py-2 rounded-full">
+                {item}
+              </span>
+            ))}
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
@@ -1305,8 +1321,8 @@ export default function Home() {
       <div className={`fixed bottom-0 left-0 right-0 bg-[#FFFDF7]/95 backdrop-blur-md border-t border-[#2D2D2D]/10 transition-all duration-300 z-50 ${showSticky ? "translate-y-0" : "translate-y-full pointer-events-none"}`}>
         <div className="max-w-4xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
           <div>
-            <p className="text-sm font-bold text-[#2D2D2D]">probeer het 2 weken · vanaf €2,63/shot</p>
-            <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">gratis verzending op 30-packs</p>
+            <p className="text-sm font-bold text-[#2D2D2D]">10g creatine per shot · wetenschappelijk onderbouwd</p>
+            <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">vanaf €2,63/dag · gratis verzending op 30-packs</p>
           </div>
           <a href="#pricing" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
             bestel nu
