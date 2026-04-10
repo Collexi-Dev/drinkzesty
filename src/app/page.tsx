@@ -451,8 +451,8 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           TRUST STRIP — icon + label badges
       ═══════════════════════════════════════════ */}
-      <section data-section="trust-strip" className="bg-[#F5EDE0] py-8 md:py-10 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+      <section data-section="trust-strip" className="bg-[#F5EDE0] py-8 md:py-10 overflow-x-auto">
+        <div className="flex items-start justify-start md:justify-center gap-8 md:gap-10 px-6 min-w-max md:min-w-0 md:flex-wrap max-w-5xl mx-auto">
           {[
             { label: "cold-pressed", icon: <Droplets className="w-6 h-6" strokeWidth={1.5} /> },
             { label: "backed by science", icon: <FlaskConical className="w-6 h-6" strokeWidth={1.5} /> },
@@ -460,9 +460,9 @@ export default function Home() {
             { label: "recycled bottles", icon: <Recycle className="w-6 h-6" strokeWidth={1.5} /> },
             { label: "no added sugar", icon: <ShieldCheck className="w-6 h-6" strokeWidth={1.5} /> },
           ].map((badge) => (
-            <div key={badge.label} className="flex flex-col items-center gap-2 text-center">
+            <div key={badge.label} className="flex flex-col items-center gap-2 text-center shrink-0 w-28 md:w-auto">
               <div className="text-[#2D2D2D]/50">{badge.icon}</div>
-              <span className="text-xs md:text-sm text-[#2D2D2D]/55 font-bold uppercase tracking-[0.1em] leading-tight">{badge.label}</span>
+              <span className="text-[10px] md:text-xs text-[#2D2D2D]/55 font-bold uppercase tracking-[0.1em] leading-tight">{badge.label}</span>
             </div>
           ))}
         </div>
