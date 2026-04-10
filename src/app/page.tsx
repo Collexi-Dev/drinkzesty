@@ -500,7 +500,7 @@ export default function Home() {
               { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "losing muscle & strength", desc: <>less muscle, more aches. declining estrogen accelerates muscle loss after 40.<SourceRef n={7} /></> },
               { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "can\u2019t focus anymore", desc: <>reading the same email three times. cognitive decline is one of the most common menopause symptoms.<SourceRef n={1} /></> },
             ].map((s) => (
-              <div key={s.title} className="flex items-start gap-4">
+              <div key={s.title} className="flex items-start gap-4 bg-[#F5EDE0]/50 rounded-xl p-5">
                 <div className="shrink-0 mt-1">{s.icon}</div>
                 <div>
                   <p className="font-extrabold text-[#2D2D2D] text-xl">{s.title}</p>
@@ -543,28 +543,28 @@ export default function Home() {
               </div>
 
               {/* Top-left: brain fog */}
-              <div className="absolute left-0 top-0 max-w-[220px] z-10">
+              <div className="absolute left-0 top-0 max-w-[240px] z-10 bg-[#F5EDE0]/50 rounded-xl p-5">
                 <IconBrainFog className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">menopause brain fog</p>
                 <p className="text-[#2D2D2D]/50 text-base mt-1">the words are there, you just can&rsquo;t find them. estrogen drops, and so does clarity.<SourceRef n={1} /></p>
               </div>
 
               {/* Top-right: can't focus */}
-              <div className="absolute right-0 top-0 max-w-[220px] text-right z-10">
+              <div className="absolute right-0 top-0 max-w-[240px] text-right z-10 bg-[#F5EDE0]/50 rounded-xl p-5">
                 <div className="flex justify-end"><IconFocus className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">cognitive decline</p>
                 <p className="text-[#2D2D2D]/50 text-base mt-1">reading the same email three times. one of the most reported menopause symptoms.<SourceRef n={1} /></p>
               </div>
 
               {/* Bottom-left: tired */}
-              <div className="absolute left-0 bottom-0 max-w-[220px] z-10">
+              <div className="absolute left-0 bottom-0 max-w-[240px] z-10 bg-[#F5EDE0]/50 rounded-xl p-5">
                 <IconBattery className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">crushing fatigue</p>
                 <p className="text-[#2D2D2D]/50 text-base mt-1">hormonal shifts tank your cellular energy. 8 hours of sleep and still dragging.<SourceRef n={3} /></p>
               </div>
 
               {/* Bottom-right: losing strength */}
-              <div className="absolute right-0 bottom-0 max-w-[220px] text-right z-10">
+              <div className="absolute right-0 bottom-0 max-w-[240px] text-right z-10 bg-[#F5EDE0]/50 rounded-xl p-5">
                 <div className="flex justify-end"><IconStrength className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">muscle &amp; strength loss</p>
                 <p className="text-[#2D2D2D]/50 text-base mt-1">declining estrogen accelerates muscle loss. things you used to do easily get harder.<SourceRef n={7} /></p>
