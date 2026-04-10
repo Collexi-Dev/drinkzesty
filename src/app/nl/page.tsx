@@ -410,7 +410,7 @@ export default function Home() {
             {" "}brain fog, moeheid en spierverlies.
           </h1>
           <p className="text-xl md:text-2xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-[#F2A922] text-2xl md:text-3xl">10g creatine</span>{" "}per shot. Gemaakt voor vrouwen die meer verdienen dan &ldquo;dat hoort bij je leeftijd.&rdquo;
+            <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. Gemaakt voor vrouwen die meer verdienen dan &ldquo;dat hoort bij je leeftijd.&rdquo;
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             een koudgeperste gember &amp; kurkuma creatine shot tegen de brain fog, vermoeidheid en het spierverlies van de overgang.
@@ -650,7 +650,7 @@ export default function Home() {
           <div className="text-center mb-16 md:mb-24">
             <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">menopauze-klachten, maak kennis met creatine</p>
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-white leading-[0.95] tracking-tight">
-              wat verandert er als je
+              wat er verandert wanneer je
               <br />
               het tekort aanvult
             </h2>
