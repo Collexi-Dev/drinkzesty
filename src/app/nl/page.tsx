@@ -528,18 +528,13 @@ export default function Home() {
 
               {/* SVG connecting lines from center to each symptom */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
-                {/* Lines from center (400, 300) to each corner */}
-                <line x1="400" y1="300" x2="120" y2="80" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                <line x1="400" y1="300" x2="680" y2="80" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                <line x1="400" y1="300" x2="120" y2="520" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                <line x1="400" y1="300" x2="680" y2="520" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                {/* Small dots at endpoints */}
-                <circle cx="120" cy="80" r="4" fill="#F2A922" fillOpacity="0.3" />
-                <circle cx="680" cy="80" r="4" fill="#F2A922" fillOpacity="0.3" />
-                <circle cx="120" cy="520" r="4" fill="#F2A922" fillOpacity="0.3" />
-                <circle cx="680" cy="520" r="4" fill="#F2A922" fillOpacity="0.3" />
+                {/* Lines from center (400, 300) toward corners, stopping before cards */}
+                <line x1="400" y1="300" x2="200" y2="160" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
+                <line x1="400" y1="300" x2="600" y2="160" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
+                <line x1="400" y1="300" x2="200" y2="440" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
+                <line x1="400" y1="300" x2="600" y2="440" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
                 {/* Center ring */}
-                <circle cx="400" cy="300" r="100" fill="none" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="4 3" />
+                <circle cx="400" cy="300" r="100" fill="none" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.12" strokeDasharray="4 3" />
               </svg>
 
               {/* Center — branded circle with message */}
@@ -562,7 +557,7 @@ export default function Home() {
               </div>
 
               {/* Top-right: can't focus */}
-              <div className="absolute right-0 top-0 max-w-[240px] text-right z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
+              <div className="absolute right-0 top-0 max-w-[260px] text-right z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <div className="flex justify-end"><IconFocus className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">concentratieproblemen</p>
                 <p className="text-[#2D2D2D]/50 text-base mt-1">dezelfde mail drie keer lezen. een van de meest voorkomende menopauze-klachten.<SourceRef n={1} /></p>
@@ -576,7 +571,7 @@ export default function Home() {
               </div>
 
               {/* Bottom-right: losing strength */}
-              <div className="absolute right-0 bottom-0 max-w-[240px] text-right z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
+              <div className="absolute right-0 bottom-0 max-w-[260px] text-right z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <div className="flex justify-end"><IconStrength className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">spierverlies &amp; minder kracht</p>
                 <p className="text-[#2D2D2D]/50 text-base mt-1">dalend oestrogeen versnelt spierverlies. dingen die je makkelijk deed, worden steeds moeilijker.<SourceRef n={7} /></p>

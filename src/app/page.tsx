@@ -516,18 +516,13 @@ export default function Home() {
 
               {/* SVG connecting lines from center to each symptom */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
-                {/* Lines from center (400, 300) to each corner */}
-                <line x1="400" y1="300" x2="120" y2="80" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                <line x1="400" y1="300" x2="680" y2="80" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                <line x1="400" y1="300" x2="120" y2="520" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                <line x1="400" y1="300" x2="680" y2="520" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.2" strokeDasharray="6 4" />
-                {/* Small dots at endpoints */}
-                <circle cx="120" cy="80" r="4" fill="#F2A922" fillOpacity="0.3" />
-                <circle cx="680" cy="80" r="4" fill="#F2A922" fillOpacity="0.3" />
-                <circle cx="120" cy="520" r="4" fill="#F2A922" fillOpacity="0.3" />
-                <circle cx="680" cy="520" r="4" fill="#F2A922" fillOpacity="0.3" />
+                {/* Lines from center (400, 300) toward corners, stopping before cards */}
+                <line x1="400" y1="300" x2="200" y2="160" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
+                <line x1="400" y1="300" x2="600" y2="160" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
+                <line x1="400" y1="300" x2="200" y2="440" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
+                <line x1="400" y1="300" x2="600" y2="440" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="6 4" />
                 {/* Center ring */}
-                <circle cx="400" cy="300" r="100" fill="none" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.15" strokeDasharray="4 3" />
+                <circle cx="400" cy="300" r="100" fill="none" stroke="#F2A922" strokeWidth="1" strokeOpacity="0.12" strokeDasharray="4 3" />
               </svg>
 
               {/* Center — branded circle with message */}
