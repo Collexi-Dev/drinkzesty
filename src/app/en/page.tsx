@@ -328,8 +328,8 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
           <a href="/en" className="text-lg font-extrabold text-[#F2A922] tracking-tight">zesty</a>
           <div className="flex items-center gap-5">
-            <a href="/blog" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
-            <a href="/veelgestelde-vragen" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">faq</a>
+            <a href="/en/blog" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
+            <a href="/en/faq" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">faq</a>
             <a href="#pricing" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">order now</a>
             <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
               <span className="px-2.5 py-1 text-xs font-bold text-[#FFFDF7] bg-[#2D2D2D] rounded-full">EN</span>
@@ -351,8 +351,8 @@ export default function Home() {
         {/* Mobile dropdown */}
         {mobileMenu && (
           <div className="sm:hidden border-t border-[#2D2D2D]/5 bg-[#FFFDF7]/95 backdrop-blur-md px-6 py-4 flex flex-col gap-3">
-            <a href="/blog" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">blog</a>
-            <a href="/veelgestelde-vragen" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">faq</a>
+            <a href="/en/blog" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">blog</a>
+            <a href="/en/faq" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">faq</a>
           </div>
         )}
       </nav>
@@ -1126,6 +1126,9 @@ export default function Home() {
                   get monthly
                 </a>
                 <p className="text-sm text-[#FFFDF7]/40 text-center mt-3 font-medium tracking-wide uppercase">ships within 3 days</p>
+                <HandNote className="mt-2 text-center block text-base text-[#FFFDF7]/60">
+                  the most popular choice
+                </HandNote>
               </div>
             </div>
           </div>
@@ -1195,8 +1198,8 @@ export default function Home() {
                 <p className="text-[#FFFDF7]/45 text-sm">the functional menopause wellness shot · 10g creatine</p>
               </div>
               <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
-                <a href="/blog" className="hover:text-[#FFFDF7]/60 transition-colors">blog</a>
-                <a href="/veelgestelde-vragen" className="hover:text-[#FFFDF7]/60 transition-colors">faq</a>
+                <a href="/en/blog" className="hover:text-[#FFFDF7]/60 transition-colors">blog</a>
+                <a href="/en/faq" className="hover:text-[#FFFDF7]/60 transition-colors">faq</a>
                 <a href="mailto:hello@drinkzesty.be" className="hover:text-[#FFFDF7]/60 transition-colors">contact</a>
               </div>
             </div>

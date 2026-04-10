@@ -1146,6 +1146,9 @@ export default function Home() {
                   bestel maandelijks
                 </a>
                 <p className="text-sm text-[#FFFDF7]/40 text-center mt-3 font-medium tracking-wide uppercase">verzending binnen 3 dagen</p>
+                <HandNote className="mt-2 text-center block text-base text-[#FFFDF7]/60">
+                  de populairste keuze
+                </HandNote>
               </div>
             </div>
           </div>
