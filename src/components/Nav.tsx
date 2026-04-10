@@ -13,13 +13,13 @@ export function Nav({ locale = "nl" }: { locale?: "en" | "nl" }) {
 
         <div className="flex items-center gap-5">
           <Link
-            href="/blog"
+            href={locale === "en" ? "/en/blog" : "/blog"}
             className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block"
           >
             blog
           </Link>
           <Link
-            href="/veelgestelde-vragen"
+            href={locale === "en" ? "/en/faq" : "/veelgestelde-vragen"}
             className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block"
           >
             faq

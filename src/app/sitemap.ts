@@ -3,9 +3,17 @@ import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
+  const enPosts = getAllPosts("en");
 
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `https://drinkzesty.be/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const enBlogEntries: MetadataRoute.Sitemap = enPosts.map((post) => ({
+    url: `https://drinkzesty.be/en/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly",
     priority: 0.7,
@@ -41,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: "https://drinkzesty.be/en/faq",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     ...(posts.length > 0
       ? [
           {
@@ -50,6 +64,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
           },
           ...blogEntries,
+        ]
+      : []),
+    ...(enPosts.length > 0
+      ? [
+          {
+            url: "https://drinkzesty.be/en/blog",
+            lastModified: new Date(),
+            changeFrequency: "weekly" as const,
+            priority: 0.8,
+          },
+          ...enBlogEntries,
         ]
       : []),
   ];
