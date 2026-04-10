@@ -175,7 +175,8 @@ const faqs = [
   { q: "how is this different from a tub of creatine?", a: "A tub gives you powder and a scoop. zesty gives you 10g sealed dry in the cap, a cold-pressed shot with piperine for absorption, and electrolytes for uptake. Plus ginger and turmeric that target menopause inflammation. No mixing, no measuring." },
   { q: "is 10g too much?", a: "~95% of your body's creatine is stored in muscle, so standard 3-5g doses mostly saturate muscle stores. Your brain holds the other ~5% — and that's what menopause is depleting. Researchers studying cognitive benefits in women use 10g+ to reach the brain [Dechent et al., 1999; Smith-Ryan et al., 2021]. Well within clinically studied safe ranges." },
   { q: "I'm in perimenopause — is it too early?", a: "Not at all — it's the perfect time. Creatine stores start declining before full menopause. Perimenopause typically starts in your mid-40s, and starting creatine then means you're getting ahead of the drop, not playing catch-up." },
-  { q: "when should I drink it?", a: "Morning works best as a daily ritual. Twist, press, shake, drink — start your day. But any consistent time works." },
+  { q: "when should I drink it?", a: "Morning works best as a daily ritual. Twist, press, shake, drink. Start your day. But any consistent time works." },
+  { q: "does creatine help protect the brain long-term?", a: "Researchers are actively studying creatine as a protective factor for the aging brain. A pilot study in Alzheimer's patients (Smith et al., 2025) showed measurable cognitive improvement after creatine supplementation. The research is still early, but the direction is promising, especially since creatine is already proven safe for long-term use." },
 ];
 
 function FaqItem({ q, a }: { q: string; a: string }) {
@@ -396,8 +397,8 @@ export default function Home() {
             <br className="hidden md:block" />
             {" "}the fog, the fatigue, and the fade.
           </h1>
-          <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-[#F2A922]">10g creatine</span>{" "}per shot. Made for women who deserve more than &ldquo;it&rsquo;s just your age.&rdquo;
+          <p className="text-xl md:text-2xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
+            <span className="text-[#F2A922] text-2xl md:text-3xl">10g creatine</span>{" "}per shot. Made for women who deserve more than &ldquo;it&rsquo;s just your age.&rdquo;
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             a cold-pressed ginger &amp; turmeric creatine shot to fight the brain fog, fatigue, and muscle loss of menopause.
@@ -645,10 +646,14 @@ export default function Home() {
               <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopause symptom: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">clearer thinking</p>
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                It&rsquo;s real — declining estrogen starves your brain of energy. Creatine replenishes that fuel directly.<SourceRef n={1} /> Focus comes back. Words come back.
+                It&rsquo;s real. Declining estrogen starves your brain of energy. Creatine replenishes that fuel directly.<SourceRef n={1} /> Focus comes back. Words come back.
               </p>
-              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
-              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-2 inline-block hover:text-white/40 transition-colors">Creatine &amp; women&rsquo;s health · Smith-Ryan et al., 2021 →</a>
+              <p className="text-white/45 leading-relaxed text-sm mt-3">
+                Researchers are also actively studying creatine as a protective factor for the aging brain. A recent pilot study in Alzheimer&rsquo;s patients showed measurable cognitive improvement after supplementation.
+              </p>
+              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-2 inline-block hover:text-white/60 transition-colors">Creatine &amp; women&rsquo;s health · Smith-Ryan et al., 2021 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/40395689/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-2 inline-block hover:text-white/60 transition-colors">Creatine &amp; Alzheimer&rsquo;s pilot · Smith et al., 2025 →</a>
             </div>
           </div>
 
@@ -663,7 +668,7 @@ export default function Home() {
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
                 It isn&rsquo;t laziness — your cells are producing less ATP. Creatine is the raw material for cellular energy.<SourceRef n={3} /> Not a stimulant. Actual fuel that your body is running low on.
               </p>
-              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
           </div>
 
@@ -676,7 +681,7 @@ export default function Home() {
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
                 Women lose up to 10% of muscle mass in the years around menopause.<SourceRef n={7} /> Creatine helps your muscles hold on to the strength you already have<SourceRef n={2} /> — and rebuild what&rsquo;s slipping.
               </p>
-              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
           </div>
         </div>

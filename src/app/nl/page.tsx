@@ -174,6 +174,7 @@ const faqs = [
   { q: "hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma tegen menopauze-ontsteking. Geen mengen, geen afmeten." },
   { q: "hoe lang duurt het voor ik iets merk?", a: "Bij 10g/dag zit je creatine na zo'n 2 weken op peil. Dat is sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Sommige vrouwen merken meer energie en minder brain fog al in de eerste week, anderen rond week 3-4. De 14-daagse starter is precies om die reden zo ontworpen." },
   { q: "is 10g niet te veel?", a: "~95% van je lichaamscreatine zit in je spieren, dus standaard 3-5g verzadigt vooral je spiermassa. Je brein bevat de overige ~5%, en dat is precies wat menopauze uitput. Onderzoekers die cognitieve voordelen bij vrouwen bestuderen, gebruiken 10g+ om het brein te bereiken [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
+  { q: "helpt creatine ook voor het brein op lange termijn?", a: "Onderzoekers bestuderen creatine actief als beschermende factor voor het brein bij veroudering. Een pilotstudie bij Alzheimerpatiënten (Smith et al., 2025) toonde meetbare verbetering in cognitie na creatinesuppletie. Het onderzoek is nog vroeg, maar de richting is hoopgevend, vooral omdat creatine al bewezen veilig is op lange termijn." },
 ];
 
 function FaqItem({ q, a, last = false }: { q: string; a: string; last?: boolean }) {
@@ -408,8 +409,8 @@ export default function Home() {
             <br className="hidden md:block" />
             {" "}brain fog, moeheid en spierverlies.
           </h1>
-          <p className="text-lg md:text-xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-[#F2A922]">10g creatine</span>{" "}per shot. Gemaakt voor vrouwen die meer verdienen dan &ldquo;dat hoort bij je leeftijd.&rdquo;
+          <p className="text-xl md:text-2xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
+            <span className="text-[#F2A922] text-2xl md:text-3xl">10g creatine</span>{" "}per shot. Gemaakt voor vrouwen die meer verdienen dan &ldquo;dat hoort bij je leeftijd.&rdquo;
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             een koudgeperste gember &amp; kurkuma creatine shot tegen de brain fog, vermoeidheid en het spierverlies van de overgang.
@@ -649,7 +650,7 @@ export default function Home() {
           <div className="text-center mb-16 md:mb-24">
             <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">menopauze-klachten, maak kennis met creatine</p>
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-white leading-[0.95] tracking-tight">
-              wat verandert als je
+              wat verandert er als je
               <br />
               het tekort aanvult
             </h2>
@@ -664,8 +665,12 @@ export default function Home() {
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
                 Het is echt. Dalend oestrogeen ontneemt je brein energie. Creatine vult dat direct aan.<SourceRef n={1} /> Je concentratie komt terug. Je woorden komen terug.
               </p>
-              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
-              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-2 inline-block hover:text-white/40 transition-colors">Creatine &amp; vrouwengezondheid · Smith-Ryan et al., 2021 →</a>
+              <p className="text-white/45 leading-relaxed text-sm mt-3">
+                Wetenschappers onderzoeken creatine ook actief als beschermende factor voor het brein bij veroudering. Een recente pilotstudie bij Alzheimerpatiënten toonde meetbare verbetering in cognitie na suppletie.
+              </p>
+              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-2 inline-block hover:text-white/60 transition-colors">Creatine &amp; vrouwengezondheid · Smith-Ryan et al., 2021 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/40395689/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-2 inline-block hover:text-white/60 transition-colors">Creatine &amp; Alzheimer pilotstudie · Smith et al., 2025 →</a>
             </div>
           </div>
 
@@ -680,7 +685,7 @@ export default function Home() {
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
                 Het is geen luiheid. Je lichaam maakt gewoon minder energie aan. Creatine is wat je lichaam nodig heeft om dat weer op peil te brengen.<SourceRef n={3} /> Geen stimulant, geen cafeïne. Gewoon aanvullen wat er tekort is.
               </p>
-              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
           </div>
 
@@ -693,7 +698,7 @@ export default function Home() {
               <p className="text-white/60 leading-relaxed text-base md:text-lg">
                 Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<SourceRef n={7} /> Creatine helpt je de kracht vasthouden die je al hebt<SourceRef n={2} /> en weer opbouwen wat je aan het verliezen bent.
               </p>
-              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/25 text-sm mt-4 inline-block hover:text-white/40 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
           </div>
         </div>

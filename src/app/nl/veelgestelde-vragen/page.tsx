@@ -31,6 +31,7 @@ const faqGroups = [
       { q: "word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water ín de spier (niet opgeblazen), geen vet. Het stabiliseert snel. Veel vrouwen in de menopauze merken juist dat het hun spiermassa helpt behouden." },
       { q: "helpt creatine tegen brain fog?", a: "Ja. Creatine dient als snelle energiebron voor je neuronen. Onderzoek toont aan dat suppletie het werkgeheugen en de verwerkingssnelheid meetbaar verbetert, met de sterkste effecten bij vrouwen en personen onder stress of slaaptekort (Xu et al., 2024; Rae et al., 2003)." },
       { q: "hoeveel creatine heb je nodig per dag?", a: "3-5g per dag is voldoende voor spiervoordelen. Voor cognitieve voordelen gebruiken onderzoekers 10g of meer, omdat het brein hogere doseringen nodig heeft om verzadigd te raken. Bij 10g/dag zit je creatine na ~2 weken op peil." },
+      { q: "helpt creatine ook voor het brein op lange termijn?", a: "Onderzoekers bestuderen creatine actief als beschermende factor voor het brein bij veroudering. Een pilotstudie bij Alzheimerpatiënten (Smith et al., 2025) toonde meetbare verbetering in cognitie na creatinesuppletie. Het onderzoek is nog vroeg, maar de richting is hoopgevend, vooral omdat creatine al bewezen veilig is op lange termijn." },
     ],
   },
   {
