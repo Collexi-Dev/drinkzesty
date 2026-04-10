@@ -34,11 +34,11 @@ function Marquee({ texts, dark = false }: { texts: string[]; dark?: boolean }) {
   const items = Array(6).fill(texts).flat();
   return (
     <div className={`overflow-hidden py-5 md:py-6 ${dark ? "bg-[#2D2D2D]" : "bg-[#F2A922]"}`}>
-      <div className="flex animate-marquee whitespace-nowrap">
+      <div className="flex animate-marquee motion-reduce:animate-none whitespace-nowrap">
         {items.map((t, i) => (
           <span
             key={i}
-            className={`text-sm md:text-base font-extrabold uppercase tracking-[0.25em] shrink-0 flex items-center ${dark ? "text-white/80" : "text-[#2D2D2D]"}`}
+            className={`text-sm md:text-base font-extrabold uppercase tracking-[0.25em] shrink-0 flex items-center ${dark ? "text-[#FFFDF7]/80" : "text-[#2D2D2D]"}`}
           >
             <span className="mx-6">{t}</span>
             <span className="opacity-40">·</span>
@@ -125,43 +125,6 @@ function Blob({ className = "", variant = 1 }: { className?: string; variant?: 1
 }
 
 /* ═══════════════════════════════════════════════════
-   FLUID STAT ELEMENT — organic blob shape
-═══════════════════════════════════════════════════ */
-
-function StatBlob({ value, label, className = "", ...rest }: { value: string; label: string; className?: string; [key: string]: unknown }) {
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`} {...rest}>
-      <div className="relative w-full h-full flex flex-col items-center justify-center">
-        {/* Organic background shape */}
-        <svg viewBox="-60 -60 120 120" className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid meet">
-          <path
-            d="M40,-30 C55,-10 50,20 30,40 C10,55 -25,50 -40,30 C-55,10 -50,-20 -30,-40 C-10,-55 25,-50 40,-30Z"
-            fill="#FFFDF7"
-            stroke="#2D2D2D"
-            strokeWidth="0.5"
-            strokeOpacity="0.06"
-          />
-        </svg>
-        <span className="relative z-10 text-2xl md:text-3xl font-extrabold text-[#2D2D2D] tracking-tight leading-none">{value}</span>
-        <span className="relative z-10 text-xs md:text-sm text-[#2D2D2D]/45 font-medium mt-1 text-center leading-tight">{label}</span>
-      </div>
-    </div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════
-   IMAGE PLACEHOLDER
-═══════════════════════════════════════════════════ */
-
-function ImgPlaceholder({ hint, className = "" }: { hint: string; className?: string }) {
-  return (
-    <div className={`bg-[#2D2D2D]/[0.04] flex items-center justify-center ${className}`}>
-      <span className="text-[#2D2D2D]/20 text-[10px] text-center px-4 leading-relaxed">{hint}</span>
-    </div>
-  );
-}
-
-/* ═══════════════════════════════════════════════════
    FAQ
 ═══════════════════════════════════════════════════ */
 
@@ -181,11 +144,11 @@ function FaqItem({ q, a, last = false }: { q: string; a: string; last?: boolean 
   const [open, setOpen] = useState(false);
   return (
     <div className={last ? "" : "border-b border-[#2D2D2D]/10"}>
-      <button onClick={() => setOpen(!open)} className="w-full text-left py-6 flex justify-between items-center gap-6 cursor-pointer group">
+      <button onClick={() => setOpen(!open)} aria-expanded={open} className="w-full text-left py-6 flex justify-between items-center gap-6 cursor-pointer group">
         <span className="font-bold text-[#2D2D2D] text-lg group-hover:text-[#F2A922] transition-colors">{q}</span>
         <span className={`text-[#F2A922] transition-transform duration-300 text-2xl shrink-0 leading-none ${open ? "rotate-45" : ""}`}>+</span>
       </button>
-      <div className={`overflow-hidden transition-all duration-400 ease-out ${open ? "max-h-96 pb-6" : "max-h-0"}`}>
+      <div className={`overflow-hidden transition-all duration-400 ease-out ${open ? "max-h-[40rem] pb-6" : "max-h-0"}`}>
         <p className="text-[#2D2D2D]/65 leading-relaxed text-base">{a}</p>
       </div>
     </div>
@@ -199,9 +162,13 @@ function FaqItem({ q, a, last = false }: { q: string; a: string; last?: boolean 
 export default function Home() {
   const heroProductRef = useRef<HTMLDivElement>(null);
   const [showSticky, setShowSticky] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   /* GSAP animations — kept minimal: hero on load, empathy headline, pricing cards */
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
     const ctx = gsap.context(() => {
       /* Hero — fade in on page load (not scroll-triggered) */
       gsap.from(".gsap-hero-intro", {
@@ -353,6 +320,10 @@ export default function Home() {
 
   return (
     <main className="overflow-x-hidden bg-[#FFFDF7]">
+      {/* Skip nav for accessibility */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-16 focus:left-4 focus:z-[70] focus:bg-[#F2A922] focus:text-[#2D2D2D] focus:px-4 focus:py-2 focus:rounded-full focus:font-bold focus:text-sm">
+        ga naar inhoud
+      </a>
       {/* JSON-LD schemas — all developer-controlled content, no user input */}
       <script
         type="application/ld+json"
@@ -372,21 +343,39 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
           <a href="/nl" className="text-lg font-extrabold text-[#F2A922] tracking-tight">zesty</a>
           <div className="flex items-center gap-5">
-            <a href="/nl/blog" className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
-            <a href="/nl/veelgestelde-vragen" className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block">faq</a>
+            <a href="/nl/blog" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
+            <a href="/nl/veelgestelde-vragen" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">faq</a>
             <a href="#pricing" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">bestel nu</a>
             <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
-              <a href="/" className="px-2.5 py-1 text-xs font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] rounded-full transition-colors">EN</a>
+              <a href="/" className="px-2.5 py-1 text-xs font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] rounded-full transition-colors">EN</a>
               <span className="px-2.5 py-1 text-xs font-bold text-[#FFFDF7] bg-[#2D2D2D] rounded-full">NL</span>
             </div>
+            {/* Mobile menu toggle */}
+            <button
+              onClick={() => setMobileMenu(!mobileMenu)}
+              className="sm:hidden text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors cursor-pointer"
+              aria-label="Menu"
+              aria-expanded={mobileMenu}
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                {mobileMenu ? <><line x1="4" y1="4" x2="16" y2="16" /><line x1="16" y1="4" x2="4" y2="16" /></> : <><line x1="3" y1="5" x2="17" y2="5" /><line x1="3" y1="10" x2="17" y2="10" /><line x1="3" y1="15" x2="17" y2="15" /></>}
+              </svg>
+            </button>
           </div>
         </div>
+        {/* Mobile dropdown */}
+        {mobileMenu && (
+          <div className="sm:hidden border-t border-[#2D2D2D]/5 bg-[#FFFDF7]/95 backdrop-blur-md px-6 py-4 flex flex-col gap-3">
+            <a href="/nl/blog" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">blog</a>
+            <a href="/nl/veelgestelde-vragen" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">faq</a>
+          </div>
+        )}
       </nav>
 
       {/* ═══════════════════════════════════════════
           1. HERO — Full-bleed immersive
       ═══════════════════════════════════════════ */}
-      <section data-section="hero" className="min-h-[100dvh] relative flex flex-col items-center justify-center px-6 pt-20 md:pt-24 pb-16 overflow-hidden">
+      <section id="main-content" data-section="hero" className="min-h-[100dvh] relative flex flex-col items-center justify-center px-6 pt-20 md:pt-24 pb-16 overflow-hidden">
 
         {/* ── LAYER 0: Full-bleed background image ── */}
         <div className="absolute inset-0 z-0">
@@ -402,7 +391,7 @@ export default function Home() {
         {/* Oversized brand name + SEO H1 */}
         <div className="gsap-hero-intro text-center relative z-10 mb-6 md:mb-8">
           <p className="text-[#F2A922] text-xs md:text-sm tracking-[0.3em] font-bold uppercase mb-5">
-            by zesty
+            zesty
           </p>
           <h1 className="text-[1.75rem] md:text-[2.75rem] lg:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight max-w-4xl mx-auto">
             de dagelijkse <span className="text-[#F2A922]">creatine</span> shot tegen
@@ -410,10 +399,10 @@ export default function Home() {
             {" "}brain fog, moeheid en spierverlies.
           </h1>
           <p className="text-xl md:text-2xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. Gemaakt voor vrouwen die meer verdienen dan &ldquo;dat hoort bij je leeftijd.&rdquo;
+            <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. Voor vrouwen die klaar zijn met &ldquo;dat hoort bij je leeftijd.&rdquo;
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
-            een koudgeperste gember &amp; kurkuma creatine shot tegen de brain fog, vermoeidheid en het spierverlies van de overgang.
+            koudgeperst met gember, kurkuma en elektrolyten. droog verzegeld in de dop. klaar in 10 seconden.
           </p>
         </div>
 
@@ -434,7 +423,7 @@ export default function Home() {
           ].map((s) => (
             <div key={s.lbl} className="flex items-baseline gap-1.5 backdrop-blur-sm border bg-[#FFFDF7]/85 border-[#2D2D2D]/[0.05] px-4 py-2.5 rounded-full shadow-sm">
               <span className="text-base md:text-lg font-extrabold text-[#2D2D2D] tracking-tight leading-none">{s.val}</span>
-              <span className="text-sm text-[#2D2D2D]/40 font-medium">{s.lbl}</span>
+              <span className="text-sm text-[#2D2D2D]/50 font-medium">{s.lbl}</span>
             </div>
           ))}
         </div>
@@ -488,7 +477,7 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="gsap-empathy-headline text-center mb-16 md:mb-24">
-            <p className="text-[#2D2D2D]/40 font-bold text-sm tracking-[0.25em] uppercase mb-4">perimenopauze &amp; menopauze</p>
+            <p className="text-[#2D2D2D]/50 font-bold text-sm tracking-[0.25em] uppercase mb-4">perimenopauze &amp; menopauze</p>
             <h2 className="text-[2.5rem] md:text-[4.5rem] lg:text-[6rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight max-w-4xl mx-auto">
               je voelde je
               <br />
@@ -613,13 +602,6 @@ export default function Home() {
             Daarom lijken de klachten (de brain fog, de moeheid, het spierverlies) zo veel op creatine-tekort. Dat is geen toeval.
           </p>
 
-          {/* The emotional bridge */}
-          <div className="mb-10 md:mb-14">
-            <HandNote className="block rotate-[1deg]">
-              menopauze neemt je creatine af. zesty geeft het terug.
-            </HandNote>
-          </div>
-
           {/* Blog link */}
           <a href="/nl/blog/creatine-menopauze-complete-gids" className="inline-block text-[#F2A922] font-bold text-sm hover:underline transition-colors mb-10 md:mb-14">
             lees de complete gids: creatine &amp; menopauze →
@@ -640,11 +622,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           4. BENEFITS — Full-bleed, dark section
       ═══════════════════════════════════════════ */}
-      <section data-section="benefits" className="bg-[#2D2D2D] relative py-24 md:py-36 px-6">
+      <section data-section="benefits" className="bg-[#2D2D2D] relative py-28 md:py-40 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 md:mb-24">
             <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">menopauze-klachten, maak kennis met creatine</p>
-            <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-white leading-[0.95] tracking-tight">
+            <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#FFFDF7] leading-[0.95] tracking-tight">
               wat er verandert wanneer je
               <br />
               het tekort aanvult
@@ -655,17 +637,17 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
             <img src="/images/4-benefit-1-clearer-thinking-no-bg.png" alt="Helder denken" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
-              <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: brain fog</p>
+              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">helder denken</p>
-              <p className="text-white/60 leading-relaxed text-base md:text-lg">
+              <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
                 Het is echt. Dalend oestrogeen ontneemt je brein energie. Creatine vult dat direct aan.<SourceRef n={1} /> Je concentratie komt terug. Je woorden komen terug.
               </p>
-              <p className="text-white/45 leading-relaxed text-sm mt-3">
+              <p className="text-[#FFFDF7]/45 leading-relaxed text-sm mt-3">
                 Wetenschappers onderzoeken creatine ook actief als beschermende factor voor het brein bij veroudering. Een recente pilotstudie bij Alzheimerpatiënten toonde meetbare verbetering in cognitie na suppletie.
               </p>
-              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
-              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-2 inline-block hover:text-white/60 transition-colors">Creatine &amp; vrouwengezondheid · Smith-Ryan et al., 2021 →</a>
-              <a href="https://pubmed.ncbi.nlm.nih.gov/40395689/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-2 inline-block hover:text-white/60 transition-colors">Creatine &amp; Alzheimer pilotstudie · Smith et al., 2025 →</a>
+              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-2 inline-block hover:text-[#FFFDF7]/60 transition-colors">Creatine &amp; vrouwengezondheid · Smith-Ryan et al., 2021 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/40395689/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-2 inline-block hover:text-[#FFFDF7]/60 transition-colors">Creatine &amp; Alzheimer pilotstudie · Smith et al., 2025 →</a>
             </div>
           </div>
 
@@ -675,12 +657,12 @@ export default function Home() {
               <img src="/images/5-benefit-2-real-energy-no-bg.png" alt="Echte energie" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             </div>
             <div className="md:order-1">
-              <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: vermoeidheid</p>
+              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: vermoeidheid</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">echte energie</p>
-              <p className="text-white/60 leading-relaxed text-base md:text-lg">
+              <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
                 Het is geen luiheid. Je lichaam maakt gewoon minder energie aan. Creatine is wat je lichaam nodig heeft om dat weer op peil te brengen.<SourceRef n={3} /> Geen stimulant, geen cafeïne. Gewoon aanvullen wat er tekort is.
               </p>
-              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
           </div>
 
@@ -688,33 +670,28 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <img src="/images/6-benefit-3-strength-no-bg.png" alt="Kracht die blijft" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
-              <p className="text-white/30 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: spierverlies</p>
+              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopauze-klacht: spierverlies</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">kracht die blijft</p>
-              <p className="text-white/60 leading-relaxed text-base md:text-lg">
+              <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
                 Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<SourceRef n={7} /> Creatine helpt je de kracht vasthouden die je al hebt<SourceRef n={2} /> en weer opbouwen wat je aan het verliezen bent.
               </p>
-              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-white/40 text-sm mt-4 inline-block hover:text-white/60 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════
-          MARQUEE — "twist press shake"
-      ═══════════════════════════════════════════ */}
-      <Marquee texts={["twist", "press", "shake", "repeat"]} />
-
-      {/* ═══════════════════════════════════════════
           5. SOCIAL PROOF — editorial, clean
       ═══════════════════════════════════════════ */}
-      <section data-section="social-proof" className="relative py-24 md:py-36 px-6">
+      <section data-section="social-proof" className="relative py-20 md:py-32 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
-            <p className="text-[#2D2D2D]/40 font-bold text-sm tracking-[0.2em] uppercase mb-3">wetenschappelijk onderbouwd. aanbevolen door artsen.</p>
+            <p className="text-[#2D2D2D]/50 font-bold text-sm tracking-[0.2em] uppercase mb-3">wetenschappelijk onderbouwd. aanbevolen door artsen.</p>
             <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              geloof ons niet
+              dit zeggen zij
               <br />
-              op ons woord.
+              erover.
             </h2>
           </div>
 
@@ -726,7 +703,7 @@ export default function Home() {
                 <img src="/images/headshot-dr-stacy-sims.png" alt="Dr. Stacy Sims" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <p className="text-sm font-bold text-[#2D2D2D]">Dr. Stacy Sims</p>
-                  <p className="text-sm text-[#2D2D2D]/40">Sportfysiologe</p>
+                  <p className="text-sm text-[#2D2D2D]/50">Sportfysiologe</p>
                 </div>
               </div>
               <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
@@ -741,7 +718,7 @@ export default function Home() {
                 <img src="/images/headshot-dr-andy-galpin.png" alt="Dr. Andy Galpin" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <p className="text-sm font-bold text-[#2D2D2D]">Dr. Andy Galpin</p>
-                  <p className="text-sm text-[#2D2D2D]/40">Sportfysioloog · Huberman Lab</p>
+                  <p className="text-sm text-[#2D2D2D]/50">Sportfysioloog · Huberman Lab</p>
                 </div>
               </div>
               <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
@@ -753,10 +730,10 @@ export default function Home() {
             {/* Card 3 — research */}
             <div className="border border-[#2D2D2D]/[0.08] rounded-xl p-7 md:p-8">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-full bg-[#2D2D2D]/[0.06] flex items-center justify-center text-[#2D2D2D]/40 font-bold text-xs">📄</div>
+                <div className="w-10 h-10 rounded-full bg-[#2D2D2D]/[0.06] flex items-center justify-center text-[#2D2D2D]/50 font-bold text-xs">📄</div>
                 <div>
                   <p className="text-sm font-bold text-[#2D2D2D]">Xu et al., 2024</p>
-                  <p className="text-sm text-[#2D2D2D]/40">Frontiers in Nutrition</p>
+                  <p className="text-sm text-[#2D2D2D]/50">Frontiers in Nutrition</p>
                 </div>
               </div>
               <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
@@ -769,29 +746,29 @@ export default function Home() {
           {/* Real women */}
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-[#2D2D2D] rounded-xl p-8">
-              <p className="text-white/70 leading-relaxed mb-4">
-                &ldquo;Geweldig als supplement nu ik de perimenopauze in ga. <strong className="text-white">Vrouwen, kijk eens naar creatine voor de grote verandering.</strong>&rdquo;
+              <p className="text-[#FFFDF7]/70 leading-relaxed mb-4">
+                &ldquo;Geweldig als supplement nu ik de perimenopauze in ga. <strong className="text-[#FFFDF7]">Vrouwen, kijk eens naar creatine voor de grote verandering.</strong>&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <p className="text-sm text-white/30">X · @SpunkyAzCougar</p>
+                <p className="text-sm text-[#FFFDF7]/45">X · @SpunkyAzCougar</p>
                 <a href="https://x.com/SpunkyAzCougar/status/2038955331317817460" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">bron →</a>
               </div>
             </div>
             <div className="bg-[#2D2D2D] rounded-xl p-8">
-              <p className="text-white/70 leading-relaxed mb-4">
-                &ldquo;De creatine helpt mijn vrouw met haar menopauze-klachten. <strong className="text-white">We kopen nu elke maand de grote pot.</strong>&rdquo;
+              <p className="text-[#FFFDF7]/70 leading-relaxed mb-4">
+                &ldquo;De creatine helpt mijn vrouw met haar menopauze-klachten. <strong className="text-[#FFFDF7]">We kopen nu elke maand de grote pot.</strong>&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <p className="text-sm text-white/30">X · @AdamWal89620299</p>
+                <p className="text-sm text-[#FFFDF7]/45">X · @AdamWal89620299</p>
                 <a href="https://x.com/AdamWal89620299/status/2036738702744109295" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">bron →</a>
               </div>
             </div>
             <div className="bg-[#2D2D2D] rounded-xl p-8">
-              <p className="text-white/70 leading-relaxed mb-4">
-                &ldquo;Ondanks dat ik postmenopauzaal ben, <strong className="text-white">is het me gelukt om flink meer spiermassa op te bouwen.</strong>{" "}Ik hoop dat het voor jou net zo goed werkt!&rdquo;
+              <p className="text-[#FFFDF7]/70 leading-relaxed mb-4">
+                &ldquo;Ondanks dat ik postmenopauzaal ben, <strong className="text-[#FFFDF7]">is het me gelukt om flink meer spiermassa op te bouwen.</strong>{" "}Ik hoop dat het voor jou net zo goed werkt!&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <p className="text-sm text-white/30">X · @RunchieC</p>
+                <p className="text-sm text-[#FFFDF7]/45">X · @RunchieC</p>
                 <a href="https://x.com/RunchieC/status/2041405617928028301" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">bron →</a>
               </div>
             </div>
@@ -803,8 +780,8 @@ export default function Home() {
           6. MEET THE PRODUCT — centerstage
       ═══════════════════════════════════════════ */}
       <section id="how-it-works" data-section="product" className="relative py-24 md:py-36 px-6 bg-[#F5EDE0] overflow-hidden">
-        <Blob variant={2} className="text-white/30 w-[500px] md:w-[700px] top-[5%] -right-[15%]" />
-        <Blob variant={3} className="text-white/20 w-[400px] md:w-[600px] bottom-[10%] -left-[20%]" />
+        <Blob variant={2} className="text-[#FFFDF7]/45 w-[500px] md:w-[700px] top-[5%] -right-[15%]" />
+        <Blob variant={3} className="text-[#FFFDF7]/20 w-[400px] md:w-[600px] bottom-[10%] -left-[20%]" />
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Big product hero */}
@@ -884,9 +861,6 @@ export default function Home() {
               <div className="absolute left-0 lg:left-[2%] z-30" style={{ top: "450px" }}>
                 <p className="font-extrabold text-[#2D2D2D] text-2xl tracking-tight">het ritueel</p>
                 <p className="text-[#2D2D2D]/50 text-sm leading-relaxed mt-1 max-w-[14rem]">Twist, press, shake, drink. 10 seconden.</p>
-                <HandNote className="mt-3 block rotate-[2deg]">
-                  voor de koffie, voor het ontbijt
-                </HandNote>
               </div>
             </div>
           </div>
@@ -896,7 +870,7 @@ export default function Home() {
             <h3 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] text-center mb-4 tracking-tight">
               twist. press. <span className="text-[#F2A922]">shake.</span>
             </h3>
-            <HandNote as="div" className="text-center mt-2 mb-14 md:mb-20 rotate-[-2deg]">je hele routine in 10 seconden.</HandNote>
+            <p className="text-[#2D2D2D]/50 text-sm md:text-base text-center mt-2 mb-14 md:mb-20">je hele routine in 10 seconden.</p>
 
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">
               {[
@@ -919,7 +893,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           7. COMPARISON TABLE — fair coloring, + gummies
       ═══════════════════════════════════════════ */}
-      <section data-section="comparison" className="relative py-24 md:py-36 px-6">
+      <section data-section="comparison" className="relative py-20 md:py-28 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
@@ -929,57 +903,50 @@ export default function Home() {
             </h2>
           </div>
 
+          <p className="text-sm text-[#2D2D2D]/30 text-center mb-4 md:hidden">swipe om te vergelijken →</p>
           <div className="overflow-x-auto">
-            {/* Table header */}
-            <div className="grid grid-cols-[1fr_4.5rem_4.5rem_4.5rem_4.5rem] md:grid-cols-[1fr_7rem_7rem_7rem_7rem] gap-2 mb-4 items-end min-w-[480px]">
-              <div />
-              <div className="text-center">
-                <p className="text-[#F2A922] font-extrabold text-sm md:text-base">zesty</p>
-              </div>
-              <div className="text-center">
-                <p className="text-[#2D2D2D]/50 font-bold text-sm">poeder</p>
-              </div>
-              <div className="text-center">
-                <p className="text-[#2D2D2D]/50 font-bold text-sm">pillen</p>
-              </div>
-              <div className="text-center">
-                <p className="text-[#2D2D2D]/50 font-bold text-sm">gummies</p>
-              </div>
-            </div>
-
-            {/* Table rows */}
-            {[
-              { feature: "Klinische 10g dosis", zesty: true, powder: true, pills: false, gummies: false },
-              { feature: "Geen afmeten nodig", zesty: true, powder: false, pills: true, gummies: true },
-              { feature: "Blijft vers tot gebruik", zesty: true, powder: false, pills: false, gummies: false },
-              { feature: "Toegevoegde gember + kurkuma", zesty: true, powder: false, pills: false, gummies: false },
-              { feature: "Elektrolyten voor opname", zesty: true, powder: false, pills: false, gummies: false },
-              { feature: "Smaakt ook nog lekker", zesty: true, powder: false, pills: false, gummies: true },
-              { feature: "10-seconde dagelijks ritueel", zesty: true, powder: false, pills: true, gummies: true },
-              { feature: "Geen shakebeker nodig", zesty: true, powder: false, pills: true, gummies: true },
-            ].map((row) => (
-              <div key={row.feature} className="grid grid-cols-[1fr_4.5rem_4.5rem_4.5rem_4.5rem] md:grid-cols-[1fr_7rem_7rem_7rem_7rem] gap-2 py-4 border-b border-[#2D2D2D]/[0.06] items-center min-w-[480px]">
-                <p className="text-sm md:text-base font-medium text-[#2D2D2D]">{row.feature}</p>
-                {[row.zesty, row.powder, row.pills, row.gummies].map((val, i) => (
-                  <div key={i} className="flex justify-center">
-                    <div className={`w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center text-sm font-bold ${
-                      val
-                        ? i === 0
-                          ? "bg-[#F2A922]/15 text-[#F2A922]"
-                          : "bg-[#6B8F5E]/10 text-[#6B8F5E]"
-                        : "bg-[#2D2D2D]/[0.03] text-[#2D2D2D]/15"
-                    }`}>
-                      {val ? "✓" : "—"}
-                    </div>
-                  </div>
+            <table className="w-full min-w-[480px]" role="table">
+              <thead>
+                <tr>
+                  <th scope="col" className="text-left py-2" />
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#F2A922] font-extrabold text-sm md:text-base">zesty</span></th>
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">poeder</span></th>
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">pillen</span></th>
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">gummies</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { feature: "Klinische 10g dosis", zesty: true, powder: true, pills: false, gummies: false },
+                  { feature: "Geen afmeten nodig", zesty: true, powder: false, pills: true, gummies: true },
+                  { feature: "Blijft vers tot gebruik", zesty: true, powder: false, pills: false, gummies: false },
+                  { feature: "Toegevoegde gember + kurkuma", zesty: true, powder: false, pills: false, gummies: false },
+                  { feature: "Elektrolyten voor opname", zesty: true, powder: false, pills: false, gummies: false },
+                  { feature: "Smaakt ook nog lekker", zesty: true, powder: false, pills: false, gummies: true },
+                  { feature: "10-seconde dagelijks ritueel", zesty: true, powder: false, pills: true, gummies: true },
+                  { feature: "Geen shakebeker nodig", zesty: true, powder: false, pills: true, gummies: true },
+                ].map((row) => (
+                  <tr key={row.feature} className="border-b border-[#2D2D2D]/[0.06]">
+                    <th scope="row" className="text-left text-sm md:text-base font-medium text-[#2D2D2D] py-4 pr-4">{row.feature}</th>
+                    {[row.zesty, row.powder, row.pills, row.gummies].map((val, i) => (
+                      <td key={i} className="text-center py-4">
+                        <span className={`inline-flex w-8 h-8 md:w-10 md:h-10 rounded-lg items-center justify-center text-sm font-bold ${
+                          val
+                            ? i === 0
+                              ? "bg-[#F2A922]/15 text-[#F2A922]"
+                              : "bg-[#6B8F5E]/10 text-[#6B8F5E]"
+                            : "bg-[#2D2D2D]/[0.03] text-[#2D2D2D]/15"
+                        }`} aria-label={val ? "ja" : "nee"}>
+                          {val ? "✓" : "—"}
+                        </span>
+                      </td>
+                    ))}
+                  </tr>
                 ))}
-              </div>
-            ))}
+              </tbody>
+            </table>
           </div>
 
-          <HandNote className="mt-8 block text-center rotate-[-2deg]">
-            geen mengen, geen rommel, geen excuses
-          </HandNote>
         </div>
       </section>
 
@@ -1033,14 +1000,11 @@ export default function Home() {
             <div className="relative z-10 p-10 md:p-14 lg:p-16 max-w-lg lg:max-w-xl">
               <p className="text-[#F2A922] font-bold text-sm tracking-[0.2em] uppercase mb-5">de dop</p>
               <p className="text-[5.5rem] md:text-[8rem] font-extrabold text-[#F2A922] leading-none tracking-tighter mb-3">10g</p>
-              <p className="text-white font-extrabold text-2xl md:text-3xl mb-3">creatine monohydraat</p>
-              <p className="text-white/35 text-sm mb-5">(de meest onderzochte vorm, gericht op brain fog, vermoeidheid &amp; spierverlies)</p>
-              <p className="text-white/50 leading-relaxed text-base md:text-lg">
+              <p className="text-[#FFFDF7] font-extrabold text-2xl md:text-3xl mb-3">creatine monohydraat</p>
+              <p className="text-[#FFFDF7]/35 text-sm mb-5">(de meest onderzochte vorm, gericht op brain fog, vermoeidheid &amp; spierverlies)</p>
+              <p className="text-[#FFFDF7]/50 leading-relaxed text-base md:text-lg">
                 Droog verzegeld. Zonder vulmiddelen. Breekt niet af. Raakt geen vloeistof tot je twist. Een van de best onderzochte supplementen voor de klachten van menopauze, en je neemt het waarschijnlijk nog niet.
               </p>
-              <HandNote className="mt-6 text-white/40 rotate-[-3deg] block">
-                versheid is alles
-              </HandNote>
             </div>
             {/* Cap image — positioned bottom-right, large and prominent */}
             <div className="absolute -bottom-4 right-0 w-[55%] md:w-[45%] h-[85%] md:h-[105%] z-[2]">
@@ -1048,7 +1012,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-sm text-[#2D2D2D]/40 mt-8 text-center">
+          <p className="text-sm text-[#2D2D2D]/50 mt-8 text-center">
             geen toegevoegde suiker · geen conserveermiddelen · herbruikbare PET-fles + PP-dop · ontworpen in belgië
           </p>
         </div>
@@ -1057,7 +1021,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           9. THE SCIENCE
       ═══════════════════════════════════════════ */}
-      <section data-section="science" className="relative py-24 md:py-36 px-6 overflow-hidden">
+      <section data-section="science" className="relative py-20 md:py-32 px-6 overflow-hidden">
         <Blob variant={2} className="text-[#F5EDE0]/40 w-[600px] md:w-[800px] top-[15%] -left-[20%]" />
 
         <div className="max-w-5xl mx-auto relative z-10">
@@ -1066,7 +1030,7 @@ export default function Home() {
               500+
             </p>
             <p className="text-xl md:text-2xl font-extrabold text-[#2D2D2D] mt-2">peer-reviewed studies over creatine</p>
-            <p className="text-[#2D2D2D]/40 text-sm mt-2">meer onderzocht dan vitamine D. meer onderzocht dan visolie.</p>
+            <p className="text-[#2D2D2D]/50 text-sm mt-2">meer onderzocht dan vitamine D. meer onderzocht dan visolie.</p>
             <HandNote className="mt-4 block rotate-[2deg]">
               dit is geen nieuwe wetenschap, het is bewezen wetenschap
             </HandNote>
@@ -1107,7 +1071,7 @@ export default function Home() {
                 </div>
               ))}
               <p className="text-sm text-[#2D2D2D]/25 mt-6">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/30086660/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2D2D2D]/40 transition-colors">Dolan et al., 2019</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2D2D2D]/40 transition-colors">Smith-Ryan et al., 2021</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30086660/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2D2D2D]/50 transition-colors">Dolan et al., 2019</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="hover:text-[#2D2D2D]/50 transition-colors">Smith-Ryan et al., 2021</a>
               </p>
             </div>
           </div>
@@ -1154,7 +1118,7 @@ export default function Home() {
                 <p className="text-sm text-[#2D2D2D]/60 font-bold mb-1">14-daagse starter</p>
                 <p className="text-5xl md:text-6xl font-extrabold text-[#2D2D2D] tracking-tight mb-2">€42</p>
                 <p className="text-sm text-[#2D2D2D]/60 mb-1">€3,00/shot</p>
-                <p className="text-sm text-[#2D2D2D]/40 mb-8">+ €4,95 verzending</p>
+                <p className="text-sm text-[#2D2D2D]/50 mb-8">+ €4,95 verzending</p>
                 <a href="/waitlist?plan=14" onClick={() => trackCta("pricing", "14")} className="w-full bg-[#2D2D2D] text-[#FFFDF7] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#2D2D2D]/85 hover:shadow-lg">
                   bestel starter
                 </a>
@@ -1174,17 +1138,14 @@ export default function Home() {
                 <img src="/images/17-pricing-monthly-packaging.jpeg" alt="30-daagse voorraad" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="p-8 md:p-10 flex flex-col flex-1">
-                <p className="text-sm text-white/50 font-bold mb-1">30-daagse voorraad</p>
-                <p className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-2">€79</p>
-                <p className="text-sm text-white/50 mb-1">€2,63/shot</p>
-                <p className="text-sm text-white/30 mb-8">gratis verzending</p>
+                <p className="text-sm text-[#FFFDF7]/50 font-bold mb-1">30-daagse voorraad</p>
+                <p className="text-5xl md:text-6xl font-extrabold text-[#FFFDF7] tracking-tight mb-2">€79</p>
+                <p className="text-sm text-[#FFFDF7]/50 mb-1">€2,63/shot</p>
+                <p className="text-sm text-[#FFFDF7]/45 mb-8">gratis verzending</p>
                 <a href="/waitlist?plan=30" onClick={() => trackCta("pricing", "30")} className="w-full bg-[#F2A922] text-[#2D2D2D] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#D4921E] hover:shadow-lg">
                   bestel maandelijks
                 </a>
-                <p className="text-sm text-white/25 text-center mt-3 font-medium tracking-wide uppercase">verzending binnen 3 dagen</p>
-                <HandNote className="mt-2 text-center block text-base text-white/40">
-                  je dagelijkse dosis voor blijvend resultaat
-                </HandNote>
+                <p className="text-sm text-[#FFFDF7]/40 text-center mt-3 font-medium tracking-wide uppercase">verzending binnen 3 dagen</p>
               </div>
             </div>
           </div>
@@ -1215,7 +1176,7 @@ export default function Home() {
 
           {/* Links */}
           <div className="mt-10 flex flex-col gap-3">
-            <a href="/nl/veelgestelde-vragen" className="text-[#2D2D2D]/40 font-bold text-sm hover:text-[#2D2D2D] transition-colors">
+            <a href="/nl/veelgestelde-vragen" className="text-[#2D2D2D]/50 font-bold text-sm hover:text-[#2D2D2D] transition-colors">
               bekijk alle veelgestelde vragen →
             </a>
             <a href="/nl/blog/bijwerkingen-creatine-vrouwen" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
@@ -1242,11 +1203,11 @@ export default function Home() {
             <div className="absolute inset-0 bg-[#2D2D2D]/75" />
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center px-8 py-16 md:py-20">
-              <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-white leading-[0.95] tracking-tight mb-4">
-                menopauze nam iets af.<br />neem het terug.
+              <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#FFFDF7] leading-[0.95] tracking-tight mb-4">
+                je verdient beter dan<br />&ldquo;dat hoort erbij.&rdquo;
               </h2>
-              <p className="text-white/50 text-sm md:text-base max-w-md mx-auto mb-8">
-                zesty. de menopauzeshot met creatine, gember en kurkuma.
+              <p className="text-[#FFFDF7]/50 text-sm md:text-base max-w-md mx-auto mb-8">
+                zesty. creatine, gember en kurkuma. elke ochtend.
               </p>
               <a
                 href="#pricing"
@@ -1255,7 +1216,7 @@ export default function Home() {
               >
                 bestel nu
               </a>
-              <p className="text-white/30 text-sm mt-4">vanaf €2,63/shot · gratis verzending op 30-daagse plannen</p>
+              <p className="text-[#FFFDF7]/45 text-sm mt-4">vanaf €2,63/shot · gratis verzending op 30-daagse plannen</p>
             </div>
           </div>
 
@@ -1264,20 +1225,17 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
               <div>
                 <p className="text-2xl font-extrabold text-[#F2A922] tracking-tight mb-2">zesty</p>
-                <p className="text-white/30 text-sm">de menopauzeshot met creatine · 10g per shot</p>
+                <p className="text-[#FFFDF7]/45 text-sm">de menopauzeshot met creatine · 10g per shot</p>
               </div>
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-white/35">
-                <a href="/nl/blog" className="hover:text-white/60 transition-colors">blog</a>
-                <a href="/nl/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</a>
-                <a href="#" className="hover:text-white/60 transition-colors">privacybeleid</a>
-                <a href="#" className="hover:text-white/60 transition-colors">voorwaarden</a>
-                <a href="#" className="hover:text-white/60 transition-colors">contact</a>
-                <a href="#" className="hover:text-white/60 transition-colors">instagram</a>
+              <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
+                <a href="/nl/blog" className="hover:text-[#FFFDF7]/60 transition-colors">blog</a>
+                <a href="/nl/veelgestelde-vragen" className="hover:text-[#FFFDF7]/60 transition-colors">faq</a>
+                <a href="mailto:hello@drinkzesty.be" className="hover:text-[#FFFDF7]/60 transition-colors">contact</a>
               </div>
             </div>
             {/* AG1-style disclaimer + study references — centered, full width */}
-            <div className="text-white/40 text-sm leading-relaxed space-y-4 text-center max-w-5xl mx-auto">
-              <p id="sources" className="text-white/50 text-sm font-bold uppercase tracking-[0.15em] mb-3 scroll-mt-8">bronnen &amp; disclaimers</p>
+            <div className="text-[#FFFDF7]/40 text-sm leading-relaxed space-y-4 text-center max-w-5xl mx-auto">
+              <p id="sources" className="text-[#FFFDF7]/50 text-sm font-bold uppercase tracking-[0.15em] mb-3 scroll-mt-8">bronnen &amp; disclaimers</p>
               <p>
                 zesty is een voedingssupplement. deze uitspraken zijn gebaseerd op gepubliceerd onderzoek en zijn niet bedoeld als gezondheidsclaims.
                 dit product is niet bedoeld voor diagnose, behandeling, genezing of preventie van ziekten. voedingssupplementen zijn geen vervanging
@@ -1285,17 +1243,17 @@ export default function Home() {
                 borstvoeding geeft of medicijnen gebruikt.
               </p>
               <div className="space-y-2 text-left">
-                <p><span className="text-white/55 font-bold">[1]</span> Creatine supplementation improves cognitive performance, especially under stress and sleep deprivation — Xu et al., <em>Frontiers in Nutrition</em>, 2024.</p>
-                <p><span className="text-white/55 font-bold">[2]</span> Creatine supplementation and lean tissue mass in women — Chilibeck et al., <em>Nutrients</em>, 2023.</p>
-                <p><span className="text-white/55 font-bold">[3]</span> Effects of creatine on exercise performance and body composition in females — Smith-Ryan et al., <em>Nutrients</em>, 2021.</p>
-                <p><span className="text-white/55 font-bold">[4]</span> Women produce 70–80% less endogenous creatine than men — Brosnan &amp; Brosnan, <em>Amino Acids</em>, 2016.</p>
-                <p><span className="text-white/55 font-bold">[5]</span> Curcumin has anti-inflammatory properties and may support joint health — Hewlings &amp; Kalman, <em>Foods</em>, 2017.</p>
-                <p><span className="text-white/55 font-bold">[6]</span> Piperine enhances curcumin bioavailability by 2,000% — Shoba et al., <em>Planta Medica</em>, 1998.</p>
-                <p><span className="text-white/55 font-bold">[7]</span> Women lose significant muscle mass during the menopausal transition — Maltais et al., <em>Maturitas</em>, 2009.</p>
-                <p><span className="text-white/55 font-bold">[8]</span> An estimated 1.5 billion women worldwide will be postmenopausal by 2030 — World Health Organization.</p>
-                <p><span className="text-white/55 font-bold">[9]</span> Muscle creatine saturation at 10g/day occurs within approximately 10–14 days, compared to 5–7 days at 20g/day or ~28 days at 3g/day — Hultman et al., <em>Journal of Applied Physiology</em>, 1996; Kreider et al., <em>JISSN</em>, 2017.</p>
-                <p><span className="text-white/55 font-bold">[10]</span> Skin collagen declines rapidly after menopause, with ~30% lost in the first 5 years; vitamin C is essential for collagen biosynthesis — Brincat et al., <em>British Journal of Obstetrics and Gynaecology</em>, 1987; Pullar et al., <em>Nutrients</em>, 2017.</p>
-                <p><span className="text-white/55 font-bold">[11]</span> Magnesium deficiency in postmenopausal women linked to heart rhythm changes, impaired glucose tolerance, and neuroinflammation — Nielsen et al., <em>Journal of the American College of Nutrition</em>, 2007; Park et al., <em>Journal of Neuroinflammation</em>, 2021.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[1]</span> Creatine supplementation improves cognitive performance, especially under stress and sleep deprivation — Xu et al., <em>Frontiers in Nutrition</em>, 2024.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[2]</span> Creatine supplementation and lean tissue mass in women — Chilibeck et al., <em>Nutrients</em>, 2023.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[3]</span> Effects of creatine on exercise performance and body composition in females — Smith-Ryan et al., <em>Nutrients</em>, 2021.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[4]</span> Women produce 70–80% less endogenous creatine than men — Brosnan &amp; Brosnan, <em>Amino Acids</em>, 2016.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[5]</span> Curcumin has anti-inflammatory properties and may support joint health — Hewlings &amp; Kalman, <em>Foods</em>, 2017.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[6]</span> Piperine enhances curcumin bioavailability by 2,000% — Shoba et al., <em>Planta Medica</em>, 1998.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[7]</span> Women lose significant muscle mass during the menopausal transition — Maltais et al., <em>Maturitas</em>, 2009.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[8]</span> An estimated 1.5 billion women worldwide will be postmenopausal by 2030 — World Health Organization.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[9]</span> Muscle creatine saturation at 10g/day occurs within approximately 10–14 days, compared to 5–7 days at 20g/day or ~28 days at 3g/day — Hultman et al., <em>Journal of Applied Physiology</em>, 1996; Kreider et al., <em>JISSN</em>, 2017.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[10]</span> Skin collagen declines rapidly after menopause, with ~30% lost in the first 5 years; vitamin C is essential for collagen biosynthesis — Brincat et al., <em>British Journal of Obstetrics and Gynaecology</em>, 1987; Pullar et al., <em>Nutrients</em>, 2017.</p>
+                <p><span className="text-[#FFFDF7]/55 font-bold">[11]</span> Magnesium deficiency in postmenopausal women linked to heart rhythm changes, impaired glucose tolerance, and neuroinflammation — Nielsen et al., <em>Journal of the American College of Nutrition</em>, 2007; Park et al., <em>Journal of Neuroinflammation</em>, 2021.</p>
               </div>
               <p>
                 creatine is het meest onderzochte sportsupplement ter wereld, met meer dan 4.000 peer-reviewed publicaties.
@@ -1303,16 +1261,10 @@ export default function Home() {
                 korte, intensieve inspanning.
               </p>
             </div>
-            <p className="text-white/25 text-sm mt-8 text-center">ontworpen in belgië · herbruikbare verpakking · drinkzesty.be</p>
+            <p className="text-[#FFFDF7]/40 text-sm mt-8 text-center">ontworpen in belgië · herbruikbare verpakking · drinkzesty.be</p>
           </div>
         </div>
 
-        {/* Oversized brand mark — sits below all content, standalone */}
-        <div className="relative z-0 text-center pb-4 -mt-8">
-          <p className="text-[10rem] md:text-[16rem] lg:text-[22rem] font-extrabold text-white/[0.03] leading-none tracking-tighter select-none pointer-events-none">
-            zesty
-          </p>
-        </div>
       </footer>
 
       {/* ═══════════════════════════════════════════
@@ -1321,8 +1273,8 @@ export default function Home() {
       <div className={`fixed bottom-0 left-0 right-0 bg-[#FFFDF7]/95 backdrop-blur-md border-t border-[#2D2D2D]/10 transition-all duration-300 z-50 ${showSticky ? "translate-y-0" : "translate-y-full pointer-events-none"}`}>
         <div className="max-w-4xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
           <div>
-            <p className="text-sm font-bold text-[#2D2D2D]">10g creatine per shot · wetenschappelijk onderbouwd</p>
-            <p className="text-sm text-[#2D2D2D]/40 hidden sm:block">vanaf €2,63/dag · gratis verzending op 30-packs</p>
+            <p className="text-sm font-bold text-[#2D2D2D]">de dagelijkse creatine shot · wetenschappelijk onderbouwd</p>
+            <p className="text-sm text-[#2D2D2D]/50 hidden sm:block">vanaf €2,63/dag · gratis verzending op 30-packs</p>
           </div>
           <a href="#pricing" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
             bestel nu
