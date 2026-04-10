@@ -770,7 +770,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-[#2D2D2D] rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-4">
-                &ldquo;Geweldig als supplement nu ik de perimenopauze inga. <strong className="text-white">Vrouwen, kijk eens naar creatine voor de grote verandering.</strong>&rdquo;
+                &ldquo;Geweldig als supplement nu ik de perimenopauze in ga. <strong className="text-white">Vrouwen, kijk eens naar creatine voor de grote verandering.</strong>&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
                 <p className="text-sm text-white/30">X · @SpunkyAzCougar</p>
@@ -788,7 +788,7 @@ export default function Home() {
             </div>
             <div className="bg-[#2D2D2D] rounded-xl p-8">
               <p className="text-white/70 leading-relaxed mb-4">
-                &ldquo;Ondanks dat ik postmenopauzaal ben, <strong className="text-white">is het me gelukt om flink meer spiermassa op te bouwen.</strong> Ik hoop dat het voor jou net zo goed werkt!&rdquo;
+                &ldquo;Ondanks dat ik postmenopauzaal ben, <strong className="text-white">is het me gelukt om flink meer spiermassa op te bouwen.</strong>{" "}Ik hoop dat het voor jou net zo goed werkt!&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
                 <p className="text-sm text-white/30">X · @RunchieC</p>
