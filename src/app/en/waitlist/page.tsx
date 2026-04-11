@@ -3,7 +3,7 @@
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
-import { trackMetaEvent } from "../meta-pixel";
+import { trackMetaEvent } from "../../meta-pixel";
 
 function WaitlistForm() {
   const searchParams = useSearchParams();
@@ -29,10 +29,10 @@ function WaitlistForm() {
           💛
         </div>
         <h2 className="text-2xl font-bold text-text mb-3">
-          je staat op de lijst!
+          you&rsquo;re on the list!
         </h2>
         <p className="text-text/60 max-w-sm mx-auto">
-          dankjewel. ik laat je weten zodra er nieuws is.
+          thank you. i&rsquo;ll keep you posted as things progress.
         </p>
       </div>
     );
@@ -41,25 +41,26 @@ function WaitlistForm() {
   return (
     <div className="text-center animate-[fadeInUp_0.4s_ease-out]">
       <h1 className="text-2xl md:text-3xl font-bold text-text mb-6 leading-snug">
-        oprecht bedankt om op bestellen te klikken.
+        genuinely, thank you for clicking order.
         <br />
         <span className="text-text/50">
-          maar zesty bestaat <em>nog</em> niet.
+          but zesty doesn&rsquo;t exist <em>yet</em>.
         </span>
       </h1>
       <div className="text-text/60 mb-6 max-w-md mx-auto leading-relaxed text-left space-y-4">
         <p>
-          ik ben zesty aan het uitbouwen, maar zit nog in de exploratiefase. ik
-          wil eerst kijken of de interesse die ik vermoed, er ook echt is.
+          i&rsquo;m building zesty, but i&rsquo;m still in the exploration
+          phase. i want to find out if the interest i think is out there
+          actually exists.
         </p>
         <p>
-          ik geloof dat dit veel mensen kan helpen. maar ik wil eerst zien dat
-          die interesse er echt is voor ik het ga maken. dus bedankt, echt, om jouw
-          interesse te tonen.
+          i believe this can help a lot of people. but i want to see that
+          interest is real before i go build it. so thank you, truly, for showing
+          your interest.
         </p>
       </div>
       <p className="text-sm font-medium text-text/80 mb-6">
-        laat je email achter en ik hou je op de hoogte van mijn proces.
+        leave your email and i&rsquo;ll keep you posted on my progress.
       </p>
 
       <form
@@ -71,19 +72,19 @@ function WaitlistForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="je emailadres"
+          placeholder="your email"
           className="w-full px-5 py-3.5 rounded-full border border-text/15 bg-bg text-text placeholder:text-text/40 focus:outline-none focus:ring-2 focus:ring-brand/50 text-center transition-shadow"
         />
         <button
           type="submit"
           className="w-full bg-brand hover:bg-brand-hover hover:-translate-y-0.5 active:translate-y-0 text-text font-semibold py-3.5 rounded-full transition-all cursor-pointer"
         >
-          hou me op de hoogte
+          keep me posted
         </button>
       </form>
 
       <p className="text-xs text-text/40 mt-4">
-        geen spam. alleen updates als er iets te melden is.
+        no spam. only updates when there&rsquo;s something to share.
       </p>
     </div>
   );
@@ -110,7 +111,7 @@ export default function WaitlistPage() {
           </p>
           <Suspense
             fallback={
-              <div className="text-center text-text/40">laden...</div>
+              <div className="text-center text-text/40">loading...</div>
             }
           >
             <WaitlistForm />
