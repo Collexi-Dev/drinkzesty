@@ -986,18 +986,17 @@ export default function Home() {
           </div>
 
           {/* The Cap — hero section */}
-          <div className="bg-[#2D2D2D] rounded-2xl overflow-hidden relative" style={{ minHeight: "440px" }}>
-            {/* Curved cream split — a large circle whose left arc creates the dividing curve */}
-            <svg className="absolute inset-0 w-full h-full z-[1]" preserveAspectRatio="none" viewBox="0 0 1000 440">
+          <div className="bg-[#2D2D2D] rounded-2xl overflow-hidden relative md:min-h-[440px]">
+            {/* Curved cream split — desktop only */}
+            <svg className="absolute inset-0 w-full h-full z-[1] hidden md:block" preserveAspectRatio="none" viewBox="0 0 1000 440">
               <clipPath id="card-clip">
                 <rect x="0" y="0" width="1000" height="440" />
               </clipPath>
-              {/* Large circle positioned so only its left arc is visible inside the card */}
               <circle cx="900" cy="220" r="340" fill="#FFFDF7" fillOpacity="0.12" clipPath="url(#card-clip)" />
             </svg>
 
-            {/* Text content — larger, takes up more horizontal space */}
-            <div className="relative z-10 p-10 md:p-14 lg:p-16 max-w-lg lg:max-w-xl">
+            {/* Text content */}
+            <div className="relative z-10 p-8 md:p-14 lg:p-16 max-w-lg lg:max-w-xl">
               <p className="text-[#F2A922] font-bold text-sm tracking-[0.2em] uppercase mb-5">de dop</p>
               <p className="text-[5.5rem] md:text-[8rem] font-extrabold text-[#F2A922] leading-none tracking-tighter mb-3">10g</p>
               <p className="text-[#FFFDF7] font-extrabold text-2xl md:text-3xl mb-3">creatine monohydraat</p>
@@ -1006,9 +1005,9 @@ export default function Home() {
                 Droog verzegeld. Zonder vulmiddelen. Breekt niet af. Raakt geen vloeistof tot je twist. Een van de best onderzochte supplementen voor de klachten van menopauze, en je neemt het waarschijnlijk nog niet.
               </p>
             </div>
-            {/* Cap image — positioned bottom-right, large and prominent */}
-            <div className="absolute -bottom-4 right-0 w-[55%] md:w-[45%] h-[85%] md:h-[105%] z-[2]">
-              <img src="/images/15-cap-detail-no-bg.png" alt="Dosisdop met creatine" className="w-full h-full object-contain object-bottom drop-shadow-2xl" />
+            {/* Cap image — below text on mobile, absolute on desktop */}
+            <div className="relative md:absolute md:-bottom-4 md:right-0 md:w-[45%] md:h-[105%] md:z-[2] flex justify-center px-8 pb-8 md:p-0">
+              <img src="/images/15-cap-detail-no-bg.png" alt="Dosisdop met creatine" className="w-48 md:w-full h-auto md:h-full object-contain object-bottom drop-shadow-2xl" />
             </div>
           </div>
 
