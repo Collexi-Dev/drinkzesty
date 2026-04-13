@@ -107,7 +107,7 @@ export default function FrequentlyAskedQuestions() {
               10g creatine. one shot. every morning.
             </p>
             <Link
-              href="/en#pricing"
+              href="/en#order"
               className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
             >
               order now
@@ -129,7 +129,7 @@ export default function FrequentlyAskedQuestions() {
               <Link href="/en" className="hover:text-white/60 transition-colors">home</Link>
               <Link href="/en/blog" className="hover:text-white/60 transition-colors">blog</Link>
               <Link href="/en/faq" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/en#pricing" className="hover:text-white/60 transition-colors">order</Link>
+              <Link href="/en#order" className="hover:text-white/60 transition-colors">order</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">

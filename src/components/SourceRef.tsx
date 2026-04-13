@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
 
 const SOURCES: Record<number, string> = {
   1: "Creatine supplementation improves cognitive performance, especially under stress and sleep deprivation — Xu et al., Frontiers in Nutrition, 2024.",
@@ -18,7 +18,9 @@ const SOURCES: Record<number, string> = {
 
 export function SourceRef({ n }: { n: number }) {
   const [open, setOpen] = useState(false);
+  const [offsetX, setOffsetX] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
+  const popoverRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -36,6 +38,25 @@ export function SourceRef({ n }: { n: number }) {
     };
   }, [open]);
 
+  // Keep popover within viewport on mobile by shifting horizontally if it overflows
+  useLayoutEffect(() => {
+    if (!open) {
+      setOffsetX(0);
+      return;
+    }
+    if (!popoverRef.current) return;
+    const rect = popoverRef.current.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const margin = 8;
+    let shift = 0;
+    if (rect.left < margin) {
+      shift = margin - rect.left;
+    } else if (rect.right > vw - margin) {
+      shift = vw - margin - rect.right;
+    }
+    if (shift !== 0) setOffsetX(shift);
+  }, [open]);
+
   return (
     <span ref={ref} className="relative inline-block align-baseline">
       <button
@@ -46,10 +67,17 @@ export function SourceRef({ n }: { n: number }) {
         [{n}]
       </button>
       {open && (
-        <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 md:w-80 bg-[#2D2D2D] text-white text-xs leading-relaxed rounded-lg px-4 py-3 shadow-xl z-50 pointer-events-auto">
+        <span
+          ref={popoverRef}
+          style={{ transform: `translateX(calc(-50% + ${offsetX}px))` }}
+          className="absolute bottom-full left-1/2 mb-2 w-[min(20rem,calc(100vw-1rem))] bg-[#2D2D2D] text-white text-xs leading-relaxed rounded-lg px-4 py-3 shadow-xl z-50 pointer-events-auto font-normal text-left"
+        >
           <span className="font-bold text-[#F2A922]">[{n}]</span>{" "}
           {SOURCES[n]}
-          <span className="absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-[#2D2D2D]" />
+          <span
+            style={{ left: `calc(50% - ${offsetX}px)` }}
+            className="absolute top-full -translate-x-1/2 border-[6px] border-transparent border-t-[#2D2D2D]"
+          />
         </span>
       )}
     </span>

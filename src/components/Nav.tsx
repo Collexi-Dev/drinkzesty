@@ -25,7 +25,7 @@ export function Nav({ locale = "nl" }: { locale?: "en" | "nl" }) {
             faq
           </Link>
           <Link
-            href={locale === "nl" ? "/#pricing" : "/en#pricing"}
+            href={locale === "nl" ? "/#order" : "/en#order"}
             className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors"
           >
             {locale === "nl" ? "bestel nu" : "order now"}

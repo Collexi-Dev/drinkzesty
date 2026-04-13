@@ -111,7 +111,7 @@ export default function BlogIndex() {
               <Link href="/" className="hover:text-white/60 transition-colors">home</Link>
               <Link href="/blog" className="hover:text-white/60 transition-colors">blog</Link>
               <Link href="/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/#pricing" className="hover:text-white/60 transition-colors">bestel</Link>
+              <Link href="/#order" className="hover:text-white/60 transition-colors">bestel</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">

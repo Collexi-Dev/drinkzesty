@@ -345,7 +345,7 @@ export default function Home() {
           <div className="flex items-center gap-5">
             <a href="/blog" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
             <a href="/veelgestelde-vragen" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">faq</a>
-            <a href="#pricing" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">bestel nu</a>
+            <a href="#order" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">bestel nu</a>
             <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
               <span className="px-2.5 py-1 text-xs font-bold text-[#FFFDF7] bg-[#2D2D2D] rounded-full">NL</span>
               <a href="/en" className="px-2.5 py-1 text-xs font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] rounded-full transition-colors">EN</a>
@@ -431,7 +431,7 @@ export default function Home() {
         {/* CTA */}
         <div className="gsap-hero-intro relative z-10 text-center">
           <a
-            href="#pricing"
+            href="#order"
             onClick={() => trackCta("hero", "30")}
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
@@ -1107,7 +1107,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div id="order" className="grid md:grid-cols-2 gap-6 md:gap-8 scroll-mt-20">
             {/* Starter */}
             <div className="gsap-pricing-card bg-[#FFFDF7] rounded-2xl overflow-hidden border border-[#2D2D2D]/[0.06] flex flex-col">
               <div className="flex items-center justify-center h-64 md:h-72 relative overflow-hidden">
@@ -1212,7 +1212,7 @@ export default function Home() {
                 zesty. creatine, gember en kurkuma. elke ochtend.
               </p>
               <a
-                href="#pricing"
+                href="#order"
                 onClick={() => trackCta("footer", "30")}
                 className="inline-flex items-center gap-3 bg-[#F2A922] text-[#2D2D2D] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#D4921E] hover:shadow-xl hover:scale-[1.02]"
               >
@@ -1278,7 +1278,7 @@ export default function Home() {
             <p className="text-sm font-bold text-[#2D2D2D]">de dagelijkse creatine shot · wetenschappelijk onderbouwd</p>
             <p className="text-sm text-[#2D2D2D]/50 hidden sm:block">vanaf €2,63/dag · gratis verzending op 30-packs</p>
           </div>
-          <a href="#pricing" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
+          <a href="#order" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
             bestel nu
           </a>
         </div>
