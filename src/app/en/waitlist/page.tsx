@@ -47,7 +47,7 @@ function WaitlistForm() {
 
   return (
     <div className="text-center animate-[fadeInUp_0.4s_ease-out]">
-      <div className="mx-auto mb-8 w-40 h-40 rounded-2xl overflow-hidden bg-sand">
+      <div className="mx-auto mb-8 w-full max-w-sm aspect-video rounded-2xl overflow-hidden bg-sand">
         <img
           src={productImage}
           alt={productAlt}
