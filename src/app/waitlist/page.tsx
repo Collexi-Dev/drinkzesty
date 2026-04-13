@@ -11,6 +11,13 @@ function WaitlistForm() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  const productImage =
+    plan === "30"
+      ? "/images/17-pricing-monthly-packaging.jpeg"
+      : "/images/17-pricing-starter-packaging.jpeg";
+  const productAlt =
+    plan === "30" ? "zesty 30-daagse voorraad" : "zesty 14-daagse starter";
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     posthog.identify(email, { email, plan });
@@ -32,7 +39,7 @@ function WaitlistForm() {
           je staat op de lijst!
         </h2>
         <p className="text-text/60 max-w-sm mx-auto">
-          dankjewel. ik laat je weten zodra er nieuws is.
+          ik laat het je weten zodra zesty te koop is.
         </p>
       </div>
     );
@@ -40,27 +47,23 @@ function WaitlistForm() {
 
   return (
     <div className="text-center animate-[fadeInUp_0.4s_ease-out]">
-      <h1 className="text-2xl md:text-3xl font-bold text-text mb-6 leading-snug">
-        oprecht bedankt om op bestellen te klikken.
-        <br />
-        <span className="text-text/50">
-          maar zesty bestaat <em>nog</em> niet.
-        </span>
+      <div className="mx-auto mb-8 w-40 h-40 rounded-2xl overflow-hidden bg-sand">
+        <img
+          src={productImage}
+          alt={productAlt}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h1 className="text-2xl md:text-3xl font-bold text-text mb-5 leading-snug">
+        goed nieuws, je hebt smaak.
       </h1>
-      <div className="text-text/60 mb-6 max-w-md mx-auto leading-relaxed text-left space-y-4">
+      <div className="text-text/60 mb-8 max-w-sm mx-auto leading-relaxed space-y-3">
+        <p>je klikte op bestellen. dat maakt mijn dag.</p>
         <p>
-          ik ben zesty aan het uitbouwen, maar zit nog in de exploratiefase. ik
-          wil eerst kijken of de interesse die ik vermoed, er ook echt is.
-        </p>
-        <p>
-          ik geloof dat dit veel mensen kan helpen. maar ik wil eerst zien dat
-          die interesse er echt is voor ik het ga maken. dus bedankt, echt, om jouw
-          interesse te tonen.
+          ik werk eraan om zesty te lanceren en jij bent er vroeg bij. laat je
+          email achter en ik stuur je een bericht zodra je kan bestellen.
         </p>
       </div>
-      <p className="text-sm font-medium text-text/80 mb-6">
-        laat je email achter en ik hou je op de hoogte van mijn proces.
-      </p>
 
       <form
         onSubmit={handleSubmit}
@@ -78,12 +81,12 @@ function WaitlistForm() {
           type="submit"
           className="w-full bg-brand hover:bg-brand-hover hover:-translate-y-0.5 active:translate-y-0 text-text font-semibold py-3.5 rounded-full transition-all cursor-pointer"
         >
-          hou me op de hoogte
+          zet me op de lijst
         </button>
       </form>
 
       <p className="text-xs text-text/40 mt-4">
-        geen spam. alleen updates als er iets te melden is.
+        geen spam. alleen een bericht zodra je kan bestellen.
       </p>
     </div>
   );
@@ -102,10 +105,10 @@ export default function WaitlistPage() {
           to { opacity: 1; transform: scale(1); }
         }
       `}</style>
-      <main className="min-h-screen bg-bg flex flex-col items-center justify-center px-6 relative overflow-hidden">
+      <main className="min-h-screen bg-bg flex flex-col items-center justify-center px-6 py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(242,169,34,0.05)_0%,_transparent_70%)] pointer-events-none" />
         <div className="w-full max-w-md relative">
-          <p className="text-3xl font-bold text-brand text-center mb-10">
+          <p className="text-2xl font-bold text-brand text-center mb-8">
             zesty
           </p>
           <Suspense

@@ -11,6 +11,13 @@ function WaitlistForm() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  const productImage =
+    plan === "30"
+      ? "/images/17-pricing-monthly-packaging.jpeg"
+      : "/images/17-pricing-starter-packaging.jpeg";
+  const productAlt =
+    plan === "30" ? "zesty 30-day supply" : "zesty 14-day starter";
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     posthog.identify(email, { email, plan });
@@ -32,7 +39,7 @@ function WaitlistForm() {
           you&rsquo;re on the list!
         </h2>
         <p className="text-text/60 max-w-sm mx-auto">
-          thank you. i&rsquo;ll keep you posted as things progress.
+          i&rsquo;ll let you know as soon as zesty is available.
         </p>
       </div>
     );
@@ -40,28 +47,24 @@ function WaitlistForm() {
 
   return (
     <div className="text-center animate-[fadeInUp_0.4s_ease-out]">
-      <h1 className="text-2xl md:text-3xl font-bold text-text mb-6 leading-snug">
-        genuinely, thank you for clicking order.
-        <br />
-        <span className="text-text/50">
-          but zesty doesn&rsquo;t exist <em>yet</em>.
-        </span>
+      <div className="mx-auto mb-8 w-40 h-40 rounded-2xl overflow-hidden bg-sand">
+        <img
+          src={productImage}
+          alt={productAlt}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h1 className="text-2xl md:text-3xl font-bold text-text mb-5 leading-snug">
+        good news, you have taste.
       </h1>
-      <div className="text-text/60 mb-6 max-w-md mx-auto leading-relaxed text-left space-y-4">
+      <div className="text-text/60 mb-8 max-w-sm mx-auto leading-relaxed space-y-3">
+        <p>you clicked order. that makes my day.</p>
         <p>
-          i&rsquo;m building zesty, but i&rsquo;m still in the exploration
-          phase. i want to find out if the interest i think is out there
-          actually exists.
-        </p>
-        <p>
-          i believe this can help a lot of people. but i want to see that
-          interest is real before i go build it. so thank you, truly, for showing
-          your interest.
+          i&rsquo;m working on launching zesty and you&rsquo;re here early.
+          leave your email and i&rsquo;ll send you a note the moment you can
+          order.
         </p>
       </div>
-      <p className="text-sm font-medium text-text/80 mb-6">
-        leave your email and i&rsquo;ll keep you posted on my progress.
-      </p>
 
       <form
         onSubmit={handleSubmit}
@@ -79,12 +82,12 @@ function WaitlistForm() {
           type="submit"
           className="w-full bg-brand hover:bg-brand-hover hover:-translate-y-0.5 active:translate-y-0 text-text font-semibold py-3.5 rounded-full transition-all cursor-pointer"
         >
-          keep me posted
+          put me on the list
         </button>
       </form>
 
       <p className="text-xs text-text/40 mt-4">
-        no spam. only updates when there&rsquo;s something to share.
+        no spam. just a note when you can order.
       </p>
     </div>
   );
@@ -103,10 +106,10 @@ export default function WaitlistPage() {
           to { opacity: 1; transform: scale(1); }
         }
       `}</style>
-      <main className="min-h-screen bg-bg flex flex-col items-center justify-center px-6 relative overflow-hidden">
+      <main className="min-h-screen bg-bg flex flex-col items-center justify-center px-6 py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(242,169,34,0.05)_0%,_transparent_70%)] pointer-events-none" />
         <div className="w-full max-w-md relative">
-          <p className="text-3xl font-bold text-brand text-center mb-10">
+          <p className="text-2xl font-bold text-brand text-center mb-8">
             zesty
           </p>
           <Suspense
