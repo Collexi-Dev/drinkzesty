@@ -136,7 +136,7 @@ const faqs = [
   { q: "Hoe smaakt het?", a: "Een pittige gembershot met warme kurkuma en frisse citrus. Citroen, ananas en sinaasappel. Het is echt een koudgeperste shot. Niet zoet. Niet medicinaal. Gewoon scherp en fris." },
   { q: "Hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. Zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma. Geen mengen, geen afmeten." },
   { q: "Hoe lang duurt het voor ik iets merk?", a: "Bij 10g per dag zit je creatine na zo'n 2 weken op peil. Dat is sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Wat je daarna merkt verschilt per persoon. Sommige vrouwen melden in onderzoek meer energie en minder brain fog na enkele weken, anderen merken weinig verschil. De 14-daagse starter is er om dat zelf te kunnen testen." },
-  { q: "Is 10g niet te veel?", a: "Ongeveer 95% van je lichaamscreatine zit in je spieren, dus 3-5g per dag verzadigt vooral spiermassa. De resterende 5% in de hersenen vereist hogere doses om bij te dragen aan hersencreatine. Studies die cognitieve effecten bij vrouwen onderzoeken, gebruiken vaak 10g of meer [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
+  { q: "Is 10g niet te veel?", a: "Ongeveer 95% van je lichaamscreatine zit in je spieren, dus 3-5g per dag verzadigt vooral spiermassa. De resterende 5% zit in de hersenen, en dat vraagt hogere doses om bij te dragen aan hersencreatine. Studies die cognitieve effecten bij vrouwen onderzoeken, gebruiken vaak 10g of meer [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
   { q: "Helpt creatine ook voor de hersenen op lange termijn?", a: "Onderzoekers bestuderen creatine actief als beschermende factor voor de hersenen bij veroudering. Een pilotstudie bij Alzheimerpatiënten (Smith et al., 2025) rapporteerde verbetering in cognitie na creatinesuppletie. Het is een klein, vroeg onderzoek, maar de richting is hoopgevend en de veiligheid op lange termijn is goed vastgesteld." },
 ];
 
@@ -399,7 +399,7 @@ export default function Home() {
             {" "}vrouwen in de menopauze.
           </h1>
           <p className="text-xl md:text-2xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
-            <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. Voor vrouwen die klaar zijn met &ldquo;dat hoort bij je leeftijd.&rdquo;
+            <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. Voor vrouwen die klaar zijn met &ldquo;dat hoort bij je leeftijd&rdquo;.
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
             Koudgeperst met gember, kurkuma en elektrolyten. Droog verzegeld in de dop. Klaar in 10 seconden.
@@ -416,7 +416,7 @@ export default function Home() {
         {/* Stat pills — horizontal below product */}
         <div className="gsap-hero-intro relative z-10 flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
           {[
-            { val: "Gember", lbl: "+ kurkuma" },
+            { val: "Gember", lbl: "& kurkuma" },
             { val: "10g", lbl: "creatine per shot" },
             { val: "Elektrolyten", lbl: "voor opname" },
             { val: "0g", lbl: "suiker" },
@@ -917,13 +917,13 @@ export default function Home() {
               </thead>
               <tbody>
                 {[
-                  { feature: "Klinische 10g dosis", zesty: true, powder: true, pills: false, gummies: false },
+                  { feature: "Klinische dosis van 10g", zesty: true, powder: true, pills: false, gummies: false },
                   { feature: "Geen afmeten nodig", zesty: true, powder: false, pills: true, gummies: true },
                   { feature: "Blijft vers tot gebruik", zesty: true, powder: false, pills: false, gummies: false },
-                  { feature: "Toegevoegde gember + kurkuma", zesty: true, powder: false, pills: false, gummies: false },
+                  { feature: "Gember en kurkuma toegevoegd", zesty: true, powder: false, pills: false, gummies: false },
                   { feature: "Elektrolyten voor opname", zesty: true, powder: false, pills: false, gummies: false },
                   { feature: "Smaakt ook nog lekker", zesty: true, powder: false, pills: false, gummies: true },
-                  { feature: "10-seconde dagelijks ritueel", zesty: true, powder: false, pills: true, gummies: true },
+                  { feature: "Dagelijks ritueel van 10 seconden", zesty: true, powder: false, pills: true, gummies: true },
                   { feature: "Geen shakebeker nodig", zesty: true, powder: false, pills: true, gummies: true },
                 ].map((row) => (
                   <tr key={row.feature} className="border-b border-[#2D2D2D]/[0.06]">
@@ -1002,7 +1002,7 @@ export default function Home() {
               <p className="text-[#FFFDF7] font-extrabold text-2xl md:text-3xl mb-3">Creatine monohydraat</p>
               <p className="text-[#FFFDF7]/35 text-sm mb-5">(de meest onderzochte vorm, ook in studies bij menopauze)</p>
               <p className="text-[#FFFDF7]/50 leading-relaxed text-base md:text-lg">
-                Droog verzegeld. Zonder vulmiddelen. Breekt niet af. Raakt geen vloeistof tot je twist. Een van de best onderzochte supplementen voor de klachten van menopauze, en je neemt het waarschijnlijk nog niet.
+                Droog verzegeld. Zonder vulmiddelen. Breekt niet af. Raakt geen vloeistof tot je twist. Een van de best onderzochte supplementen voor de klachten van menopauze. De meeste vrouwen kennen het nog niet als optie.
               </p>
             </div>
             {/* Cap image — below text on mobile, absolute on desktop */}
