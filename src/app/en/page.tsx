@@ -481,9 +481,9 @@ export default function Home() {
           {/* Mobile: stacked list */}
           <div className="md:hidden space-y-6">
             {[
-              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "Menopause brain fog", desc: <>The words are there, you just can&rsquo;t find them. Estrogen drops, and so does your mental clarity.<SourceRef n={1} /></> },
+              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "Menopause brain fog", desc: <>The words are there, you just can&rsquo;t find them. Oestrogen drops, and so does your mental clarity.<SourceRef n={1} /></> },
               { icon: <IconBattery className="w-8 h-8 text-[#F2A922]" />, title: "Crushing fatigue", desc: <>8 hours of sleep and still dragging. Hormonal shifts tank your cellular energy production.<SourceRef n={3} /></> },
-              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "Losing muscle & strength", desc: <>Less muscle, more aches. Declining estrogen accelerates muscle loss after 40.<SourceRef n={7} /></> },
+              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "Losing muscle & strength", desc: <>Less muscle, more aches. Declining oestrogen accelerates muscle loss after 40.<SourceRef n={7} /></> },
               { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "Can\u2019t focus anymore", desc: <>Reading the same email three times. Cognitive decline is one of the most common menopause symptoms.<SourceRef n={1} /></> },
             ].map((s) => (
               <div key={s.title} className="flex items-start gap-4 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
@@ -527,7 +527,7 @@ export default function Home() {
               <div className="absolute left-0 top-0 max-w-[240px] z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <IconBrainFog className="w-10 h-10 text-[#F2A922] mb-2" />
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">Menopause brain fog</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">The words are there, you just can&rsquo;t find them. Estrogen drops, and so does clarity.<SourceRef n={1} /></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">The words are there, you just can&rsquo;t find them. Oestrogen drops, and so does clarity.<SourceRef n={1} /></p>
               </div>
 
               {/* Top-right: can't focus */}
@@ -548,7 +548,7 @@ export default function Home() {
               <div className="absolute right-0 bottom-0 max-w-[240px] text-right z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <div className="flex justify-end"><IconStrength className="w-10 h-10 text-[#F2A922] mb-2" /></div>
                 <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">Muscle &amp; strength loss</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">Declining estrogen accelerates muscle loss. Things you used to do easily get harder.<SourceRef n={7} /></p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">Declining oestrogen accelerates muscle loss. Things you used to do easily get harder.<SourceRef n={7} /></p>
               </div>
             </div>
           </div>
@@ -579,7 +579,7 @@ export default function Home() {
 
           {/* Beat 2 — the gap */}
           <p className="text-[#2D2D2D]/60 text-lg md:text-xl leading-relaxed mb-8 md:mb-10">
-            Women already carry up to <strong className="text-[#2D2D2D] font-bold">80% lower creatine stores</strong> than men.<SourceRef n={4} /> Then perimenopause hits: estrogen drops, creatine synthesis slows, and the gap widens,<SourceRef n={3} /> right when your brain and muscles need it most.
+            Women already carry up to <strong className="text-[#2D2D2D] font-bold">80% lower creatine stores</strong> than men.<SourceRef n={4} /> Then perimenopause hits: oestrogen drops, creatine synthesis slows, and the gap widens,<SourceRef n={3} /> right when your brain and muscles need it most.
           </p>
 
           {/* Beat 3 — the connection */}
@@ -620,7 +620,7 @@ export default function Home() {
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Clearer thinking</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                It&rsquo;s real. Declining estrogen starves your brain of energy. Creatine is what the brain uses to replenish that energy.<SourceRef n={1} /> Research in women suggests supplementation may improve working memory and processing speed, especially under stress and sleep deprivation.
+                It&rsquo;s real. Declining oestrogen starves your brain of energy. Creatine is what the brain uses to replenish that energy.<SourceRef n={1} /> Research in women suggests supplementation may improve working memory and processing speed, especially under stress and sleep deprivation.
               </p>
               <p className="text-[#FFFDF7]/45 leading-relaxed text-sm mt-3">
                 Researchers are also actively studying creatine as a protective factor for the aging brain. A recent pilot study in Alzheimer&rsquo;s patients reported cognitive improvement after supplementation. Early research, promising direction.
@@ -949,8 +949,8 @@ export default function Home() {
             {[
               { name: "Cold-pressed ginger", why: <>A natural anti-inflammatory that helps with the joint pain and digestive issues many women experience during menopause. Also supports immune function when your body is under hormonal stress.<SourceRef n={5} /></>, symptoms: ["Joint pain", "Bloating", "Nausea"], img: "/images/11-ginger.jpeg" },
               { name: "Turmeric + piperine", why: <>Curcumin fights the chronic inflammation that spikes during menopause, linked to joint stiffness, mood swings, and brain fog.<SourceRef n={5} /> Piperine boosts turmeric absorption by 2,000%.<SourceRef n={6} /></>, symptoms: ["Inflammation", "Joint stiffness", "Mood"], img: "/images/12-turmeric.jpeg" },
-              { name: "Lemon, pineapple, orange", why: <>Women lose up to 30% of skin collagen in the first 5 years after menopause. Vitamin C is essential for collagen synthesis, fighting the skin thinning estrogen leaves behind.<SourceRef n={10} /> Bromelain from pineapple is a proven anti-inflammatory for the joint stiffness that spikes during menopause.<SourceRef n={5} /> No added sugar.</>, symptoms: ["Skin thinning", "Joint pain", "Inflammation"], img: "/images/13-citrus.jpeg" },
-              { name: "Electrolytes", why: <>Sodium, potassium, magnesium. Estrogen decline directly disrupts electrolyte balance, magnesium deficiency in postmenopausal women is linked to fatigue, muscle cramps, mood changes, and even heart rhythm issues.<SourceRef n={11} /> Electrolytes also improve creatine uptake into your muscles.</>, symptoms: ["Fatigue", "Muscle cramps", "Hot flashes"], img: "/images/14-electrolytes.jpeg" },
+              { name: "Lemon, pineapple, orange", why: <>Women lose up to 30% of skin collagen in the first 5 years after menopause. Vitamin C is essential for collagen synthesis, fighting the skin thinning oestrogen leaves behind.<SourceRef n={10} /> Bromelain from pineapple is a proven anti-inflammatory for the joint stiffness that spikes during menopause.<SourceRef n={5} /> No added sugar.</>, symptoms: ["Skin thinning", "Joint pain", "Inflammation"], img: "/images/13-citrus.jpeg" },
+              { name: "Electrolytes", why: <>Sodium, potassium, magnesium. Oestrogen decline directly disrupts electrolyte balance, magnesium deficiency in postmenopausal women is linked to fatigue, muscle cramps, mood changes, and even heart rhythm issues.<SourceRef n={11} /> Electrolytes also improve creatine uptake into your muscles.</>, symptoms: ["Fatigue", "Muscle cramps", "Hot flashes"], img: "/images/14-electrolytes.jpeg" },
             ].map((item) => (
               <div key={item.name}>
                 <img src={item.img} alt={item.name} className="h-48 md:h-56 rounded-xl mb-5 w-full object-cover" />
