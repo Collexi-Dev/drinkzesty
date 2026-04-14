@@ -394,7 +394,7 @@ export default function Home() {
         {/* Product — large, centered */}
         <div className="gsap-hero-intro relative z-10 flex justify-center mb-2 md:mb-4">
           <div ref={heroProductRef} className="relative w-64 h-80 md:w-80 md:h-[26rem] lg:w-[22rem] lg:h-[30rem]">
-            <img src="/images/2-hero-product-cutout.webp" alt="Zesty bottle" className="w-full h-full object-contain drop-shadow-2xl" />
+            <img src="/images/2-hero-product-cutout.webp" alt="Zesty creatine shot bottle, 10g creatine per shot for women in menopause" className="w-full h-full object-contain drop-shadow-2xl" />
           </div>
         </div>
 
@@ -615,7 +615,7 @@ export default function Home() {
 
           {/* Benefit 1 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
-            <img src="/images/4-benefit-1-clearer-thinking-no-bg.webp" alt="Clearer thinking" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/4-benefit-1-clearer-thinking-no-bg.webp" alt="Clearer thinking with creatine during menopause" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Clearer thinking</p>
@@ -634,7 +634,7 @@ export default function Home() {
           {/* Benefit 2 — flipped */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
             <div className="md:order-2">
-              <img src="/images/5-benefit-2-real-energy-no-bg.webp" alt="Real energy" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+              <img src="/images/5-benefit-2-real-energy-no-bg.webp" alt="Real energy at the cellular level with creatine for women in menopause" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             </div>
             <div className="md:order-1">
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: fatigue</p>
@@ -648,7 +648,7 @@ export default function Home() {
 
           {/* Benefit 3 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-            <img src="/images/6-benefit-3-strength-no-bg.webp" alt="Strength that stays" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/6-benefit-3-strength-no-bg.webp" alt="Muscle preservation with creatine and strength training during menopause" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: muscle loss</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Strength that stays</p>
@@ -1155,6 +1155,19 @@ export default function Home() {
             Frequently asked questions
           </h2>
           {faqs.map((faq) => <FaqItem key={faq.q} q={faq.q} a={faq.a} />)}
+
+          {/* Links */}
+          <div className="mt-10 flex flex-col gap-3">
+            <a href="/en/faq" className="text-[#2D2D2D]/50 font-bold text-sm hover:text-[#2D2D2D] transition-colors">
+              See all frequently asked questions →
+            </a>
+            <a href="/en/blog/creatine-side-effects-women" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
+              Creatine side effects in women: what does the research say? →
+            </a>
+            <a href="/en/blog/best-creatine-for-women-menopause" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
+              Best creatine for women in menopause: the guide →
+            </a>
+          </div>
         </div>
       </section>
 
@@ -1195,6 +1208,7 @@ export default function Home() {
               <div>
                 <p className="text-2xl font-extrabold text-[#F2A922] tracking-tight mb-2">zesty</p>
                 <p className="text-[#FFFDF7]/45 text-sm">The functional menopause wellness shot · 10g creatine</p>
+                <p className="text-[#FFFDF7]/35 text-sm mt-2">Questions? <a href="mailto:hello@drinkzesty.be" className="text-[#F2A922] hover:underline">hello@drinkzesty.be</a></p>
               </div>
               <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
                 <a href="/en/blog" className="hover:text-[#FFFDF7]/60 transition-colors">Blog</a>

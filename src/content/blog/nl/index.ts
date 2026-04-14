@@ -56,7 +56,8 @@ const posts: BlogEntry[] = [
     description:
       "Alles over de bijwerkingen van creatine bij vrouwen. Wat zegt de wetenschap? Is creatine veilig tijdens de menopauze? Een eerlijk overzicht.",
     date: "2026-04-09",
-    readingTime: "6 min",
+    dateModified: "2026-04-14",
+    readingTime: "10 min",
     faqs: [
       {
         q: "Is creatine veilig voor vrouwen?",

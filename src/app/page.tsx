@@ -409,7 +409,7 @@ export default function Home() {
         {/* Product — large, centered */}
         <div className="gsap-hero-intro relative z-10 flex justify-center mb-2 md:mb-4">
           <div ref={heroProductRef} className="relative w-64 h-80 md:w-80 md:h-[26rem] lg:w-[22rem] lg:h-[30rem]">
-            <img src="/images/2-hero-product-cutout.webp" alt="Zesty fles" className="w-full h-full object-contain drop-shadow-2xl" />
+            <img src="/images/2-hero-product-cutout.webp" alt="Zesty creatine shot fles, 10g creatine per shot voor vrouwen in de menopauze" className="w-full h-full object-contain drop-shadow-2xl" />
           </div>
         </div>
 
@@ -635,7 +635,7 @@ export default function Home() {
 
           {/* Benefit 1 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
-            <img src="/images/4-benefit-1-clearer-thinking-no-bg.webp" alt="Helder denken" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/4-benefit-1-clearer-thinking-no-bg.webp" alt="Helder denken met creatine tijdens de menopauze" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopauze-klacht: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Helder denken</p>
@@ -654,7 +654,7 @@ export default function Home() {
           {/* Benefit 2 — flipped */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
             <div className="md:order-2">
-              <img src="/images/5-benefit-2-real-energy-no-bg.webp" alt="Echte energie" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+              <img src="/images/5-benefit-2-real-energy-no-bg.webp" alt="Echte energie op celniveau met creatine voor vrouwen in de menopauze" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             </div>
             <div className="md:order-1">
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopauze-klacht: vermoeidheid</p>
@@ -668,7 +668,7 @@ export default function Home() {
 
           {/* Benefit 3 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-            <img src="/images/6-benefit-3-strength-no-bg.webp" alt="Kracht die blijft" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/6-benefit-3-strength-no-bg.webp" alt="Spierbehoud met creatine en krachttraining tijdens de menopauze" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopauze-klacht: spierverlies</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Kracht die blijft</p>
@@ -796,7 +796,7 @@ export default function Home() {
           {/* Mobile: stacked layout */}
           <div className="md:hidden mb-16">
             <div className="relative w-64 h-80 mx-auto mb-8">
-              <img src="/images/7-meet-zesty-bg.jpeg" alt="Ontmoet Zesty" className="w-full h-full rounded-xl object-cover" />
+              <img src="/images/7-meet-zesty-bg.jpeg" alt="Zesty creatine shot fles voor vrouwen in de menopauze" className="w-full h-full rounded-xl object-cover" />
             </div>
             <div className="space-y-6 px-2">
               {[
@@ -839,7 +839,7 @@ export default function Home() {
 
               {/* Center product image */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[26rem] lg:w-96 lg:h-[30rem] z-10">
-                <img src="/images/7-meet-zesty-bg.jpeg" alt="Ontmoet Zesty" className="w-full h-full rounded-2xl object-cover shadow-2xl" />
+                <img src="/images/7-meet-zesty-bg.jpeg" alt="Zesty creatine shot fles voor vrouwen in de menopauze" className="w-full h-full rounded-2xl object-cover shadow-2xl" />
               </div>
 
               {/* Label: the cap — top-left, aligned with annotation line */}
@@ -1111,7 +1111,7 @@ export default function Home() {
             {/* Starter */}
             <div className="gsap-pricing-card bg-[#FFFDF7] rounded-2xl overflow-hidden border border-[#2D2D2D]/[0.06] flex flex-col">
               <div className="flex items-center justify-center h-64 md:h-72 relative overflow-hidden">
-                <img src="/images/17-pricing-starter-packaging.jpeg" alt="14-daagse starter" className="w-full h-full object-cover" />
+                <img src="/images/17-pricing-starter-packaging.jpeg" alt="Zesty 14-daagse starter verpakking met creatine shots" className="w-full h-full object-cover" />
               </div>
               <div className="p-8 md:p-10 flex flex-col flex-1">
                 <p className="text-sm text-[#2D2D2D]/60 font-bold mb-1">14-daagse starter</p>
@@ -1134,7 +1134,7 @@ export default function Home() {
                 Beste deal
               </span>
               <div className="flex items-center justify-center h-64 md:h-72 relative border-b border-white/[0.08] overflow-hidden">
-                <img src="/images/17-pricing-monthly-packaging.jpeg" alt="30-daagse voorraad" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/images/17-pricing-monthly-packaging.jpeg" alt="Zesty maandpakket met 30 creatine shots" className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="p-8 md:p-10 flex flex-col flex-1">
                 <p className="text-sm text-[#FFFDF7]/50 font-bold mb-1">30-daagse voorraad</p>
@@ -1184,8 +1184,8 @@ export default function Home() {
             <a href="/blog/bijwerkingen-creatine-vrouwen" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
               Bijwerkingen van creatine bij vrouwen: wat zegt het onderzoek? →
             </a>
-            <a href="/blog/beste-supplementen-menopauze" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
-              Beste supplementen voor vrouwen in de menopauze [2026] →
+            <a href="/blog/beste-creatine-voor-vrouwen-menopauze" className="text-[#F2A922] font-bold text-sm hover:underline transition-colors">
+              Beste creatine voor vrouwen in de menopauze: de gids →
             </a>
           </div>
         </div>
@@ -1228,6 +1228,7 @@ export default function Home() {
               <div>
                 <p className="text-2xl font-extrabold text-[#F2A922] tracking-tight mb-2">zesty</p>
                 <p className="text-[#FFFDF7]/45 text-sm">De menopauzeshot met creatine · 10g per shot</p>
+                <p className="text-[#FFFDF7]/35 text-sm mt-2">Vragen? <a href="mailto:hello@drinkzesty.be" className="text-[#F2A922] hover:underline">hello@drinkzesty.be</a></p>
               </div>
               <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
                 <a href="/blog" className="hover:text-[#FFFDF7]/60 transition-colors">Blog</a>

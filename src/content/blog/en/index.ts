@@ -56,7 +56,8 @@ const posts: BlogEntry[] = [
     description:
       "Everything about creatine side effects in women. What does the science say? Is creatine safe during menopause? An honest overview.",
     date: "2026-04-09",
-    readingTime: "6 min",
+    dateModified: "2026-04-14",
+    readingTime: "10 min",
     faqs: [
       {
         q: "Is creatine safe for women?",
