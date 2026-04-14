@@ -206,22 +206,8 @@ export default async function BlogPost(props: {
             <Content />
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 p-8 bg-[#2D2D2D] rounded-2xl text-center">
-            <p className="text-white/60 text-sm font-bold uppercase tracking-[0.2em] mb-2">
-              Zesty
-            </p>
-            <p className="text-white text-xl md:text-2xl font-extrabold mb-4">
-              10g creatine. One shot. Every morning.
-            </p>
-            <Link
-              href="/en#order"
-              className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
-            >
-              Order now
-            </Link>
-            <p className="text-white/30 text-sm mt-3">From €2.63/shot</p>
-          </div>
+          {/* CTA is rendered inside the MDX body via <BlogOrderCtaEN />,
+             placed between "Read more"/"Also read" and the sources list. */}
 
           {/* Back to blog */}
           <div className="mt-12 pt-8 border-t border-[#2D2D2D]/10">
