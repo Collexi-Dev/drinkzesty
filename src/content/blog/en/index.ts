@@ -4,6 +4,7 @@ import type { ComponentType } from "react";
 import CreatineSideEffectsWomen from "./creatine-side-effects-women.mdx";
 import CreatineBenefitsWomen from "./creatine-benefits-women.mdx";
 import BestSupplementsMenopause from "./best-supplements-menopause.mdx";
+import BestCreatineForWomenMenopause from "./best-creatine-for-women-menopause.mdx";
 import CreatineMenopauseGuide from "./creatine-menopause-complete-guide.mdx";
 
 interface BlogEntry extends BlogPost {
@@ -115,6 +116,42 @@ const posts: BlogEntry[] = [
       { name: "Estrogen", url: "https://www.wikidata.org/wiki/Q277954" },
     ],
     component: CreatineBenefitsWomen,
+  },
+  {
+    slug: "best-creatine-for-women-menopause",
+    counterpartSlug: "beste-creatine-voor-vrouwen-menopauze",
+    title: "Best creatine for women in menopause: the guide",
+    image: "/images/blog-article-2.jpeg",
+    description:
+      "Which creatine is best for women in menopause? Monohydrate vs HCl, dosage, quality, and what Zesty does differently. Science-backed.",
+    date: "2026-04-14",
+    readingTime: "10 min",
+    faqs: [
+      {
+        q: "Which creatine is best for women in menopause?",
+        a: "Creatine monohydrate at a daily dose of 5 to 10 grams is the best-researched choice. More than 500 peer-reviewed studies are based on monohydrate. Alternative forms like HCl, ethyl ester, or buffered creatine have no proven advantage.",
+      },
+      {
+        q: "How much creatine per day for women in menopause?",
+        a: "3 to 5 grams per day is enough for muscle preservation. 10 grams per day is used in research on cognitive effects, because the brain needs a higher dose to reach saturation. At 10 grams per day, your creatine reaches saturation after about 2 weeks.",
+      },
+      {
+        q: "Is creatine monohydrate really better than HCl?",
+        a: "Yes. The ISSN position stand concludes there is no clinical evidence that HCl or other advanced forms are superior to monohydrate. Monohydrate has 90-100% oral bioavailability, so there is little room for improvement.",
+      },
+    ],
+    about: [
+      { name: "Creatine", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Menopause", url: "https://www.wikidata.org/wiki/Q131149" },
+      { name: "Dietary supplement", url: "https://www.wikidata.org/wiki/Q191668" },
+    ],
+    mentions: [
+      { name: "Creatine monohydrate", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Estrogen", url: "https://www.wikidata.org/wiki/Q277954" },
+      { name: "Curcumin", url: "https://www.wikidata.org/wiki/Q312266" },
+      { name: "Piperine", url: "https://www.wikidata.org/wiki/Q407272" },
+    ],
+    component: BestCreatineForWomenMenopause,
   },
   {
     slug: "best-supplements-menopause",

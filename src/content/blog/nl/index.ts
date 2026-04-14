@@ -4,6 +4,7 @@ import type { ComponentType } from "react";
 import BijwerkingenCreatineVrouwen from "./bijwerkingen-creatine-vrouwen.mdx";
 import CreatineVoordelenVrouwen from "./creatine-voordelen-vrouwen.mdx";
 import BesteSupplementenMenopauze from "./beste-supplementen-menopauze.mdx";
+import BesteCreatineVoorVrouwenMenopauze from "./beste-creatine-voor-vrouwen-menopauze.mdx";
 import CreatineMenopauzeGids from "./creatine-menopauze-complete-gids.mdx";
 
 interface BlogEntry extends BlogPost {
@@ -115,6 +116,42 @@ const posts: BlogEntry[] = [
       { name: "Estrogen", url: "https://www.wikidata.org/wiki/Q277954" },
     ],
     component: CreatineVoordelenVrouwen,
+  },
+  {
+    slug: "beste-creatine-voor-vrouwen-menopauze",
+    counterpartSlug: "best-creatine-for-women-menopause",
+    title: "Beste creatine voor vrouwen in de menopauze: de gids",
+    image: "/images/blog-article-2.jpeg",
+    description:
+      "Welke creatine is het best voor vrouwen in de menopauze? Monohydraat versus HCl, dosering, kwaliteit, en wat Zesty anders maakt. Wetenschappelijk onderbouwd.",
+    date: "2026-04-14",
+    readingTime: "10 min",
+    faqs: [
+      {
+        q: "Welke creatine is het best voor vrouwen in de menopauze?",
+        a: "Creatine monohydraat in een dagelijkse dosis van 5 tot 10 gram is de best onderzochte keuze. Meer dan 500 peer-reviewed studies zijn gebaseerd op monohydraat. Alternatieve vormen zoals HCl, ethyl ester of buffered creatine hebben geen bewezen meerwaarde.",
+      },
+      {
+        q: "Hoeveel creatine per dag voor vrouwen in de overgang?",
+        a: "3 tot 5 gram per dag volstaat voor spierbehoud. 10 gram per dag wordt in onderzoek gebruikt voor cognitieve effecten, omdat de hersenen een hogere dosis nodig heeft om verzadigd te raken. Bij 10 gram per dag zit je creatine na ongeveer 2 weken op peil.",
+      },
+      {
+        q: "Is creatine monohydraat echt beter dan HCl?",
+        a: "Ja. De ISSN position stand concludeert dat er geen klinisch bewijs is dat HCl of andere geavanceerde vormen superieur zijn aan monohydraat. Monohydraat heeft 90-100% orale biobeschikbaarheid, dus er is weinig marge voor verbetering.",
+      },
+    ],
+    about: [
+      { name: "Creatine", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Menopause", url: "https://www.wikidata.org/wiki/Q131149" },
+      { name: "Dietary supplement", url: "https://www.wikidata.org/wiki/Q191668" },
+    ],
+    mentions: [
+      { name: "Creatine monohydrate", url: "https://www.wikidata.org/wiki/Q186037" },
+      { name: "Estrogen", url: "https://www.wikidata.org/wiki/Q277954" },
+      { name: "Curcumin", url: "https://www.wikidata.org/wiki/Q312266" },
+      { name: "Piperine", url: "https://www.wikidata.org/wiki/Q407272" },
+    ],
+    component: BesteCreatineVoorVrouwenMenopauze,
   },
   {
     slug: "beste-supplementen-menopauze",
