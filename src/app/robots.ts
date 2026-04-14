@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/brand/",
     },
-    sitemap: "https://drinkzesty.be/sitemap.xml",
+    sitemap: "https://www.drinkzesty.be/sitemap.xml",
   };
 }

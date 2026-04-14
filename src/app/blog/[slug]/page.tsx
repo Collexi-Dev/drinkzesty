@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPost, getPostComponent } from "@/lib/blog";
+import { getAllPosts, getPost, getPostComponent, DEFAULT_AUTHOR } from "@/lib/blog";
 import { Nav } from "@/components/Nav";
+
+const SITE = "https://www.drinkzesty.be";
 
 export async function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -18,16 +20,25 @@ export async function generateMetadata(props: {
   const post = getPost(slug);
   if (!post) return {};
 
+  const languages: Record<string, string> = {
+    "nl-BE": `${SITE}/blog/${slug}`,
+    "x-default": `${SITE}/blog/${slug}`,
+  };
+  if (post.counterpartSlug) {
+    languages.en = `${SITE}/en/blog/${post.counterpartSlug}`;
+  }
+
   return {
     title: `${post.title} | Zesty`,
     description: post.description,
     alternates: {
-      canonical: `https://drinkzesty.be/blog/${slug}`,
+      canonical: `${SITE}/blog/${slug}`,
+      languages,
     },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://drinkzesty.be/blog/${slug}`,
+      url: `${SITE}/blog/${slug}`,
       siteName: "Zesty",
       type: "article",
       ...(post.image ? { images: [{ url: post.image }] } : {}),
@@ -43,16 +54,51 @@ export default async function BlogPost(props: {
   const Content = getPostComponent(slug);
   if (!post || !Content) notFound();
 
+  const author = post.author ?? DEFAULT_AUTHOR;
+  const articleUrl = `${SITE}/blog/${slug}`;
+
   // All JSON-LD schemas use developer-controlled content only, no user input
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
+    "@id": `${articleUrl}#article`,
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "Zesty", url: "https://drinkzesty.be" },
-    publisher: { "@type": "Organization", name: "Zesty", url: "https://drinkzesty.be" },
-    mainEntityOfPage: `https://drinkzesty.be/blog/${slug}`,
+    dateModified: post.dateModified ?? post.date,
+    inLanguage: "nl-BE",
+    url: articleUrl,
+    mainEntityOfPage: articleUrl,
+    ...(post.image
+      ? {
+          image: {
+            "@type": "ImageObject",
+            url: post.image.startsWith("http") ? post.image : `${SITE}${post.image}`,
+            width: 1200,
+            height: 630,
+          },
+        }
+      : {}),
+    author: {
+      "@type": "Person",
+      name: author.name,
+      ...(author.jobTitle ? { jobTitle: author.jobTitle } : {}),
+      ...(author.url ? { url: author.url } : {}),
+      ...(author.sameAs?.length ? { sameAs: author.sameAs } : {}),
+    },
+    ...(post.reviewedBy
+      ? {
+          reviewedBy: {
+            "@type": "Person",
+            name: post.reviewedBy.name,
+            ...(post.reviewedBy.jobTitle ? { jobTitle: post.reviewedBy.jobTitle } : {}),
+            ...(post.reviewedBy.url ? { url: post.reviewedBy.url } : {}),
+          },
+        }
+      : {}),
+    publisher: { "@id": `${SITE}/#organization` },
+    isPartOf: { "@id": `${SITE}/#website-nl` },
+    medicalAudience: { "@type": "MedicalAudience", audienceType: "Patient" },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: [".prose > p:first-of-type"],
@@ -63,6 +109,22 @@ export default async function BlogPost(props: {
     ...(post.mentions?.length
       ? { mentions: post.mentions.map((e) => ({ "@type": "Thing", name: e.name, sameAs: e.url })) }
       : {}),
+  };
+
+  // Article + Breadcrumb as a single @graph so we use one script tag
+  const articleGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      articleSchema,
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: articleUrl },
+        ],
+      },
+    ],
   };
 
   const faqSchema = post.faqs?.length
@@ -83,7 +145,7 @@ export default async function BlogPost(props: {
       <main className="min-h-screen bg-[#FFFBF0] px-6 pt-24 md:pt-32 pb-20 md:pb-32">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleGraph) }}
         />
         {faqSchema && (
           <script
@@ -103,10 +165,26 @@ export default async function BlogPost(props: {
           <header className="mt-6 mb-12">
             <p className="text-sm text-[#2D2D2D]/40 font-medium mb-2">
               {post.date} · {post.readingTime}
+              {post.dateModified && post.dateModified !== post.date && (
+                <> · Laatst bijgewerkt {post.dateModified}</>
+              )}
             </p>
             <h1 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight">
               {post.title}
             </h1>
+            <p className="mt-4 text-sm text-[#2D2D2D]/60">
+              Geschreven door <span className="font-semibold text-[#2D2D2D]/80">{author.name}</span>
+              {author.jobTitle && <>, {author.jobTitle}</>}
+              {post.reviewedBy ? (
+                <>
+                  {" · Medisch nagekeken door "}
+                  <span className="font-semibold text-[#2D2D2D]/80">{post.reviewedBy.name}</span>
+                  {post.reviewedBy.jobTitle && <>, {post.reviewedBy.jobTitle}</>}
+                </>
+              ) : (
+                <> · Op basis van peer-reviewed onderzoek, niet bedoeld als medisch advies</>
+              )}
+            </p>
             {post.image && (
               <div className="mt-8 rounded-xl overflow-hidden">
                 <Image

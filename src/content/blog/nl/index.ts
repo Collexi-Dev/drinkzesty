@@ -13,6 +13,7 @@ interface BlogEntry extends BlogPost {
 const posts: BlogEntry[] = [
   {
     slug: "creatine-menopauze-complete-gids",
+    counterpartSlug: "creatine-menopause-complete-guide",
     title: "Creatine & Menopauze: de complete gids",
     image: "/images/blog-pillar-1.jpeg",
     description:
@@ -48,6 +49,7 @@ const posts: BlogEntry[] = [
   },
   {
     slug: "bijwerkingen-creatine-vrouwen",
+    counterpartSlug: "creatine-side-effects-women",
     title: "Bijwerkingen van creatine bij vrouwen: wat zegt het onderzoek?",
     image: "/images/blog-article-1.jpeg",
     description:
@@ -81,6 +83,7 @@ const posts: BlogEntry[] = [
   },
   {
     slug: "creatine-voordelen-vrouwen",
+    counterpartSlug: "creatine-benefits-women",
     title: "Creatine voordelen voor vrouwen: wat het onderzoek zegt",
     image: "/images/blog-article-2.jpeg",
     description:
@@ -115,6 +118,7 @@ const posts: BlogEntry[] = [
   },
   {
     slug: "beste-supplementen-menopauze",
+    counterpartSlug: "best-supplements-menopause",
     title: "Beste supplementen voor vrouwen in de menopauze [2026]",
     image: "/images/blog-article-3.jpeg",
     description:

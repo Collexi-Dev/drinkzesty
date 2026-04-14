@@ -129,15 +129,15 @@ function Blob({ className = "", variant = 1 }: { className?: string; variant?: 1
 ═══════════════════════════════════════════════════ */
 
 const faqs = [
-  { q: "Wacht, wat is creatine eigenlijk?", a: "Creatine is een stof die je lichaam van nature aanmaakt. Je hersenen en spieren hebben het nodig voor energie. Tijdens perimenopauze en menopauze maakt je lichaam er veel minder van, en dat hangt rechtstreeks samen met de brain fog, vermoeidheid en het spierverlies waar zoveel vrouwen last van hebben." },
-  { q: "Hoe helpt creatine bij menopauze?", a: "Veel menopauze-klachten (brain fog, vermoeidheid, spierverlies, weinig energie) lijken verdacht veel op creatine-tekort. Als je oestrogeen daalt, maakt je lichaam ook minder creatine aan. Door creatine aan te vullen geef je terug wat menopauze afpakt: energie voor je hersenen, kracht voor je spieren." },
+  { q: "Wacht, wat is creatine eigenlijk?", a: "Creatine is een stof die je lichaam van nature aanmaakt. Je hersenen en spieren gebruiken het in hun energiesysteem. Tijdens perimenopauze en menopauze maakt je lichaam er minder van. Klachten die vrouwen in deze periode vaak melden, zoals brain fog, vermoeidheid en verminderde kracht, worden in onderzoek mee in verband gebracht met dat dalende creatine-niveau." },
+  { q: "Hoe helpt creatine bij menopauze?", a: "EFSA erkent creatine voor het verbeteren van fysieke prestaties bij herhaalde, kortdurende inspanning. Daarbuiten lopen er studies bij vrouwen in en na de menopauze die kijken naar mogelijke effecten op cognitie, energie en spierbehoud. De bevindingen wijzen in een hoopgevende richting. Of jij persoonlijk een verschil merkt, kan per persoon variëren." },
   { q: "Is creatine veilig tijdens menopauze?", a: "Meer dan 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistent veilig bevonden voor gezonde volwassenen bij de aanbevolen dosering. Het wordt al tientallen jaren onderzocht bij alle leeftijdsgroepen, inclusief postmenopauzale vrouwen." },
-  { q: "Word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water ín de spier (niet opgeblazen), geen vet. Het stabiliseert snel. Veel vrouwen in de menopauze merken juist dat het hun spiermassa helpt behouden." },
+  { q: "Word ik zwaarder van creatine?", a: "Creatine trekt water naar je spieren, dus je ziet misschien 1 tot 2 kg erbij in de eerste week. Dat is water in de spier, geen vet. Het stabiliseert snel." },
   { q: "Hoe smaakt het?", a: "Een pittige gembershot met warme kurkuma en frisse citrus. Citroen, ananas en sinaasappel. Het is echt een koudgeperste shot. Niet zoet. Niet medicinaal. Gewoon scherp en fris." },
-  { q: "Hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. Zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma tegen menopauze-ontsteking. Geen mengen, geen afmeten." },
-  { q: "Hoe lang duurt het voor ik iets merk?", a: "Bij 10g/dag zit je creatine na zo'n 2 weken op peil. Dat is sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Sommige vrouwen merken meer energie en minder brain fog al in de eerste week, anderen rond week 3-4. De 14-daagse starter is precies om die reden zo ontworpen." },
-  { q: "Is 10g niet te veel?", a: "~95% van je lichaamscreatine zit in je spieren, dus standaard 3-5g verzadigt vooral je spiermassa. Je hersenen bevat de overige ~5%, en dat is precies wat menopauze uitput. Onderzoekers die cognitieve voordelen bij vrouwen bestuderen, gebruiken 10g+ om de hersenen te bereiken [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
-  { q: "Helpt creatine ook voor de hersenen op lange termijn?", a: "Onderzoekers bestuderen creatine actief als beschermende factor voor de hersenen bij veroudering. Een pilotstudie bij Alzheimerpatiënten (Smith et al., 2025) toonde meetbare verbetering in cognitie na creatinesuppletie. Het onderzoek is nog vroeg, maar de richting is hoopgevend, vooral omdat creatine al bewezen veilig is op lange termijn." },
+  { q: "Hoe verschilt dit van een pot creatine?", a: "Een pot geeft je poeder en een maatlepel. Zesty geeft je 10g droog verzegeld in de dop, een koudgeperste shot met zwarte peper-extract voor opname en elektrolyten voor transport. Plus gember en kurkuma. Geen mengen, geen afmeten." },
+  { q: "Hoe lang duurt het voor ik iets merk?", a: "Bij 10g per dag zit je creatine na zo'n 2 weken op peil. Dat is sneller dan de 28 dagen die je nodig hebt bij een lagere dosis [Hultman et al., 1996]. Wat je daarna merkt verschilt per persoon. Sommige vrouwen melden in onderzoek meer energie en minder brain fog na enkele weken, anderen merken weinig verschil. De 14-daagse starter is er om dat zelf te kunnen testen." },
+  { q: "Is 10g niet te veel?", a: "Ongeveer 95% van je lichaamscreatine zit in je spieren, dus 3-5g per dag verzadigt vooral spiermassa. De resterende 5% in de hersenen vereist hogere doses om bij te dragen aan hersencreatine. Studies die cognitieve effecten bij vrouwen onderzoeken, gebruiken vaak 10g of meer [Dechent et al., 1999; Smith-Ryan et al., 2021]. Ruim binnen de onderzochte veilige marges." },
+  { q: "Helpt creatine ook voor de hersenen op lange termijn?", a: "Onderzoekers bestuderen creatine actief als beschermende factor voor de hersenen bij veroudering. Een pilotstudie bij Alzheimerpatiënten (Smith et al., 2025) rapporteerde verbetering in cognitie na creatinesuppletie. Het is een klein, vroeg onderzoek, maar de richting is hoopgevend en de veiligheid op lange termijn is goed vastgesteld." },
 ];
 
 function FaqItem({ q, a, last = false }: { q: string; a: string; last?: boolean }) {
@@ -281,8 +281,8 @@ export default function Home() {
     name: "Zesty creatine shot",
     description: "10g creatine monohydraat in een koudgeperste gember & kurkuma shot. Voor vrouwen in de menopauze.",
     brand: { "@type": "Brand", name: "Zesty" },
-    url: "https://drinkzesty.be",
-    image: "https://drinkzesty.be/images/2-hero-product-cutout.png",
+    url: "https://www.drinkzesty.be",
+    image: "https://www.drinkzesty.be/images/2-hero-product-cutout.webp",
     offers: [
       {
         "@type": "Offer",
@@ -394,9 +394,9 @@ export default function Home() {
             Zesty
           </p>
           <h1 className="text-[1.75rem] md:text-[2.75rem] lg:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight max-w-4xl mx-auto">
-            De dagelijkse <span className="text-[#F2A922]">creatine</span> shot tegen
+            De dagelijkse <span className="text-[#F2A922]">creatine</span> shot voor
             <br className="hidden md:block" />
-            {" "}brain fog, moeheid en spierverlies.
+            {" "}vrouwen in de menopauze.
           </h1>
           <p className="text-xl md:text-2xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
             <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. Voor vrouwen die klaar zijn met &ldquo;dat hoort bij je leeftijd.&rdquo;
@@ -409,7 +409,7 @@ export default function Home() {
         {/* Product — large, centered */}
         <div className="gsap-hero-intro relative z-10 flex justify-center mb-2 md:mb-4">
           <div ref={heroProductRef} className="relative w-64 h-80 md:w-80 md:h-[26rem] lg:w-[22rem] lg:h-[30rem]">
-            <img src="/images/2-hero-product-cutout.png" alt="Zesty fles" className="w-full h-full object-contain drop-shadow-2xl" />
+            <img src="/images/2-hero-product-cutout.webp" alt="Zesty fles" className="w-full h-full object-contain drop-shadow-2xl" />
           </div>
         </div>
 
@@ -573,7 +573,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           MARQUEE — "it's not just getting older"
       ═══════════════════════════════════════════ */}
-      <Marquee texts={["De brain fog. De vermoeidheid. Het spierverlies. Menopauze put je creatine uit. Neem het terug."]} dark />
+      <Marquee texts={["De brain fog. De vermoeidheid. Het spierverlies. Menopauze put je creatine uit. Onderzoek toont wat aanvullen mogelijk maakt."]} dark />
 
       {/* ═══════════════════════════════════════════
           3. THE CREATINE GAP — Conversational reveal
@@ -627,23 +627,23 @@ export default function Home() {
           <div className="text-center mb-16 md:mb-24">
             <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">Menopauze-klachten, maak kennis met creatine</p>
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#FFFDF7] leading-[0.95] tracking-tight">
-              Wat er verandert wanneer je
+              Wat het onderzoek
               <br />
-              het tekort aanvult
+              hierover laat zien
             </h2>
           </div>
 
           {/* Benefit 1 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
-            <img src="/images/4-benefit-1-clearer-thinking-no-bg.png" alt="Helder denken" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/4-benefit-1-clearer-thinking-no-bg.webp" alt="Helder denken" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopauze-klacht: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Helder denken</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                Het is echt. Dalend oestrogeen ontneemt je hersenen energie. Creatine vult dat direct aan.<SourceRef n={1} /> Je concentratie komt terug. Je woorden komen terug.
+                Het is echt. Dalend oestrogeen ontneemt je hersenen energie. Creatine is wat de hersenen gebruiken om die energie aan te vullen.<SourceRef n={1} /> Onderzoek bij vrouwen suggereert dat suppletie het werkgeheugen en de verwerkingssnelheid kan verbeteren, vooral bij stress en slaaptekort.
               </p>
               <p className="text-[#FFFDF7]/45 leading-relaxed text-sm mt-3">
-                Wetenschappers onderzoeken creatine ook actief als beschermende factor voor de hersenen bij veroudering. Een recente pilotstudie bij Alzheimerpatiënten toonde meetbare verbetering in cognitie na suppletie.
+                Wetenschappers onderzoeken creatine ook actief als beschermende factor voor de hersenen bij veroudering. Een recente pilotstudie bij Alzheimerpatiënten rapporteerde verbetering in cognitie na suppletie. Vroeg onderzoek, hoopgevende richting.
               </p>
               <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-2 inline-block hover:text-[#FFFDF7]/60 transition-colors">Creatine &amp; vrouwengezondheid · Smith-Ryan et al., 2021 →</a>
@@ -654,13 +654,13 @@ export default function Home() {
           {/* Benefit 2 — flipped */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
             <div className="md:order-2">
-              <img src="/images/5-benefit-2-real-energy-no-bg.png" alt="Echte energie" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+              <img src="/images/5-benefit-2-real-energy-no-bg.webp" alt="Echte energie" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             </div>
             <div className="md:order-1">
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopauze-klacht: vermoeidheid</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Echte energie</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                Het is geen luiheid. Je lichaam maakt gewoon minder energie aan. Creatine is wat je lichaam nodig heeft om dat weer op peil te brengen.<SourceRef n={3} /> Geen stimulant, geen cafeïne. Gewoon aanvullen wat er tekort is.
+                Het is geen luiheid. Je lichaam maakt gewoon minder energie aan op celniveau. Creatine speelt een rol in dat energiesysteem (het ATP-systeem in je cellen).<SourceRef n={3} /> Geen stimulant, geen cafeïne. Gewoon aanvullen wat er tekort is.
               </p>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
@@ -668,12 +668,12 @@ export default function Home() {
 
           {/* Benefit 3 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-            <img src="/images/6-benefit-3-strength-no-bg.png" alt="Kracht die blijft" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/6-benefit-3-strength-no-bg.webp" alt="Kracht die blijft" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopauze-klacht: spierverlies</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Kracht die blijft</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<SourceRef n={7} /> Creatine helpt je de kracht vasthouden die je al hebt<SourceRef n={2} /> en weer opbouwen wat je aan het verliezen bent.
+                Vrouwen verliezen tot 10% spiermassa in de jaren rond menopauze.<SourceRef n={7} /> EFSA erkent creatine voor het verbeteren van fysieke prestaties bij herhaalde, kortdurende inspanning. Studies bij postmenopauzale vrouwen suggereren bovendien dat de combinatie met krachttraining kan bijdragen aan het behoud van spier en botdichtheid.<SourceRef n={2} />
               </p>
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
@@ -700,7 +700,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="border border-[#2D2D2D]/[0.08] rounded-xl p-7 md:p-8">
               <div className="flex items-center gap-3 mb-5">
-                <img src="/images/headshot-dr-stacy-sims.png" alt="Dr. Stacy Sims" className="w-10 h-10 rounded-full object-cover" />
+                <img src="/images/headshot-dr-stacy-sims.webp" alt="Dr. Stacy Sims" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <p className="text-sm font-bold text-[#2D2D2D]">Dr. Stacy Sims</p>
                   <p className="text-sm text-[#2D2D2D]/50">Sportfysiologe</p>
@@ -715,7 +715,7 @@ export default function Home() {
             {/* Card 2 */}
             <div className="border border-[#2D2D2D]/[0.08] rounded-xl p-7 md:p-8">
               <div className="flex items-center gap-3 mb-5">
-                <img src="/images/headshot-dr-andy-galpin.png" alt="Dr. Andy Galpin" className="w-10 h-10 rounded-full object-cover" />
+                <img src="/images/headshot-dr-andy-galpin.webp" alt="Dr. Andy Galpin" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <p className="text-sm font-bold text-[#2D2D2D]">Dr. Andy Galpin</p>
                   <p className="text-sm text-[#2D2D2D]/50">Sportfysioloog · Huberman Lab</p>
@@ -1000,14 +1000,14 @@ export default function Home() {
               <p className="text-[#F2A922] font-bold text-sm tracking-[0.2em] uppercase mb-5">De dop</p>
               <p className="text-[5.5rem] md:text-[8rem] font-extrabold text-[#F2A922] leading-none tracking-tighter mb-3">10g</p>
               <p className="text-[#FFFDF7] font-extrabold text-2xl md:text-3xl mb-3">Creatine monohydraat</p>
-              <p className="text-[#FFFDF7]/35 text-sm mb-5">(de meest onderzochte vorm, gericht op brain fog, vermoeidheid &amp; spierverlies)</p>
+              <p className="text-[#FFFDF7]/35 text-sm mb-5">(de meest onderzochte vorm, ook in studies bij menopauze)</p>
               <p className="text-[#FFFDF7]/50 leading-relaxed text-base md:text-lg">
                 Droog verzegeld. Zonder vulmiddelen. Breekt niet af. Raakt geen vloeistof tot je twist. Een van de best onderzochte supplementen voor de klachten van menopauze, en je neemt het waarschijnlijk nog niet.
               </p>
             </div>
             {/* Cap image — below text on mobile, absolute on desktop */}
             <div className="relative md:absolute md:-bottom-4 md:right-0 md:w-[45%] md:h-[105%] md:z-[2] flex justify-center px-8 pb-8 md:p-0">
-              <img src="/images/15-cap-detail-no-bg.png" alt="Dosisdop met creatine" className="w-48 md:w-full h-auto md:h-full object-contain object-bottom drop-shadow-2xl" />
+              <img src="/images/15-cap-detail-no-bg.webp" alt="Dosisdop met creatine" className="w-48 md:w-full h-auto md:h-full object-contain object-bottom drop-shadow-2xl" />
             </div>
           </div>
 
@@ -1057,7 +1057,7 @@ export default function Home() {
               {[
                 { dose: "3g", label: "EU-minimum voor prestatieclaims", pct: "30%" },
                 { dose: "5g", label: "Standaard onderhoudsdosis (spier)", pct: "50%" },
-                { dose: "10g", label: "Menopauze · helder denken · resultaat in 2 weken", pct: "100%", active: true },
+                { dose: "10g", label: "Menopauze-onderzoek · bereikt ook hersencreatine · op peil in 2 weken", pct: "100%", active: true },
               ].map((d) => (
                 <div key={d.dose} className="mb-7 last:mb-0">
                   <div className="flex items-baseline justify-between mb-2">
@@ -1087,7 +1087,7 @@ export default function Home() {
               14 dagen. <span className="text-[#F2A922]">Dat is alles.</span>
             </h2>
             <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base max-w-md mx-auto">
-              Zo lang duurt het voor creatine op peil is in je lichaam.<SourceRef n={9} /> De meeste vrouwen voelen binnen 14 dagen hun brain fog afnemen en hun energie terugkomen.
+              Zo lang duurt het voor creatine op peil is in je lichaam.<SourceRef n={9} /> Genoeg tijd om zelf te merken of het bij jou een verschil maakt.
             </p>
           </div>
 
@@ -1229,9 +1229,10 @@ export default function Home() {
                 <p className="text-2xl font-extrabold text-[#F2A922] tracking-tight mb-2">zesty</p>
                 <p className="text-[#FFFDF7]/45 text-sm">De menopauzeshot met creatine · 10g per shot</p>
               </div>
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
+              <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
                 <a href="/blog" className="hover:text-[#FFFDF7]/60 transition-colors">Blog</a>
                 <a href="/veelgestelde-vragen" className="hover:text-[#FFFDF7]/60 transition-colors">FAQ</a>
+                <a href="/privacybeleid" className="hover:text-[#FFFDF7]/60 transition-colors">Privacy</a>
                 <a href="mailto:hello@drinkzesty.be" className="hover:text-[#FFFDF7]/60 transition-colors">Contact</a>
               </div>
             </div>

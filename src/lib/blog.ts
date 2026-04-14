@@ -5,13 +5,25 @@ export interface WikidataEntity {
   url: string; // e.g. "https://www.wikidata.org/wiki/Q186037"
 }
 
+export interface BlogAuthor {
+  name: string;
+  jobTitle?: string;
+  url?: string;
+  sameAs?: string[];
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
   description: string;
   date: string;
+  dateModified?: string;
   readingTime: string;
   image?: string;
+  author?: BlogAuthor;
+  reviewedBy?: BlogAuthor;
+  /** Slug of the same post in the opposite locale (for hreflang mapping). */
+  counterpartSlug?: string;
   faqs?: { q: string; a: string }[];
   about?: WikidataEntity[];
   mentions?: WikidataEntity[];
@@ -44,3 +56,14 @@ export function getPost(slug: string, locale: "nl" | "en" = "nl"): BlogPost | nu
 export function getPostComponent(slug: string, locale: "nl" | "en" = "nl"): ComponentType | null {
   return getPostsByLocale(locale).find((p) => p.slug === slug)?.component ?? null;
 }
+
+/**
+ * Default author used when a post does not set its own.
+ *
+ * Honest framing for the validation phase: a small team writing based on
+ * peer-reviewed research, not a credentialed medical voice. Update with a real
+ * Person + jobTitle + sameAs once a named writer or medical reviewer is on board.
+ */
+export const DEFAULT_AUTHOR: BlogAuthor = {
+  name: "Het Zesty team",
+};

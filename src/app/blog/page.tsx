@@ -9,7 +9,12 @@ export const metadata: Metadata = {
   description:
     "Alles over creatine, menopauze en supplementen. Wetenschappelijk onderbouwd, in begrijpelijke taal.",
   alternates: {
-    canonical: "https://drinkzesty.be/blog",
+    canonical: "https://www.drinkzesty.be/blog",
+    languages: {
+      "nl-BE": "https://www.drinkzesty.be/blog",
+      en: "https://www.drinkzesty.be/en/blog",
+      "x-default": "https://www.drinkzesty.be/blog",
+    },
   },
 };
 

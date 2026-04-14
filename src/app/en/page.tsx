@@ -129,17 +129,17 @@ function Blob({ className = "", variant = 1 }: { className?: string; variant?: 1
 ═══════════════════════════════════════════════════ */
 
 const faqs = [
-  { q: "Wait, what exactly is creatine?", a: "Creatine is a molecule your body produces naturally. Your brain and muscles need it for energy. During perimenopause and menopause, your body produces significantly less of it, which is directly linked to the brain fog, fatigue, and muscle loss so many women experience." },
-  { q: "How does creatine help with menopause?", a: "Many menopause symptoms (brain fog, fatigue, muscle loss, low energy) overlap with creatine deficiency. As estrogen drops, so does creatine synthesis. Supplementing creatine replenishes what menopause is draining: fuel for your brain, energy for your cells, and support for your muscles." },
+  { q: "Wait, what exactly is creatine?", a: "Creatine is a molecule your body produces naturally. Your brain and muscles use it in their energy systems. During perimenopause and menopause, your body produces less of it. Symptoms women often report in this period, like brain fog, fatigue, and reduced strength, are studied alongside that drop in creatine levels." },
+  { q: "How does creatine help with menopause?", a: "EFSA recognises creatine for improving physical performance during repeated bursts of short-term, high-intensity exercise. Beyond that, ongoing studies in peri- and postmenopausal women look at possible effects on cognition, energy, and muscle preservation. The findings point in a promising direction. Whether you personally notice a difference can vary from person to person." },
   { q: "What does it taste like?", a: "A spicy ginger kick with warm turmeric and bright citrus. Lemon, pineapple, and orange. It's a proper cold-pressed shot. Not sweet. Not medicinal. Just sharp and bright." },
   { q: "Is creatine safe during menopause?", a: "Over 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistently safe for healthy adults at recommended doses. It's been studied for decades across all age groups, including postmenopausal women specifically." },
-  { q: "Will creatine make me gain weight?", a: "Creatine draws water into your muscle cells, so you might see 1 to 2kg in the first week. That's intracellular water (inside the muscle, not bloating), not fat. It stabilises quickly. Many menopausal women find it actually helps maintain lean muscle mass." },
-  { q: "How long until I feel something?", a: "At 10g/day, full creatine saturation takes about 2 weeks, faster than the 28 days needed at lower doses [Hultman et al., 1996]. Some women notice improved energy and less brain fog in the first week, others around 3 to 4 weeks. The 14-day starter is designed around this timeline." },
-  { q: "How is this different from a tub of creatine?", a: "A tub gives you powder and a scoop. Zesty gives you 10g sealed dry in the cap, a cold-pressed shot with piperine for absorption, and electrolytes for uptake. Plus ginger and turmeric that target menopause inflammation. No mixing, no measuring." },
-  { q: "Is 10g too much?", a: "~95% of your body's creatine is stored in muscle, so standard 3-5g doses mostly saturate muscle stores. Your brain holds the other ~5%, and that's what menopause is depleting. Researchers studying cognitive benefits in women use 10g+ to reach the brain [Dechent et al., 1999; Smith-Ryan et al., 2021]. Well within clinically studied safe ranges." },
-  { q: "I'm in perimenopause. Is it too early?", a: "Not at all, it's the perfect time. Creatine stores start declining before full menopause. Perimenopause typically starts in your mid-40s, and starting creatine then means you're getting ahead of the drop, not playing catch-up." },
+  { q: "Will creatine make me gain weight?", a: "Creatine draws water into your muscle cells, so you might see 1 to 2kg in the first week. That's intracellular water (inside the muscle, not bloating), not fat. It stabilises quickly." },
+  { q: "How long until I feel something?", a: "At 10g per day, creatine stores reach saturation in about 2 weeks, faster than the 28 days needed at lower doses [Hultman et al., 1996]. What you notice after that varies. Some women report more energy and less brain fog in studies after a few weeks, others notice little. The 14-day starter is there to test it for yourself." },
+  { q: "How is this different from a tub of creatine?", a: "A tub gives you powder and a scoop. Zesty gives you 10g sealed dry in the cap, a cold-pressed shot with piperine for absorption, and electrolytes for uptake. Plus ginger and turmeric. No mixing, no measuring." },
+  { q: "Is 10g too much?", a: "About 95% of your body's creatine is stored in muscle, so 3-5g per day mostly saturates muscle stores. The remaining 5% in the brain requires higher doses to contribute to brain creatine. Studies looking at cognitive effects in women often use 10g or more [Dechent et al., 1999; Smith-Ryan et al., 2021]. Well within clinically studied safe ranges." },
+  { q: "I'm in perimenopause. Is it too early?", a: "Not at all. Creatine stores start declining before full menopause. Perimenopause typically starts in your mid-40s, and starting creatine then means you're getting ahead of the drop, not playing catch-up." },
   { q: "When should I drink it?", a: "Morning works best as a daily ritual. Twist, press, shake, drink. Start your day. But any consistent time works." },
-  { q: "Does creatine help protect the brain long-term?", a: "Researchers are actively studying creatine as a protective factor for the aging brain. A pilot study in Alzheimer's patients (Smith et al., 2025) showed measurable cognitive improvement after creatine supplementation. The research is still early, but the direction is promising, especially since creatine is already proven safe for long-term use." },
+  { q: "Does creatine help protect the brain long-term?", a: "Researchers are actively studying creatine as a protective factor for the aging brain. A pilot study in Alzheimer's patients (Smith et al., 2025) reported cognitive improvement after creatine supplementation. It's a small, early study, but the direction is promising and long-term safety is well established." },
 ];
 
 function FaqItem({ q, a }: { q: string; a: string }) {
@@ -284,8 +284,8 @@ export default function Home() {
     name: "Zesty creatine shot",
     description: "10g creatine monohydrate in a cold-pressed ginger & turmeric shot. Built for women in menopause.",
     brand: { "@type": "Brand", name: "Zesty" },
-    url: "https://drinkzesty.be",
-    image: "https://drinkzesty.be/images/2-hero-product-cutout.png",
+    url: "https://www.drinkzesty.be",
+    image: "https://www.drinkzesty.be/images/2-hero-product-cutout.webp",
     offers: [
       {
         "@type": "Offer",
@@ -379,9 +379,9 @@ export default function Home() {
             Zesty
           </p>
           <h1 className="text-[1.75rem] md:text-[2.75rem] lg:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight max-w-4xl mx-auto">
-            The daily <span className="text-[#F2A922]">creatine</span> shot that fights
+            The daily <span className="text-[#F2A922]">creatine</span> shot for
             <br className="hidden md:block" />
-            {" "}the fog, the fatigue, and the fade.
+            {" "}women in menopause.
           </h1>
           <p className="text-xl md:text-2xl text-[#2D2D2D] font-bold mt-4 md:mt-5 tracking-tight">
             <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. For women who are done with &ldquo;it&rsquo;s just your age.&rdquo;
@@ -394,7 +394,7 @@ export default function Home() {
         {/* Product — large, centered */}
         <div className="gsap-hero-intro relative z-10 flex justify-center mb-2 md:mb-4">
           <div ref={heroProductRef} className="relative w-64 h-80 md:w-80 md:h-[26rem] lg:w-[22rem] lg:h-[30rem]">
-            <img src="/images/2-hero-product-cutout.png" alt="Zesty bottle" className="w-full h-full object-contain drop-shadow-2xl" />
+            <img src="/images/2-hero-product-cutout.webp" alt="Zesty bottle" className="w-full h-full object-contain drop-shadow-2xl" />
           </div>
         </div>
 
@@ -558,7 +558,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           MARQUEE — "it's not just getting older"
       ═══════════════════════════════════════════ */}
-      <Marquee texts={["The brain fog. The fatigue. The muscle loss. Menopause drains your creatine. Take it back."]} dark />
+      <Marquee texts={["The brain fog. The fatigue. The muscle loss. Menopause drains your creatine. Research shows what replenishing it can do."]} dark />
 
       {/* ═══════════════════════════════════════════
           3. THE CREATINE GAP — Conversational reveal
@@ -607,23 +607,23 @@ export default function Home() {
           <div className="text-center mb-16 md:mb-24">
             <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">Menopause symptoms, meet creatine</p>
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#FFFDF7] leading-[0.95] tracking-tight">
-              What changes when you
+              What the research
               <br />
-              close the gap
+              shows so far
             </h2>
           </div>
 
           {/* Benefit 1 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
-            <img src="/images/4-benefit-1-clearer-thinking-no-bg.png" alt="Clearer thinking" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/4-benefit-1-clearer-thinking-no-bg.webp" alt="Clearer thinking" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: brain fog</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Clearer thinking</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                It&rsquo;s real. Declining estrogen starves your brain of energy. Creatine replenishes that fuel directly.<SourceRef n={1} /> Focus comes back. Words come back.
+                It&rsquo;s real. Declining estrogen starves your brain of energy. Creatine is what the brain uses to replenish that energy.<SourceRef n={1} /> Research in women suggests supplementation may improve working memory and processing speed, especially under stress and sleep deprivation.
               </p>
               <p className="text-[#FFFDF7]/45 leading-relaxed text-sm mt-3">
-                Researchers are also actively studying creatine as a protective factor for the aging brain. A recent pilot study in Alzheimer&rsquo;s patients showed measurable cognitive improvement after supplementation.
+                Researchers are also actively studying creatine as a protective factor for the aging brain. A recent pilot study in Alzheimer&rsquo;s patients reported cognitive improvement after supplementation. Early research, promising direction.
               </p>
               <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Xu et al., 2024 →</a>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-2 inline-block hover:text-[#FFFDF7]/60 transition-colors">Creatine &amp; women&rsquo;s health · Smith-Ryan et al., 2021 →</a>
@@ -634,13 +634,13 @@ export default function Home() {
           {/* Benefit 2 — flipped */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
             <div className="md:order-2">
-              <img src="/images/5-benefit-2-real-energy-no-bg.png" alt="Real energy" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+              <img src="/images/5-benefit-2-real-energy-no-bg.webp" alt="Real energy" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             </div>
             <div className="md:order-1">
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: fatigue</p>
               <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Real energy</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                It isn&rsquo;t laziness, your cells are producing less ATP. Creatine is the raw material for cellular energy.<SourceRef n={3} /> Not a stimulant. Actual fuel that your body is running low on.
+                It isn&rsquo;t laziness, your cells are producing less ATP. Creatine plays a role in that ATP system at the cellular level.<SourceRef n={3} /> Not a stimulant. Just topping up what runs low.
               </p>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
@@ -648,12 +648,12 @@ export default function Home() {
 
           {/* Benefit 3 */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-            <img src="/images/6-benefit-3-strength-no-bg.png" alt="Strength that stays" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
+            <img src="/images/6-benefit-3-strength-no-bg.webp" alt="Strength that stays" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
               <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: muscle loss</p>
               <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Strength that stays</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                Women lose up to 10% of muscle mass in the years around menopause.<SourceRef n={7} /> Creatine helps your muscles hold on to the strength you already have<SourceRef n={2} /> and rebuild what&rsquo;s slipping.
+                Women lose up to 10% of muscle mass in the years around menopause.<SourceRef n={7} /> EFSA recognises creatine for improving physical performance during repeated bursts of short-term exercise. Studies in postmenopausal women also suggest that combining it with strength training can support muscle and bone density.<SourceRef n={2} />
               </p>
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
@@ -680,7 +680,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="border border-[#2D2D2D]/[0.08] rounded-xl p-7 md:p-8">
               <div className="flex items-center gap-3 mb-5">
-                <img src="/images/headshot-dr-stacy-sims.png" alt="Dr. Stacy Sims" className="w-10 h-10 rounded-full object-cover" />
+                <img src="/images/headshot-dr-stacy-sims.webp" alt="Dr. Stacy Sims" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <p className="text-sm font-bold text-[#2D2D2D]">Dr. Stacy Sims</p>
                   <p className="text-sm text-[#2D2D2D]/50">Exercise Physiologist</p>
@@ -695,7 +695,7 @@ export default function Home() {
             {/* Card 2 */}
             <div className="border border-[#2D2D2D]/[0.08] rounded-xl p-7 md:p-8">
               <div className="flex items-center gap-3 mb-5">
-                <img src="/images/headshot-dr-andy-galpin.png" alt="Dr. Andy Galpin" className="w-10 h-10 rounded-full object-cover" />
+                <img src="/images/headshot-dr-andy-galpin.webp" alt="Dr. Andy Galpin" className="w-10 h-10 rounded-full object-cover" />
                 <div>
                   <p className="text-sm font-bold text-[#2D2D2D]">Dr. Andy Galpin</p>
                   <p className="text-sm text-[#2D2D2D]/50">Exercise Physiologist · on Huberman Lab</p>
@@ -980,14 +980,14 @@ export default function Home() {
               <p className="text-[#F2A922] font-bold text-sm tracking-[0.2em] uppercase mb-5">The cap</p>
               <p className="text-[5.5rem] md:text-[8rem] font-extrabold text-[#F2A922] leading-none tracking-tighter mb-3">10g</p>
               <p className="text-[#FFFDF7] font-extrabold text-2xl md:text-3xl mb-3">Creatine monohydrate</p>
-              <p className="text-[#FFFDF7]/35 text-sm mb-5">(the most studied form, targets brain fog, fatigue &amp; muscle loss)</p>
+              <p className="text-[#FFFDF7]/35 text-sm mb-5">(the most studied form, also used in menopause research)</p>
               <p className="text-[#FFFDF7]/50 leading-relaxed text-base md:text-lg">
                 Sealed dry. Zero fillers. Zero degradation. Doesn&rsquo;t touch liquid until you twist. One of the most studied supplements for the symptoms menopause causes, and you&rsquo;re probably not taking it yet.
               </p>
             </div>
             {/* Cap image — below text on mobile, absolute on desktop */}
             <div className="relative md:absolute md:-bottom-4 md:right-0 md:w-[45%] md:h-[105%] md:z-[2] flex justify-center px-8 pb-8 md:p-0">
-              <img src="/images/15-cap-detail-no-bg.png" alt="Dosing cap with creatine" className="w-48 md:w-full h-auto md:h-full object-contain object-bottom drop-shadow-2xl" />
+              <img src="/images/15-cap-detail-no-bg.webp" alt="Dosing cap with creatine" className="w-48 md:w-full h-auto md:h-full object-contain object-bottom drop-shadow-2xl" />
             </div>
           </div>
 
@@ -1037,7 +1037,7 @@ export default function Home() {
               {[
                 { dose: "3g", label: "EU minimum for performance claims", pct: "30%" },
                 { dose: "5g", label: "Standard maintenance (muscle)", pct: "50%" },
-                { dose: "10g", label: "Menopause support · brain clarity · results in 2 weeks", pct: "100%", active: true },
+                { dose: "10g", label: "Menopause research · brain creatine reach · saturation in 2 weeks", pct: "100%", active: true },
               ].map((d) => (
                 <div key={d.dose} className="mb-7 last:mb-0">
                   <div className="flex items-baseline justify-between mb-2">
@@ -1067,7 +1067,7 @@ export default function Home() {
               14 days. <span className="text-[#F2A922]">That&rsquo;s all it takes.</span>
             </h2>
             <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base max-w-md mx-auto">
-              That&rsquo;s how long it takes for creatine to build up in your system.<SourceRef n={9} /> Most women feel the fog lift and energy return within 14 days.
+              That&rsquo;s how long it takes for creatine to build up in your system.<SourceRef n={9} /> Long enough to find out for yourself whether it makes a difference for you.
             </p>
           </div>
 
@@ -1196,9 +1196,10 @@ export default function Home() {
                 <p className="text-2xl font-extrabold text-[#F2A922] tracking-tight mb-2">zesty</p>
                 <p className="text-[#FFFDF7]/45 text-sm">The functional menopause wellness shot · 10g creatine</p>
               </div>
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
+              <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
                 <a href="/en/blog" className="hover:text-[#FFFDF7]/60 transition-colors">Blog</a>
                 <a href="/en/faq" className="hover:text-[#FFFDF7]/60 transition-colors">FAQ</a>
+                <a href="/en/privacy" className="hover:text-[#FFFDF7]/60 transition-colors">Privacy</a>
                 <a href="mailto:hello@drinkzesty.be" className="hover:text-[#FFFDF7]/60 transition-colors">Contact</a>
               </div>
             </div>

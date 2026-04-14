@@ -1,0 +1,144 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Nav } from "@/components/Nav";
+
+function FaqItem({ q, a, last = false }: { q: string; a: string; last?: boolean }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={last ? "" : "border-b border-[#2D2D2D]/10"}>
+      <button onClick={() => setOpen(!open)} className="w-full text-left py-6 flex justify-between items-center gap-6 cursor-pointer group">
+        <span className="font-bold text-[#2D2D2D] text-lg group-hover:text-[#F2A922] transition-colors">{q}</span>
+        <span className={`text-[#F2A922] transition-transform duration-300 text-2xl shrink-0 leading-none ${open ? "rotate-45" : ""}`}>+</span>
+      </button>
+      <div className={`overflow-hidden transition-all duration-400 ease-out ${open ? "max-h-96 pb-6" : "max-h-0"}`}>
+        <p className="text-[#2D2D2D]/65 leading-relaxed text-base">{a}</p>
+      </div>
+    </div>
+  );
+}
+
+const faqGroups = [
+  {
+    label: "About creatine & menopause",
+    items: [
+      { q: "Wait, what actually is creatine?", a: "Creatine is a substance your body naturally produces. Your brain and muscles use it in their energy systems. During perimenopause and menopause, your body makes less of it. Symptoms women often report in this period (brain fog, fatigue, reduced strength) are studied alongside that drop in creatine levels." },
+      { q: "How does creatine help with menopause?", a: "EFSA recognises creatine for improving physical performance during repeated bursts of short-term, high-intensity exercise. Beyond that, ongoing studies in peri- and postmenopausal women look at possible effects on cognition, energy, and muscle preservation. The findings point in a promising direction. Whether you personally notice a difference can vary from person to person." },
+      { q: "What are the benefits of creatine for women?", a: "Research suggests women have around 70-80% lower creatine reserves than men, and that gap widens as estrogen declines (Smith-Ryan et al., 2021). Studies in women look at possible effects on cognition, muscle preservation, and strength when combined with training. For physical performance during repeated bursts of short-term exercise, creatine is officially recognised by EFSA." },
+      { q: "What are the side effects of creatine in women?", a: "At the recommended dosage, no clinically relevant side effects have been found. Over 500 peer-reviewed studies confirm its safety, including in postmenopausal women. The most common question is about weight gain. That's a small amount of water in the muscles (1-2 kg), not fat. Stomach issues are rare when taken in liquid form." },
+      { q: "Is creatine safe during menopause?", a: "Over 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistently found safe for healthy adults at the recommended dosage. It has been studied for decades across all age groups, including postmenopausal women." },
+      { q: "Will creatine make me gain weight?", a: "Creatine draws water into your muscles, so you might see 1 to 2 kg more on the scale in the first week. That's water inside the muscle, not fat. It stabilizes quickly." },
+      { q: "Does creatine help with brain fog?", a: "Research in women suggests that creatine supplementation may improve working memory and processing speed, with the strongest effects under stress or sleep deprivation (Xu et al., 2024; Rae et al., 2003). What you personally notice can vary. An honest read: these are not approved health claims, but findings from ongoing research." },
+      { q: "How much creatine do you need per day?", a: "3-5g per day is enough to saturate muscle stores. For cognitive research, scientists use 10g or more, because higher doses are needed to contribute to brain creatine. At 10g per day, your creatine reaches saturation in about 2 weeks." },
+      { q: "Does creatine help the brain long-term?", a: "Researchers are actively studying creatine as a protective factor for the aging brain. A pilot study in Alzheimer's patients (Smith et al., 2025) reported improvement in cognition after creatine supplementation. It's a small, early study, but the direction is promising and long-term safety is well established." },
+    ],
+  },
+  {
+    label: "About the shot",
+    items: [
+      { q: "How does it taste?", a: "A spicy ginger shot with warm turmeric and fresh citrus. Lemon, pineapple, and orange. It's a real cold-pressed shot. Not sweet. Not medicinal. Just sharp and fresh." },
+      { q: "How is this different from a tub of creatine?", a: "A tub gives you powder and a measuring scoop. Zesty gives you 10g sealed dry in the cap, a cold-pressed shot with black pepper extract for absorption and electrolytes for transport. Plus ginger and turmeric. No mixing, no measuring." },
+      { q: "Isn't 10g too much?", a: "About 95% of your body's creatine is in your muscles, so the standard 3-5g mainly saturates muscle stores. Your brain holds the remaining ~5%, and that's exactly what menopause depletes. Researchers studying cognitive benefits in women use 10g+ to reach the brain. Well within the studied safe ranges." },
+      { q: "Why is the creatine in the cap and not in the liquid?", a: "Creatine monohydrate breaks down in liquid over time (it converts to creatinine, a waste product). By sealing it dry in the cap, it stays stable until the moment you drink. Twist the cap, the creatine drops into the shot, shake, and drink. Maximum potency, zero loss." },
+      { q: "Can I combine creatine with my current supplements?", a: "In most cases, yes. Creatine has no known interactions with common supplements like vitamin D, magnesium, or omega-3. Check with your doctor if you take medication that affects kidney function." },
+      { q: "Does turmeric help with menopause symptoms?", a: "Turmeric (curcumin) has anti-inflammatory properties relevant to menopause-related joint discomfort (Hewlings & Kalman, 2017). Piperine (black pepper extract) in the shot increases curcumin bioavailability by 2,000% (Shoba et al., 1998)." },
+      { q: "Why are there electrolytes in the shot?", a: "Electrolytes support the transport of creatine to your muscle and brain cells. They also help with water retention in the muscle (not subcutaneously), which allows for more efficient absorption." },
+    ],
+  },
+  {
+    label: "Practical",
+    items: [
+      { q: "How long until I notice something?", a: "At 10g per day, your creatine reaches saturation in about 2 weeks. Faster than the 28 days needed at lower doses. What you notice after that varies. Some women report more energy and less brain fog in studies after a few weeks, others notice little. The 14-day starter is there to test it for yourself." },
+      { q: "Do I need a loading phase with Zesty?", a: "No. ChatGPT and many fitness articles still mention a 20g per day loading phase. That approach comes from studies in young men from the 1990s and is unnecessary for women in menopause. With 10g per day, your creatine stores reach saturation in about 2 weeks, without the stomach and gut issues a high loading dose can cause. Research by Forbes and Candow (2022) confirms that a steady daily dose is just as effective as a loading protocol, with fewer side effects." },
+      { q: "I'm in perimenopause. Is it too early?", a: "Not at all. It's actually the perfect time. Your creatine reserves start declining before actual menopause begins. Perimenopause usually starts around age 45, and starting creatine then means you stay ahead of the deficit." },
+      { q: "When is the best time to drink it?", a: "Morning works best as a daily ritual. Twist, press, shake, drink. And your day begins. But any consistent time of day works." },
+      { q: "Is Zesty a medicine or a dietary supplement?", a: "Zesty is a dietary supplement, not a medicine. It is not intended to diagnose, treat, cure, or prevent disease. Creatine monohydrate is one of the most researched dietary supplements in the world, recognized by EFSA for supporting physical performance." },
+      { q: "How do I store the shots?", a: "Cool and dry, out of direct sunlight. Refrigeration isn't necessary but is fine. The creatine in the cap is sealed dry and stays stable until you twist the cap." },
+    ],
+  },
+];
+
+// JSON-LD schema uses developer-controlled content only (from faqGroups above), no user input
+const allFaqs = faqGroups.flatMap((g) => g.items);
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: allFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
+export default function FrequentlyAskedQuestionsClient() {
+  return (
+    <>
+      <Nav locale="en" />
+      <main className="min-h-screen bg-[#FFFBF0] px-6 pt-24 md:pt-32 pb-20 md:pb-32">
+        {/* Structured data for FAQ rich results, content is developer-controlled */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] mb-4 tracking-tight">
+            Frequently asked questions
+          </h1>
+          <p className="text-[#2D2D2D]/60 text-lg mb-12">
+            Everything you want to know about creatine, menopause and Zesty.
+          </p>
+
+          {faqGroups.map((group) => (
+            <div key={group.label} className="mb-12 last:mb-0">
+              <h2 className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] mb-4">{group.label}</h2>
+              {group.items.map((faq, i) => (
+                <FaqItem key={faq.q} q={faq.q} a={faq.a} last={i === group.items.length - 1} />
+              ))}
+            </div>
+          ))}
+
+          {/* CTA */}
+          <div className="mt-16 p-8 bg-[#2D2D2D] rounded-2xl text-center">
+            <p className="text-white/60 text-sm font-bold uppercase tracking-[0.2em] mb-2">
+              Zesty
+            </p>
+            <p className="text-white text-xl md:text-2xl font-extrabold mb-4">
+              10g creatine. One shot. Every morning.
+            </p>
+            <Link
+              href="/en#order"
+              className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
+            >
+              Order now
+            </Link>
+            <p className="text-white/30 text-sm mt-3">From €2.63/shot</p>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-[#2D2D2D] px-6 py-12">
+        <div className="max-w-2xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <p className="text-lg font-extrabold text-[#F2A922] tracking-tight mb-1">zesty</p>
+              <p className="text-white/30 text-sm">The menopause shot with creatine</p>
+            </div>
+            <div className="flex flex-wrap gap-5 text-sm text-white/35">
+              <Link href="/en" className="hover:text-white/60 transition-colors">Home</Link>
+              <Link href="/en/blog" className="hover:text-white/60 transition-colors">Blog</Link>
+              <Link href="/en/faq" className="hover:text-white/60 transition-colors">FAQ</Link>
+              <Link href="/en/privacy" className="hover:text-white/60 transition-colors">Privacy</Link>
+              <Link href="/en#order" className="hover:text-white/60 transition-colors">Order</Link>
+            </div>
+          </div>
+          <p className="text-white/20 text-xs mt-8">
+            Zesty is a dietary supplement, not medicine. Consult a doctor if in doubt.
+          </p>
+        </div>
+      </footer>
+    </>
+  );
+}

@@ -1,20 +1,25 @@
 import type { Metadata } from "next";
 
+const SITE_URL = "https://www.drinkzesty.be";
+
 export const metadata: Metadata = {
-  title: "Zesty: the daily creatine shot for menopause",
-  description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause, fights brain fog, fatigue, and muscle loss. One shot, every morning.",
+  title: "Zesty: the daily creatine shot for women in menopause",
+  description:
+    "10g creatine in a cold-pressed ginger and turmeric shot. Researched in women in menopause. One shot, every morning.",
   openGraph: {
-    title: "Zesty: the daily creatine shot for menopause",
-    description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause, fights brain fog, fatigue, and muscle loss.",
-    url: "https://drinkzesty.be/en",
+    title: "Zesty: the daily creatine shot for women in menopause",
+    description:
+      "10g creatine in a cold-pressed ginger and turmeric shot. Researched in women in menopause.",
+    url: `${SITE_URL}/en`,
     siteName: "Zesty",
     type: "website",
   },
   alternates: {
-    canonical: "https://drinkzesty.be/en",
+    canonical: `${SITE_URL}/en`,
     languages: {
-      nl: "https://drinkzesty.be",
-      en: "https://drinkzesty.be/en",
+      "nl-BE": SITE_URL,
+      en: `${SITE_URL}/en`,
+      "x-default": SITE_URL,
     },
   },
 };
