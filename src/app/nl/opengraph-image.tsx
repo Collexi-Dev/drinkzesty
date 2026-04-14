@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const alt =
-  "zesty — de menopauzeshot met 10g creatine, gember + kurkuma";
+  "Zesty, de menopauzeshot met 10g creatine, gember + kurkuma";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -124,7 +124,7 @@ export default async function Image() {
               flexDirection: "column",
             }}
           >
-            <span>de menopauzeshot tegen</span>
+            <span>De menopauzeshot tegen</span>
             <span style={{ color: "#F2A922" }}>brain fog, moeheid en spierverlies.</span>
           </div>
 
@@ -144,7 +144,7 @@ export default async function Image() {
 
           {/* Stat pills */}
           <div style={{ display: "flex", gap: "10px" }}>
-            {["10g creatine", "gember + kurkuma", "0g suiker"].map((text) => (
+            {["10g creatine", "Gember + kurkuma", "0g suiker"].map((text) => (
               <div
                 key={text}
                 style={{

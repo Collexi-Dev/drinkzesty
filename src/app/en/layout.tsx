@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "zesty — the daily creatine shot for menopause",
-  description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause — fights brain fog, fatigue, and muscle loss. One shot, every morning.",
+  title: "Zesty: the daily creatine shot for menopause",
+  description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause, fights brain fog, fatigue, and muscle loss. One shot, every morning.",
   openGraph: {
-    title: "zesty — the daily creatine shot for menopause",
-    description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause — fights brain fog, fatigue, and muscle loss.",
+    title: "Zesty: the daily creatine shot for menopause",
+    description: "10g creatine in a cold-pressed ginger & turmeric shot. Built for women in menopause, fights brain fog, fatigue, and muscle loss.",
     url: "https://drinkzesty.be/en",
-    siteName: "zesty",
+    siteName: "Zesty",
     type: "website",
   },
   alternates: {

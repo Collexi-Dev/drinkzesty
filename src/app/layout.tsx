@@ -25,13 +25,13 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://drinkzesty.be"),
-  title: "zesty — creatine voor vrouwen in de menopauze | dagelijkse shot",
+  title: "Zesty: creatine voor vrouwen in de menopauze | dagelijkse shot",
   description: "10g creatine in een koudgeperste gember & kurkuma shot. Wetenschappelijk onderbouwd voor vrouwen in de menopauze. Tegen brain fog, vermoeidheid en spierverlies. Elke ochtend.",
   openGraph: {
-    title: "zesty — creatine voor vrouwen in de menopauze | dagelijkse shot",
+    title: "Zesty: creatine voor vrouwen in de menopauze | dagelijkse shot",
     description: "10g creatine in een koudgeperste gember & kurkuma shot. Wetenschappelijk onderbouwd voor vrouwen in de menopauze.",
     url: "https://drinkzesty.be",
-    siteName: "zesty",
+    siteName: "Zesty",
     type: "website",
   },
   alternates: {
@@ -58,7 +58,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "zesty",
+              name: "Zesty",
               url: "https://drinkzesty.be",
               inLanguage: ["nl", "en"],
             }),

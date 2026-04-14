@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 export const alt =
-  "zesty — de menopauzeshot met 10g creatine, gember + kurkuma";
+  "Zesty, de menopauzeshot met 10g creatine, gember + kurkuma";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -103,7 +103,7 @@ export default async function Image() {
               flexDirection: "column",
             }}
           >
-            <span>de menopauzeshot</span>
+            <span>De menopauzeshot</span>
             <span>tegen brain fog, moeheid</span>
             <span style={{ color: "#F2A922" }}>en spierverlies.</span>
           </div>

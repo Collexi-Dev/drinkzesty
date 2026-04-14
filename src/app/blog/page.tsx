@@ -5,7 +5,7 @@ import { getAllPosts } from "@/lib/blog";
 import { Nav } from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "Blog — zesty",
+  title: "Blog: Zesty",
   description:
     "Alles over creatine, menopauze en supplementen. Wetenschappelijk onderbouwd, in begrijpelijke taal.",
   alternates: {
@@ -25,7 +25,7 @@ export default function BlogIndex() {
           {/* Hero */}
           <div className="mb-14">
             <h1 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              creatine, menopauze
+              Creatine, menopauze
               <br />
               <span className="text-[#F2A922]">en de wetenschap erachter.</span>
             </h1>
@@ -105,17 +105,17 @@ export default function BlogIndex() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <p className="text-lg font-extrabold text-[#F2A922] tracking-tight mb-1">zesty</p>
-              <p className="text-white/30 text-sm">de menopauzeshot met creatine</p>
+              <p className="text-white/30 text-sm">De menopauzeshot met creatine</p>
             </div>
             <div className="flex gap-5 text-sm text-white/35">
-              <Link href="/" className="hover:text-white/60 transition-colors">home</Link>
-              <Link href="/blog" className="hover:text-white/60 transition-colors">blog</Link>
-              <Link href="/veelgestelde-vragen" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/#order" className="hover:text-white/60 transition-colors">bestel</Link>
+              <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
+              <Link href="/blog" className="hover:text-white/60 transition-colors">Blog</Link>
+              <Link href="/veelgestelde-vragen" className="hover:text-white/60 transition-colors">FAQ</Link>
+              <Link href="/#order" className="hover:text-white/60 transition-colors">Bestel</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">
-            zesty is een voedingssupplement, geen medicijn. raadpleeg een arts bij twijfel.
+            Zesty is een voedingssupplement, geen medicijn. Raadpleeg een arts bij twijfel.
           </p>
         </div>
       </footer>

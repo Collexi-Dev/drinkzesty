@@ -19,7 +19,7 @@ export async function generateMetadata(props: {
   if (!post) return {};
 
   return {
-    title: `${post.title} — zesty`,
+    title: `${post.title} | Zesty`,
     description: post.description,
     alternates: {
       canonical: `https://drinkzesty.be/en/blog/${slug}`,
@@ -28,7 +28,7 @@ export async function generateMetadata(props: {
       title: post.title,
       description: post.description,
       url: `https://drinkzesty.be/en/blog/${slug}`,
-      siteName: "zesty",
+      siteName: "Zesty",
       type: "article",
       ...(post.image ? { images: [{ url: post.image }] } : {}),
     },
@@ -50,8 +50,8 @@ export default async function BlogPost(props: {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
-    publisher: { "@type": "Organization", name: "zesty", url: "https://drinkzesty.be" },
+    author: { "@type": "Organization", name: "Zesty", url: "https://drinkzesty.be" },
+    publisher: { "@type": "Organization", name: "Zesty", url: "https://drinkzesty.be" },
     mainEntityOfPage: `https://drinkzesty.be/en/blog/${slug}`,
     speakable: {
       "@type": "SpeakableSpecification",
@@ -98,7 +98,7 @@ export default async function BlogPost(props: {
             href="/en/blog"
             className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] hover:text-[#F2A922] transition-colors"
           >
-            ← all articles
+            ← All articles
           </Link>
 
           <header className="mt-6 mb-12">
@@ -129,18 +129,18 @@ export default async function BlogPost(props: {
           {/* CTA */}
           <div className="mt-16 p-8 bg-[#2D2D2D] rounded-2xl text-center">
             <p className="text-white/60 text-sm font-bold uppercase tracking-[0.2em] mb-2">
-              zesty
+              Zesty
             </p>
             <p className="text-white text-xl md:text-2xl font-extrabold mb-4">
-              10g creatine. one shot. every morning.
+              10g creatine. One shot. Every morning.
             </p>
             <Link
               href="/en#order"
               className="inline-block bg-[#F2A922] text-[#2D2D2D] font-bold px-8 py-3 rounded-full hover:bg-[#F2A922]/90 transition-colors"
             >
-              order now
+              Order now
             </Link>
-            <p className="text-white/30 text-sm mt-3">from €2.63/shot</p>
+            <p className="text-white/30 text-sm mt-3">From €2.63/shot</p>
           </div>
 
           {/* Back to blog */}
@@ -149,7 +149,7 @@ export default async function BlogPost(props: {
               href="/en/blog"
               className="text-sm font-bold text-[#2D2D2D]/40 uppercase tracking-[0.2em] hover:text-[#F2A922] transition-colors"
             >
-              ← all articles
+              ← All articles
             </Link>
           </div>
         </article>
@@ -161,17 +161,17 @@ export default async function BlogPost(props: {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <p className="text-lg font-extrabold text-[#F2A922] tracking-tight mb-1">zesty</p>
-              <p className="text-white/30 text-sm">the menopause shot with creatine</p>
+              <p className="text-white/30 text-sm">The menopause shot with creatine</p>
             </div>
             <div className="flex gap-5 text-sm text-white/35">
-              <Link href="/en" className="hover:text-white/60 transition-colors">home</Link>
-              <Link href="/en/blog" className="hover:text-white/60 transition-colors">blog</Link>
-              <Link href="/en/faq" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/en#order" className="hover:text-white/60 transition-colors">order</Link>
+              <Link href="/en" className="hover:text-white/60 transition-colors">Home</Link>
+              <Link href="/en/blog" className="hover:text-white/60 transition-colors">Blog</Link>
+              <Link href="/en/faq" className="hover:text-white/60 transition-colors">FAQ</Link>
+              <Link href="/en#order" className="hover:text-white/60 transition-colors">Order</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">
-            zesty is a dietary supplement, not medicine. consult a doctor if in doubt.
+            Zesty is a dietary supplement, not medicine. Consult a doctor if in doubt.
           </p>
         </div>
       </footer>

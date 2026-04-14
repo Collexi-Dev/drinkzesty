@@ -16,7 +16,7 @@ function WaitlistForm() {
       ? "/images/17-pricing-monthly-packaging.jpeg"
       : "/images/17-pricing-starter-packaging.jpeg";
   const productAlt =
-    plan === "30" ? "zesty 30-day supply" : "zesty 14-day starter";
+    plan === "30" ? "Zesty 30-day supply" : "Zesty 14-day starter";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,10 +36,10 @@ function WaitlistForm() {
           💛
         </div>
         <h2 className="text-2xl font-bold text-text mb-3">
-          you&rsquo;re on the list!
+          You&rsquo;re on the list!
         </h2>
         <p className="text-text/60 max-w-sm mx-auto">
-          i&rsquo;ll let you know as soon as zesty is available.
+          I&rsquo;ll let you know as soon as Zesty is available.
         </p>
       </div>
     );
@@ -55,13 +55,13 @@ function WaitlistForm() {
         />
       </div>
       <h1 className="text-2xl md:text-3xl font-bold text-text mb-5 leading-snug">
-        good news, you have taste.
+        Good news, you have taste.
       </h1>
       <div className="text-text/60 mb-8 max-w-sm mx-auto leading-relaxed space-y-3">
-        <p>you clicked order. that makes my day.</p>
+        <p>You clicked order. That makes my day.</p>
         <p>
-          i&rsquo;m working on launching zesty and you&rsquo;re here early.
-          leave your email and i&rsquo;ll send you a note the moment you can
+          I&rsquo;m working on launching Zesty and you&rsquo;re here early.
+          Leave your email and I&rsquo;ll send you a note the moment you can
           order.
         </p>
       </div>
@@ -75,19 +75,19 @@ function WaitlistForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="your email"
+          placeholder="Your email"
           className="w-full px-5 py-3.5 rounded-full border border-text/15 bg-bg text-text placeholder:text-text/40 focus:outline-none focus:ring-2 focus:ring-brand/50 text-center transition-shadow"
         />
         <button
           type="submit"
           className="w-full bg-brand hover:bg-brand-hover hover:-translate-y-0.5 active:translate-y-0 text-text font-semibold py-3.5 rounded-full transition-all cursor-pointer"
         >
-          put me on the list
+          Put me on the list
         </button>
       </form>
 
       <p className="text-xs text-text/40 mt-4">
-        no spam. just a note when you can order.
+        No spam. Just a note when you can order.
       </p>
     </div>
   );
@@ -114,7 +114,7 @@ export default function WaitlistPage() {
           </p>
           <Suspense
             fallback={
-              <div className="text-center text-text/40">loading...</div>
+              <div className="text-center text-text/40">Loading...</div>
             }
           >
             <WaitlistForm />

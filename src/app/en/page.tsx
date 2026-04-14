@@ -129,17 +129,17 @@ function Blob({ className = "", variant = 1 }: { className?: string; variant?: 1
 ═══════════════════════════════════════════════════ */
 
 const faqs = [
-  { q: "wait, what exactly is creatine?", a: "Creatine is a molecule your body produces naturally. Your brain and muscles need it for energy. During perimenopause and menopause, your body produces significantly less of it, which is directly linked to the brain fog, fatigue, and muscle loss so many women experience." },
-  { q: "how does creatine help with menopause?", a: "Many menopause symptoms — brain fog, fatigue, muscle loss, low energy — overlap with creatine deficiency. As estrogen drops, so does creatine synthesis. Supplementing creatine replenishes what menopause is draining: fuel for your brain, energy for your cells, and support for your muscles." },
-  { q: "what does it taste like?", a: "A spicy ginger kick with warm turmeric and bright citrus. Lemon, pineapple, and orange. It's a proper cold-pressed shot. Not sweet. Not medicinal. Just sharp and bright." },
-  { q: "is creatine safe during menopause?", a: "Over 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistently safe for healthy adults at recommended doses. It's been studied for decades across all age groups, including postmenopausal women specifically." },
-  { q: "will creatine make me gain weight?", a: "Creatine draws water into your muscle cells, so you might see 1 to 2kg in the first week. That's intracellular water (inside the muscle, not bloating), not fat. It stabilises quickly. Many menopausal women find it actually helps maintain lean muscle mass." },
-  { q: "how long until I feel something?", a: "At 10g/day, full creatine saturation takes about 2 weeks — faster than the 28 days needed at lower doses [Hultman et al., 1996]. Some women notice improved energy and less brain fog in the first week, others around 3 to 4 weeks. The 14-day starter is designed around this timeline." },
-  { q: "how is this different from a tub of creatine?", a: "A tub gives you powder and a scoop. zesty gives you 10g sealed dry in the cap, a cold-pressed shot with piperine for absorption, and electrolytes for uptake. Plus ginger and turmeric that target menopause inflammation. No mixing, no measuring." },
-  { q: "is 10g too much?", a: "~95% of your body's creatine is stored in muscle, so standard 3-5g doses mostly saturate muscle stores. Your brain holds the other ~5% — and that's what menopause is depleting. Researchers studying cognitive benefits in women use 10g+ to reach the brain [Dechent et al., 1999; Smith-Ryan et al., 2021]. Well within clinically studied safe ranges." },
-  { q: "I'm in perimenopause — is it too early?", a: "Not at all — it's the perfect time. Creatine stores start declining before full menopause. Perimenopause typically starts in your mid-40s, and starting creatine then means you're getting ahead of the drop, not playing catch-up." },
-  { q: "when should I drink it?", a: "Morning works best as a daily ritual. Twist, press, shake, drink. Start your day. But any consistent time works." },
-  { q: "does creatine help protect the brain long-term?", a: "Researchers are actively studying creatine as a protective factor for the aging brain. A pilot study in Alzheimer's patients (Smith et al., 2025) showed measurable cognitive improvement after creatine supplementation. The research is still early, but the direction is promising, especially since creatine is already proven safe for long-term use." },
+  { q: "Wait, what exactly is creatine?", a: "Creatine is a molecule your body produces naturally. Your brain and muscles need it for energy. During perimenopause and menopause, your body produces significantly less of it, which is directly linked to the brain fog, fatigue, and muscle loss so many women experience." },
+  { q: "How does creatine help with menopause?", a: "Many menopause symptoms (brain fog, fatigue, muscle loss, low energy) overlap with creatine deficiency. As estrogen drops, so does creatine synthesis. Supplementing creatine replenishes what menopause is draining: fuel for your brain, energy for your cells, and support for your muscles." },
+  { q: "What does it taste like?", a: "A spicy ginger kick with warm turmeric and bright citrus. Lemon, pineapple, and orange. It's a proper cold-pressed shot. Not sweet. Not medicinal. Just sharp and bright." },
+  { q: "Is creatine safe during menopause?", a: "Over 500 peer-reviewed studies (ISSN position stand, Kreider et al., 2017). Consistently safe for healthy adults at recommended doses. It's been studied for decades across all age groups, including postmenopausal women specifically." },
+  { q: "Will creatine make me gain weight?", a: "Creatine draws water into your muscle cells, so you might see 1 to 2kg in the first week. That's intracellular water (inside the muscle, not bloating), not fat. It stabilises quickly. Many menopausal women find it actually helps maintain lean muscle mass." },
+  { q: "How long until I feel something?", a: "At 10g/day, full creatine saturation takes about 2 weeks, faster than the 28 days needed at lower doses [Hultman et al., 1996]. Some women notice improved energy and less brain fog in the first week, others around 3 to 4 weeks. The 14-day starter is designed around this timeline." },
+  { q: "How is this different from a tub of creatine?", a: "A tub gives you powder and a scoop. Zesty gives you 10g sealed dry in the cap, a cold-pressed shot with piperine for absorption, and electrolytes for uptake. Plus ginger and turmeric that target menopause inflammation. No mixing, no measuring." },
+  { q: "Is 10g too much?", a: "~95% of your body's creatine is stored in muscle, so standard 3-5g doses mostly saturate muscle stores. Your brain holds the other ~5%, and that's what menopause is depleting. Researchers studying cognitive benefits in women use 10g+ to reach the brain [Dechent et al., 1999; Smith-Ryan et al., 2021]. Well within clinically studied safe ranges." },
+  { q: "I'm in perimenopause. Is it too early?", a: "Not at all, it's the perfect time. Creatine stores start declining before full menopause. Perimenopause typically starts in your mid-40s, and starting creatine then means you're getting ahead of the drop, not playing catch-up." },
+  { q: "When should I drink it?", a: "Morning works best as a daily ritual. Twist, press, shake, drink. Start your day. But any consistent time works." },
+  { q: "Does creatine help protect the brain long-term?", a: "Researchers are actively studying creatine as a protective factor for the aging brain. A pilot study in Alzheimer's patients (Smith et al., 2025) showed measurable cognitive improvement after creatine supplementation. The research is still early, but the direction is promising, especially since creatine is already proven safe for long-term use." },
 ];
 
 function FaqItem({ q, a }: { q: string; a: string }) {
@@ -271,7 +271,7 @@ export default function Home() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "zesty",
+    name: "Zesty",
     url: "https://drinkzesty.be",
     logo: "https://drinkzesty.be/icon.svg",
     description: "The daily creatine shot for women in menopause. 10g creatine, cold-pressed with ginger, turmeric and electrolytes.",
@@ -281,9 +281,9 @@ export default function Home() {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "zesty creatine shot",
+    name: "Zesty creatine shot",
     description: "10g creatine monohydrate in a cold-pressed ginger & turmeric shot. Built for women in menopause.",
-    brand: { "@type": "Brand", name: "zesty" },
+    brand: { "@type": "Brand", name: "Zesty" },
     url: "https://drinkzesty.be",
     image: "https://drinkzesty.be/images/2-hero-product-cutout.png",
     offers: [
@@ -318,7 +318,7 @@ export default function Home() {
 
   return (
     <main className="overflow-x-hidden bg-[#FFFDF7]">
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-16 focus:left-4 focus:z-[70] focus:bg-[#F2A922] focus:text-[#2D2D2D] focus:px-4 focus:py-2 focus:rounded-full focus:font-bold focus:text-sm">skip to content</a>
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-16 focus:left-4 focus:z-[70] focus:bg-[#F2A922] focus:text-[#2D2D2D] focus:px-4 focus:py-2 focus:rounded-full focus:font-bold focus:text-sm">Skip to content</a>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
@@ -328,9 +328,9 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
           <a href="/en" className="text-lg font-extrabold text-[#F2A922] tracking-tight">zesty</a>
           <div className="flex items-center gap-5">
-            <a href="/en/blog" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">blog</a>
-            <a href="/en/faq" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">faq</a>
-            <a href="#order" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">order now</a>
+            <a href="/en/blog" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">Blog</a>
+            <a href="/en/faq" className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors hidden sm:block">FAQ</a>
+            <a href="#order" onClick={() => trackCta("nav", "30")} className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors">Order now</a>
             <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
               <span className="px-2.5 py-1 text-xs font-bold text-[#FFFDF7] bg-[#2D2D2D] rounded-full">EN</span>
               <a href="/" className="px-2.5 py-1 text-xs font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] rounded-full transition-colors">NL</a>
@@ -351,8 +351,8 @@ export default function Home() {
         {/* Mobile dropdown */}
         {mobileMenu && (
           <div className="sm:hidden border-t border-[#2D2D2D]/5 bg-[#FFFDF7]/95 backdrop-blur-md px-6 py-4 flex flex-col gap-3">
-            <a href="/en/blog" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">blog</a>
-            <a href="/en/faq" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">faq</a>
+            <a href="/en/blog" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">Blog</a>
+            <a href="/en/faq" onClick={() => setMobileMenu(false)} className="text-sm font-bold text-[#2D2D2D]/50 hover:text-[#2D2D2D] transition-colors">FAQ</a>
           </div>
         )}
       </nav>
@@ -376,10 +376,10 @@ export default function Home() {
         {/* Oversized brand name + SEO H1 */}
         <div className="gsap-hero-intro text-center relative z-10 mb-6 md:mb-8">
           <p className="text-[#F2A922] text-xs md:text-sm tracking-[0.3em] font-bold uppercase mb-5">
-            zesty
+            Zesty
           </p>
           <h1 className="text-[1.75rem] md:text-[2.75rem] lg:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[1.05] tracking-tight max-w-4xl mx-auto">
-            the daily <span className="text-[#F2A922]">creatine</span> shot that fights
+            The daily <span className="text-[#F2A922]">creatine</span> shot that fights
             <br className="hidden md:block" />
             {" "}the fog, the fatigue, and the fade.
           </h1>
@@ -387,23 +387,23 @@ export default function Home() {
             <span className="text-2xl md:text-3xl font-extrabold">10g creatine</span>{" "}per shot. For women who are done with &ldquo;it&rsquo;s just your age.&rdquo;
           </p>
           <p className="text-sm md:text-base text-[#2D2D2D]/50 font-medium mt-2 md:mt-3 max-w-lg mx-auto leading-relaxed">
-            cold-pressed with ginger, turmeric and electrolytes. sealed dry in the cap. ready in 10 seconds.
+            Cold-pressed with ginger, turmeric and electrolytes. Sealed dry in the cap. Ready in 10 seconds.
           </p>
         </div>
 
         {/* Product — large, centered */}
         <div className="gsap-hero-intro relative z-10 flex justify-center mb-2 md:mb-4">
           <div ref={heroProductRef} className="relative w-64 h-80 md:w-80 md:h-[26rem] lg:w-[22rem] lg:h-[30rem]">
-            <img src="/images/2-hero-product-cutout.png" alt="zesty bottle" className="w-full h-full object-contain drop-shadow-2xl" />
+            <img src="/images/2-hero-product-cutout.png" alt="Zesty bottle" className="w-full h-full object-contain drop-shadow-2xl" />
           </div>
         </div>
 
         {/* Stat pills — horizontal below product */}
         <div className="gsap-hero-intro relative z-10 flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
           {[
-            { val: "ginger", lbl: "+ turmeric" },
+            { val: "Ginger", lbl: "+ turmeric" },
             { val: "10g", lbl: "creatine per shot" },
-            { val: "electrolytes", lbl: "for uptake" },
+            { val: "Electrolytes", lbl: "for uptake" },
             { val: "0g", lbl: "sugar" },
           ].map((s) => (
             <div key={s.lbl} className="flex items-baseline gap-1.5 backdrop-blur-sm border bg-[#FFFDF7]/85 border-[#2D2D2D]/[0.05] px-4 py-2.5 rounded-full shadow-sm">
@@ -421,9 +421,9 @@ export default function Home() {
             className="inline-flex items-center gap-3 bg-[#2D2D2D] text-[#FFFDF7] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-xl hover:scale-[1.02]"
           >
             <span className="w-6 h-6 rounded-full bg-[#F2A922] flex items-center justify-center text-[#2D2D2D] text-xs">↗</span>
-            try it for 14 days
+            Try it for 14 days
           </a>
-          <p className="text-[#2D2D2D]/50 text-sm mt-4 font-medium">from €2.63/shot · free shipping on 30-packs</p>
+          <p className="text-[#2D2D2D]/50 text-sm mt-4 font-medium">From €2.63/shot · free shipping on 30-packs</p>
         </div>
 
         {/* Scroll indicator */}
@@ -440,11 +440,11 @@ export default function Home() {
       <section data-section="trust-strip" className="bg-[#F5EDE0] py-8 md:py-10 px-6">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-6 md:gap-4 [&>*]:w-[calc(33%-1rem)] md:[&>*]:w-auto">
           {[
-            { label: "cold-pressed", icon: <Droplets className="w-6 h-6" strokeWidth={1.5} /> },
-            { label: "backed by science", icon: <FlaskConical className="w-6 h-6" strokeWidth={1.5} /> },
-            { label: "no artificial anything", icon: <Leaf className="w-6 h-6" strokeWidth={1.5} /> },
-            { label: "recycled bottles", icon: <Recycle className="w-6 h-6" strokeWidth={1.5} /> },
-            { label: "sugar-free", icon: <ShieldCheck className="w-6 h-6" strokeWidth={1.5} /> },
+            { label: "Cold-pressed", icon: <Droplets className="w-6 h-6" strokeWidth={1.5} /> },
+            { label: "Backed by science", icon: <FlaskConical className="w-6 h-6" strokeWidth={1.5} /> },
+            { label: "No artificial anything", icon: <Leaf className="w-6 h-6" strokeWidth={1.5} /> },
+            { label: "Recycled bottles", icon: <Recycle className="w-6 h-6" strokeWidth={1.5} /> },
+            { label: "Sugar-free", icon: <ShieldCheck className="w-6 h-6" strokeWidth={1.5} /> },
           ].map((badge) => (
             <div key={badge.label} className="flex flex-col items-center gap-2 text-center">
               <div className="text-[#2D2D2D]/50">{badge.icon}</div>
@@ -462,17 +462,17 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="gsap-empathy-headline text-center mb-16 md:mb-24">
-            <p className="text-[#2D2D2D]/50 font-bold text-sm tracking-[0.25em] uppercase mb-4">perimenopause &amp; menopause</p>
+            <p className="text-[#2D2D2D]/50 font-bold text-sm tracking-[0.25em] uppercase mb-4">Perimenopause &amp; menopause</p>
             <h2 className="text-[2.5rem] md:text-[4.5rem] lg:text-[6rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight max-w-4xl mx-auto">
-              you used to
+              You used to
               <br />
               <span className="text-[#F2A922]/50">feel different.</span>
             </h2>
             <p className="text-[#2D2D2D]/45 text-base md:text-lg mt-5 max-w-lg mx-auto leading-relaxed">
-              it started in your mid-40s. maybe earlier. the symptoms crept in quietly — and no one told you what was coming. it&rsquo;s not ageing. it&rsquo;s menopause.
+              It started in your mid-40s. Maybe earlier. The symptoms crept in quietly, and no one told you what was coming. It&rsquo;s not ageing. It&rsquo;s menopause.
             </p>
             <HandNote className="mt-5 block rotate-[-3deg]">
-              why did no one tell me sooner?
+              Why did no one tell me sooner?
             </HandNote>
           </div>
 
@@ -481,10 +481,10 @@ export default function Home() {
           {/* Mobile: stacked list */}
           <div className="md:hidden space-y-6">
             {[
-              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "menopause brain fog", desc: <>the words are there, you just can&rsquo;t find them. estrogen drops, and so does your mental clarity.<SourceRef n={1} /></> },
-              { icon: <IconBattery className="w-8 h-8 text-[#F2A922]" />, title: "crushing fatigue", desc: <>8 hours of sleep and still dragging. hormonal shifts tank your cellular energy production.<SourceRef n={3} /></> },
-              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "losing muscle & strength", desc: <>less muscle, more aches. declining estrogen accelerates muscle loss after 40.<SourceRef n={7} /></> },
-              { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "can\u2019t focus anymore", desc: <>reading the same email three times. cognitive decline is one of the most common menopause symptoms.<SourceRef n={1} /></> },
+              { icon: <IconBrainFog className="w-8 h-8 text-[#F2A922]" />, title: "Menopause brain fog", desc: <>The words are there, you just can&rsquo;t find them. Estrogen drops, and so does your mental clarity.<SourceRef n={1} /></> },
+              { icon: <IconBattery className="w-8 h-8 text-[#F2A922]" />, title: "Crushing fatigue", desc: <>8 hours of sleep and still dragging. Hormonal shifts tank your cellular energy production.<SourceRef n={3} /></> },
+              { icon: <IconStrength className="w-8 h-8 text-[#F2A922]" />, title: "Losing muscle & strength", desc: <>Less muscle, more aches. Declining estrogen accelerates muscle loss after 40.<SourceRef n={7} /></> },
+              { icon: <IconFocus className="w-8 h-8 text-[#F2A922]" />, title: "Can\u2019t focus anymore", desc: <>Reading the same email three times. Cognitive decline is one of the most common menopause symptoms.<SourceRef n={1} /></> },
             ].map((s) => (
               <div key={s.title} className="flex items-start gap-4 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <div className="shrink-0 mt-1">{s.icon}</div>
@@ -514,41 +514,41 @@ export default function Home() {
               {/* Center — branded circle with message */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                 <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-[#F2A922]/[0.08] via-[#F5EDE0] to-[#F2A922]/[0.05] border border-[#F2A922]/15 flex flex-col items-center justify-center px-8">
-                  <p className="text-[#2D2D2D]/50 text-xl lg:text-2xl font-extrabold tracking-tight leading-snug text-center">you&rsquo;re not alone.</p>
+                  <p className="text-[#2D2D2D]/50 text-xl lg:text-2xl font-extrabold tracking-tight leading-snug text-center">You&rsquo;re not alone.</p>
                   <p className="text-[#F2A922] text-[2.5rem] lg:text-[3.5rem] font-extrabold tracking-tight leading-none mt-2">1.5B</p>
-                  <p className="text-[#2D2D2D]/30 text-sm lg:text-base font-medium mt-1.5 text-center leading-snug">women in menopause<br />worldwide by 2030 <span className="text-[#F2A922]/60">[8]</span></p>
+                  <p className="text-[#2D2D2D]/30 text-sm lg:text-base font-medium mt-1.5 text-center leading-snug">Women in menopause<br />worldwide by 2030 <span className="text-[#F2A922]/60">[8]</span></p>
                 </div>
                 <HandNote as="div" className="text-center mt-4 rotate-[-2deg]">
-                  sound familiar?
+                  Sound familiar?
                 </HandNote>
               </div>
 
               {/* Top-left: brain fog */}
               <div className="absolute left-0 top-0 max-w-[240px] z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <IconBrainFog className="w-10 h-10 text-[#F2A922] mb-2" />
-                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">menopause brain fog</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">the words are there, you just can&rsquo;t find them. estrogen drops, and so does clarity.<SourceRef n={1} /></p>
+                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">Menopause brain fog</p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">The words are there, you just can&rsquo;t find them. Estrogen drops, and so does clarity.<SourceRef n={1} /></p>
               </div>
 
               {/* Top-right: can't focus */}
               <div className="absolute right-0 top-0 max-w-[240px] text-right z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <div className="flex justify-end"><IconFocus className="w-10 h-10 text-[#F2A922] mb-2" /></div>
-                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">cognitive decline</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">reading the same email three times. one of the most reported menopause symptoms.<SourceRef n={1} /></p>
+                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">Cognitive decline</p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">Reading the same email three times. One of the most reported menopause symptoms.<SourceRef n={1} /></p>
               </div>
 
               {/* Bottom-left: tired */}
               <div className="absolute left-0 bottom-0 max-w-[240px] z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <IconBattery className="w-10 h-10 text-[#F2A922] mb-2" />
-                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">crushing fatigue</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">hormonal shifts tank your cellular energy. 8 hours of sleep and still dragging.<SourceRef n={3} /></p>
+                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">Crushing fatigue</p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">Hormonal shifts tank your cellular energy. 8 hours of sleep and still dragging.<SourceRef n={3} /></p>
               </div>
 
               {/* Bottom-right: losing strength */}
               <div className="absolute right-0 bottom-0 max-w-[240px] text-right z-10 border border-[#2D2D2D]/[0.06] rounded-xl p-5">
                 <div className="flex justify-end"><IconStrength className="w-10 h-10 text-[#F2A922] mb-2" /></div>
-                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">muscle &amp; strength loss</p>
-                <p className="text-[#2D2D2D]/50 text-base mt-1">declining estrogen accelerates muscle loss. things you used to do easily get harder.<SourceRef n={7} /></p>
+                <p className="font-extrabold text-[#2D2D2D] text-xl leading-snug">Muscle &amp; strength loss</p>
+                <p className="text-[#2D2D2D]/50 text-base mt-1">Declining estrogen accelerates muscle loss. Things you used to do easily get harder.<SourceRef n={7} /></p>
               </div>
             </div>
           </div>
@@ -558,7 +558,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           MARQUEE — "it's not just getting older"
       ═══════════════════════════════════════════ */}
-      <Marquee texts={["the brain fog. the fatigue. the muscle loss. menopause drains your creatine — take it back."]} dark />
+      <Marquee texts={["The brain fog. The fatigue. The muscle loss. Menopause drains your creatine. Take it back."]} dark />
 
       {/* ═══════════════════════════════════════════
           3. THE CREATINE GAP — Conversational reveal
@@ -567,9 +567,9 @@ export default function Home() {
         <Blob variant={1} className="text-[#F2A922]/[0.05] w-[600px] md:w-[900px] -bottom-[20%] -right-[25%]" />
 
         <div className="max-w-2xl mx-auto relative z-10">
-          <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-6 text-center">the menopause creatine gap</p>
+          <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-6 text-center">The menopause creatine gap</p>
           <h2 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight text-center mb-12 md:mb-16">
-            there&rsquo;s a name for<br /><span className="text-[#2D2D2D]/25">what&rsquo;s missing.</span>
+            There&rsquo;s a name for<br /><span className="text-[#2D2D2D]/25">what&rsquo;s missing.</span>
           </h2>
 
           {/* Beat 1 — what it is */}
@@ -579,21 +579,21 @@ export default function Home() {
 
           {/* Beat 2 — the gap */}
           <p className="text-[#2D2D2D]/60 text-lg md:text-xl leading-relaxed mb-8 md:mb-10">
-            Women already carry up to <strong className="text-[#2D2D2D] font-bold">80% lower creatine stores</strong> than men.<SourceRef n={4} /> Then perimenopause hits: estrogen drops, creatine synthesis slows, and the gap widens<SourceRef n={3} /> — right when your brain and muscles need it most.
+            Women already carry up to <strong className="text-[#2D2D2D] font-bold">80% lower creatine stores</strong> than men.<SourceRef n={4} /> Then perimenopause hits: estrogen drops, creatine synthesis slows, and the gap widens,<SourceRef n={3} /> right when your brain and muscles need it most.
           </p>
 
           {/* Beat 3 — the connection */}
           <p className="text-[#2D2D2D]/60 text-lg md:text-xl leading-relaxed mb-10 md:mb-14">
-            That&rsquo;s why the symptoms — the brain fog, the fatigue, the muscle loss — overlap so closely with creatine deficiency. It&rsquo;s not a coincidence.
+            That&rsquo;s why the symptoms (the brain fog, the fatigue, the muscle loss) overlap so closely with creatine deficiency. It&rsquo;s not a coincidence.
           </p>
 
           {/* The turn — reframe + zesty payoff */}
           <div className="text-center py-8 border-t border-b border-[#2D2D2D]/10">
             <p className="text-[#2D2D2D] text-2xl md:text-3xl font-extrabold leading-snug">
-              you don&rsquo;t need more willpower.<br />you need more creatine.
+              You don&rsquo;t need more willpower.<br />You need more creatine.
             </p>
             <p className="text-[#2D2D2D]/50 text-base md:text-lg mt-4">
-              <strong className="text-[#F2A922] font-bold">zesty</strong> closes the menopause gap. 10g creatine, one shot, every morning.
+              <strong className="text-[#F2A922] font-bold">Zesty</strong> closes the menopause gap. 10g creatine, one shot, every morning.
             </p>
           </div>
         </div>
@@ -605,9 +605,9 @@ export default function Home() {
       <section data-section="benefits" className="bg-[#2D2D2D] relative py-28 md:py-40 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 md:mb-24">
-            <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">menopause symptoms, meet creatine</p>
+            <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">Menopause symptoms, meet creatine</p>
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#FFFDF7] leading-[0.95] tracking-tight">
-              what changes when you
+              What changes when you
               <br />
               close the gap
             </h2>
@@ -617,8 +617,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20 md:mb-32">
             <img src="/images/4-benefit-1-clearer-thinking-no-bg.png" alt="Clearer thinking" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
-              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopause symptom: brain fog</p>
-              <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">clearer thinking</p>
+              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: brain fog</p>
+              <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Clearer thinking</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
                 It&rsquo;s real. Declining estrogen starves your brain of energy. Creatine replenishes that fuel directly.<SourceRef n={1} /> Focus comes back. Words come back.
               </p>
@@ -637,10 +637,10 @@ export default function Home() {
               <img src="/images/5-benefit-2-real-energy-no-bg.png" alt="Real energy" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             </div>
             <div className="md:order-1">
-              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopause symptom: fatigue</p>
-              <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">real energy</p>
+              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: fatigue</p>
+              <p className="text-[#F2A922] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Real energy</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                It isn&rsquo;t laziness — your cells are producing less ATP. Creatine is the raw material for cellular energy.<SourceRef n={3} /> Not a stimulant. Actual fuel that your body is running low on.
+                It isn&rsquo;t laziness, your cells are producing less ATP. Creatine is the raw material for cellular energy.<SourceRef n={3} /> Not a stimulant. Actual fuel that your body is running low on.
               </p>
               <a href="https://pubmed.ncbi.nlm.nih.gov/33800439/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Smith-Ryan et al., 2021 →</a>
             </div>
@@ -650,10 +650,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <img src="/images/6-benefit-3-strength-no-bg.png" alt="Strength that stays" className="rounded-xl h-80 md:h-[28rem] w-full object-contain" />
             <div>
-              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">menopause symptom: muscle loss</p>
-              <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">strength that stays</p>
+              <p className="text-[#FFFDF7]/45 text-sm font-bold uppercase tracking-[0.2em] mb-2">Menopause symptom: muscle loss</p>
+              <p className="text-[#6B8F5E] text-5xl md:text-7xl font-extrabold tracking-tight mb-4">Strength that stays</p>
               <p className="text-[#FFFDF7]/60 leading-relaxed text-base md:text-lg">
-                Women lose up to 10% of muscle mass in the years around menopause.<SourceRef n={7} /> Creatine helps your muscles hold on to the strength you already have<SourceRef n={2} /> — and rebuild what&rsquo;s slipping.
+                Women lose up to 10% of muscle mass in the years around menopause.<SourceRef n={7} /> Creatine helps your muscles hold on to the strength you already have<SourceRef n={2} /> and rebuild what&rsquo;s slipping.
               </p>
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10487398/" target="_blank" rel="noopener noreferrer" className="text-[#FFFDF7]/40 text-sm mt-4 inline-block hover:text-[#FFFDF7]/60 transition-colors">Peer-reviewed · Chilibeck et al., 2023 →</a>
             </div>
@@ -667,9 +667,9 @@ export default function Home() {
       <section data-section="social-proof" className="relative py-20 md:py-32 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
-            <p className="text-[#2D2D2D]/50 font-bold text-sm tracking-[0.2em] uppercase mb-3">backed by science. recommended by doctors.</p>
+            <p className="text-[#2D2D2D]/50 font-bold text-sm tracking-[0.2em] uppercase mb-3">Backed by science. Recommended by doctors.</p>
             <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              here&rsquo;s what they
+              Here&rsquo;s what they
               <br />
               have to say.
             </h2>
@@ -689,7 +689,7 @@ export default function Home() {
               <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
                 &ldquo;Creatine is one of the supplements I take <strong className="text-[#2D2D2D]">every single day</strong>, especially important for women during menopause.&rdquo;
               </p>
-              <a href="https://www.drstacysims.com/newsletters/articles/posts/Why_Active_Women_Need_Creatine" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">source →</a>
+              <a href="https://www.drstacysims.com/newsletters/articles/posts/Why_Active_Women_Need_Creatine" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">Source →</a>
             </div>
 
             {/* Card 2 */}
@@ -704,7 +704,7 @@ export default function Home() {
               <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
                 &ldquo;Creatine is <strong className="text-[#2D2D2D]">the Michael Jordan of supplements.</strong>{" "}It has decades of data behind it.&rdquo;
               </p>
-              <a href="https://www.hubermanlab.com/episode/dr-andy-galpin-optimal-nutrition-and-supplementation-for-fitness" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">source →</a>
+              <a href="https://www.hubermanlab.com/episode/dr-andy-galpin-optimal-nutrition-and-supplementation-for-fitness" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">Source →</a>
             </div>
 
             {/* Card 3 — research */}
@@ -719,7 +719,7 @@ export default function Home() {
               <p className="text-[#2D2D2D]/65 leading-relaxed text-base">
                 &ldquo;Creatine supplementation <strong className="text-[#2D2D2D]">improves cognitive performance</strong>, especially under conditions of stress and sleep deprivation.&rdquo;
               </p>
-              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">source →</a>
+              <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold mt-5 inline-block hover:underline">Source →</a>
             </div>
           </div>
 
@@ -731,7 +731,7 @@ export default function Home() {
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
                 <p className="text-sm text-[#FFFDF7]/45">X · @SpunkyAzCougar</p>
-                <a href="https://x.com/SpunkyAzCougar/status/2038955331317817460" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">source →</a>
+                <a href="https://x.com/SpunkyAzCougar/status/2038955331317817460" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">Source →</a>
               </div>
             </div>
             <div className="bg-[#2D2D2D] rounded-xl p-8">
@@ -740,7 +740,7 @@ export default function Home() {
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
                 <p className="text-sm text-[#FFFDF7]/45">X · @AdamWal89620299</p>
-                <a href="https://x.com/AdamWal89620299/status/2036738702744109295" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">source →</a>
+                <a href="https://x.com/AdamWal89620299/status/2036738702744109295" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">Source →</a>
               </div>
             </div>
             <div className="bg-[#2D2D2D] rounded-xl p-8">
@@ -749,7 +749,7 @@ export default function Home() {
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
                 <p className="text-sm text-[#FFFDF7]/45">X · @RunchieC</p>
-                <a href="https://x.com/RunchieC/status/2041405617928028301" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">source →</a>
+                <a href="https://x.com/RunchieC/status/2041405617928028301" target="_blank" rel="noopener noreferrer" className="text-sm text-[#F2A922] font-bold hover:underline">Source →</a>
               </div>
             </div>
           </div>
@@ -766,9 +766,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Big product hero */}
           <div className="text-center mb-16 md:mb-20">
-            <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">the product</p>
+            <p className="text-[#F2A922] font-bold text-sm tracking-[0.25em] uppercase mb-4">The product</p>
             <h2 className="text-[3rem] md:text-[5rem] lg:text-[7rem] font-extrabold text-[#2D2D2D] leading-[0.85] tracking-tight">
-              meet <span className="text-[#F2A922]">zesty.</span>
+              Meet <span className="text-[#F2A922]">Zesty.</span>
             </h2>
           </div>
 
@@ -776,13 +776,13 @@ export default function Home() {
           {/* Mobile: stacked layout */}
           <div className="md:hidden mb-16">
             <div className="relative w-64 h-80 mx-auto mb-8">
-              <img src="/images/7-meet-zesty-bg.jpeg" alt="Meet zesty" className="w-full h-full rounded-xl object-cover" />
+              <img src="/images/7-meet-zesty-bg.jpeg" alt="Meet Zesty" className="w-full h-full rounded-xl object-cover" />
             </div>
             <div className="space-y-6 px-2">
               {[
-                { label: "the cap", desc: "10g creatine sealed dry. Doesn\u2019t touch liquid until you twist.", color: "#F2A922" },
-                { label: "the shot", desc: "Cold-pressed ginger + turmeric with piperine & electrolytes.", color: "#6B8F5E" },
-                { label: "the ritual", desc: "Twist, press, shake, drink. 10 seconds.", color: "#2D2D2D" },
+                { label: "The cap", desc: "10g creatine sealed dry. Doesn\u2019t touch liquid until you twist.", color: "#F2A922" },
+                { label: "The shot", desc: "Cold-pressed ginger + turmeric with piperine & electrolytes.", color: "#6B8F5E" },
+                { label: "The ritual", desc: "Twist, press, shake, drink. 10 seconds.", color: "#2D2D2D" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3">
                   <div className="w-2.5 h-2.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: item.color }} />
@@ -819,27 +819,27 @@ export default function Home() {
 
               {/* Center product image */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-[26rem] lg:w-96 lg:h-[30rem] z-10">
-                <img src="/images/7-meet-zesty-bg.jpeg" alt="Meet zesty" className="w-full h-full rounded-2xl object-cover shadow-2xl" />
+                <img src="/images/7-meet-zesty-bg.jpeg" alt="Meet Zesty" className="w-full h-full rounded-2xl object-cover shadow-2xl" />
               </div>
 
               {/* Label: the cap — top-left, aligned with annotation line */}
               <div className="absolute left-0 lg:left-[2%] z-30" style={{ top: "80px" }}>
-                <p className="font-extrabold text-[#2D2D2D] text-2xl tracking-tight">the cap</p>
+                <p className="font-extrabold text-[#2D2D2D] text-2xl tracking-tight">The cap</p>
                 <p className="text-[#2D2D2D]/50 text-sm leading-relaxed mt-1 max-w-[14rem]">10g creatine sealed dry. Doesn&rsquo;t touch liquid until you twist.</p>
                 <HandNote className="mt-3 block rotate-[-4deg]" arrow="right">
-                  this is the innovation
+                  This is the innovation
                 </HandNote>
               </div>
 
               {/* Label: the shot — right, aligned with annotation line */}
               <div className="absolute right-0 lg:right-[2%] z-30" style={{ top: "300px" }}>
-                <p className="font-extrabold text-[#2D2D2D] text-2xl tracking-tight">the shot</p>
+                <p className="font-extrabold text-[#2D2D2D] text-2xl tracking-tight">The shot</p>
                 <p className="text-[#2D2D2D]/50 text-sm leading-relaxed mt-1 max-w-[14rem]">Cold-pressed ginger + turmeric with piperine &amp; electrolytes.</p>
               </div>
 
               {/* Label: the ritual — bottom-left, aligned with annotation line */}
               <div className="absolute left-0 lg:left-[2%] z-30" style={{ top: "450px" }}>
-                <p className="font-extrabold text-[#2D2D2D] text-2xl tracking-tight">the ritual</p>
+                <p className="font-extrabold text-[#2D2D2D] text-2xl tracking-tight">The ritual</p>
                 <p className="text-[#2D2D2D]/50 text-sm leading-relaxed mt-1 max-w-[14rem]">Twist, press, shake, drink. 10 seconds.</p>
               </div>
             </div>
@@ -848,15 +848,15 @@ export default function Home() {
           {/* How it works — 3 steps */}
           <div>
             <h3 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] text-center mb-4 tracking-tight">
-              twist. press. <span className="text-[#F2A922]">shake.</span>
+              Twist. Press. <span className="text-[#F2A922]">Shake.</span>
             </h3>
-            <p className="text-[#2D2D2D]/50 text-sm md:text-base text-center mt-2 mb-14 md:mb-20">your entire routine in 10 seconds.</p>
+            <p className="text-[#2D2D2D]/50 text-sm md:text-base text-center mt-2 mb-14 md:mb-20">Your entire routine in 10 seconds.</p>
 
             <div className="grid md:grid-cols-3 gap-8 md:gap-12">
               {[
-                { num: "01", name: "twist", desc: "break the seal. the creatine sits dry-sealed in the cap, fresh and full-strength.", img: "/images/8-step-twist.jpeg" },
-                { num: "02", name: "press", desc: "push the cap down. 10g creatine drops into the ginger shot. precisely dosed, no measuring.", img: "/images/9-step-press.jpeg" },
-                { num: "03", name: "shake + drink", desc: "shake and drink. your entire morning routine in 10 seconds.", img: "/images/10-step-drink.jpeg" },
+                { num: "01", name: "Twist", desc: "Break the seal. The creatine sits dry-sealed in the cap, fresh and full-strength.", img: "/images/8-step-twist.jpeg" },
+                { num: "02", name: "Press", desc: "Push the cap down. 10g creatine drops into the ginger shot. Precisely dosed, no measuring.", img: "/images/9-step-press.jpeg" },
+                { num: "03", name: "Shake + drink", desc: "Shake and drink. Your entire morning routine in 10 seconds.", img: "/images/10-step-drink.jpeg" },
               ].map((step) => (
                 <div key={step.num} className="text-center">
                   <p className="text-[#F2A922] text-6xl md:text-7xl font-extrabold tracking-tight mb-3">{step.num}</p>
@@ -877,22 +877,22 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              more for you.
+              More for you.
               <br />
-              <span className="text-[#F2A922]">see the difference.</span>
+              <span className="text-[#F2A922]">See the difference.</span>
             </h2>
           </div>
 
-          <p className="text-sm text-[#2D2D2D]/50 text-center mb-4 md:hidden">swipe to compare &rarr;</p>
+          <p className="text-sm text-[#2D2D2D]/50 text-center mb-4 md:hidden">Swipe to compare &rarr;</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px]" role="table">
               <thead>
                 <tr>
                   <th scope="col" className="text-left py-2" />
-                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#F2A922] font-extrabold text-sm md:text-base">zesty</span></th>
-                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">powder</span></th>
-                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">pills</span></th>
-                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">gummies</span></th>
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#F2A922] font-extrabold text-sm md:text-base">Zesty</span></th>
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">Powder</span></th>
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">Pills</span></th>
+                  <th scope="col" className="text-center py-2 w-[4.5rem] md:w-[7rem]"><span className="text-[#2D2D2D]/50 font-bold text-sm">Gummies</span></th>
                 </tr>
               </thead>
               <tbody>
@@ -916,7 +916,7 @@ export default function Home() {
                               ? "bg-[#F2A922]/15 text-[#F2A922]"
                               : "bg-[#6B8F5E]/10 text-[#6B8F5E]"
                             : "bg-[#2D2D2D]/[0.03] text-[#2D2D2D]/15"
-                        }`} aria-label={val ? "yes" : "no"}>
+                        }`} aria-label={val ? "Yes" : "No"}>
                           {val ? "✓" : "—"}
                         </span>
                       </td>
@@ -937,20 +937,20 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              every ingredient
+              Every ingredient
               <br />
               <span className="text-[#F2A922]">targets a symptom.</span>
             </h2>
-            <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base">not random supplements. a system designed for menopause.</p>
+            <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base">Not random supplements. A system designed for menopause.</p>
           </div>
 
           {/* Ingredient grid — image + text + symptom tags */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 mb-16">
             {[
-              { name: "Cold-pressed ginger", why: <>A natural anti-inflammatory that helps with the joint pain and digestive issues many women experience during menopause. Also supports immune function when your body is under hormonal stress.<SourceRef n={5} /></>, symptoms: ["joint pain", "bloating", "nausea"], img: "/images/11-ginger.jpeg" },
-              { name: "Turmeric + piperine", why: <>Curcumin fights the chronic inflammation that spikes during menopause — linked to joint stiffness, mood swings, and brain fog.<SourceRef n={5} /> Piperine boosts turmeric absorption by 2,000%.<SourceRef n={6} /></>, symptoms: ["inflammation", "joint stiffness", "mood"], img: "/images/12-turmeric.jpeg" },
-              { name: "Lemon, pineapple, orange", why: <>Women lose up to 30% of skin collagen in the first 5 years after menopause. Vitamin C is essential for collagen synthesis — fighting the skin thinning estrogen leaves behind.<SourceRef n={10} /> Bromelain from pineapple is a proven anti-inflammatory for the joint stiffness that spikes during menopause.<SourceRef n={5} /> No added sugar.</>, symptoms: ["skin thinning", "joint pain", "inflammation"], img: "/images/13-citrus.jpeg" },
-              { name: "Electrolytes", why: <>Sodium, potassium, magnesium. Estrogen decline directly disrupts electrolyte balance — magnesium deficiency in postmenopausal women is linked to fatigue, muscle cramps, mood changes, and even heart rhythm issues.<SourceRef n={11} /> Electrolytes also improve creatine uptake into your muscles.</>, symptoms: ["fatigue", "muscle cramps", "hot flashes"], img: "/images/14-electrolytes.jpeg" },
+              { name: "Cold-pressed ginger", why: <>A natural anti-inflammatory that helps with the joint pain and digestive issues many women experience during menopause. Also supports immune function when your body is under hormonal stress.<SourceRef n={5} /></>, symptoms: ["Joint pain", "Bloating", "Nausea"], img: "/images/11-ginger.jpeg" },
+              { name: "Turmeric + piperine", why: <>Curcumin fights the chronic inflammation that spikes during menopause, linked to joint stiffness, mood swings, and brain fog.<SourceRef n={5} /> Piperine boosts turmeric absorption by 2,000%.<SourceRef n={6} /></>, symptoms: ["Inflammation", "Joint stiffness", "Mood"], img: "/images/12-turmeric.jpeg" },
+              { name: "Lemon, pineapple, orange", why: <>Women lose up to 30% of skin collagen in the first 5 years after menopause. Vitamin C is essential for collagen synthesis, fighting the skin thinning estrogen leaves behind.<SourceRef n={10} /> Bromelain from pineapple is a proven anti-inflammatory for the joint stiffness that spikes during menopause.<SourceRef n={5} /> No added sugar.</>, symptoms: ["Skin thinning", "Joint pain", "Inflammation"], img: "/images/13-citrus.jpeg" },
+              { name: "Electrolytes", why: <>Sodium, potassium, magnesium. Estrogen decline directly disrupts electrolyte balance, magnesium deficiency in postmenopausal women is linked to fatigue, muscle cramps, mood changes, and even heart rhythm issues.<SourceRef n={11} /> Electrolytes also improve creatine uptake into your muscles.</>, symptoms: ["Fatigue", "Muscle cramps", "Hot flashes"], img: "/images/14-electrolytes.jpeg" },
             ].map((item) => (
               <div key={item.name}>
                 <img src={item.img} alt={item.name} className="h-48 md:h-56 rounded-xl mb-5 w-full object-cover" />
@@ -977,9 +977,9 @@ export default function Home() {
 
             {/* Text content */}
             <div className="relative z-10 p-8 md:p-14 lg:p-16 max-w-lg lg:max-w-xl">
-              <p className="text-[#F2A922] font-bold text-sm tracking-[0.2em] uppercase mb-5">the cap</p>
+              <p className="text-[#F2A922] font-bold text-sm tracking-[0.2em] uppercase mb-5">The cap</p>
               <p className="text-[5.5rem] md:text-[8rem] font-extrabold text-[#F2A922] leading-none tracking-tighter mb-3">10g</p>
-              <p className="text-[#FFFDF7] font-extrabold text-2xl md:text-3xl mb-3">creatine monohydrate</p>
+              <p className="text-[#FFFDF7] font-extrabold text-2xl md:text-3xl mb-3">Creatine monohydrate</p>
               <p className="text-[#FFFDF7]/35 text-sm mb-5">(the most studied form, targets brain fog, fatigue &amp; muscle loss)</p>
               <p className="text-[#FFFDF7]/50 leading-relaxed text-base md:text-lg">
                 Sealed dry. Zero fillers. Zero degradation. Doesn&rsquo;t touch liquid until you twist. One of the most studied supplements for the symptoms menopause causes, and you&rsquo;re probably not taking it yet.
@@ -992,7 +992,7 @@ export default function Home() {
           </div>
 
           <p className="text-sm text-[#2D2D2D]/50 mt-8 text-center">
-            no added sugar · no preservatives · recyclable PET bottle + PP cap · designed in belgium
+            No added sugar · no preservatives · recyclable PET bottle + PP cap · designed in Belgium
           </p>
         </div>
       </section>
@@ -1008,23 +1008,23 @@ export default function Home() {
             <p className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-extrabold text-[#F2A922] leading-none tracking-tighter">
               500+
             </p>
-            <p className="text-xl md:text-2xl font-extrabold text-[#2D2D2D] mt-2">peer-reviewed studies on creatine</p>
-            <p className="text-[#2D2D2D]/50 text-sm mt-2">more studied than vitamin D. more studied than fish oil.</p>
+            <p className="text-xl md:text-2xl font-extrabold text-[#2D2D2D] mt-2">Peer-reviewed studies on creatine</p>
+            <p className="text-[#2D2D2D]/50 text-sm mt-2">More studied than vitamin D. More studied than fish oil.</p>
             <HandNote className="mt-4 block rotate-[2deg]">
-              this isn&rsquo;t new science, it&rsquo;s settled science
+              This isn&rsquo;t new science, it&rsquo;s settled science
             </HandNote>
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start mb-16">
             <div>
               <h3 className="text-2xl md:text-3xl font-extrabold text-[#2D2D2D] mb-5 leading-snug">
-                the most studied supplement in <span className="text-[#F2A922]">nutrition science</span>
+                The most studied supplement in <span className="text-[#F2A922]">nutrition science</span>
               </h3>
               <p className="text-[#2D2D2D]/65 leading-relaxed mb-4">
-                Creatine isn&rsquo;t new. Researchers have studied it for decades: brain health, muscle strength, bone density, and energy — including studies specifically on postmenopausal women.
+                Creatine isn&rsquo;t new. Researchers have studied it for decades: brain health, muscle strength, bone density, and energy. Including studies specifically on postmenopausal women.
               </p>
               <p className="text-[#2D2D2D]/65 leading-relaxed">
-                The challenge has always been the format: powders that taste terrible, gummies that under-deliver, and pills you forget to take. None of them were built for menopause. zesty was.
+                The challenge has always been the format: powders that taste terrible, gummies that under-deliver, and pills you forget to take. None of them were built for menopause. Zesty was.
               </p>
               <a href="https://pubmed.ncbi.nlm.nih.gov/28615996/" target="_blank" rel="noopener noreferrer" className="text-[#F2A922] font-bold text-sm mt-6 inline-block hover:underline">
                 ISSN position stand on creatine →
@@ -1033,11 +1033,11 @@ export default function Home() {
 
             {/* Dose chart — lighter container */}
             <div className="bg-[#F5EDE0] rounded-xl p-8 md:p-10">
-              <h4 className="font-extrabold text-[#2D2D2D] text-lg mb-6">why 10g, not 3 or 5</h4>
+              <h4 className="font-extrabold text-[#2D2D2D] text-lg mb-6">Why 10g, not 3 or 5</h4>
               {[
                 { dose: "3g", label: "EU minimum for performance claims", pct: "30%" },
-                { dose: "5g", label: "standard maintenance (muscle)", pct: "50%" },
-                { dose: "10g", label: "menopause support · brain clarity · results in 2 weeks", pct: "100%", active: true },
+                { dose: "5g", label: "Standard maintenance (muscle)", pct: "50%" },
+                { dose: "10g", label: "Menopause support · brain clarity · results in 2 weeks", pct: "100%", active: true },
               ].map((d) => (
                 <div key={d.dose} className="mb-7 last:mb-0">
                   <div className="flex items-baseline justify-between mb-2">
@@ -1064,10 +1064,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <h2 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              14 days. <span className="text-[#F2A922]">that&rsquo;s all it takes.</span>
+              14 days. <span className="text-[#F2A922]">That&rsquo;s all it takes.</span>
             </h2>
             <p className="text-[#2D2D2D]/55 mt-4 text-sm md:text-base max-w-md mx-auto">
-              that&rsquo;s how long it takes for creatine to build up in your system.<SourceRef n={9} /> most women feel the fog lift and energy return within 14 days.
+              That&rsquo;s how long it takes for creatine to build up in your system.<SourceRef n={9} /> Most women feel the fog lift and energy return within 14 days.
             </p>
           </div>
 
@@ -1075,10 +1075,10 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-3 mb-14 md:mb-20">
             {[
               "10g creatine monohydrate",
-              "ginger",
-              "turmeric + piperine",
-              "electrolytes",
-              "vitamin C",
+              "Ginger",
+              "Turmeric + piperine",
+              "Electrolytes",
+              "Vitamin C",
               "0g sugar",
             ].map((item) => (
               <span key={item} className="text-sm font-bold text-[#2D2D2D]/50 bg-[#FFFDF7] border border-[#2D2D2D]/[0.06] px-4 py-2 rounded-full">
@@ -1099,11 +1099,11 @@ export default function Home() {
                 <p className="text-sm text-[#2D2D2D]/60 mb-1">€3.00/shot</p>
                 <p className="text-sm text-[#2D2D2D]/50 mb-8">+ €4.95 shipping</p>
                 <a href="/waitlist?plan=14" onClick={() => trackCta("pricing", "14")} className="w-full bg-[#2D2D2D] text-[#FFFDF7] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#2D2D2D]/85 hover:shadow-lg">
-                  get starter
+                  Get starter
                 </a>
-                <p className="text-sm text-[#2D2D2D]/35 text-center mt-3 font-medium tracking-wide uppercase">ships within 3 days</p>
+                <p className="text-sm text-[#2D2D2D]/35 text-center mt-3 font-medium tracking-wide uppercase">Ships within 3 days</p>
                 <HandNote className="mt-2 text-center block text-base">
-                  give it 2 weeks to feel it
+                  Give it 2 weeks to feel it
                 </HandNote>
               </div>
             </div>
@@ -1111,7 +1111,7 @@ export default function Home() {
             {/* Monthly — featured */}
             <div className="gsap-pricing-card bg-[#2D2D2D] rounded-2xl overflow-hidden shadow-xl relative flex flex-col">
               <span className="absolute top-5 right-5 bg-[#F2A922] text-[#2D2D2D] text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider z-10">
-                best value
+                Best value
               </span>
               <div className="flex items-center justify-center h-64 md:h-72 relative border-b border-white/[0.08] overflow-hidden">
                 <img src="/images/17-pricing-monthly-packaging.jpeg" alt="30-day supply" className="absolute inset-0 w-full h-full object-cover" />
@@ -1120,13 +1120,13 @@ export default function Home() {
                 <p className="text-sm text-[#FFFDF7]/50 font-bold mb-1">30-day supply</p>
                 <p className="text-5xl md:text-6xl font-extrabold text-[#FFFDF7] tracking-tight mb-2">€79</p>
                 <p className="text-sm text-[#FFFDF7]/50 mb-1">€2.63/shot</p>
-                <p className="text-sm text-[#FFFDF7]/45 mb-8">free shipping</p>
+                <p className="text-sm text-[#FFFDF7]/45 mb-8">Free shipping</p>
                 <a href="/waitlist?plan=30" onClick={() => trackCta("pricing", "30")} className="w-full bg-[#F2A922] text-[#2D2D2D] font-bold py-4 rounded-full text-center block mt-auto transition-all hover:bg-[#D4921E] hover:shadow-lg">
-                  get monthly
+                  Get monthly
                 </a>
-                <p className="text-sm text-[#FFFDF7]/40 text-center mt-3 font-medium tracking-wide uppercase">ships within 3 days</p>
+                <p className="text-sm text-[#FFFDF7]/40 text-center mt-3 font-medium tracking-wide uppercase">Ships within 3 days</p>
                 <HandNote className="mt-2 text-center block text-base text-[#FFFDF7]/60">
-                  the most popular choice
+                  The most popular choice
                 </HandNote>
               </div>
             </div>
@@ -1141,7 +1141,7 @@ export default function Home() {
           </div>
 
           <p className="text-center text-sm text-[#2D2D2D]/30 mt-8 font-medium">
-            free shipping on 30-packs · cancel anytime · designed for menopause
+            Free shipping on 30-packs · cancel anytime · designed for menopause
           </p>
         </div>
       </section>
@@ -1152,7 +1152,7 @@ export default function Home() {
       <section data-section="faq" className="py-20 md:py-32 px-6">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[2rem] md:text-[3rem] font-extrabold text-[#2D2D2D] mb-10 tracking-tight">
-            frequently asked questions
+            Frequently asked questions
           </h2>
           {faqs.map((faq) => <FaqItem key={faq.q} q={faq.q} a={faq.a} />)}
         </div>
@@ -1173,19 +1173,19 @@ export default function Home() {
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center px-8 py-16 md:py-20">
               <h2 className="text-[2rem] md:text-[3.5rem] font-extrabold text-[#FFFDF7] leading-[0.95] tracking-tight mb-4">
-                you deserve better than<br />&ldquo;it&rsquo;s just your age.&rdquo;
+                You deserve better than<br />&ldquo;it&rsquo;s just your age.&rdquo;
               </h2>
               <p className="text-[#FFFDF7]/50 text-sm md:text-base max-w-md mx-auto mb-8">
-                zesty. creatine, ginger and turmeric. every morning.
+                Zesty. Creatine, ginger and turmeric. Every morning.
               </p>
               <a
                 href="#order"
                 onClick={() => trackCta("footer", "30")}
                 className="inline-flex items-center gap-3 bg-[#F2A922] text-[#2D2D2D] font-bold text-base md:text-lg px-10 py-4 md:py-5 rounded-full transition-all hover:bg-[#D4921E] hover:shadow-xl hover:scale-[1.02]"
               >
-                order now
+                Order now
               </a>
-              <p className="text-[#FFFDF7]/45 text-sm mt-4">from €2.63/shot · free shipping on 30-day plans</p>
+              <p className="text-[#FFFDF7]/45 text-sm mt-4">From €2.63/shot · free shipping on 30-day plans</p>
             </div>
           </div>
 
@@ -1194,21 +1194,21 @@ export default function Home() {
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
               <div>
                 <p className="text-2xl font-extrabold text-[#F2A922] tracking-tight mb-2">zesty</p>
-                <p className="text-[#FFFDF7]/45 text-sm">the functional menopause wellness shot · 10g creatine</p>
+                <p className="text-[#FFFDF7]/45 text-sm">The functional menopause wellness shot · 10g creatine</p>
               </div>
               <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-[#FFFDF7]/35">
-                <a href="/en/blog" className="hover:text-[#FFFDF7]/60 transition-colors">blog</a>
-                <a href="/en/faq" className="hover:text-[#FFFDF7]/60 transition-colors">faq</a>
-                <a href="mailto:hello@drinkzesty.be" className="hover:text-[#FFFDF7]/60 transition-colors">contact</a>
+                <a href="/en/blog" className="hover:text-[#FFFDF7]/60 transition-colors">Blog</a>
+                <a href="/en/faq" className="hover:text-[#FFFDF7]/60 transition-colors">FAQ</a>
+                <a href="mailto:hello@drinkzesty.be" className="hover:text-[#FFFDF7]/60 transition-colors">Contact</a>
               </div>
             </div>
             {/* AG1-style disclaimer + study references — centered, full width */}
             <div className="text-[#FFFDF7]/40 text-sm leading-relaxed space-y-4 text-center max-w-5xl mx-auto">
-              <p id="sources" className="text-[#FFFDF7]/50 text-sm font-bold uppercase tracking-[0.15em] mb-3 scroll-mt-8">sources &amp; disclaimers</p>
+              <p id="sources" className="text-[#FFFDF7]/50 text-sm font-bold uppercase tracking-[0.15em] mb-3 scroll-mt-8">Sources &amp; disclaimers</p>
               <p>
-                zesty is a food supplement. these statements describe published research findings and are not intended as health claims.
-                this product is not intended to diagnose, treat, cure, or prevent any disease. food supplements should not be used as a substitute
-                for a varied and balanced diet and a healthy lifestyle. consult a healthcare professional before use if you are pregnant,
+                Zesty is a food supplement. These statements describe published research findings and are not intended as health claims.
+                This product is not intended to diagnose, treat, cure, or prevent any disease. Food supplements should not be used as a substitute
+                for a varied and balanced diet and a healthy lifestyle. Consult a healthcare professional before use if you are pregnant,
                 breastfeeding, or taking medication.
               </p>
               <div className="space-y-2 text-left">
@@ -1225,12 +1225,12 @@ export default function Home() {
                 <p><span className="text-[#FFFDF7]/55 font-bold">[11]</span> Magnesium deficiency in postmenopausal women linked to heart rhythm changes, impaired glucose tolerance, and neuroinflammation. <a href="https://pubmed.ncbi.nlm.nih.gov/17536122/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#FFFDF7]/60 transition-colors">Nielsen et al., <em>J. Am. Coll. Nutr.</em>, 2007</a></p>
               </div>
               <p>
-                creatine is the most studied sports nutrition supplement in history, with over 4,000 peer-reviewed publications.
-                the european food safety authority (EFSA) recognises creatine&rsquo;s role in supporting physical performance during
+                Creatine is the most studied sports nutrition supplement in history, with over 4,000 peer-reviewed publications.
+                The European Food Safety Authority (EFSA) recognises creatine&rsquo;s role in supporting physical performance during
                 short-term, high-intensity exercise.
               </p>
             </div>
-            <p className="text-[#FFFDF7]/40 text-sm mt-8 text-center">designed in belgium · recyclable packaging · drinkzesty.be</p>
+            <p className="text-[#FFFDF7]/40 text-sm mt-8 text-center">Designed in Belgium · recyclable packaging · drinkzesty.be</p>
           </div>
         </div>
 
@@ -1242,11 +1242,11 @@ export default function Home() {
       <div className={`fixed bottom-0 left-0 right-0 bg-[#FFFDF7]/95 backdrop-blur-md border-t border-[#2D2D2D]/10 transition-all duration-300 z-50 ${showSticky ? "translate-y-0" : "translate-y-full pointer-events-none"}`}>
         <div className="max-w-4xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
           <div>
-            <p className="text-sm font-bold text-[#2D2D2D]">the daily creatine shot · science-backed</p>
-            <p className="text-sm text-[#2D2D2D]/50 hidden sm:block">from €2.63/day · free shipping on 30-packs</p>
+            <p className="text-sm font-bold text-[#2D2D2D]">The daily creatine shot · science-backed</p>
+            <p className="text-sm text-[#2D2D2D]/50 hidden sm:block">From €2.63/day · free shipping on 30-packs</p>
           </div>
           <a href="#order" onClick={() => trackCta("sticky-bar", "30")} className="bg-[#2D2D2D] text-[#FFFDF7] font-bold text-sm px-7 py-3 rounded-full transition-all hover:bg-[#2D2D2D]/85 hover:shadow-md shrink-0">
-            order now
+            Order now
           </a>
         </div>
       </div>

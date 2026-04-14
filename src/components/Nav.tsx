@@ -16,19 +16,19 @@ export function Nav({ locale = "nl" }: { locale?: "en" | "nl" }) {
             href={locale === "en" ? "/en/blog" : "/blog"}
             className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block"
           >
-            blog
+            Blog
           </Link>
           <Link
             href={locale === "en" ? "/en/faq" : "/veelgestelde-vragen"}
             className="text-sm font-bold text-[#2D2D2D]/40 hover:text-[#2D2D2D] transition-colors hidden sm:block"
           >
-            faq
+            FAQ
           </Link>
           <Link
             href={locale === "nl" ? "/#order" : "/en#order"}
             className="text-sm font-bold bg-[#2D2D2D] text-[#FFFDF7] px-5 py-2 rounded-full hover:bg-[#2D2D2D]/85 transition-colors"
           >
-            {locale === "nl" ? "bestel nu" : "order now"}
+            {locale === "nl" ? "Bestel nu" : "Order now"}
           </Link>
           <div className="flex items-center gap-0.5 border border-[#2D2D2D]/10 rounded-full px-0.5 py-0.5">
             <Link

@@ -9,11 +9,11 @@ export default function LabelDesigner() {
   return (
     <div className="w-full">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-[var(--text)] mb-2">label designer</h1>
+        <h1 className="text-3xl font-bold text-[var(--text)] mb-2">Label designer</h1>
         <p className="text-gray-500">
-          Final label design — use as reference for Nano Banana product shots.
+          Final label design. Use as reference for Nano Banana product shots.
           <br />
-          <span className="text-xs">real label ~12cm × 8cm. Shown at 1080×520px.</span>
+          <span className="text-xs">Real label ~12cm × 8cm. Shown at 1080×520px.</span>
         </p>
       </div>
 
@@ -21,8 +21,8 @@ export default function LabelDesigner() {
       {/*  FINAL LABEL                                                     */}
       {/* ================================================================ */}
       <div className="bg-white rounded-2xl p-16 border border-gray-200 mb-8">
-        <div className="text-xs text-gray-400 uppercase tracking-[3px] mb-2">final label</div>
-        <div className="text-sm text-gray-500 mb-8">Modern minimal — amber bars, pill badge, numbered steps</div>
+        <div className="text-xs text-gray-400 uppercase tracking-[3px] mb-2">Final label</div>
+        <div className="text-sm text-gray-500 mb-8">Modern minimal: amber bars, pill badge, numbered steps</div>
 
         <div
           style={{

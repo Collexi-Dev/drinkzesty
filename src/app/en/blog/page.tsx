@@ -5,7 +5,7 @@ import { getAllPosts } from "@/lib/blog";
 import { Nav } from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "Blog — zesty",
+  title: "Blog: Zesty",
   description:
     "Everything about creatine, menopause and supplements. Science-backed, in plain language.",
   alternates: {
@@ -25,7 +25,7 @@ export default function BlogIndex() {
           {/* Hero */}
           <div className="mb-14">
             <h1 className="text-[2.5rem] md:text-[4rem] font-extrabold text-[#2D2D2D] leading-[0.95] tracking-tight">
-              creatine, menopause
+              Creatine, menopause
               <br />
               <span className="text-[#F2A922]">and the science behind it.</span>
             </h1>
@@ -105,17 +105,17 @@ export default function BlogIndex() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <p className="text-lg font-extrabold text-[#F2A922] tracking-tight mb-1">zesty</p>
-              <p className="text-white/30 text-sm">the menopause shot with creatine</p>
+              <p className="text-white/30 text-sm">The menopause shot with creatine</p>
             </div>
             <div className="flex gap-5 text-sm text-white/35">
-              <Link href="/en" className="hover:text-white/60 transition-colors">home</Link>
-              <Link href="/en/blog" className="hover:text-white/60 transition-colors">blog</Link>
-              <Link href="/en/faq" className="hover:text-white/60 transition-colors">faq</Link>
-              <Link href="/en#order" className="hover:text-white/60 transition-colors">order</Link>
+              <Link href="/en" className="hover:text-white/60 transition-colors">Home</Link>
+              <Link href="/en/blog" className="hover:text-white/60 transition-colors">Blog</Link>
+              <Link href="/en/faq" className="hover:text-white/60 transition-colors">FAQ</Link>
+              <Link href="/en#order" className="hover:text-white/60 transition-colors">Order</Link>
             </div>
           </div>
           <p className="text-white/20 text-xs mt-8">
-            zesty is a dietary supplement, not medicine. consult a doctor if in doubt.
+            Zesty is a dietary supplement, not medicine. Consult a doctor if in doubt.
           </p>
         </div>
       </footer>
